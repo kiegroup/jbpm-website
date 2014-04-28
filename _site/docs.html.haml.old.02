@@ -1,0 +1,16 @@
+---
+layout: rightcol
+/ rightcol_partial: rightcol-downloads.html.haml
+title: Documentation
+---
+
+/ Main hero unit for a primary marketing message or call to action
+.row-fluid
+  %h1 jBPM Documentation Library
+  %p Latest Releaase 5.6.0
+  %p<
+    %a.btn.btn-primary.btn-large(href="swatch.html") View the Swatches &raquo;
+
+  %hr
+
+/ Example Content

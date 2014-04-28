@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="../stylesheets/index-pages.css" media="screen" rel="stylesheet">
+    <link rel="shortcut icon">
+    <title>Example Homepage · JBoss Community</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="/stylesheets-source/_bootstrap-community.less" rel="stylesheet/less" type="text/css">
+    <!-- IE 6-8 support of HTML 5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/cache/static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js"></script>
+    <![endif]-->
+    <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+    <link href="/cache/static.jboss.org/example/images/favicon.ico" rel="shortcut icon">
+    <link href="/cache/static.jboss.org/example/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/cache/static.jboss.org/example/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="/cache/static.jboss.org/example/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="/cache/static.jboss.org/example/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+    <!-- Defines the project banner. Change these URLs to your specific project folder on static.jboss.org -->
+    <style>
+      @media (min-width: 980px) {
+        .banner { background-image: url(/cache/static.jboss.org/example/images/example-banner-1180px.png); height: 110px;  }
+      }
+      @media (max-width: 979px) {
+        .banner { background-image: url(/cache/static.jboss.org/example/images/example-logo.png); background-repeat:no-repeat; background-position: center bottom; height: 60px; }
+      }
+      @media (max-width: 650px) {
+        .banner { width: 100%; margin: 0px auto; }
+      }
+      @media (max-width: 450px) {
+        .banner { height: 90px; }
+      }
+    </style>
+    <script src="/cache/static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.js"></script>
+    <script src="/javascripts/less-1.4.1.min.js"></script>
+  </head>
+  <body>
+    <div class="forkMeOnGithub">
+      <a href="https://github.com/droolsjbpm" target="_blank">
+        <img alt="Fork me on GitHub" src="../images/forkMeOnGithub.png">
+      </a>
+    </div>
+    <div id="">
+      <!-- begin accesibility skip to top -->
+      <ul class="visuallyhidden" id="top">
+        <li>
+          <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+        </li>
+        <li>
+          <a accesskey="c" href="#page" title="Skip to content">Skip to content</a>
+        </li>
+      </ul>
+      <div class="container" id="content">
+        <div class="dropup">
+          <div id="ajbossproject">A JBoss Project</div>
+          <a class="tabnav-closed" href="#" id="tab">Red Hat</a>
+          <script>
+            window.addEventListener('load', function() { renderTabzilla("Example","example") }, false);
+          </script>
+        </div>
+        <div class="banner">
+          <a href="#"></a>
+          <div class="taglinelight visible-desktop">This text is for the project tagline.</div>
+        </div>
+        <div class="navbar navbar-inverse" id="navbar-fix">
+          <div class="navbar-inner">
+            <div class="container">
+              <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li class=""><a href="http://localhost:4242/index.html">Overview</a></li>
+                  <li class=""><a href="http://localhost:4242/downloads.html">Downloads</a></li>
+                  <li class=""><a href="http://localhost:4242/docs.html">Documentation</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Community <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Wiki</a></li>
+                      <li><a href="#">User Forum</a></li>
+                      <li><a href="#">Mailing Lists</a></li>
+                      <li><a href="#">Chat</a></li>
+                      <li><a href="#">Blog</a></li>
+                      <li><a href="#">Twitter</a></li>
+                    </ul>
+                  </li>
+                  <li class=""><a href="http://localhost:4242/issues.html">Issue Tracker</a></li>
+                  <li class=""><a href="http://localhost:4242/source.html">Source Code</a></li>
+                  <li class=""><a href="http://localhost:4242/build.html">Build</a></li>
+                  <li class="divider"></li>
+                </ul>
+                <ul class="nav pull-right">
+                  <li>
+                    <form class="navbar-search">
+                      <input class="search-query" id="projectsearch" placeholder="Search" type="text">
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='breadcrumb'><a class='breadcrumb_anchor ' href='http://localhost:4242/index.html'
+                >jBPM</a> / <a class='breadcrumb_anchor active' href='http://localhost:4242/project.html'
+                >Example Homepage</a></div>
+        <!-- Main hero unit for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <h1>Project XYZ is Awesome!</h1>
+          <p>This is the basic template for the JBoss Community Bootstrap/Awestruct project sites. This is where you would put a marketing message.</p>
+          <p><a class="btn btn-primary btn-large" href="swatch.html">View the Swatches &raquo;</a></p>
+        </div>
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="span4">
+            <h2>Uses Bootstrap</h2>
+            <p>This theme is designed to layer on top of Bootstrap by using the standardized CSS classes and IDs so you can easily take advantage of all the great built in components of Bootstrap.</p>
+            <p><a class="btn" href="http://twitter.github.io/bootstrap/components.html">Bootstrap Components &raquo;</a></p>
+          </div>
+          <div class="span4">
+            <h2>Look and Feel Swatches</h2>
+            <p>To give a better view of some of the look and feel changes, we've put together a swatch file containing various styled components and the Font Awesome icon replacement for quick viewing.</p>
+            <p><a class="btn" href="swatch.html">Go to the Swatches &raquo;</a></p>
+          </div>
+          <div class="span4">
+            <h2>The JBoss Badge</h2>
+            <p>Projects are now able to utilize this standard look and feel or create their own. We just ask that you keep unedited this badge on your home page to show that your project is a part of the JBoss Family.</p>
+            <p></p>
+            <div class="jbossbadge">
+              <a href="http://www.jboss.org/"><img src="/cache/static.jboss.org/theme/images/common/jbossbadge.png"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="container">
+        <div class="row-fluid">
+          <div class="span2 offset1">
+            <h4>Navigate</h4>
+            <ul>
+              <li>
+                <a href="#" title="Learn">Learn</a>
+              </li>
+              <li>
+                <a href="#" title="Get Started">Get Started</a>
+              </li>
+              <li>
+                <a href="#" title="Forums">Forums</a>
+              </li>
+              <li>
+                <a href="#" title="Get Involved">Get Involved</a>
+              </li>
+              <li>
+                <a href="#" title="Download">Download</a>
+              </li>
+            </ul>
+          </div>
+          <div class="span2">
+            <h4>Follow Us</h4>
+            <ul>
+              <li>
+                <a href="#" title="Blog">Blog</a>
+              </li>
+              <li>
+                <a href="#" title="Twitter">Twitter</a>
+              </li>
+              <li>
+                <a href="#" title="Google+">Google+</a>
+              </li>
+            </ul>
+          </div>
+          <div class="span2">
+            <h4>Contribute</h4>
+            <ul>
+              <li>
+                <a href="#" title="Submit a bug">Submit a bug</a>
+              </li>
+              <li>
+                <a href="#" title="Write code">Write Code</a>
+              </li>
+              <li>
+                <a href="#" title="Join the team">Join the team</a>
+              </li>
+            </ul>
+          </div>
+          <div class="span3 offset1">
+            <h4>LGPL 2.1 License</h4>
+            <p>All dependencies of this project are available under the LGPL or a compatible license.</p>
+            <p></p>
+            <div class="jbossbadge">
+              <a href="http://www.jboss.org/">
+                <img src="/cache/static.jboss.org/theme/images/common/jbossbadge.png">
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="container" id="companyfooter">
+        <div class="redhatlogo">
+          <div id="logospacer"></div>
+          <a href="http://www.redhat.com/"><img src="/cache/static.jboss.org/theme/images/common/redhat_logo.png"></a>
+        </div>
+      </div>
+      <span class="backToTop">
+        <a href="#top">back to top</a>
+      </span>
+      <script src="/javascripts/bootstrap-community.js"></script>
+    </div>
+  </body>
+</html>

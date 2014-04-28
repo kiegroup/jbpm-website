@@ -1,0 +1,28 @@
+---
+layout: rightcol
+rightcol_partial: rightcol-interior.html.haml
+title: Documentation
+---
+
+/ Main hero unit for a primary marketing message or call to action
+.row-fluid
+%h1 jBPM Documentation Library
+%p Latest Releaase 5.6.0
+%table.table.table-bordered.table-striped
+  %thead
+    %tr
+      %th Product
+      %th Version
+      %th Released
+      %th 
+    %tr
+      %td jBPM 6
+      %td 6.0
+      %td 20 Nov 2013
+      %td
+        %a{:href => "http://docs.jboss.org/jbpm/v6.0.1/userguide/", :target => "_blank"} User Guide
+        |
+        %a{:href => "http://docs.jboss.org/jbpm/v6.0.1/javadocs/", :target => "_blank"} API
+  %hr
+  
+/ Example Content

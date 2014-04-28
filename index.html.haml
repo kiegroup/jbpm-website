@@ -1,0 +1,35 @@
+---
+layout: rightcol
+/ rightcol_partial: rightcol-downloads.html.haml
+title: jBPM Home
+---
+
+/ Main hero unit for a primary marketing message or call to action
+.hero-unit
+  %h1 Project XYZ is Awesome!
+  %p This is the basic template for the JBoss Community Bootstrap/Awestruct project sites. This is where you would put a marketing message.
+  %p<
+    %a.btn.btn-primary.btn-large(href="swatch.html") View the Swatches &raquo;
+
+/ Example row of columns
+.row-fluid
+  .span4
+    %h2 About jBPM
+    :markdown
+      jBPM is a flexible Business Process Management (BPM) Suite. It makes the bridge between business analysts and developers. Traditional BPM engines have a focus that is limited to non-technical people only. jBPM has a dual focus: it offers process management features in a way that both business users and developers like it.
+    %p<
+      %a.btn.btn-primary{:href => "about.html"} About jBPM &raquo;
+  .span4
+    %h2 Look and Feel Swatches
+    :markdown
+      To give a better view of some of the look and feel changes, we've put together a swatch file containing various styled components and the Font Awesome icon replacement for quick viewing.
+    %p<
+      %a.btn(href="swatch.html") Go to the Swatches &raquo;
+  .span4
+    %h2 The JBoss Badge
+    :markdown
+      Projects are now able to utilize this standard look and feel or create their own. We just ask that you keep unedited this badge on your home page to show that your project is a part of the JBoss Family.
+    %p<
+    .jbossbadge
+      %a(href="http://www.jboss.org/")<
+        %img(src="#{site.jborg_images_url}/common/jbossbadge.png")

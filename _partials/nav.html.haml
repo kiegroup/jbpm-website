@@ -1,0 +1,67 @@
+.navbar.navbar-inverse#navbar-fix
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      .nav-collapse.collapse
+        %ul.nav
+          %li{:class=>"#{'active' if page.output_path.start_with?('/Home') }" }<
+            %a(href="#{site.base_url}/index.html") Home
+          %li{:class=>"#{'active' if page.output_path.start_with?('/About') }" }<
+            %a(href="#{site.base_url}/about.html") About
+          %li{:class=>"#{'active' if page.output_path.start_with?('/downloads') }" }<
+            %a(href="#{site.base_url}/downloads.html") Downloads
+          %li.dropdown
+            %a.dropdown-toggle(href="#" data-toggle="dropdown")<
+              = precede 'Learn ' do
+                %b.caret>
+            %ul.dropdown-menu
+              %li<
+                %a(href="#{site.base_url}/documentation.html") Documentation
+              %li<
+                %a(href="#{site.base_url}/videos.html") Videos
+              %li<
+                %a(href="#{site.base_url}/slides.html") Slides
+              %li<
+                %a(href="#{site.base_url}/testimonials.html") Testimonials and Case Studies
+          %li.dropdown
+            %a.dropdown-toggle(href="#" data-toggle="dropdown")<
+              = precede 'Community ' do
+                %b.caret>
+            %ul.dropdown-menu
+              %li<
+                %a(href="#{site.base_url}/forum.html") Forum
+              %li<
+                %a(href="#{site.base_url}/chat.html") Chat real-time
+              %li<
+                %a(href="#{site.base_url}/product.html") Product
+              %li<
+                %a(href="#{site.base_url}/social_media.html") Social media
+              %li<
+                %a(href="#{site.base_url}/blog.html") Blog
+              %li<
+                %a(href="#{site.base_url}/team.html") Team
+              %li<
+                %a(href="#{site.base_url}/research.html") Research
+          %li.dropdown
+            %a.dropdown-toggle(href="#" data-toggle="dropdown")<
+              = precede 'Code ' do
+                %b.caret>
+            %ul.dropdown-menu
+              %li<
+                %a(href="#{site.base_url}/issues.html") Report an issue
+              %li<
+                %a(href="#{site.base_url}/source.html") Source code
+              %li<
+                %a(href="#{site.base_url}/continuous_integration.html") Continuous integration
+              %li<
+                %a(href="#{site.base_url}/license.html") License
+          %li.divider
+        %ul.nav.pull-right
+          %li
+            %form.navbar-search
+              %input.search-query#projectsearch(type="text" placeholder="Search")
+
+= breadcrumb(page.real_page.output_path)
