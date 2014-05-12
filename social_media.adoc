@@ -1,0 +1,15 @@
+= Social media
+:awestruct-layout: rightcol
+/ rightcol_partial: rightcol-downloads.html.haml
+:showtitle:
+
+Main hero unit for a primary marketing message or call to action
+
+== jBPM Social media
+=== Twitter
+The #jbossjbpm twitter account can be found http://twitter.com/jbossjbpm[here].
+
+== Mailing list
+The developers mailing https://lists.jboss.org/mailman/listinfo/jbpm-dev[list] can be used to for discussions on the design and development of jBPM.  If you have usage questions, please use the forums.
+
+'''

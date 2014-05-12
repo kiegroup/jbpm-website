@@ -127,63 +127,112 @@
         <div class="row-fluid">
           <div id="equalHeightsLayout">
             <div class="span9" id="maincol">
-              <!-- Main hero unit for a primary marketing message or call to action -->
-              <div class="row-fluid">
-                <h1>What does jBPM do?</h1>
-                <p>A business process allows you to model your business goals by describing the steps that need to be executed to achieve that goal and the order, using a flow chart.  This greatly improves the visibility and agility of your business logic, results in higher-level and domain-specific representations that can be understood by business users and is easier to monitor.</p>
-                <p>The core of jBPM is a light-weight, extensible workflow engine written in pure Java that allows you to execute business processes using the latest BPMN 2.0 specification.  It can run in any Java environment, embedded in your application or as a service.</p>
-                <p>On top of the core engine, a lot of features and tools are offered to support business processes throughout their entire life cycle:</p>
-                <ul class="icons-ul">
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Eclipse-based and web-based editor to support the graphical creation of your business processes (drag & drop).</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Pluggable persistence and transactions based on JPA / JTA.</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Pluggable human task service based on WS-HumanTask 'for' including tasks that need to be performed by human actors.</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Management console supporting process instance management, task lists and task form management, and reporting.</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Optional process repository to deploy your process (and other related knowledge).</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp History logging (for querying / monitoring / analysis).</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Integration with Seam, Spring, OSGi, etc.</i>
-                </ul>
-                <p>BPM makes the bridge between business analysts, developers and end users, by offering process management features and tools in a way that both business users and developers like it.  Domain-specific nodes can be plugged into the palette, making the processes more easily understood by business users.</p>
-                <p>jBPM supports adaptive and dynamic processes that require flexibility to model complex, real-life situations that cannot easily be described using a rigid process.  We bring control back to the end users by allowing them to control which parts of the process should be executed, to dynamically deviate from the process, etc.</p>
-                <p>jBPM is also not just an isolated process engine.  Complex business logic can be modeled as a combination of business processes with business rules and complex event processing.  jBPM can be combined with the Drools project to support one unified environment that integrates these paradigms where you model your business logic as a combination of processes, rules and events.</p>
-                <h2>Process languages</h2>
-                <p>jBPM is based on a generic process engine, which is our foundation to support multiple process languages natively.  jBPM5 focusses on BPMN 2.0 as the language for expressing business processes.  BPMN 2.0 is a standardized specification that defines a visualization and XML serialization of business processes, and can be extended (if necessary) to include more advanced features.</p>
-                <h2>jBPM6</h2>
-                <p>jBPM6 is the latest community version of the jBPM project.  It is based on the BPMN 2.0 specification and supports the entire life cycle of the business process (from authoring through execution to monitoring and management).</p>
-                <p>It offers open-source business process execution and management, including:</p>
-                <ul class="icons-ul">
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Embeddable, lightweight Java process engine, supporting native BPMN 2.0 execution.</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Human interaction using an independent WS-HT task service.</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp BPMN 2.0 process modeling in Eclipse (developers) and the web (business users).</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Web tooling to model, deploy, execute and monitor your processes, including for example a data and form modeler, simulation, deployment, task lists, etc.</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Web-based business activity monitoring and reporting that allows you to define your own reports.</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Managing and deploying your processes using technologies underneath like Git and Maven.</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp An execution server that you can remotely connect to (REST, JMS) and can be deployed in a clustered environment for load balancing and high availability.</i>
-                  <li></li>
-                  <i class="icon-li icon-chevron-sign-right">&nbsp Tight, powerful integration with business rules and event processing.</i>
-                </ul>
-                <h2>What to do if I encounter problems or have questions?</h2>
-                <p>You can always contact the jBPM community for assistance.</p>
-                <p>Email: jbpm-dev@lists.jboss.org</p>
-                <p>(note that you have to subscribe to the list first before being able to post)</p>
-                <p>IRC: #jbpm at chat.freenode.net</p>
-                <p>jBPM User Forum</p>
-                <hr>
+              <h1>About jBPM</h1>
+              <div class="sect1">
+              <h2 id="_what_does_jbpm_do">What does jBPM do?</h2>
+              <div class="sectionbody">
+              <div class="paragraph">
+              <p>A business process allows you to model your business goals by describing the steps that need to be executed to achieve that goal and the order, using a flow chart.  This greatly improves the visibility and agility of your business logic, results in higher-level and domain-specific representations that can be understood by business users and is easier to monitor.
+              The core of jBPM is a light-weight, extensible workflow engine written in pure Java that allows you to execute business processes using the latest BPMN 2.0 specification.  It can run in any Java environment, embedded in your application or as a service.
+              On top of the core engine, a lot of features and tools are offered to support business processes throughout their entire life cycle:</p>
               </div>
-              <!-- Example Content -->
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Eclipse-based and web-based editor to support the graphical creation of your business processes (drag &amp; drop).</p>
+              </li>
+              <li>
+              <p>Pluggable persistence and transactions based on JPA / JTA.</p>
+              </li>
+              <li>
+              <p>Pluggable human task service based on WS-HumanTask <em>for</em> including tasks that need to be performed by human actors.</p>
+              </li>
+              <li>
+              <p>Management console supporting process instance management, task lists and task form management, and reporting.</p>
+              </li>
+              <li>
+              <p>Optional process repository to deploy your process (and other related knowledge).</p>
+              </li>
+              <li>
+              <p>History logging (for querying / monitoring / analysis).</p>
+              </li>
+              <li>
+              <p>Integration with Seam, Spring, OSGi, etc.</p>
+              </li>
+              </ul>
+              </div>
+              <div class="paragraph">
+              <p>BPM makes the bridge between business analysts, developers and end users, by offering process management features and tools in a way that both business users and developers like it.  Domain-specific nodes can be plugged into the palette, making the processes more easily understood by business users.
+              jBPM supports adaptive and dynamic processes that require flexibility to model complex, real-life situations that cannot easily be described using a rigid process.  We bring control back to the end users by allowing them to control which parts of the process should be executed, to dynamically deviate from the process, etc.
+              jBPM is also not just an isolated process engine.  Complex business logic can be modeled as a combination of business processes with business rules and complex event processing.  jBPM can be combined with the Drools project to support one unified environment that integrates these paradigms where you model your business logic as a combination of processes, rules and events.</p>
+              </div>
+              </div>
+              </div>
+              <div class="sect1">
+              <h2 id="_process_languages">Process languages</h2>
+              <div class="sectionbody">
+              <div class="paragraph">
+              <p>jBPM is based on a generic process engine, which is our foundation to support multiple process languages natively.  jBPM5 focusses on BPMN 2.0 as the language for expressing business processes.  BPMN 2.0 is a standardized specification that defines a visualization and XML serialization of business processes, and can be extended (if necessary) to include more advanced features.</p>
+              </div>
+              <div class="sect2">
+              <h3 id="_jbpm6">jBPM6</h3>
+              <div class="paragraph">
+              <p>jBPM6 is the latest community version of the jBPM project.  It is based on the BPMN 2.0 specification and supports the entire life cycle of the business process (from authoring through execution to monitoring and management).</p>
+              </div>
+              <div class="paragraph">
+              <p>It offers open-source business process execution and management, including:</p>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Embeddable, lightweight Java process engine, supporting native BPMN 2.0 execution.</p>
+              </li>
+              <li>
+              <p>Human interaction using an independent WS-HT task service.</p>
+              </li>
+              <li>
+              <p>BPMN 2.0 process modeling in Eclipse (developers) and the web (business users).</p>
+              </li>
+              <li>
+              <p>Web tooling to model, deploy, execute and monitor your processes, including for example a data and form modeler, simulation, deployment, task lists, etc.</p>
+              </li>
+              <li>
+              <p>Web-based business activity monitoring and reporting that allows you to define your own reports.</p>
+              </li>
+              <li>
+              <p>Managing and deploying your processes using technologies underneath like Git and Maven.</p>
+              </li>
+              <li>
+              <p>An execution server that you can remotely connect to (REST, JMS) and can be deployed in a clustered environment for load balancing and high availability.</p>
+              </li>
+              <li>
+              <p>Tight, powerful integration with business rules and event processing.</p>
+              </li>
+              </ul>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="_what_to_do_if_i_encounter_problems_or_have_questions">What to do if I encounter problems or have questions?</h3>
+              <div class="paragraph">
+              <p>You can always contact the jBPM community for assistance.</p>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Email: <a href="mailto:jbpm-dev@lists.jboss.org">jbpm-dev@lists.jboss.org</a>[<a href="mailto:jbpm-dev@lists.jboss.org">jbpm-dev@lists.jboss.org</a>] (note that you have to <a href="https://lists.jboss.org/mailman/listinfo/jbpm-dev">subscribe</a> to the list first before being able to post)</p>
+              </li>
+              <li>
+              <p>IRC: #jbpm at chat.freenode.net</p>
+              </li>
+              <li>
+              <p><a href="http://community.jboss.org/en/jbpm?view=discussions">jBPM User Forum</a></p>
+              </li>
+              </ul>
+              </div>
+              <hr>
+              </div>
+              </div>
+              </div>
             </div>
             <div class="span3 well" id="rightcol">
               <table>
