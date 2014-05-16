@@ -1,22 +1,14 @@
-require 'wget_wrapper'
-require 'js_minifier'
-require 'css_minifier'
-require 'html_minifier'
-require 'file_merger'
-require 'less_config'
-require 'symlinker'
-require 'breadcrumb'
+require File.expand_path '../haml/filters/asciidoc.rb', __FILE__
+require 'optaplanner'
 
 Awestruct::Extensions::Pipeline.new do
-  helper Awestruct::Extensions::Partial
-  helper Awestruct::Extensions::Breadcrumb
-  helper Awestruct::Extensions::GoogleAnalytics
-  extension Awestruct::Extensions::WgetWrapper.new
-  transformer Awestruct::Extensions::JsMinifier.new
-  transformer Awestruct::Extensions::CssMinifier.new
-  transformer Awestruct::Extensions::HtmlMinifier.new
-  extension Awestruct::Extensions::FileMerger.new
-  extension Awestruct::Extensions::LessConfig.new
-  extension Awestruct::Extensions::Symlinker.new
-end
+	helper Awestruct::Extensions::Partial
+	helper Awestruct::Extensions::Relative
+	helper Awestruct::Extensions::Optaplanner
 
+  extension Awestruct::Extensions::Posts.new('/blog')
+  extension Awestruct::Extensions::Paginator.new(:posts, '/blog/index', :per_page => 5)
+  extension Awestruct::Extensions::Tagger.new(:posts, '/blog/index', '/blog/tags', :per_page => 5)
+  extension Awestruct::Extensions::Disqus.new
+  extension Awestruct::Extensions::Atomizer.new(:posts, '/blog/news.atom', :template => File.join( File.dirname(__FILE__), 'relative_template.atom.haml'))
+end

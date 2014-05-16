@@ -1,104 +1,27 @@
-# Default page title
+encoding: UTF-8
 title: jBPM
+description: jBPM is a flexible Business Process Management (BPM) Suite.
+keywords: metaheuristic, heuristic, constraint satisfaction, constraint programming, operations research, NP-complete, NP-hard, optimization, planning, scheduling, java, open source, software, library, solver, tabu search, simulated annealing, pareto
+canonicalBaseUrl: http://www.jbpm.org
 
-# Project id name
-project: example
+# jbossorg_bootstrap_css: http://static.jboss.org/theme/css/bootstrap/2.1.0.0.0/bootstrap-community.css
+# jbossorg_bootstrap_js: http://static.jboss.org/theme/js/libs/bootstrap/2.1.0.0.0/bootstrap-community.js
 
-# Project full name
-project_name: Example
+googleAnalyticsId: UA-39485370-1
+disqus: jbpm
+disqus_generate_id: true
 
-# Default minify settings
-css_minifier: disabled
-js_minifier: disabled
-html_minifier: disabled
+asciidoctor:
+  :safe: safe
+  :attributes:
+    imagesdir: ''
 
-# Merge multiple JavaScript files to improve performance
-fileMerger:
-  enabled: true
-  outputFilePath: /javascripts/bootstrap-community.js
-  paths:
-    - /javascripts/_bootstrap-transition.js
-    - /javascripts/_bootstrap-alert.js
-    - /javascripts/_bootstrap-button.js
-    - /javascripts/_bootstrap-carousel.js
-    - /javascripts/_bootstrap-collapse.js
-    - /javascripts/_bootstrap-dropdown.js
-    - /javascripts/_bootstrap-modal.js
-    - /javascripts/_bootstrap-tooltip.js
-    - /javascripts/_bootstrap-popover.js
-    - /javascripts/_bootstrap-scrollspy.js
-    - /javascripts/_bootstrap-tab.js
-    - /javascripts/_bootstrap-typeahead.js
-    - /javascripts/_bootstrap-affix.js
-    - /javascripts/_jbossorg-navbarfix.js
-    - /javascripts/_jbossorg-FeedEk.js
-    - /javascripts/_jbossorg-jiraWidget.js
-    - /javascripts/_jquery-easytabs.js
-    - /javascripts/_crisp-scripts.js
-    - /javascripts/_jbossorg-tabzilla.js
-
-# Cache hosted fonts, images and javascript
-wget:
-  enabled: true
-  rerunEach: 86400 # seconds
-  timestampFilename: _wget-timestamp
-  options:
-    - --no-remove-listing
-    - -q
-    - -r
-    - --no-parent
-    - -N
-    - --reject 'index.html*'
-    - -e robots=off
-    - --directory-prefix=cache
-  urls:
-    - http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.js
-    - http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.min.js
-    - http://static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js
-    - http://static.jboss.org/theme/js/libs/prettify/188.0.0/prettify.min.js
-    - http://static.jboss.org/theme/js/libs/holder/1.9/holder.js
-    - http://static.jboss.org/theme/fonts/titilliumtext/
-    - http://static.jboss.org/theme/fonts/font-awesome/
-    - http://static.jboss.org/theme/images/common/
-    - http://static.jboss.org/example/
-
-# Update resource URLs based on the profile
 profiles:
   development:
-    jborg_fonts_url: /cache/static.jboss.org/theme/fonts
-    jborg_images_url: /cache/static.jboss.org/theme/images
-    jborg_js_url: /cache/static.jboss.org/theme/js
-    project_images_url: /cache/static.jboss.org/example/images
-    bootstrap_css_url: /stylesheets-source/_bootstrap-community
-    bootstrap_js_url: /javascripts/bootstrap-community
-    symlinker:
-      from: ../stylesheets
-      to: ./_site/stylesheets-source
-  staging:
-    jborg_fonts_url: http://static.jboss.org/theme/fonts
-    jborg_images_url: http://static.jboss.org/theme/images
-    jborg_js_url: http://static.jboss.org/theme/js
-    project_images_url: http://static.jboss.org/example/images
-    bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/2.3.1.4/bootstrap-community
-    bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.4/bootstrap-community
-    base_url: http://example-stg.jboss.org
-    wget:
-      enabled: false
-    # Uncomment the line below and provide a valid Google Analytics ID to enable tracking of your site in this profile.
-    # google_analytics: UA-00000000-0
+    developmentMode: true
   production:
-    minified: .min
-    css_minifier: enabled
-    js_minifier: enabled
-    html_minifier: enabled
-    jborg_fonts_url: http://static.jboss.org/theme/fonts
-    jborg_images_url: http://static.jboss.org/theme/images
-    jborg_js_url: http://static.jboss.org/theme/js
-    project_images_url: http://static.jboss.org/example/images
-    bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/2.3.1.4/bootstrap-community
-    bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.4/bootstrap-community
+    developmentMode: false
     base_url: http://www.jbpm.org
-    wget:
-      enabled: false
-    # Uncomment the line below and provide a valid Google Analytics ID to enable tracking of your site in this profile.
-    # google_analytics: UA-00000000-0
+    deploy:
+      host: optaplanner@filemgmt.jboss.org
+      path: /www_htdocs/optaplanner/
