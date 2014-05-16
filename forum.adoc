@@ -1,9 +1,0 @@
-= jBPM Forum
-:awestruct-layout: rightcol
-/ rightcol_partial: rightcol-downloads.html.haml
-:showtitle:
-
-
-The jBPM User Forum can be used or posting user questions and answers. Remember: answering is all based on voluntary work, so consider to contribute as many answers as you got from others to keep the system going.
-
-'''
