@@ -1,0 +1,35 @@
+= Webinar JBoss BPM Suite 6.0 available on demand 
+:page-interpolate: true
+:awestruct-author: kverlaenen
+:awestruct-layout: blogPostBase
+:awestruct-tags: [BPMS, BPMS6, demo, Event, jbpm, jBPM6, screencast, video, webinar]
+
+The webinar we recently did on JBoss BPM Suite 6.0, *including a 15-20min demo of the web tooling in action*, is now available on demand.  Click the "Register Now" button below to register and you'll be able to view the entire webinar on demand. 
+
+Automate workflows now with a leading open source BPM platform.
+
+image::register-now-button.png[, , , ,align="center", link="https://vts.inxpo.com/Launch/QReg.htm?ShowKey=18697&AffiliateData=krisblog"]
+
+Looking to build powerful workflow automation solutions? Red Hat JBoss BPM Suite 6.0, now generally available, brings Business Activity Monitoring and Business Process Management capabilities from the jBPM community project together in to a single, integrated product.
+
+*Join us in this webinar to learn:*
+
+* How to get started quickly with the fully integrated User Interface, Process Simulation and Business Activity Monitoring (BAM) tools.
+
+* The best use cases for running the process execution as a stand alone server vs. embedded mode. 
+
+* How to seamlessly manage decision logic with business rules optimization
+  
+* What's coming next...
+
+=== Speakers:
+
+*Prakash Aradhya, Product Management Director, JBoss BPM and BRMS Platforms, Red Hat*
+
+Prakash Aradhya is responsible for driving the product strategy and roadmap for JBoss Enterprise BRMS and BPM products. He has over 15 years of experience in product development and product management in the middleware software industry.
+
+*Dr Kris Verlaenen, Principal Software Engineer, Lead BPM Architect, Red Hat*
+
+Kris Verlaenen leads the jBPM Project effort and is also one of the core developers of the Drools project, to which he started contributing in 2006. After finishing his PhD in Computer Science in 2008, he joined JBoss full-time and became the Drools Flow lead. He has a keen interest in the healthcare domain, one of the areas that have already shown to have a great need for a unified process, rule and event processing framework.
+
+image::register-now-button.png[, , , ,align="center", link="https://vts.inxpo.com/Launch/QReg.htm?ShowKey=18697&AffiliateData=krisblog"]

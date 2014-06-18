@@ -1,0 +1,19 @@
+= Red Hat Summit Middleware Keynote and Demo 
+:page-interpolate: true
+:awestruct-author: kverlaenen
+:awestruct-layout: blogPostBase
+:awestruct-tags: [demo, jboss bpm suite, jbpm, presentation, summit]
+
+This year, JBoss BPM Suite 6 / jBPM6 was an important part of the middleware keynote once again!
+
+image::01.jpg[ ,50% , , align="center"]
+
+Mark Little explained why the release of the JBoss BPM Suite 6 is an important step forward.
+
+image::02.jpg[ ,50% , , align="center"]
+
+And later it was used as part of the keynote demo to drive requests (coming in from twitter), all running on openshift, set up on a bunch of laptops.
+
+The full keynote video is available here, enjoy!
+
+video::XPK2RTqlBxk[youtube]

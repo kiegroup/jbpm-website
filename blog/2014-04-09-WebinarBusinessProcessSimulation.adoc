@@ -1,0 +1,55 @@
+= Webinar (April 10th) - Business Process Simulation
+:page-interpolate: true
+:awestruct-author: kverlaenen
+:awestruct-layout: blogPostBase
+:awestruct-tags: [BPSim, Event, jbpm, jBPM6, simulation, webinar]
+
+== Get More Value out of BPM with BPSim Simulation
+
+image::BPSim2.jpg[, , , ,align="center"]
+
+=== Thursday, April 10th, 11:00AM Eastern
+
+Business process design with BPMN2 can be complex, with many feasible options for implementing a business strategy. How can process designers evaluate alternative approaches before committing to a costly rollout of an untried process design?
+
+Recently, there have been great strides in new process simulation tools, intended to answer this question and help analysts optimize their process designs before any real data is available to test them against. The BPSim standard is now emerging to provide a common framework for defining and exchanging simulation data in conjunction with BPMN2 models.
+
+Join http://bpm.com/[BPM.com]'s Nathaniel Palmer with guest Kris Verlaenen to learn how BPSim compatible tools can help you understand how business process designs will perform in practice, and where to look to improve and optimize them.
+
+As part of the presentation we will see a live demonstration of Red Hat's new process simulation tool, included with JBoss BPM Suite. Attendees will also receive access to the developer version of BPM Suite, and the exclusive demonstration models used in the presentation.
+
+*Why You Should Attend:*
+
+* Learn How to Use Business Process Simulation for Data-Driven Process Excellence
+* Gain Both Actionable Ideas and a Complete Working BPM Suite with Process Simulation Capabilities
+* Jumpstart Your BPM Programs With Pre-built and Ready-to-Run Simulation Models
+
+*Who Should Attend:*
+
+* Business Architects and BPM Practitioners Looking to Get Started with Process Simulation
+* Business Analysts Seeking to Leverage BPM and Simulation for Data-Driven Process Optimization
+* Anyone Looking to Get Started with BPM, BPMN2 Process Modeling, or Process Simulation
+
+image::register.png[, , , ,align="center", link="http://marketing.bpm.com/acton/form/9188/001e:d-0001/1/index.htm?id=001e"]
+
+***
+
+image::NathanielPalmer.jpg[, , , ,float="left"]
+
+*Nathaniel Palmer*
+
+CTO & VP, Business Process Management, Inc.
+
+A best-selling author, practitioner, and rated as the #1 most influential thought leader in BPM by independent research, Nathaniel is co-author of a dozen books on innovation and knowledge work, including “Intelligent BPM” (FSI 2013), “How Knowledge Workers Get Things Done” (FSI 2012), “Social BPM” (Future Strategies), “Mastering the Unpredictable” (MK Press, 2008), “Excellence in Practice (FSI 2007), as well as the “Encyclopedia of Database Systems” (Springer Reference, 2007) and “The X-Economy” (Texere, 2001). Nathaniel has been the Chief Architect for projects involving investments of $200 Million or more, and frequently tops the lists of the most recognized names in his field. He was the first individual named as Laureate in Workflow.
+
+***
+
+[.left.text-center]
+
+image::KrisVerlaenen.jpg[, , , ,float="left", right="10"]
+
+*Kris Verlaenen*
+
+jBPM Project Lead, Red Hat
+
+Kris is the JBoss jBPM project lead and the lead technical architect behind the Red Hat JBoss BPM Suite 6. After finishing his Ph.D. in computer science in 2008, he joined JBoss. In 2010, he became the jBPM project lead. He also has a keen interest in the healthcare domain, one of the areas that has shown a great need for a flexible processes and advanced rule and event-processing integration.
