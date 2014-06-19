@@ -47,6 +47,42 @@ layout: base
 
     **jBPM** is a flexible Business Process Management (BPM) Suite. It makes the bridge between business analysts and developers. Traditional BPM engines have a focus that is limited to non-technical people only. jBPM has a dual focus: it offers process management features in a way that both business users and developers like it.
 
+    ## What does jBPM do?
+
+    A business process allows you to model your business goals by describing the steps that need to be executed to achieve that goal and the order, using a flow chart.  This greatly improves the visibility and agility of your business logic, results in higher-level and domain-specific representations that can be understood by business users and is easier to monitor.
+  
+    The core of jBPM is a light-weight, extensible workflow engine written in pure Java that allows you to execute business processes using the latest BPMN 2.0 specification.  It can run in any Java environment, embedded in your application or as a service.
+    
+    On top of the core engine, a lot of features and tools are offered to support business processes throughout their entire life cycle:
+    
+  %ul
+    %li
+      Eclipse-based and web-based editor to support the graphical creation of your business processes (drag & drop).
+    %li
+      Pluggable persistence and transactions based on JPA / JTA.
+    %li
+      Pluggable human task service based on WS-HumanTask for including tasks that need to be performed by human actors.
+    %li
+      Management console supporting process instance management, task lists and task form management, and reporting.
+    %li
+      Optional process repository to deploy your process (and other related knowledge).
+    %li
+      History logging (for querying / monitoring / analysis).
+    %li
+      Integration with Seam, Spring, OSGi, etc.
+    
+    %p BPM makes the bridge between business analysts, developers and end users, by offering process management features and tools in a way that both business users and developers like it. Domain-specific nodes can be plugged into the palette, making the processes more easily understood by business users.
+  
+    %p jBPM supports adaptive and dynamic processes that require flexibility to model complex, real-life situations that cannot easily be described using a rigid process. We bring control back to the end users by allowing them to control which parts of the process should be executed, to dynamically deviate from the process, etc.
+     
+    %p jBPM is also not just an isolated process engine. Complex business logic can be modeled as a combination of business processes with business rules and complex event processing. jBPM can be combined with the Drools project to support one unified environment that integrates these paradigms where you model your business logic as a combination of processes, rules and events.
+ 
+   
+    ## Process languages
+
+    jBPM is based on a generic process engine, which is our foundation to support multiple process languages natively.  jBPM5 focusses on **BPMN 2.0** as the language for expressing business processes.  BPMN 2.0 is a standardized specification that defines a visualization and XML serialization of business processes, and can be extended (if necessary) to include more advanced features.
+
+  
 .alert.alert-info.alert-dismissable
   %button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
   #{site.pom.latest.releaseDate}:
@@ -86,7 +122,7 @@ layout: base
           Read the
           %strong Quick Start
           chapter
-
+          
 .panel.panel-default
   .panel-heading Latest blog posts
   .panel-body
