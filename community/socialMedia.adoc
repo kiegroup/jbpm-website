@@ -8,5 +8,4 @@ This stream contains easily understood information about jBPM. Includes a post f
 
 [unstyled]
 * image:../headerFooter/googlePlusLogo.png[] https://plus.google.com/118073921313256143924/[jBPM on Google+]
-* image:../headerFooter/twitterLogo.png[] https://twitter.com/jbossjbpm[jBPM on Twitter] (Google+ mirror)
-* image:../headerFooter/facebookLogo.png[] https://www.facebook.com/jboss[jBPM on Facebook] (Google+ mirror)
+* image:../headerFooter/twitterLogo.png[] https://twitter.com/jbossjbpm[jBPM on Twitter]
