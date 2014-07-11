@@ -6,10 +6,11 @@
 == Final releases
 
 * Documentation for jBPM #{site.pom.latestFinal.version}
-  ** jBPM reference manual #{site.pom.latestFinal.version}: #{site.pom.latestFinal.documentationHtmlSingle}[HTML Single] - #{site.pom.latestFinal.documentationHtml}[HTML] - #{site.pom.latestFinal.documentationPdf}[PDF]
-  ** jBPM javadocs #{site.pom.latestFinal.version}: #{site.pom.latestFinal.javadocs}[HTML]
-  ** Drools Expert reference manual: #{site.pom.latestFinal.droolsExpert_documentationHtmlSingle}[HTML Single] - #{site.pom.latestFinal.droolsExpert_documentationHtml}[HTML] - #{site.pom.latestFinal.droolsExpert_documentationPdf}[PDF]
+  ** jBPM User Guide #{site.pom.latestFinal.version}: #{site.pom.latestFinal.UserGuide}[HTML]
+  ** jBPM JavaDocs #{site.pom.latestFinal.version}: #{site.pom.latestFinal.JavaDocs}[Link]
+  ** jBPM Archive #{site.pom.latestFinal.version}: #{site.pom.latestFinal.Archive}[Link]
 
+  
 * Older community documentation: http://docs.jboss.org/drools/release/[Check the documentation archive].
 * Red Hat subscription documentation: https://access.redhat.com/knowledge/docs/[Check the customer portal].
 
@@ -20,14 +21,6 @@
 === Alpha’s, Beta’s and CR’s
 
 * Documentation for jBPM #{site.pom.latest.version}
-  ** jBPM reference manual #{site.pom.latest.version}: #{site.pom.latest.documentationHtmlSingle}[HTML Single] - #{site.pom.latest.documentationHtml}[HTML] - #{site.pom.latest.documentationPdf}[PDF]
-  ** jBPM javadocs #{site.pom.latest.version}: #{site.pom.latest.javadocs}[HTML]
-  ** Drools Expert reference manual: #{site.pom.latest.droolsExpert_documentationHtmlSingle}[HTML Single] - #{site.pom.latest.droolsExpert_documentationHtml}[HTML] - #{site.pom.latest.droolsExpert_documentationPdf}[PDF]
-
-=== Nightly snapshots
-
-Nightly snapshots are build by https://github.com/droolsjbpm/jbpm-website/blob/master/code/continuousIntegration.html[our build server].
-
-* Documentation for jBPM #{site.pom.nightly.version}
-  **documentation jBPM reference manual #{site.pom.nightly.version}: #{site.pom.nightly.documentationHtmlSingle}[HTML Single]
+  ** jBPM User Guide #{site.pom.latest.version}: #{site.pom.latest.UserGuide}[HTML]
+  ** jBPM Nightly snapshots #{site.pom.latest.version}: #{site.pom.latest.Nightly}[HTML]  
 
