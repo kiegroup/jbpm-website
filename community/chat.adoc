@@ -20,7 +20,11 @@ Most of our project discussion take place on IRC, usually during European and Am
 
         *** *#jbpm*
 
-        *** *#drools* (for DRL questions)
+        *** *#drools* (for rules questions)
+
+    ** Channels for developers:
+
+        *** *#jbpmdev*
 
     ** Channels for contributors:
 
