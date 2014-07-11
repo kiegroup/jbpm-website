@@ -2,7 +2,13 @@
 :awestruct-layout: base
 :showtitle:
 
-*jBPM* is open source software, released under the http://www.apache.org/licenses/LICENSE-2.0.html[Apache Software License 2.0].
+*jBPM* is open source software, released under the http://www.apache.org/licenses/LICENSE-2.0.html[Apache Software License 2.0]. +
+
+Some other components we integrate with have their own license:
+
+* The new Eclipse BPMN2 plugin is Eclipse Public License (EPL) v1.0.
+* The web-based designer is based on Oryx/Wapama and is MIT License
+* The Drools project is Apache License v2.0.
 
 This license is very liberal: it allows reuse for commercial purposes.
 Read http://www.apache.org/foundation/licence-FAQ.html#WhatDoesItMEAN[the layman's explanation] for more information.
