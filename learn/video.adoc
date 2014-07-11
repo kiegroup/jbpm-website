@@ -2,9 +2,9 @@
 :awestruct-layout: base
 :showtitle:
 
-See http://www.youtube.com/playlist?list=PLJY69IMbAdq0uKPnjtWXZ2x7KE1eWg3ns[Geoffrey's OptaPlanner playlist on YouTube]
-for a list of all videos.
+*10 Minute Tutorial using the Workbench*: http://people.redhat.com/kverlaen/jbpm6F-installer-console.swf[Video] +
+*10 Minute Tutorial using Eclipse*: http://people.redhat.com/kverlaen/jbpm6F-installer-eclipse.swf[Video]
 
-+++
-<iframe width="853" height="480" src="http://www.youtube.com/embed/videoseries?list=PLJY69IMbAdq0uKPnjtWXZ2x7KE1eWg3ns&showinfo=1" frameborder="0" allowfullscreen></iframe>
-+++
+
+
+
