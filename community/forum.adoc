@@ -6,9 +6,9 @@
 
 If you have a question about jBPM, just ask our friendly community:
 
-* Ask on http://www.jboss.org/drools/lists[the Drools user mailing list] (recommended).
+* Ask on https://community.jboss.org/en/jbpm?view=discussions[the jBPM user mailing list] (recommended).
 
-* Or ask on http://stackoverflow.com/questions/tagged/jbpm[StackOverflow].
+* Come link:../community/chat.html[chat] with us.
 
 Please follow these recommendations when posting a question:
 
@@ -19,9 +19,9 @@ Please follow these recommendations when posting a question:
 
 == Development discussions
 
-If you've link:../code/sourceCode.html[build jBPM from source] and you would like to improve it,
+If you've link:../code/sourceCode.html[built jBPM from source] and you would like to improve it,
 then come talk with us:
 
-* Join us on http://www.jboss.org/drools/lists[the Drools developer mailing list].
+* Join us on https://lists.jboss.org/mailman/listinfo/jbpm-dev[the jBPM developer mailing list] (note that you have to subscribe to the list first before being able to post).
 
 * And link:chat.html[chat with us] (recommended).
