@@ -1,10 +1,10 @@
 latestFinal:
     version: 6.0.1.Final
-    distributionZip: http://download.jboss.org/drools/release/6.0.1.Final/droolsjbpm-integration-distribution-6.0.1.Final.zip
+    distributionZip: http://sourceforge.net/projects/jbpm/files/jBPM%206/jbpm-6.1.0.CR1/
     releaseDate: 2014-06-19
     releaseNotesVersion: 6
 
-    UserGuide: http://docs.jboss.org/jbpm/v6.0.1/userguide/index.html
+    UserGuide: http://docs.jboss.org/jbpm/v6.0.1/userguide/
     JavaDocs: http://docs.jboss.org/jbpm/v6.0.1/javadocs/
     Archive: http://docs.jboss.org/jbpm/
 

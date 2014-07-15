@@ -83,15 +83,13 @@ layout: base
         %a.btn.btn-lg.btn-success(href="#{site.pom.latestFinal.distributionZip}")<
           %img(src = "download/download.png")
           Download jBPM #{site.pom.latestFinal.version}
-      %h3 Try the examples now
+      %h3 Try the jBPM-installer now
       %ol
-        %li Download the zip and unzip it
-        %li
-          On Linux/Mac, run
-          %code examples/runExamples.sh
-          %br
-          On Windows, run
-          %code examples/runExamples.bat
+        %li Download the jbpm installer-full zip and unzip it.
+        %li<
+          %a(href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMInstaller.html")Follow the jBPM Installer
+          chapter to get started.
+
       .small
         Requires
         %a(href="http://www.java.com")< Java™
@@ -100,7 +98,7 @@ layout: base
   .col-md-6
     .jumbotron(style="padding: 10px; margin-bottom: 20px;")
       .text-center<
-        %a.btn.btn-lg.btn-primary(href="#{site.pom.latestFinal.documentationHtmlSingle}")<
+        %a.btn.btn-lg.btn-primary(href="#{site.pom.latestFinal.UserGuide}")<
           %img(src = "learn/documentation.png")
           Read documentation #{site.pom.latestFinal.version}
       %h3 Get started

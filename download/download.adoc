@@ -13,11 +13,10 @@ The jBPM distribution zip includes binaries, documentation, examples and sources
 ** link:releaseNotes/releaseNotes#{site.pom.latestFinal.releaseNotesVersion}.html[Release notes #{site.pom.latestFinal.releaseNotesVersion}]
 ** License: link:../code/license.html[ASL 2.0]
 ** Release date: +#{site.pom.latestFinal.releaseDate}+
-** Download size: Large (over 90% is due to examples, data sets and documentation)
 
 * Older community releases: Check http://download.jboss.org/drools/release/[the release archive].
 
-* Red Hat subscription releases: Check http://www.jboss.com/downloads/[the product download site].
+* Evaluation version of JBoss BPM Suite: Check http://www.jboss.com/downloads/[the product download site].
 
 === Maven, Gradle, Ivy or Buildr
 
