@@ -10,11 +10,11 @@
 The jBPM distribution zip includes binaries, documentation, examples and sources.
 
 * image:download.png[] *#{site.pom.latestFinal.distributionZip}[Download jBPM #{site.pom.latestFinal.version}]*
-** link:releaseNotes/releaseNotes#{site.pom.latestFinal.releaseNotesVersion}.html[Release notes #{site.pom.latestFinal.releaseNotesVersion}]
+** #{site.pom.latestFinal.releaseNotesVersion}[Release notes]
 ** License: link:../code/license.html[ASL 2.0]
 ** Release date: +#{site.pom.latestFinal.releaseDate}+
 
-* Older community releases: Check http://download.jboss.org/drools/release/[the release archive].
+* Older community releases: Check http://sourceforge.net/projects/jbpm/files/[the release archive].
 
 * Evaluation version of JBoss BPM Suite: Check http://www.jboss.com/downloads/[the product download site].
 
@@ -29,7 +29,7 @@ If you use Maven, just add a dependency in your +pom.xml+:
 ----
     <dependency>
       <groupId>org.jbpm</groupId>
-      <artifactId>jbpm-core</artifactId>
+      <artifactId>jbpm-test</artifactId>
       <version>#{site.pom.latestFinal.version}</version>
     </dependency>
 ----
@@ -38,7 +38,7 @@ This is similar for Gradle, Ivy and Buildr.
 
 '''
 
-== Non-Final releases
+=== jBPM #{site.pom.latest.version}
 
 *Non-Final releases are the best way to test drive new features and API's
 to provide feedback before we lock down the API with a Final release.*
@@ -52,7 +52,7 @@ A Beta should work (it passes automated testing), but its new API's might still 
 A CR should be almost identical to the Final release.
 
 * image:download.png[] #{site.pom.latest.distributionZip}[Download jBPM #{site.pom.latest.version}]
-** link:releaseNotes/releaseNotes#{site.pom.latest.releaseNotesVersion}.html[Release notes #{site.pom.latest.releaseNotesVersion}]
+** #{site.pom.latestFinal.releaseNotesVersion}[Release notes]
 ** License: link:../code/license.html[ASL 2.0]
 ** Release date: +#{site.pom.latest.releaseDate}+
 
@@ -62,7 +62,7 @@ Or with Maven:
 ----
     <dependency>
       <groupId>org.jbpm</groupId>
-      <artifactId>jbpm-core</artifactId>
+      <artifactId>jbpm-test</artifactId>
       <version>#{site.pom.latest.version}</version>
     </dependency>
 ----

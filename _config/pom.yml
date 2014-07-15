@@ -1,8 +1,8 @@
 latestFinal:
     version: 6.0.1.Final
-    distributionZip: http://sourceforge.net/projects/jbpm/files/jBPM%206/jbpm-6.1.0.CR1/
+    distributionZip: http://sourceforge.net/projects/jbpm/files/jBPM%206/jbpm-6.0.1.Final/
     releaseDate: 2014-06-19
-    releaseNotesVersion: 6
+    releaseNotesVersion: https://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMReleaseNotes.html
 
     UserGuide: http://docs.jboss.org/jbpm/v6.0.1/userguide/
     JavaDocs: http://docs.jboss.org/jbpm/v6.0.1/javadocs/
@@ -15,9 +15,9 @@ latestFinal:
 # latest.version can be equal to latestFinal.version
 latest:
     version: 6.1.0.CR1
-    distributionZip: http://download.jboss.org/drools/release/6.1.0.Beta3/droolsjbpm-integration-distribution-6.1.0.Beta3.zip
+    distributionZip:  http://sourceforge.net/projects/jbpm/files/jBPM%206/jbpm-6.1.0.CR1/
     releaseDate: 2014-04-30
-    releaseNotesVersion: 6.1
+    releaseNotesVersion: http://docs.jboss.org/jbpm/v6.1.0.CR1/userguide/jBPMReleaseNotes.html
 
     UserGuide: http://docs.jboss.org/jbpm/v6.1.0.CR1/userguide/
     Nightly: https://hudson.jboss.org/hudson/job/droolsjbpm-knowledge/lastSuccessfulBuild/artifact/kie-docs/jbpm-docs/target/docbook/publish/en-US/html/index.html
@@ -28,6 +28,6 @@ latest:
 
 nightly:
     version: 6.1.0-SNAPSHOT
-    distributionZip: https://hudson.jboss.org/hudson/job/optaplanner/lastSuccessfulBuild/artifact/optaplanner-distribution/target/optaplanner-distribution-6.1.0-SNAPSHOT.zip
+    distributionZip: https://hudson.jboss.org/hudson/job/jbpm/lastSuccessfulBuild/artifact/jbpm-distribution/target/
 
     documentationHtmlSingle: https://hudson.jboss.org/hudson/job/optaplanner/lastSuccessfulBuild/artifact/optaplanner-docs/target/docbook/publish/en-US/html_single/index.html
