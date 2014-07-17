@@ -1,5 +1,5 @@
 encoding: UTF-8
-title: jBPM
+title: jBPM - Open Source Business Process Management
 description: jBPM is a flexible Business Process Management (BPM) Suite.
 keywords: metaheuristic, heuristic, constraint satisfaction, constraint programming, operations research, NP-complete, NP-hard, optimization, planning, scheduling, java, open source, software, library, solver, tabu search, simulated annealing, pareto
 canonicalBaseUrl: http://www.jbpm.org
@@ -24,4 +24,4 @@ profiles:
     base_url: http://www.jbpm.org
     deploy:
       host: optaplanner@filemgmt.jboss.org
-      path: /www_htdocs/optaplanner/
+      path: /www_htdocs/jbpm/
