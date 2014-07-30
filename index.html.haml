@@ -2,29 +2,37 @@
 title: Planning engine (Java™, Open Source)
 layout: base
 ---
-
 .jumbotron.pagination-centered(style="padding: 10px; margin-bottom: 20px;")
   .carousel.slide#whatIsCarousel(data-ride="carousel" data-interval="false" style="background-color: white;")
     -#.carousel-inner(style="align: center;")
     .carousel-inner
-      .item.active
-        %img(src="landingPage/01_Home.png" alt="Home")
+      .item.active#links
+        %a(href="landingPage/01_Home_Big.png" title="Home" data-gallery="")
+          %img(src="landingPage/01_Home.png" alt="Home")
       .item
-        %img(src="landingPage/02_Authoring.png" alt="Authoring")
+        %a(href="landingPage/02_Authoring_Big.png" title="Authoring" data-gallery="")
+          %img(src="landingPage/02_Authoring.png" alt="Authoring")
       .item
-        %img(src="landingPage/03_DataModeler.png" alt="DataModeler")
+        %a(href="landingPage/03_DataModeler_Big.png" title="DataModeler" data-gallery="")
+          %img(src="landingPage/03_DataModeler.png" alt="DataModeler")
       .item
-        %img(src="landingPage/04_FormModeler.png" alt="FormModeler")
+        %a(href="landingPage/04_FormModeler_Big.png" title="FormModeler" data-gallery="")
+          %img(src="landingPage/04_FormModeler.png" alt="FormModeler")
       .item
-        %img(src="landingPage/05_Simulation.png" alt="Simulation")
+        %a(href="landingPage/05_Simulation_Big.png" title="Simulation" data-gallery="")
+          %img(src="landingPage/05_Simulation.png" alt="Simulation")
       .item
-        %img(src="landingPage/06_ProcessInstances.png" alt="ProcessInstances")
+        %a(href="landingPage/06_ProcessInstances_Big.png" title="ProcessInstances" data-gallery="")
+          %img(src="landingPage/06_ProcessInstances.png" alt="ProcessInstances")
       .item
-        %img(src="landingPage/07_TaskList.png" alt="TaskList")
+        %a(href="landingPage/07_TaskList_Big.png" title="TaskList" data-gallery="")
+          %img(src="landingPage/07_TaskList.png" alt="TaskList")
       .item
-        %img(src="landingPage/08_Dashboards.png" alt="Dashboards")
+        %a(href="landingPage/08_Dashboards_Big.png" title="Dashboards" data-gallery="")
+          %img(src="landingPage/08_Dashboards.png" alt="Dashboards")
       .item
-        %img(src="landingPage/09_Eclipse.png" alt="Eclipse")
+        %a(href="landingPage/09_Eclipse_Big.png" title="Eclipse" data-gallery="")
+          %img(src="landingPage/09_Eclipse.png" alt="Eclipse")
     %a.left.carousel-control(href="#whatIsCarousel" data-slide="prev")
       %span.glyphicon.glyphicon-chevron-left
     %a.right.carousel-control(href="#whatIsCarousel" data-slide="next")
@@ -48,6 +56,21 @@ layout: base
       %a(href="#" data-toggle="tab") Dashboards
     %li(data-target="#whatIsCarousel" data-slide-to="8")
       %a(href="#" data-toggle="tab") Eclipse
+
+
+  #blueimp-gallery.blueimp-gallery
+    .slides
+    %a.prev‹
+    %a.next›
+    %a.close×
+    %a.play-pause
+    %ol.indicator
+    .modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            %button(type="button" class="close" aria-hidden="true")
+            %h4.modal-title"
 
 %div(style="margin-bottom: 20px")
   :markdown
