@@ -22,7 +22,7 @@ body {
     height: 100%;
     color: #333333;
     font-family: "Open Sans",Helvetica,Arial,sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.66667;
 }
 
@@ -49,6 +49,12 @@ footer {
 .bgHeader {
     -webkit-box-shadow: 0 0 3px 0 rgba(0,0,,100);
     box-shadow: 0 0 3px 0 rgba(0,0,,100);
+}
+
+@media (max-width: 767px) {
+    .navbar-toggle {
+        margin-right: 100px;
+    }
 }
 
 /* WORKAROUND for Twitter bootstrap's navbar-fixed-top's hides content head */
@@ -204,8 +210,8 @@ footer {
 ******************************************************************************/
 .dropup {
     z-index: 9999 !Important;
+    right: 10px !Important;
 }
-
 
 /******************************************************************************
 * Header Property
@@ -236,11 +242,11 @@ footer {
 }
 #header li a {
     color: #777;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 100%;
+    font-weight: bold;
     line-height: 25px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 #header .dropdown.open {
     background: none repeat scroll 0 0 #E7E7E7;
@@ -249,12 +255,12 @@ footer {
 #header .dropdown .dropdown-toggle {
     background: none repeat scroll 0 0 ;
     color: #777;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 100%;
+    font-weight: bold;
     line-height: 25px;
     padding: 14px 20px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 #header .dropdown .dropdown-toggle span {
     font-weight: bold;
@@ -363,4 +369,15 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n) {
 table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td {
     display: table-cell;
     line-height: 1.6;
+}
+
+/******************************************************************************
+* Text zoom in carousel
+******************************************************************************/
+
+.TextZoom {
+    text-align: center;
+    font-size: 10px;
+    margin: 0;
+    font-style: italic;
 }
