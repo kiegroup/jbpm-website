@@ -23,5 +23,5 @@ profiles:
     developmentMode: false
     base_url: http://www.jbpm.org
     deploy:
-      host: optaplanner@filemgmt.jboss.org
+      host: jbpm@filemgmt.jboss.org
       path: /www_htdocs/jbpm/

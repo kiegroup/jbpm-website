@@ -15,7 +15,7 @@ if [ "${helpEnabled}" = "true" ]; then
 	echo "  --help this help message"
 	echo "  clean - Delete generated files"
 	echo "  build - Build website"
-	echo "  publish - Publish to optaplanner.org"
+	echo "  publish - Publish to jbpm.org"
 	echo "In development, just use \"awestract -d\""
 	exit 0;
 fi
@@ -35,7 +35,7 @@ if [ "${buildEnabled}" = "true" ]; then
 fi
 
 if [ "${publishEnabled}" = "true" ]; then
-	publishDir="filemgmt.jboss.org:/www_htdocs/optaplanner/"
+	publishDir="filemgmt.jboss.org:/www_htdocs/jbpm/"
 	echo "Deploying ${siteDir} to ${publishDir}"
 	echo -n "Username: "
 	read publishDirUsername

@@ -21,7 +21,7 @@ The jBPM distribution zip includes binaries, documentation, examples and sources
 === Maven, Gradle, Ivy or Buildr
 
 The jBPM jars are also available in http://search.maven.org/#search|ga|1|org.jbpm[the central maven repository]
-(and also in https://repository.jboss.org/nexus/index.html#nexus-search;gav\~org.jbpm\~\~\~\~[the JBoss maven repository]).
+(and also in https://repository.jboss.org/nexus/index.html#nexus-search;gav\~org.jbpm~\~~~[the JBoss maven repository]).
 
 If you use Maven, just add a dependency in your +pom.xml+:
 
@@ -71,4 +71,4 @@ Or with Maven:
 
 Nightly snapshots are unstable binaries, build by link:../code/continuousIntegration.html[our build server].
 
-* image:download.png[] #{site.pom.nightly.distributionZip}[Download OptaPlanner #{site.pom.nightly.version}]
+* image:download.png[] #{site.pom.nightly.distributionZip}[Download jBPM #{site.pom.nightly.version}]
