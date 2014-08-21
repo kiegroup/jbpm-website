@@ -120,3 +120,11 @@
   employedBy: Red Hat
   githubUsername: ederign
   ircNickname: ederign
+- userId: mrietvel
+  fullName: Marco Rietveld
+  role: Senior Software Engineer
+  gravatarHashId: d4dacb2e9fe88961621b8a89d119c6aa
+  twitterUsername: marcorietveld
+  employedBy: Red Hat
+  githubUsername: mrietveld
+  ircNickname: mriet
