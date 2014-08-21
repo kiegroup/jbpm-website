@@ -23,6 +23,10 @@ Authoring, executing and managing processes with jBPM. Any questions regarding t
 
 * https://groups.google.com/forum/#!forum/jbpm-usage[jBPM usage forum and mailing list].
 
+== Legacy jBPM user forum
+
+There is a ton of information still available in the link:https://community.jboss.org/en/jbpm?view=discussions[legacy jBPM user forum]
+
 == StackOverflow
 StackOverflow is a popular externally run question and answer site, it does not allow for general discussions, and provides scoring and moderation.
 
