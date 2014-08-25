@@ -2,8 +2,8 @@
 - # See http://www.jboss.org/help/awestructguide/projectpropertyfilestruction.html
 - values = {}
 
-- values['nodePath']= "/optaplanner"
-- values['projectName']= "OptaPlanner"
+- values['nodePath']= "/jbpm"
+- values['projectName']= "jBPM"
 - values['homePage']= site.canonicalBaseUrl
 - values['description'] = site.description
 - values['license']= "ASL"
@@ -13,13 +13,13 @@
 - # Community
 - values['userForumLink']= "#{site.canonicalBaseUrl}/community/forum.html"
 - values['chatLink']= "#{site.canonicalBaseUrl}/community/chat.html"
-- values['blogLink']= "#{site.canonicalBaseUrl}/blog/"
-- values['twitterLink']= "https://twitter.com/optaplanner"
+- values['blogLink']= "http://planet.jboss.org/#projects=jbpm"
+- values['twitterLink']= "https://twitter.com/jbossjbpm"
 
 - # Code
-- values['githubLink']= "https://github.com/droolsjbpm/optaplanner"
-- values['jiraLink']= "https://issues.jboss.org/browse/PLANNER"
-- values['hudsonLink']= "https://hudson.jboss.org/hudson/job/optaplanner"
+- values['githubLink']= "https://github.com/droolsjbpm"
+- values['jiraLink']= "https://issues.jboss.org/browse/JBPM"
+- values['hudsonLink']= "https://hudson.jboss.org/hudson/view/Drools%20jBPM/"
 
 - for key in values.keys
     #{key}=#{values[key]}

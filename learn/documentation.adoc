@@ -8,11 +8,10 @@
 * Documentation for jBPM #{site.pom.latestFinal.version}
   ** jBPM User Guide #{site.pom.latestFinal.version}: #{site.pom.latestFinal.UserGuide}[HTML]
   ** jBPM JavaDocs #{site.pom.latestFinal.version}: #{site.pom.latestFinal.JavaDocs}[Link]
-  ** jBPM Archive #{site.pom.latestFinal.version}: #{site.pom.latestFinal.Archive}[Link]
 
   
-* Older community documentation: http://docs.jboss.org/drools/release/[Check the documentation archive].
-* Red Hat subscription documentation: https://access.redhat.com/knowledge/docs/[Check the customer portal].
+* Older community documentation: #{site.pom.latestFinal.Archive}[Check the documentation archive].
+* Red Hat subscription documentation: https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BPM_Suite/[Check the customer portal].
 
 '''
 
@@ -22,5 +21,5 @@
 
 * Documentation for jBPM #{site.pom.latest.version}
   ** jBPM User Guide #{site.pom.latest.version}: #{site.pom.latest.UserGuide}[HTML]
-  ** jBPM Nightly snapshots #{site.pom.latest.version}: #{site.pom.latest.Nightly}[HTML]  
+  ** jBPM Nightly snapshots: #{site.pom.latest.Nightly}[HTML]  
 

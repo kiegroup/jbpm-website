@@ -3,9 +3,17 @@
 :linkattrs:
 :showtitle:
 
-We use http://git-scm.com/[Git] as source control management.
+We use http://git-scm.com/[Git] to manage our source code. The reference repositories are on GitHub:
 
-The blessed jBPM repositories, summarized below, are hosted on GitHub.
+http://github.com/droolsjbpm[http://github.com/droolsjbpm]
+
+To build our sources, follow the instructions https://github.com/droolsjbpm/droolsjbpm-build-bootstrap/blob/master/README.md[in the README file in droolsjbpm-build-bootstrap].
+
+To learn more about git, read the free book http://progit.org/book/[Git Pro].
+
+== jBPM repository
+
+Most of the core jBPM services are located in the jBPM repository.
 
 https://github.com/droolsjbpm/jbpm[jBPM, role=lead]::
 _The source code for jBPM itself, examples and documentation._
@@ -35,25 +43,16 @@ use this command instead, to avoid an authentication issue:
 +
 The first time, Maven might take a lot time, because it needs to download jars.
 
-. Run the examples:
-+
-----
- $ cd jbpm-examples
- $ mvn exec:exec
- ...
-----
+== Tracking our changes
 
-. Edit the sources in your favorite IDE (such as http://www.jetbrains.com/idea/[IntelliJ IDEA], http://www.eclipse.org/[Eclipse] or https://netbeans.org/[NetBeans]).
-+
-++++
-<a href="http://www.jetbrains.com/idea/" style="position: relative;display:block; width:88px; height:31px; border:0; margin:0;padding:0;text-decoration:none;text-indent:0;"><span style="margin: 0;padding: 0;position: absolute;top: 0;left: 4px;font-size: 10px; line-height: 12px;cursor:pointer; background-image:none;border:0;color: #acc4f9; font-family: trebuchet ms,arial,sans-serif;font-weight: normal;text-align:left;">Developed with</span><img src="http://www.jetbrains.com/idea/opensource/img/all/banners/idea88x31_blue.gif" alt="IntelliJ IDEA" border="0"/></a>
-++++
+It's easy to keep an eye on the source code changes on the project:
 
-. Optional: Use a Java profiler (such as http://www.ej-technologies.com/products/jprofiler/overview.html[JProfiler] or http://visualvm.java.net/[VisualVM]).
-+
-++++
-<a href="http://www.ej-technologies.com/products/jprofiler/overview.html"><img src="http://www.ej-technologies.com/images/banners/jprofiler_small.png" alt="JProfiler"/></a>
-++++
+* Go to the https://github.com/droolsjbpm/repositories[GitHub website].
+* Click on the repository you're intrested in
+* Click on the link Commits to show the commit history.
+* You can subscribe to that feed with the orange feed icon link.
+
+== Website
 
 https://github.com/droolsjbpm/jbpm-website[jbpm-website, role=lead]::
 _The source code for this website and presentations._

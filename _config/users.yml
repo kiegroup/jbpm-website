@@ -1,18 +1,18 @@
-# Available properties per user
-# userId: Should be the same as githubUsername
-# fullName: First name and last name (in that order)
-# role: Role in this project
-# gravatarHashId: Used to show your avatar image. Change your avatar any time at http://www.gravatar.com/
-# To find the gravatar hash id, use: "echo -n youremail@gmail.com | md5sum"
-# googlePlusId: (optional)
-# twitterUsername: without the @ (optional)
-# facebookUsername: (optional)
-# githubUsername: (optional)
-# email: It's best to anti-spam this (optional)
-# employedBy: (optional)
-# ircNickname: (optional)
-# contributionsDescription: only work related to this project (optional)
-# biography: (optional)
+#  Available properties per user
+#  userId: Should be the same as githubUsername
+#  fullName: First name and last name (in that order)
+#  role: Role in this project
+#  gravatarHashId: Used to show your avatar image. Change your avatar any time at http://www.gravatar.com/
+#                  To find the gravatar hash id, use: "echo -n youremail@gmail.com | md5sum"
+#  googlePlusId: (optional)
+#  twitterUsername: without the @ (optional)
+#  facebookUsername: (optional)
+#  githubUsername: (optional)
+#  email: It's best to anti-spam this (optional)
+#  employedBy: (optional)
+#  ircNickname: (optional)
+#  contributionsDescription: only work related to this project (optional)
+#  biography: (optional)
 - userId: mdproctor
   fullName: Mark Proctor
   role: KIE lead
