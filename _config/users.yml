@@ -121,6 +121,13 @@
   employedBy: Red Hat
   githubUsername: mrietveld
   ircNickname: mriet
+- userId: mswiderski
+  fullName: Maciej Swiderski
+  role: Senior Software Engineer
+  gravatarHashId: 367d990904b8520a15e75d2fbcee6183
+  employedBy: Red Hat
+  githubUsername: mswiderski
+  ircNickname: maciejs
 # Properties per contributor
 - userId: vkiran
   fullName: Vinod Kiran P.
