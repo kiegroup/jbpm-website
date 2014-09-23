@@ -12,7 +12,7 @@ The jBPM distribution zip includes binaries, documentation, examples and sources
 * image:download.png[] *#{site.pom.latestFinal.distributionZip}[Download jBPM #{site.pom.latestFinal.version}]*
 ** #{site.pom.latestFinal.releaseNotesVersion}[Release notes]
 ** License: link:../code/license.html[ASL 2.0]
-** Release date: +#{site.pom.latestFinal.releaseDate}+
+** Release date: `#{site.pom.latestFinal.releaseDate}`
 
 * Older community releases: Check http://sourceforge.net/projects/jbpm/files/[the release archive].
 
@@ -23,7 +23,7 @@ The jBPM distribution zip includes binaries, documentation, examples and sources
 The jBPM jars are also available in http://search.maven.org/#search|ga|1|org.jbpm[the central maven repository]
 (and also in https://repository.jboss.org/nexus/index.html#nexus-search;gav\~org.jbpm~\~~~[the JBoss maven repository]).
 
-If you use Maven, just add a dependency in your +pom.xml+:
+If you use Maven, just add a dependency in your `pom.xml`:
 
 [source,xml]
 ----
@@ -54,7 +54,7 @@ A CR should be almost identical to the Final release.
 * image:download.png[] #{site.pom.latest.distributionZip}[Download jBPM #{site.pom.latest.version}]
 ** #{site.pom.latestFinal.releaseNotesVersion}[Release notes]
 ** License: link:../code/license.html[ASL 2.0]
-** Release date: +#{site.pom.latest.releaseDate}+
+** Release date: `#{site.pom.latest.releaseDate}`
 
 Or with Maven:
 
