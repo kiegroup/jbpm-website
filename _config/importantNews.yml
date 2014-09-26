@@ -1,0 +1,29 @@
+# To add news in the GitHub user interface, click on the Edit button at the top right which will submit a pull request.
+#
+# Available properties per important news
+#  newsId: Should be in format "yyyymmdd-suffix". The yyyymmdd is the date
+#  newsDate: Must be in format "yyyy-mm-dd". If multiple days cover our project, only note the first day
+#  newsTitle: News title.
+#  newsUrl: Link to the news page itself. If CFP not yet accepted, temporarily link the news organization itself.
+#  newsContent: News Content.
+#
+# Order news by date.
+# Don't remove past news.
+
+- newsId: 20140924-webinar
+  newsDate: 2014-09-24
+  newsTitle: Lorem ipsum dolor sit amet
+  newsContent: Onsectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat...
+  newsUrl: http://www.jbpm.org/
+
+- newsId: 20140925-webinar
+  newsDate: 2014-09-25
+  newsTitle: Lorem ipsum dolor sit amet
+  newsContent: Onsectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat...
+  newsUrl: http://www.jbpm.org/
+
+- newsId: 20140926-webinar
+  newsDate: 2014-09-26
+  newsTitle: Lorem ipsum dolor sit amet
+  newsContent: Onsectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat...
+  newsUrl: http://www.jbpm.org/

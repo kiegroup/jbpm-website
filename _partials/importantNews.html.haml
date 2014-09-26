@@ -1,0 +1,15 @@
+.panel.panel-default
+  .panel-heading
+    %strong Important News
+  .panel-body
+    %ul.list-unstyled
+      - for new in site.importantNews
+        %li(style = "margin-top: 10px;")
+          .title
+            %a{:href => new.newsUrl, :target => "_blank"}
+              #{new.newsTitle}
+          %div
+            #{new.newsDate.strftime('%a %-d %B %Y')} - #{new.newsContent}
+    .small.pull-right
+      %a{:href => "https://github.com/droolsjbpm/jbpm-website/tree/master/_config/importantNews.yml", :target => "_blank"}
+        Add news
