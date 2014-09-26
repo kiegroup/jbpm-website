@@ -13,11 +13,10 @@
     %meta(itemprop="image"){:content => relative("/headerFooter/jBPMLogo210px.png")}
 
     %link(rel="stylesheet"){:href => relative("/website/bootstrap/css/bootstrap.min.css")}
-    %link(rel="stylesheet"){:href => relative("/website/bootstrap/css/bootstrap-image-gallery.css")}
     %link(rel="stylesheet"){:href => relative("/website/highlight/highlight.css")}
-    -# %link(rel="stylesheet"){:href => site.jbossorg_bootstrap_css}
+    %link(rel="stylesheet"){:href => relative("/website/tabzilla/tabzilla.css")}
     %link(rel="stylesheet"){:href => relative("/website/jBPMWebsite.css")}
-    %link(rel="stylesheet"){:href => ("https://static.jboss.org/css/tabzilla.css")}
+    %link(rel="stylesheet"){:href => relative("/website/bootstrap/css/bootstrap-image-gallery.css")}
     %link(rel="stylesheet"){:href => ("http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css")}
     :plain
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -30,12 +29,13 @@
     
   %body(data-spy="scroll" data-target=".bs-docs-sidebar")
 
-    #tabzillaHolder
-    .dropup
-      %div#ajbossproject A JBoss Project
-      %a#tab.tabnav-closed{:href => "#"} Red Hat
-
-    .navbar.navbar-default.bgHeader.affix#header(role="navigation")
+    %header.navbar.navbar-default.navbar-fixed-top(role="navigation")
+      #tabzillaHolder
+      .dropup
+        %div#ajbossproject A JBoss Project
+        %a#tab.tabnav-closed{:href => "https://www.jboss.org"} Red Hat
+        %script
+          window.addEventListener('load', function() { renderTabzilla("jBPM","jbpm", true) });
       .container
         .navbar-header
           -# When the screen width is too little, these 3 icon-bar spans are needed to show the collapsed navbar
@@ -164,10 +164,10 @@
     %script{:src => relative("/website/jquery/jquery.min.js")}
     %script{:src => relative("/website/bootstrap/js/bootstrap.min.js")}
     %script{:src => relative("/website/highlight/highlight.js")}
-    %script{:src => relative("/website/optaplannerWebsite.js")}
+    %script{:src => relative("/website/tabzilla/tabzilla.js")}
+    %script{:src => relative("/website/jBPMWebsite.js")}
     %script{:src => ("http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js")}
     %script{:src => relative("/website/bootstrap/js/bootstrap-image-gallery.js")}
-    %script{:src => ("https://static.jboss.org/js/_jbossorg-tabzilla.js")}
     %script(type="text/javascript")<
       hljs.initHighlightingOnLoad();
     -# %script{:src => site.jbossorg_bootstrap_js}
