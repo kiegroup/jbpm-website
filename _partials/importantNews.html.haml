@@ -9,7 +9,10 @@
             %a{:href => new.newsUrl, :target => "_blank"}
               #{new.newsTitle}
           %div
-            #{new.newsDate.strftime('%a %-d %B %Y')} - #{new.newsContent}
+            - if !new.newsDate?
+              #{new.newsContent}
+            - else
+              #{new.newsDate.strftime('%a %-d %B %Y')} - #{new.newsContent}
     .small.pull-right
       %a{:href => "https://github.com/droolsjbpm/jbpm-website/tree/master/_config/importantNews.yml", :target => "_blank"}
         Add news
