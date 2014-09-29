@@ -13,28 +13,17 @@
 # Remove past events.
 
 - eventId: 20140924-webinar
-  eventOrganization: Red Hat Webinar
-  location: Worldwide
-  date: 2014-09-24
-  title: How to solve impossible business resource planning problems
-  url: http://www.redhat.com/en/about/events/how-solve-impossible-business-resource-planning-problems
-  presenters: Geoffrey De Smet, Phil Simpson
+  eventOrganization: Devoxx 2014
+  location: Antwerp, Belgium
+  date: 2014-11-10
+  url: http://www.schabell.org/2014/09/1-talk-need-to-see-devoxx2014.html
 
 - eventId: 20140925-brujug
-  eventOrganization: BruJUG
-  location: Brussels, Belgium
-  date: 2014-09-25
-  title: Optimizing vehicle routes, shift rosters and other NP-hard problems
-  url: http://www.meetup.com/BruJUG/events/206149232/
-  presenters: Geoffrey De Smet
-
-- eventId: 20141014-cloudopen
-  eventOrganization: CloudOpen Europe
-  location: Düsseldorf, Germany
-  date: 2014-10-14
-  title: Smart VM Scheduling in oVirt Cluster
-  url: http://lccoelce14.sched.org/event/c25af16e16beee7b8ec566a31481c077
-  presenters: Martin Sivak
+  eventOrganization: JavaLand 2015
+  location: Phantasialand, Germany
+  date: 2015-03-24
+  url: http://www.schabell.org/2014/09/2-sesssions-challenge-you-at-javaland-2015.html
+  presenters: Eric Schabell
 
 - eventId: 20150623-redhatsummit
   eventOrganization: Red Hat Summit
