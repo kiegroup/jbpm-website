@@ -1,5 +1,5 @@
 = Videos
-:awestruct-layout: base
+:awestruct-layout: normalBase
 :showtitle:
 
 Getting started screencasts:

@@ -1,5 +1,5 @@
 = Research
-:awestruct-layout: base
+:awestruct-layout: normalBase
 :showtitle:
 
 *jBPM* is a good base for research related to workflow, business process management, BPMN, case management, etc. +
