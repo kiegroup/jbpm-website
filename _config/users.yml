@@ -135,6 +135,14 @@
   employedBy: Red Hat
   githubUsername: pefernan
   ircNickname: sr_pere
+- userId: bbrodt
+  fullName: Bob Brodt
+  role: Software Engineer
+  gravatarHashId: bab590bda7e10028e61d120f7f4427cf
+  employedBy: Red Hat
+  githubUsername: bbrodt
+  facebookUsername: rbrodt
+  ircNickname: bbrodt
 - userId: wmedvede
   fullName: Walter Medvedeo
   role: Software Engineer
