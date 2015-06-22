@@ -36,6 +36,15 @@ If you use Maven, just add a dependency in your `pom.xml`:
 
 This is similar for Gradle, Ivy and Buildr.
 
+=== http://www.docker.com/[Docker] images
+
+You can find the Docker images for jBPM and how to use them for last final version 6.2 at
+
+* http://registry.hub.docker.com/u/jboss/jbpm-workbench/[jBPM Workbench]
+* http://registry.hub.docker.com/u/jboss/jbpm-workbench-showcase/[jBPM Workbench Showcase]
+
+More info at http://blog.athico.com/2015/06/drools-jbpm-get-dockerized.html[this post]
+
 '''
 
 === jBPM #{site.pom.latest.version}
