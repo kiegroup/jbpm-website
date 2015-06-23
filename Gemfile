@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 # ruby '1.9.3'
 
 gem 'awestruct', '>= 0.5.5'
-gem 'rake', '>= 10.3.2'
+# gem 'rake', '>= 10.3.2'
+gem 'rake', '>=10.4.2'
 # gem 'less', '>= 2.2.2'           # LESS
 gem 'asciidoctor', '>= 1.5.0'      # AsciiDoc
 gem 'kramdown', '>= 1.4.1'        # Markdown
