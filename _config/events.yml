@@ -12,29 +12,8 @@
 # Order events by date.
 # Remove past events.
 
-- eventId: 20150206-devconf-talk
-  eventOrganization: DevConf 2015
-  location: Brno, Czech Republic
-  date: 2015-02-06
-  title: jBPM - BPM swiss knife
-  url: http://developerconference2015.sched.org/event/6256751e57278eb678930e344b97e349#.VK0-R6bbx96
-
-- eventId: 20150206-devconf-workshop
-  eventOrganization: DevConf 2015
-  location: Brno, Czech Republic
-  date: 2015-02-06
-  title: Get your hands dirty with jBPM
-  url: http://developerconference2015.sched.org/event/e1090fa7109b2acddfb99cd03ddfda9f#.VK0-kabbx94
-  
-- eventId: 20140925-brujug
-  eventOrganization: JavaLand 2015
-  location: Phantasialand, Germany
-  date: 2015-03-24
-  url: http://www.schabell.org/2014/09/2-sesssions-challenge-you-at-javaland-2015.html
-  presenters: Eric Schabell
-
-- eventId: 20150623-redhatsummit
+- eventId: 20160628-redhatsummit
   eventOrganization: Red Hat Summit
-  location: Boston, MA, USA
-  date: 2015-06-23
+  location: San Francisco, US
+  date: 2016-06-28
   url: http://www.redhat.com/summit/
