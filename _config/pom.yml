@@ -21,14 +21,14 @@ latest:
     releaseNotesVersion: http://docs.jboss.org/jbpm/v6.2/userguide/ch25.html
 
     UserGuide: http://docs.jboss.org/jbpm/v6.2/userguide/
-    Nightly: https://hudson.jboss.org/hudson/job/droolsjbpm-knowledge/lastSuccessfulBuild/artifact/kie-docs/jbpm-docs/target/docbook/publish/en-US/html/index.html
+    Nightly: https://jenkins-kieci.rhcloud.com/job/kie-docs/lastStableBuild/artifact/jbpm-docs/target/docbook/publish/en-US/html_single/index.html
 
     droolsExpert_documentationHtmlSingle: http://docs.jboss.org/drools/release/6.3.0.CR1/drools-docs/html_single/index.html
     droolsExpert_documentationHtml: http://docs.jboss.org/drools/release/6.3.0.CR1/drools-docs/html/index.html
     droolsExpert_documentationPdf: http://docs.jboss.org/drools/release/6.3.0.CR1l/drools-docs/pdf/drools-expert-docs.pdf
 
 nightly:
-    version: 6.3.0-SNAPSHOT
-    distributionZip: https://hudson.jboss.org/hudson/job/jbpm/lastSuccessfulBuild/artifact/jbpm-distribution/target/
+    version: 6.4.0-SNAPSHOT
+    distributionZip: http://downloads.jboss.org/jbpm/release/snapshot/master/index.html
 
     documentationHtmlSingle: https://hudson.jboss.org/hudson/job/droolsjbpm-knowledge/lastSuccessfulBuild/artifact/kie-docs/jbpm-docs/target/docbook/publish/en-US/html/index.html
