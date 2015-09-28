@@ -1,34 +1,34 @@
 latestFinal:
-    version: 6.2.0.Final
-    distributionZip: http://sourceforge.net/projects/jbpm/files/jBPM%206/jbpm-6.2.0.Final/
-    installerChapter: http://docs.jboss.org/jbpm/v6.2/userguide/ch03.html
-    releaseDate: 2015-03-05
-    releaseNotesVersion: http://docs.jboss.org/jbpm/v6.2/userguide/ch25.html
+    version: 6.3.0.Final
+    distributionZip: http://sourceforge.net/projects/jbpm/files/jBPM%206/jbpm-6.3.0.Final/
+    installerChapter: http://docs.jboss.org/jbpm/v6.3/userguide/ch03.html
+    releaseDate: 2015-09-28
+    releaseNotesVersion: http://docs.jboss.org/jbpm/v6.3/userguide/ch25.html
 
-    UserGuide: http://docs.jboss.org/jbpm/v6.2/userguide/
-    JavaDocs: http://docs.jboss.org/jbpm/v6.2/javadocs/
+    UserGuide: http://docs.jboss.org/jbpm/v6.3/userguide/
+    JavaDocs: http://docs.jboss.org/jbpm/v6.3/javadocs/
     Archive: http://docs.jboss.org/jbpm/
 
-    droolsExpert_documentationHtmlSingle: http://docs.jboss.org/drools/release/6.2.0.Final/drools-docs/html_single/index.html
-    droolsExpert_documentationHtml: http://docs.jboss.org/drools/release/6.2.0.Final/drools-docs/html/index.html
-    droolsExpert_documentationPdf: http://docs.jboss.org/drools/release/6.2.0.Final/drools-docs/pdf/drools-expert-docs.pdf
+    droolsExpert_documentationHtmlSingle: http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html_single/index.html
+    droolsExpert_documentationHtml: http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html/index.html
+    droolsExpert_documentationPdf: http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/pdf/drools-expert-docs.pdf
 
 # latest.version can be equal to latestFinal.version
 latest:
-    version: 6.3.0.CR1
-    distributionZip: http://sourceforge.net/projects/jbpm/files/jBPM%206/jbpm-6.3.0.CR1/
-    releaseDate: 2015-08-11
-    releaseNotesVersion: http://docs.jboss.org/jbpm/v6.2/userguide/ch25.html
+    version: 6.3.0.Final
+    distributionZip: http://sourceforge.net/projects/jbpm/files/jBPM%206/jbpm-6.3.0.Final/
+    releaseDate: 2015-09-28
+    releaseNotesVersion: http://docs.jboss.org/jbpm/v6.3/userguide/ch25.html
 
-    UserGuide: http://docs.jboss.org/jbpm/v6.2/userguide/
+    UserGuide: http://docs.jboss.org/jbpm/v6.3/userguide/
     Nightly: https://jenkins-kieci.rhcloud.com/job/kie-docs/lastStableBuild/artifact/jbpm-docs/target/docbook/publish/en-US/html/index.html
 
-    droolsExpert_documentationHtmlSingle: http://docs.jboss.org/drools/release/6.3.0.CR1/drools-docs/html_single/index.html
-    droolsExpert_documentationHtml: http://docs.jboss.org/drools/release/6.3.0.CR1/drools-docs/html/index.html
-    droolsExpert_documentationPdf: http://docs.jboss.org/drools/release/6.3.0.CR1l/drools-docs/pdf/drools-expert-docs.pdf
+    droolsExpert_documentationHtmlSingle: http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html_single/index.html
+    droolsExpert_documentationHtml: http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html/index.html
+    droolsExpert_documentationPdf: http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/pdf/drools-expert-docs.pdf
 
 nightly:
     version: 6.4.0-SNAPSHOT
     distributionZip: http://downloads.jboss.org/jbpm/release/snapshot/master/index.html
 
-    documentationHtmlSingle: https://hudson.jboss.org/hudson/job/droolsjbpm-knowledge/lastSuccessfulBuild/artifact/kie-docs/jbpm-docs/target/docbook/publish/en-US/html/index.html
+    documentationHtmlSingle: https://hudson.jboss.org/hudson/job/kie-docs/lastSuccessfulBuild/
