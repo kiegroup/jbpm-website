@@ -3,13 +3,16 @@
 :page-interpolate: true
 :showtitle:
 
-== Final releases
+== Latest Final version: #{site.pom.latestFinal.version}
 
-=== Distribution zip
+The jBPM binaries include documentation, examples and sources.
 
-The jBPM distribution zip includes binaries, documentation, examples and sources.
-
-* image:download.png[] *#{site.pom.latestFinal.distributionZip}[Download jBPM #{site.pom.latestFinal.version}]*
+* image:download.png[] Download jBPM #{site.pom.latestFinal.version} binaries
+** #{site.pom.latestFinal.jbpmBinZip}[jBPM #{site.pom.latestFinal.version}-bin.zip]
+** #{site.pom.latestFinal.jbpmExamplesZip}[jBPM #{site.pom.latestFinal.version}-examples.zip]
+** #{site.pom.latestFinal.jbpmInstallerZip}[jBPM #{site.pom.latestFinal.version}-installer.zip]
+** #{site.pom.latestFinal.jbpmInstallerFullZip}[jBPM #{site.pom.latestFinal.version}-installer-full.zip]
+** #{site.pom.latestFinal.updatesite}[updatesite #{site.pom.latestFinal.version}]
 ** #{site.pom.latestFinal.releaseNotesVersion}[Release notes]
 ** License: link:../code/license.html[ASL 2.0]
 ** Release date: `#{site.pom.latestFinal.releaseDate}`
@@ -47,7 +50,7 @@ More info at http://blog.athico.com/2015/06/drools-jbpm-get-dockerized.html[this
 
 '''
 
-=== jBPM #{site.pom.latest.version}
+=== Latest development version: #{site.pom.latest.version}
 
 *Non-Final releases are the best way to test drive new features and API's
 to provide feedback before we lock down the API with a Final release.*
@@ -60,8 +63,12 @@ An Alpha can be unstable.
 A Beta should work (it passes automated testing), but its new API's might still change in the next release.
 A CR should be almost identical to the Final release.
 
-* image:download.png[] #{site.pom.latest.distributionZip}[Download jBPM #{site.pom.latest.version}]
-** #{site.pom.latestFinal.releaseNotesVersion}[Release notes]
+* image:download.png[] Download jBPM #{site.pom.latest.version} binaries
+** #{site.pom.latest.jbpmBinZip}[Download jBPM #{site.pom.latest.version}-bin.zip]
+** #{site.pom.latest.jbpmExamplesZip}[Download jBPM #{site.pom.latest.version}-examples.zip]
+** #{site.pom.latest.jbpmInstallerZip}[Download jBPM #{site.pom.latest.version}-installer.zip]
+** #{site.pom.latest.updatesite}[updatesite #{site.pom.latest.version}]
+** #{site.pom.latest.releaseNotesVersion}[Release notes]
 ** License: link:../code/license.html[ASL 2.0]
 ** Release date: `#{site.pom.latest.releaseDate}`
 
@@ -80,4 +87,4 @@ Or with Maven:
 
 Nightly snapshots are unstable binaries, build by link:../code/continuousIntegration.html[our build server].
 
-* image:download.png[] #{site.pom.nightly.distributionZip}[Download jBPM #{site.pom.nightly.version}]
+* image:download.png[] #{site.pom.nightly.jbpmBinaries}[Download jBPM #{site.pom.nightly.version} binaries]
