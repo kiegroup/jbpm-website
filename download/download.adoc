@@ -17,7 +17,7 @@ The jBPM binaries include documentation, examples and sources.
 ** License: link:../code/license.html[ASL 2.0]
 ** Release date: `#{site.pom.latestFinal.releaseDate}`
 
-* Older community releases: Check http://sourceforge.net/projects/jbpm/files/[the release archive].
+* Older community releases: Check http://download.jboss.org/jbpm/release/[the release archive].
 
 * Evaluation version of JBoss BPM Suite: Check http://www.jboss.com/downloads/[the product download site].
 
