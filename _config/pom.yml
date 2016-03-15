@@ -1,6 +1,5 @@
 latestFinal:
     version: 6.3.0.Final
-    distributionZip: http://download.jboss.org/jbpm/release/6.3.0.Final
     jbpmBinZip: http://download.jboss.org/jbpm/release/6.3.0.Final/jbpm-6.3.0.Final-bin.zip
     jbpmExamplesZip: http://download.jboss.org/jbpm/release/6.3.0.Final/jbpm-6.3.0.Final-examples.zip
     jbpmInstallerZip: http://download.jboss.org/jbpm/release/6.3.0.Final/jbpm-6.3.0.Final-installer.zip
@@ -22,7 +21,6 @@ latest:
     version: 6.4.0.CR1
     releaseDate: 2016-03-08
 
-    distributionZip: http://download.jboss.org/jbpm/release/6.4.0.CR1
     jbpmBinZip: http://download.jboss.org/jbpm/release/6.4.0.CR1/jbpm-6.4.0.CR1-bin.zip
     jbpmExamplesZip: http://download.jboss.org/jbpm/release/6.4.0.CR1/jbpm-6.4.0.CR1-examples.zip
     jbpmInstallerZip: http://download.jboss.org/jbpm/release/6.4.0.CR1/jbpm-6.4.0.CR1-installer.zip
