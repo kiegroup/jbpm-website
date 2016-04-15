@@ -1,21 +1,21 @@
 latestFinal:
-    version: 6.3.0.Final
-    jbpmBinZip: http://download.jboss.org/jbpm/release/6.3.0.Final/jbpm-6.3.0.Final-bin.zip
-    jbpmExamplesZip: http://download.jboss.org/jbpm/release/6.3.0.Final/jbpm-6.3.0.Final-examples.zip
-    jbpmInstallerZip: http://download.jboss.org/jbpm/release/6.3.0.Final/jbpm-6.3.0.Final-installer.zip
-    jbpmInstallerFullZip: http://download.jboss.org/jbpm/release/6.3.0.Final/jbpm-6.3.0.Final-installer-full.zip
-    updatesite: http://download.jboss.org/jbpm/release/6.3.0.Final/updatesite/
+    version: 6.4.0.Final
+    jbpmBinZip: http://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-bin.zip
+    jbpmExamplesZip: http://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-examples.zip
+    jbpmInstallerZip: http://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-installer.zip
+    jbpmInstallerFullZip: http://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-installer-full.zip
+    updatesite: http://download.jboss.org/jbpm/release/6.4.0.Final/updatesite/
     installerChapter: http://docs.jboss.org/jbpm/v6.3/userguide/ch03.html
-    releaseDate: 2015-09-25
-    releaseNotesVersion: http://docs.jboss.org/jbpm/release/6.3.0.Final/jbpm-docs/html/ch25.html
+    releaseDate: 2016-04-14
+    releaseNotesVersion: http://docs.jboss.org/jbpm/release/6.4.0.Final/jbpm-docs/html/ch25.html
 
-    UserGuide: http://docs.jboss.org/jbpm/release/6.3.0.Final/jbpm-docs/html/
-    JavaDocs: http://docs.jboss.org/drools/release/6.3.0.Final/kie-api-javadoc/index.html
+    UserGuide: http://docs.jboss.org/jbpm/release/6.4.0.Final/jbpm-docs/html/
+    JavaDocs: http://docs.jboss.org/drools/release/6.4.0.Final/kie-api-javadoc/index.html
     Archive: http://docs.jboss.org/jbpm/
 
-    droolsExpert_documentationHtmlSingle: http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html_single/index.html
-    droolsExpert_documentationHtml: http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html/index.html
-    droolsExpert_documentationPdf: http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/pdf/drools-expert-docs.pdf
+    droolsExpert_documentationHtmlSingle: http://docs.jboss.org/drools/release/6.4.0.Final/drools-docs/html_single/index.html
+    droolsExpert_documentationHtml: http://docs.jboss.org/drools/release/6.4.0.Final/drools-docs/html/index.html
+    droolsExpert_documentationPdf: http://docs.jboss.org/drools/release/6.4.0.Final/drools-docs/pdf/drools-expert-docs.pdf
 
 latest:
     version: 6.4.0.CR2
