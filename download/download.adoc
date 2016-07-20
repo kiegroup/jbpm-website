@@ -49,7 +49,7 @@ You can find the Docker images for jBPM and how to use them for last final versi
 More info at http://blog.athico.com/2015/06/drools-jbpm-get-dockerized.html[this post]
 
 '''
-
+////
 === Latest development version: #{site.pom.latest.version}
 
 *Non-Final releases are the best way to test drive new features and API's
@@ -82,7 +82,7 @@ Or with Maven:
       <version>#{site.pom.latest.version}</version>
     </dependency>
 ----
-
+////
 === Nightly snapshots
 
 Nightly snapshots are unstable binaries, build by link:../code/continuousIntegration.html[our build server].
