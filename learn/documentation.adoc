@@ -19,9 +19,13 @@
 
 === Alpha’s, Beta’s and CR’s
 
-* Documentation for jBPM #{site.pom.latest.version}
+* Documentation for jBPM *#{site.pom.latest.version}*
   ** jBPM User Guide #{site.pom.latest.version}: #{site.pom.latest.UserGuide}[HTML]
   ** jBPM JavaDocs #{site.pom.latest.version}: #{site.pom.latest.JavaDocs}[HTML]
+
+* Documentation for jBPM *#{site.pom.latest_65x.version}*
+  ** jBPM User Guide #{site.pom.latest_65x.version}: #{site.pom.latest_65x.UserGuide}[HTML]
+  ** jBPM JavaDocs #{site.pom.latest_65x.version}: #{site.pom.latest_65x.JavaDocs}[HTML]
 
 === Nightly builds
 

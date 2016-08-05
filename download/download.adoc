@@ -50,7 +50,7 @@ More info at http://blog.athico.com/2015/06/drools-jbpm-get-dockerized.html[this
 
 '''
 
-=== Latest development version: #{site.pom.latest.version}
+=== Latest development version: #{site.pom.latest.version} and #{site.pom.latest_65x.version}
 
 *Non-Final releases are the best way to test drive new features and API's
 to provide feedback before we lock down the API with a Final release.*
@@ -63,7 +63,7 @@ An Alpha can be unstable.
 A Beta should work (it passes automated testing), but its new API's might still change in the next release.
 A CR should be almost identical to the Final release.
 
-* image:download.png[] Download jBPM #{site.pom.latest.version} binaries
+* image:download.png[] Download jBPM *#{site.pom.latest.version}* binaries
 ** #{site.pom.latest.jbpmBinZip}[Download jBPM #{site.pom.latest.version}-bin.zip]
 ** #{site.pom.latest.jbpmExamplesZip}[Download jBPM #{site.pom.latest.version}-examples.zip]
 ** #{site.pom.latest.jbpmInstallerZip}[Download jBPM #{site.pom.latest.version}-installer.zip]
@@ -71,6 +71,15 @@ A CR should be almost identical to the Final release.
 ** #{site.pom.latest.releaseNotesVersion}[Release notes]
 ** License: link:../code/license.html[ASL 2.0]
 ** Release date: `#{site.pom.latest.releaseDate}`
+
+* image:download.png[] Download jBPM *#{site.pom.latest_65x.version}* binaries
+** #{site.pom.latest_65x.jbpmBinZip}[Download jBPM #{site.pom.latest_65x.version}-bin.zip]
+** #{site.pom.latest_65x.jbpmExamplesZip}[Download jBPM #{site.pom.latest_65x.version}-examples.zip]
+** #{site.pom.latest_65x.jbpmInstallerZip}[Download jBPM #{site.pom.latest_65x.version}-installer.zip]
+** #{site.pom.latest_65x.updatesite}[updatesite #{site.pom.latest_65x.version}]
+** #{site.pom.latest_65x.releaseNotesVersion}[Release notes]
+** License: link:../code/license.html[ASL 2.0]
+** Release date: `#{site.pom.latest_65x.releaseDate}`
 
 Or with Maven:
 
