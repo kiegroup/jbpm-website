@@ -1,60 +1,59 @@
 latestFinal:
     version: 6.4.0.Final
-    jbpmBinZip: http://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-bin.zip
-    jbpmExamplesZip: http://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-examples.zip
-    jbpmInstallerZip: http://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-installer.zip
-    jbpmInstallerFullZip: http://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-installer-full.zip
-    updatesite: http://download.jboss.org/jbpm/release/6.4.0.Final/updatesite/
-    installerChapter: http://docs.jboss.org/jbpm/v6.3/userguide/ch03.html
+    jbpmBinZip: https://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-bin.zip
+    jbpmExamplesZip: https://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-examples.zip
+    jbpmInstallerZip: https://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-installer.zip
+    jbpmInstallerFullZip: https://download.jboss.org/jbpm/release/6.4.0.Final/jbpm-6.4.0.Final-installer-full.zip
+    updatesite: https://download.jboss.org/jbpm/release/6.4.0.Final/updatesite/
+    installerChapter: https://docs.jboss.org/jbpm/v6.3/userguide/ch03.html
     releaseDate: 2016-04-14
-    releaseNotesVersion: http://docs.jboss.org/jbpm/release/6.4.0.Final/jbpm-docs/html/ch25.html
+    releaseNotesVersion: https://docs.jboss.org/jbpm/release/6.4.0.Final/jbpm-docs/html/ch25.html
 
-    UserGuide: http://docs.jboss.org/jbpm/release/6.4.0.Final/jbpm-docs/html/
-    JavaDocs: http://docs.jboss.org/drools/release/6.4.0.Final/kie-api-javadoc/index.html
-    Archive: http://docs.jboss.org/jbpm/
+    UserGuide: https://docs.jboss.org/jbpm/release/6.4.0.Final/jbpm-docs/html/
+    JavaDocs: https://docs.jboss.org/drools/release/6.4.0.Final/kie-api-javadoc/index.html
+    Archive: https://docs.jboss.org/jbpm/
 
-    droolsExpert_documentationHtmlSingle: http://docs.jboss.org/drools/release/6.4.0.Final/drools-docs/html_single/index.html
-    droolsExpert_documentationHtml: http://docs.jboss.org/drools/release/6.4.0.Final/drools-docs/html/index.html
-    droolsExpert_documentationPdf: http://docs.jboss.org/drools/release/6.4.0.Final/drools-docs/pdf/drools-expert-docs.pdf
+    droolsExpert_documentationHtmlSingle: https://docs.jboss.org/drools/release/6.4.0.Final/drools-docs/html_single/index.html
+    droolsExpert_documentationHtml: https://docs.jboss.org/drools/release/6.4.0.Final/drools-docs/html/index.html
+    droolsExpert_documentationPdf: https://docs.jboss.org/drools/release/6.4.0.Final/drools-docs/pdf/drools-expert-docs.pdf
 
 latest:
     version: 7.0.0.Beta2
     releaseDate: 2016-10-03
 
-    jbpmBinZip: http://download.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-7.0.0.Beta2-bin.zip
-    jbpmExamplesZip: http://download.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-7.0.0.Beta2-examples.zip
-    jbpmInstallerZip: http://download.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-7.0.0.Beta2-installer.zip
-    updatesite: http://download.jboss.org/jbpm/release/7.0.0.Beta2/updatesite/
+    jbpmBinZip: https://download.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-7.0.0.Beta2-bin.zip
+    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-7.0.0.Beta2-examples.zip
+    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-7.0.0.Beta2-installer.zip
+    updatesite: https://download.jboss.org/jbpm/release/7.0.0.Beta2/updatesite/
 
-    UserGuide: http://docs.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-docs/html_single
-    JavaDocs: http://docs.jboss.org/drools/release/7.0.0.Beta2/kie-api-javadoc/index.html
-    Nightly: https://jenkins-kieci.rhcloud.com/job/kie-docs/lastStableBuild/artifact/jbpm-docs/target/docbook/publish/en-US/html/index.html
+    UserGuide: https://docs.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-docs/html_single
+    JavaDocs: https://docs.jboss.org/drools/release/7.0.0.Beta2/kie-api-javadoc/index.html
+    Nightly: https://jenkins-kieci.rhcloud.com/job/kie-docs/lastStableBuild/artifact/jbpm-docs/target/generated-docs/html_single/index.html
 
-    releaseNotesVersion: http://docs.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-docs/html_single/#_jbpmreleasenotes
+    releaseNotesVersion: https://docs.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-docs/html_single/#_jbpmreleasenotes
 
-    droolsExpert_documentationHtmlSingle: http://docs.jboss.org/drools/release/7.0.0.Beta2/drools-docs/html_single/index.html
-    droolsExpert_documentationHtml: http://docs.jboss.org/drools/release/7.0.0.Beta2/drools-docs/html/index.html
-    droolsExpert_documentationPdf: http://docs.jboss.org/drools/release/7.0.0.Beta2/drools-docs/pdf/drools-expert-docs.pdf
+    droolsExpert_documentationHtmlSingle: https://docs.jboss.org/drools/release/7.0.0.Beta2/drools-docs/html_single/index.html
+    droolsExpert_documentationHtml: https://docs.jboss.org/drools/release/7.0.0.Beta2/drools-docs/html/index.html
+    droolsExpert_documentationPdf: https://docs.jboss.org/drools/release/7.0.0.Beta2/drools-docs/pdf/drools-expert-docs.pdf
 
 latest_65x:
     version: 6.5.0.CR2
     releaseDate: 2016-09-13
 
-    jbpmBinZip: http://download.jboss.org/jbpm/release/6.5.0.CR2/jbpm-6.5.0.CR2-bin.zip
-    jbpmExamplesZip: http://download.jboss.org/jbpm/release/6.5.0.CR2/jbpm-6.5.0.CR2-examples.zip
-    jbpmInstallerZip: http://download.jboss.org/jbpm/release/6.5.0.CR2/jbpm-6.5.0.CR2-installer.zip
-    updatesite: http://download.jboss.org/jbpm/release/6.5.0.CR2/updatesite/
+    jbpmBinZip: https://download.jboss.org/jbpm/release/6.5.0.CR2/jbpm-6.5.0.CR2-bin.zip
+    jbpmExamplesZip: https://download.jboss.org/jbpm/release/6.5.0.CR2/jbpm-6.5.0.CR2-examples.zip
+    jbpmInstallerZip: https://download.jboss.org/jbpm/release/6.5.0.CR2/jbpm-6.5.0.CR2-installer.zip
+    updatesite: https://download.jboss.org/jbpm/release/6.5.0.CR2/updatesite/
 
-    releaseNotesVersion: http://docs.jboss.org/jbpm/release/6.5.0.CR2/jbpm-docs/html/ch25.html
+    releaseNotesVersion: https://docs.jboss.org/jbpm/release/6.5.0.CR2/jbpm-docs/html/ch25.html
 
-    UserGuide: http://docs.jboss.org/jbpm/release/6.5.0.CR2/jbpm-docs/html/
-    JavaDocs: http://docs.jboss.org/drools/release/6.5.0.CR2/kie-api-javadoc/index.html
-    Nightly: https://jenkins-kieci.rhcloud.com/job/kie-docs/lastStableBuild/artifact/jbpm-docs/target/docbook/publish/en-US/html/index.html
+    UserGuide: https://docs.jboss.org/jbpm/release/6.5.0.CR2/jbpm-docs/html/
+    JavaDocs: https://docs.jboss.org/drools/release/6.5.0.CR2/kie-api-javadoc/index.html
 
-    droolsExpert_documentationHtmlSingle: http://docs.jboss.org/drools/release/6.5.0.CR2/drools-docs/html_single/index.html
-    droolsExpert_documentationHtml: http://docs.jboss.org/drools/release/6.5.0.CR2/drools-docs/html/index.html
-    droolsExpert_documentationPdf: http://docs.jboss.org/drools/release/6.5.0.CR1/drools-docs/pdf/drools-expert-docs.pdf
+    droolsExpert_documentationHtmlSingle: https://docs.jboss.org/drools/release/6.5.0.CR2/drools-docs/html_single/index.html
+    droolsExpert_documentationHtml: https://docs.jboss.org/drools/release/6.5.0.CR2/drools-docs/html/index.html
+    droolsExpert_documentationPdf: https://docs.jboss.org/drools/release/6.5.0.CR1/drools-docs/pdf/drools-expert-docs.pdf
 
 nightly:
     version: 7.0.0-SNAPSHOT
-    jbpmBinaries: http://downloads.jboss.org/jbpm/release/snapshot/master/index.html
+    jbpmBinaries: https://downloads.jboss.org/jbpm/release/snapshot/master/index.html
