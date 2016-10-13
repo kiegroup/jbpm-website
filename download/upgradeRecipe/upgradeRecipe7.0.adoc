@@ -1,0 +1,26 @@
+= Upgrade recipe 7.0
+:awestruct-description: Upgrade to jBPM 7.0 from a previous version.
+:awestruct-layout: upgradeRecipeBase
+:awestruct-priority: 0.5
+:awestruct-upgrade_recipe_version: 7.0
+
+== Backwards incompatible changes to the public API
+
+Because this is a new major version number (7.0), which is the foundation for the 7.x series for the next few years,
+it allows us to make backwards incompatible changes to the public API _for the long term benefit of this project_.
+
+Our current intention is to keep these backwards incompatible changes to a strict minimum
+(by favoring deprecation over removal) and do not introduce any additional ones after 7.0.
+
+Any backwards incompatible changes are annotated with a [.label.label-danger.label-as-badge.label-public-api]#Public API# badge.
+
+
+== From 6.5.0.Final to 7.0.0.Beta2
+
+
+[.upgrade-recipe-major.upgrade-recipe-public-api]
+=== Java 8 or higher required
+
+If you're using JRE or JDK 6 or 7, upgrade to JDK 8 or higher.
+
+We currently intend to support a minimal version of Java 8 throughout the entire 7.x series.
