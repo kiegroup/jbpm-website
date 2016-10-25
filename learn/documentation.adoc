@@ -23,10 +23,6 @@
   ** jBPM User Guide #{site.pom.latest.version}: #{site.pom.latest.UserGuide}[HTML]
   ** jBPM JavaDocs #{site.pom.latest.version}: #{site.pom.latest.JavaDocs}[HTML]
 
-* Documentation for jBPM *#{site.pom.latest_65x.version}*
-  ** jBPM User Guide #{site.pom.latest_65x.version}: #{site.pom.latest_65x.UserGuide}[HTML]
-  ** jBPM JavaDocs #{site.pom.latest_65x.version}: #{site.pom.latest_65x.JavaDocs}[HTML]
-
 === Nightly builds
 
   ** jBPM Nightly snapshots: #{site.pom.latest.Nightly}[HTML]  
