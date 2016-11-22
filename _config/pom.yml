@@ -18,23 +18,23 @@ latestFinal:
     droolsExpert_documentationPdf: https://docs.jboss.org/drools/release/6.5.0.Final/drools-docs/pdf/drools-expert-docs.pdf
 
 latest:
-    version: 7.0.0.Beta2
-    releaseDate: 2016-10-03
+    version: 7.0.0.Beta3
+    releaseDate: 2016-11-18
 
-    jbpmBinZip: https://download.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-7.0.0.Beta2-bin.zip
-    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-7.0.0.Beta2-examples.zip
-    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-7.0.0.Beta2-installer.zip
-    updatesite: https://download.jboss.org/jbpm/release/7.0.0.Beta2/updatesite/
+    jbpmBinZip: https://download.jboss.org/jbpm/release/7.0.0.Beta3/jbpm-7.0.0.Beta3-bin.zip
+    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.0.0.Beta3/jbpm-7.0.0.Beta3-examples.zip
+    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.0.0.Beta3/jbpm-7.0.0.Beta3-installer.zip
+    updatesite: https://download.jboss.org/jbpm/release/7.0.0.Beta3/updatesite/
 
-    UserGuide: https://docs.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-docs/html_single
-    JavaDocs: https://docs.jboss.org/drools/release/7.0.0.Beta2/kie-api-javadoc/index.html
+    UserGuide: https://docs.jboss.org/jbpm/release/7.0.0.Beta3/jbpm-docs/html_single
+    JavaDocs: https://docs.jboss.org/drools/release/7.0.0.Beta3/kie-api-javadoc/index.html
     Nightly: https://jenkins-kieci.rhcloud.com/job/kie-docs/lastStableBuild/artifact/jbpm-docs/target/generated-docs/html_single/index.html
 
-    releaseNotesVersion: https://docs.jboss.org/jbpm/release/7.0.0.Beta2/jbpm-docs/html_single/#_jbpmreleasenotes
+    releaseNotesVersion: https://docs.jboss.org/jbpm/release/7.0.0.Beta3/jbpm-docs/html_single/#_jbpmreleasenotes
 
-    droolsExpert_documentationHtmlSingle: https://docs.jboss.org/drools/release/7.0.0.Beta2/drools-docs/html_single/index.html
-    droolsExpert_documentationHtml: https://docs.jboss.org/drools/release/7.0.0.Beta2/drools-docs/html/index.html
-    droolsExpert_documentationPdf: https://docs.jboss.org/drools/release/7.0.0.Beta2/drools-docs/pdf/drools-expert-docs.pdf
+    droolsExpert_documentationHtmlSingle: https://docs.jboss.org/drools/release/7.0.0.Beta3/drools-docs/html_single/index.html
+    droolsExpert_documentationHtml: https://docs.jboss.org/drools/release/7.0.0.Beta3/drools-docs/html/index.html
+    droolsExpert_documentationPdf: https://docs.jboss.org/drools/release/7.0.0.Beta3/drools-docs/pdf/drools-expert-docs.pdf
 
 nightly:
     version: 7.0.0-SNAPSHOT
