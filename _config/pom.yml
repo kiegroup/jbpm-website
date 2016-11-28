@@ -28,7 +28,7 @@ latest:
 
     UserGuide: https://docs.jboss.org/jbpm/release/7.0.0.Beta3/jbpm-docs/html_single
     JavaDocs: https://docs.jboss.org/drools/release/7.0.0.Beta3/kie-api-javadoc/index.html
-    Nightly: https://jenkins-kieci.rhcloud.com/job/kie-docs/lastStableBuild/artifact/jbpm-docs/target/generated-docs/html_single/index.html
+    Nightly: https://docs.jboss.org/jbpm/release/snapshot/noPublicCI.html
 
     releaseNotesVersion: https://docs.jboss.org/jbpm/release/7.0.0.Beta3/jbpm-docs/html_single/#_jbpmreleasenotes
 

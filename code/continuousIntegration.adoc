@@ -4,6 +4,7 @@
 
 We use Jenkins for continuous integration.
 
-*Show http://ci.jbpm.org/[the Jenkins jobs].* These are mirrors of a Red Hat internal Jenkins jobs.
+// *Show https://docs.jbpm.org/snapshot/brokenCILink.html[the public Jenkins jobs].* These are mirrors of a Red Hat internal Jenkins jobs.
+=== Sorry! Currently there are no public jobs on internal Red Hat Jenkins CI.
 
-Keep the builds green!
+// Keep the builds green!
