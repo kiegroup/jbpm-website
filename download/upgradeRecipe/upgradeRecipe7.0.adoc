@@ -24,3 +24,7 @@ Any backwards incompatible changes are annotated with a [.label.label-danger.lab
 If you're using JRE or JDK 6 or 7, upgrade to JDK 8 or higher.
 
 We currently intend to support a minimal version of Java 8 throughout the entire 7.x series.
+
+=== singleResult flag removed from QueryFilter
+
+org.kie.internal.query.QueryFilter does not offer an option for retrieving a single result anymore.
