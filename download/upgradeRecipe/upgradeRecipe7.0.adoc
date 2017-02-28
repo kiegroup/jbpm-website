@@ -15,7 +15,7 @@ Our current intention is to keep these backwards incompatible changes to a stric
 Any backwards incompatible changes are annotated with a [.label.label-danger.label-as-badge.label-public-api]#Public API# badge.
 
 
-== From 6.5.0.Final to 7.0.0.Beta2
+== From 6.5.0.Final to 7.0.0.Final
 
 
 [.upgrade-recipe-major.upgrade-recipe-public-api]
@@ -28,3 +28,33 @@ We currently intend to support a minimal version of Java 8 throughout the entire
 === singleResult flag removed from QueryFilter
 
 org.kie.internal.query.QueryFilter does not offer an option for retrieving a single result anymore.
+
+[.upgrade-recipe-major.upgrade-recipe-public-api]
+=== KIE Workbench WARs renamed
+The KIE Workbench WARs were renamed from `kie-wb-distribution-wars-<version>-<container>.war`
+to just `kie-wb-<version>-<container>.war`. In case you depend directly on the Maven GAV you need to change
+the `artifactId`:
+
+Before in `pom.xml`:
+[source, xml]
+----
+<dependency>
+  <groupId>org.kie</groupId>
+  <artifactId>kie-wb-distribution-wars</artifactId>
+  <version>6.5.0.Final</version>
+  <type>war</type>
+  <classifier>wildfly10</classifier>
+</dependency>
+----
+
+After in `pom.xml`:
+[source, xml]
+----
+<dependency>
+  <groupId>org.kie</groupId>
+  <artifactId>kie-wb</artifactId>
+  <version>7.0.0.Final</version>
+  <type>war</type>
+  <classifier>wildfly10</classifier>
+</dependency>
+----
