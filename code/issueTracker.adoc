@@ -12,6 +12,6 @@ Log in and click on the button _Create Issue_ to report a bug, improvement or fe
 
 == Pull requests on GitHub
 
-Want to fix the issue yourself? Fork https://github.com/droolsjbpm/jbpm[the git repository] and send in a pull request. +
+Want to fix the issue yourself? Fork https://github.com/kiegroup/jbpm[the git repository] and send in a pull request. +
 
-*Show https://github.com/droolsjbpm/jbpm/pulls[the open pull requests].*
+*Show https://github.com/kiegroup/jbpm/pulls[the open pull requests].*

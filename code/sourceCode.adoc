@@ -7,7 +7,7 @@ We use http://git-scm.com/[Git] to manage our source code. The reference reposit
 
 http://github.com/droolsjbpm[http://github.com/droolsjbpm]
 
-To build our sources, follow the instructions https://github.com/droolsjbpm/droolsjbpm-build-bootstrap/blob/master/README.md[in the README file in droolsjbpm-build-bootstrap].
+To build our sources, follow the instructions https://github.com/kiegroup/droolsjbpm-build-bootstrap/blob/master/README.md[in the README file in droolsjbpm-build-bootstrap].
 
 To learn more about git, read the free book http://progit.org/book/[Git Pro].
 
@@ -15,13 +15,13 @@ To learn more about git, read the free book http://progit.org/book/[Git Pro].
 
 Most of the core jBPM services are located in the jBPM repository.
 
-https://github.com/droolsjbpm/jbpm[jBPM, role=lead]::
+https://github.com/kiegroup/jbpm[jBPM, role=lead]::
 _The source code for jBPM itself, examples and documentation._
 
 . Get the source code locally with http://git-scm.com/[Git]:
 +
 ----
- $ git clone git@github.com:droolsjbpm/jbpm.git
+ $ git clone git@github.com:kiegroup/jbpm.git
  ...
 ----
 +
@@ -29,7 +29,7 @@ If you don't have a GitHub account or your local Git installation isn't configur
 use this command instead, to avoid an authentication issue:
 +
 ----
- $ git clone https://github.com/droolsjbpm/jbpm.git jbpm
+ $ git clone https://github.com/kiegroup/jbpm.git jbpm
  ...
 ----
 
@@ -59,20 +59,20 @@ The first time, Maven might take a lot time, because it needs to download jars.
 
 It's easy to keep an eye on the source code changes on the project:
 
-* Go to the https://github.com/droolsjbpm/repositories[GitHub website].
+* Go to the https://github.com/kiegroup/repositories[GitHub website].
 * Click on the repository you're intrested in
 * Click on the link Commits to show the commit history.
 * You can subscribe to that feed with the orange feed icon link.
 
 == Website
 
-https://github.com/droolsjbpm/jbpm-website[jbpm-website, role=lead]::
+https://github.com/kiegroup/jbpm-website[jbpm-website, role=lead]::
 _The source code for this website and presentations._
 
 . Get the source code locally with http://git-scm.com/[Git]:
 +
 ----
- $ git clone git@github.com:droolsjbpm/jbpm-website.git
+ $ git clone git@github.com:kiegroup/jbpm-website.git
  ...
 ----
 
