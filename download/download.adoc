@@ -64,9 +64,9 @@ A Beta should work (it passes automated testing), but its new API's might still 
 A CR should be almost identical to the Final release.
 
 * image:download.png[] Download jBPM *#{site.pom.latest.version}* binaries
-** #{site.pom.latest.jbpmBinZip}[Download jBPM #{site.pom.latest.version}-bin.zip]
-** #{site.pom.latest.jbpmExamplesZip}[Download jBPM #{site.pom.latest.version}-examples.zip]
-** #{site.pom.latest.jbpmInstallerZip}[Download jBPM #{site.pom.latest.version}-installer.zip]
+** #{site.pom.latest.jbpmBinZip}[jBPM #{site.pom.latest.version}-bin.zip]
+** #{site.pom.latest.jbpmExamplesZip}[jBPM #{site.pom.latest.version}-examples.zip]
+** #{site.pom.latest.jbpmInstallerZip}[jBPM #{site.pom.latest.version}-installer.zip]
 ** #{site.pom.latest.updatesite}[updatesite #{site.pom.latest.version}]
 ** #{site.pom.latest.releaseNotesVersion}[Release notes]
 ** License: link:../code/license.html[ASL 2.0]
