@@ -10,8 +10,8 @@ The jBPM binaries include documentation, examples and sources.
 * image:download.png[] Download jBPM #{site.pom.latestFinal.version} binaries
 ** #{site.pom.latestFinal.jbpmBinZip}[jBPM #{site.pom.latestFinal.version}-bin.zip]
 ** #{site.pom.latestFinal.jbpmExamplesZip}[jBPM #{site.pom.latestFinal.version}-examples.zip]
-** #{site.pom.latestFinal.jbpmInstallerZip}[jBPM #{site.pom.latestFinal.version}-installer.zip]
-** #{site.pom.latestFinal.jbpmInstallerFullZip}[jBPM #{site.pom.latestFinal.version}-installer-full.zip]
+** #{site.pom.latestFinal.jbpmInstallerZip}[jBPM-installer #{site.pom.latestFinal.version}.zip]
+** #{site.pom.latestFinal.jbpmInstallerFullZip}[jBPM-installer-full #{site.pom.latestFinal.version}.zip]
 ** #{site.pom.latestFinal.updatesite}[updatesite #{site.pom.latestFinal.version}]
 ** #{site.pom.latestFinal.releaseNotesVersion}[Release notes]
 ** License: link:../code/license.html[ASL 2.0]
@@ -50,7 +50,7 @@ More info at http://blog.athico.com/2015/06/drools-jbpm-get-dockerized.html[this
 
 '''
 
-=== Latest development version: #{site.pom.latest.version}
+== Latest development version: #{site.pom.latest.version}
 
 *Non-Final releases are the best way to test drive new features and API's
 to provide feedback before we lock down the API with a Final release.*
@@ -82,6 +82,7 @@ Or with Maven:
       <version>#{site.pom.latest.version}</version>
     </dependency>
 ----
+'''
 
 === Nightly snapshots
 
