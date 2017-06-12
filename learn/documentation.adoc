@@ -14,7 +14,6 @@
 * Red Hat subscription documentation: https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BPM_Suite/[Check the customer portal].
 
 '''
-
 == Non-Final releases
 
 === Alpha’s, Beta’s and CR’s
@@ -22,6 +21,8 @@
 * Documentation for jBPM *#{site.pom.latest.version}*
   ** jBPM User Guide #{site.pom.latest.version}: #{site.pom.latest.UserGuide}[HTML]
   ** jBPM JavaDocs #{site.pom.latest.version}: #{site.pom.latest.JavaDocs}[HTML]
+
+'''
 
 === Nightly builds
 
