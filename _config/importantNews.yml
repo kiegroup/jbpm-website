@@ -10,6 +10,12 @@
 # Order news by date.
 # Don't remove past news.
 
+- newsId: 20170407-blog
+  newsDate: 2017-07-04
+  newsTitle: Take a look at jBPM 7.0
+  newsContent: Introducing case management, new admin APIs, dashboards, and much more!
+  newsUrl: http://kverlaen.blogspot.be/2017/07/take-look-at-jbpm-70.html
+
 - newsId: 20161025-blog
   newsDate: 2016-10-25
   newsTitle: jBPM 6.5.0.Final release
