@@ -50,40 +50,6 @@ More info at http://blog.athico.com/2015/06/drools-jbpm-get-dockerized.html[this
 
 '''
 
-== Latest development version: #{site.pom.latest.version}
-
-*Non-Final releases are the best way to test drive new features and API's
-to provide feedback before we lock down the API with a Final release.*
-We welcome that feedback on the link:../community/forum.html[forum], link:../community/chat.html[chat]
-or link:../code/issueTracker.html[issue tracker].
-
-=== Alpha's, Beta's and CR's
-
-An Alpha can be unstable.
-A Beta should work (it passes automated testing), but its new API's might still change in the next release.
-A CR should be almost identical to the Final release.
-
-* image:download.png[] Download jBPM *#{site.pom.latest.version}* binaries
-** #{site.pom.latest.jbpmBinZip}[jBPM #{site.pom.latest.version}-bin.zip]
-** #{site.pom.latest.jbpmExamplesZip}[jBPM #{site.pom.latest.version}-examples.zip]
-** #{site.pom.latest.jbpmInstallerZip}[jBPM #{site.pom.latest.version}-installer.zip]
-** #{site.pom.latest.updatesite}[updatesite #{site.pom.latest.version}]
-** #{site.pom.latest.releaseNotesVersion}[Release notes]
-** License: link:../code/license.html[ASL 2.0]
-** Release date: `#{site.pom.latest.releaseDate}`
-
-Or with Maven:
-
-[source,xml]
-----
-    <dependency>
-      <groupId>org.jbpm</groupId>
-      <artifactId>jbpm-test</artifactId>
-      <version>#{site.pom.latest.version}</version>
-    </dependency>
-----
-'''
-
 === Nightly snapshots
 
 Nightly snapshots are unstable binaries, build by link:../code/continuousIntegration.html[our build server].
