@@ -39,7 +39,7 @@
   date: 2017-05-02
   url: https://www.redhat.com/summit/
 
-- eventId: 20170926-jbuglondon
+- eventId: 20170926-droolsday
   eventOrganization: Red Hat
   location: New York
   date: 2017-09-26
@@ -47,7 +47,7 @@
   url: http://kverlaen.blogspot.be/2017/08/drools-jbpm-and-optaplanner-day.html
   presenters: Prakash Aradya, Mark Proctor, Edson Tirelli, Kris Verlaenen, Alexandre Porcelli, Geoffrey De Smet
 
-- eventId: 20170928-jbuglondon
+- eventId: 20170928-droolsday
   eventOrganization: Red Hat
   location: Washington DC
   date: 2017-09-28
