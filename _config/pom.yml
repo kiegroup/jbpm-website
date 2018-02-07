@@ -1,33 +1,33 @@
 latestFinal:
-    version: 7.5.0.Final
-    releaseDate: 2017-12-11
-    jbpmBinZip: https://download.jboss.org/jbpm/release/7.5.0.Final/jbpm-7.5.0.Final-bin.zip
-    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.5.0.Final/jbpm-7.5.0.Final-examples.zip
-    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.5.0.Final/jbpm-installer-7.5.0.Final.zip
-    jbpmInstallerFullZip: https://download.jboss.org/jbpm/release/7.5.0.Final/jbpm-installer-full-7.5.0.Final.zip
-    updatesite: https://download.jboss.org/jbpm/release/7.5.0.Final/updatesite/
-    installerChapter: https://docs.jboss.org/jbpm/release/7.5.0.Final/jbpm-docs/html_single/#_jbpminstaller
-    releaseNotesVersion: http://docs.jboss.org/jbpm/release/7.5.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+    version: 7.6.0.Final
+    releaseDate: 2018-02-05
+    jbpmBinZip: https://download.jboss.org/jbpm/release/7.6.0.Final/jbpm-7.6.0.Final-bin.zip
+    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.6.0.Final/jbpm-7.6.0.Final-examples.zip
+    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.6.0.Final/jbpm-installer-7.6.0.Final.zip
+    jbpmInstallerFullZip: https://download.jboss.org/jbpm/release/7.6.0.Final/jbpm-installer-full-7.6.0.Final.zip
+    updatesite: https://download.jboss.org/jbpm/release/7.6.0.Final/updatesite/
+    installerChapter: https://docs.jboss.org/jbpm/release/7.6.0.Final/jbpm-docs/html_single/#_jbpminstaller
+    releaseNotesVersion: http://docs.jboss.org/jbpm/release/7.6.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
 
-    UserGuide: https://docs.jboss.org/jbpm/release/7.5.0.Final/jbpm-docs/html_single/
-    JavaDocs: https://docs.jboss.org/drools/release/7.5.0.Final/kie-api-javadoc/index.html
+    UserGuide: https://docs.jboss.org/jbpm/release/7.6.0.Final/jbpm-docs/html_single/
+    JavaDocs: https://docs.jboss.org/drools/release/7.6.0.Final/kie-api-javadoc/index.html
     Archive: https://docs.jboss.org/jbpm/
 
 latest:
-    version: 7.1.0.Beta3
-    releaseDate: 2017-06-19
+    version: 7.6.0.Final
+    releaseDate: 2018-02-05
 
-    jbpmBinZip: https://download.jboss.org/jbpm/release/7.1.0.Beta3/jbpm-7.1.0.Beta3-bin.zip
-    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.1.0.Beta3/jbpm-7.1.0.Beta3-examples.zip
-    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.1.0.Beta3/jbpm-installer-7.1.0.Beta3.zip
-    updatesite: https://download.jboss.org/jbpm/release/7.1.0.Beta3/updatesite/
+    jbpmBinZip: https://download.jboss.org/jbpm/release/7.6.0.Final/jbpm-7.6.0.Final-bin.zip
+    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.6.0.Final/jbpm-7.6.0.Final-examples.zip
+    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.6.0.Final/jbpm-installer-7.6.0.Final.zip
+    updatesite: https://download.jboss.org/jbpm/release/7.6.0.Final/updatesite/
 
-    UserGuide: https://docs.jboss.org/jbpm/release/7.1.0.Beta3/jbpm-docs/html_single
-    JavaDocs: https://docs.jboss.org/drools/release/7.1.0.Beta3/kie-api-javadoc/index.html
+    UserGuide: https://docs.jboss.org/jbpm/release/7.6.0.Final/jbpm-docs/html_single
+    JavaDocs: https://docs.jboss.org/drools/release/7.6.0.Final/kie-api-javadoc/index.html
     Nightly: https://docs.jboss.org/jbpm/release/snapshot/noPublicCI.html
 
-    releaseNotesVersion: https://docs.jboss.org/jbpm/release/7.1.0.Beta3/jbpm-docs/html_single/#_jbpmreleasenotes
+    releaseNotesVersion: https://docs.jboss.org/jbpm/release/7.6.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
 
 nightly:
-    version: 7.5.0-SNAPSHOT
+    version: 7.7.0-SNAPSHOT
     jbpmBinaries: https://downloads.jboss.org/jbpm/release/snapshot/master/index.html
