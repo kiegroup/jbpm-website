@@ -3,6 +3,7 @@ title: jBPM - Open Source Business Process Management
 description: jBPM is a flexible Business Process Management (BPM) Suite.
 keywords: metaheuristic, heuristic, constraint satisfaction, constraint programming, operations research, NP-complete, NP-hard, optimization, planning, scheduling, java, open source, software, library, solver, tabu search, simulated annealing, pareto
 canonicalBaseUrl: https://www.jbpm.org
+issueTracker: https://issues.jboss.org/projects/JBPM
 
 # jbossorg_bootstrap_css: http://static.jboss.org/theme/css/bootstrap/2.1.0.0.0/bootstrap-community.css
 # jbossorg_bootstrap_js: http://static.jboss.org/theme/js/libs/bootstrap/2.1.0.0.0/bootstrap-community.js
