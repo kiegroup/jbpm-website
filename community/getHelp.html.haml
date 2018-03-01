@@ -1,0 +1,80 @@
+---
+description: Ask a question or start a discussion about JBPM
+layout: normalBase
+title: Get help
+---
+
+%h1 #{page.title}
+
+.row
+  .col-md-7
+    .panel.panel-default
+      .panel-body(style="padding-top: 0")
+        :asciidoc
+          == Create an issue
+
+          If you've found a bug,
+          please open a ticket in our issue tracker _with a reproducer_:
+
+        .text-center<
+          %a.btn.btn-default.versionedButton{:href => site.issueTracker}<
+            %div
+              %span Create an issue in JIRA
+          .small
+            Do not use our issue tracker for questions.
+
+
+.row
+  .col-md-7
+    .panel.panel-default
+      .panel-body(style="padding-top: 0")
+        :asciidoc
+          == Customer support
+
+          For a fast and detailed answer, open a support case with Red Hat.
+
+          Red Hat sponsors this open source project by employing its core developers.
+          They have a dedicated QA and support team around this project.
+
+        .text-center<
+          %a.btn.btn-default.versionedButton(href="https://access.redhat.com/support/cases/#/case/new")<
+            %div
+              %span Open a support case
+          .small
+            :asciidoc
+              This requires link:../product/services.html[a paid support subscription].
+
+.row
+  .col-md-7
+    .panel.panel-default
+      .panel-body(style="padding-top: 0")
+        :asciidoc
+          == Contributor contact
+
+          If you're working on a contribution or want to start an opinionated discussion, join our discussion forum
+          or mail directly through mailto:jbpm-usage@googlegroups.com[jbpm-usage@googlegroups.com] or mailto:jbpm-setup@googlegroups.com[jbpm-setup@googlegroups.com]
+
+          It's recommended to link:../code/sourceCode.html[build JBPM from source] before starting a discussion there.
+
+        .text-center<
+          %a.btn.btn-default.versionedButton(href="https://groups.google.com/forum/#!forum/jbpm-setup")<
+            %div
+              %span Start/view discussions on our forum
+          .small
+            Please don't cross post to both our forum and StackOverflow.
+
+
+.row
+  .col-md-7
+    .panel.panel-default
+      .panel-body(style="padding-top: 0")
+        :asciidoc
+          == Chat
+
+          Use https://hexchat.github.io/[an IRC client]
+          to connect to http://freenode.net/[Freenode] (such as `chat.freenode.net`).
+
+          - For questions, try the channels `#jbpm`.
+
+          - If you're working on a contribution, come talk to us on `#jbpmdev`.
+          The core developers are there during working hours (depending on their timezone).
