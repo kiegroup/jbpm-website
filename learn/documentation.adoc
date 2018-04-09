@@ -17,5 +17,5 @@
 
 === Nightly builds
 
-  ** jBPM Nightly snapshots: #{site.pom.latest.Nightly}[HTML]  
+  ** jBPM Nightly snapshots: #{site.pom.nightly.jbpmDocs}[HTML]
 
