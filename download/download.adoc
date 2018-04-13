@@ -41,7 +41,7 @@ This is similar for Gradle, Ivy and Buildr.
 
 === http://www.docker.com/[Docker] images
 
-You can find the Docker images for jBPM and how to use them for last final version 6.2 at
+You can find the Docker images for jBPM and how to use them for last final version #{site.pom.latestFinal.version} at
 
 * http://registry.hub.docker.com/u/jboss/jbpm-workbench/[jBPM Workbench]
 * http://registry.hub.docker.com/u/jboss/jbpm-workbench-showcase/[jBPM Workbench Showcase]
