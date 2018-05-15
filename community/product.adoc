@@ -1,9 +1,0 @@
-= Product
-:awestruct-layout: normalBase
-:showtitle:
-
-The community project jBPM is now available as part of the Red Hat JBoss BPM Suite 6 product. +
-
-Red Hat offers full support for jBPM with a JBoss BPM Suite subscription. +
-
-Learn more about http://www.jboss.org/products/bpmsuite/overview/[JBoss BPM Suite]

@@ -9,8 +9,6 @@ issueTracker: https://issues.jboss.org/projects/JBPM
 # jbossorg_bootstrap_js: http://static.jboss.org/theme/js/libs/bootstrap/2.1.0.0.0/bootstrap-community.js
 
 googleAnalyticsId: UA-54014107-1
-googleTagManagerId: GTM-NJWS5L
-googleTagManagerChannel: jBPM
 disqus: jbpm
 disqus_generate_id: true
 
@@ -18,6 +16,10 @@ asciidoctor:
   :safe: safe
   :attributes:
     imagesdir: ''
+
+# Avoid broken images in blog posts
+generation:
+  :in_threads: 0
 
 profiles:
   development:
