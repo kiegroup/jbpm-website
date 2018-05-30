@@ -1,0 +1,11 @@
+= Continuous integration
+:awestruct-layout: normalBase
+:showtitle:
+
+We use Jenkins for continuous integration.
+
+// *Show https://docs.jbpm.org/snapshot/brokenCILink.html[the public Jenkins jobs].* These are mirrors of a Red Hat internal Jenkins jobs.
+
+== Sorry! Currently there are no public jobs on internal Red Hat Jenkins CI.
+
+// Keep the builds green!
