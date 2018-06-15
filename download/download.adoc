@@ -5,6 +5,27 @@
 
 == Latest Final version: #{site.pom.latestFinal.version}
 
+The jBPM Server distribution is the easiest way to start with jBPM. It includes:
+
+* WildFly server
+* jBPM console
+* KIE Server
+* jBPM Case management showcase app
+* jBPM Service repository (with community work items)
+
+all configured to work smoothly together.
+
+* image:download.png[] #{site.pom.latestFinal.jbpmServerZip}[Download jBPM #{site.pom.latestFinal.version} server (single zip) distribution]
+
+Just download, unzip and run
+
+[source,bash]
+----
+ curl #{site.pom.latestFinal.jbpmServerZip} --output jbpm-server-distribuion.zip
+ unzip jbpm-server-distribuion.zip -d jbpm-server
+ jbpm-server/bin/standalone.sh
+----
+
 The jBPM binaries include documentation, examples and sources.
 
 * image:download.png[] Download jBPM #{site.pom.latestFinal.version} binaries
