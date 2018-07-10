@@ -38,7 +38,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
     %link{:rel => "shortcut icon", :href => relative("/favicon.ico")}
-    
+
   %body(data-spy="scroll" data-target=".bs-docs-sidebar")
     %header.navbar.navbar-default.navbar-fixed-top(role="navigation")
       #tabzillaHolder
@@ -68,6 +68,8 @@
                 = precede 'Learn ' do
                   %b.caret>
               %ul.dropdown-menu
+                %li<
+                  %a{:href => relative("/learn/gettingStarted.html")} Getting started
                 %li<
                   %a{:href => relative("/learn/documentation.html")} Documentation
                 %li<
@@ -206,4 +208,3 @@
           s.parentNode.insertBefore(po, s);
         })();
       </script>
-

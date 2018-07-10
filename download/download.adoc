@@ -1,4 +1,5 @@
 = Download
+:awestruct-description: Download the community release of jBPM.
 :awestruct-layout: normalBase
 :page-interpolate: true
 :showtitle:
@@ -40,25 +41,7 @@ The jBPM binaries include documentation, examples and sources.
 
 * Older community releases: Check https://download.jboss.org/jbpm/release/[the release archive].
 
-* Evaluation version of JBoss BPM Suite: Check http://www.jboss.com/downloads/[the product download site].
-
-=== Maven, Gradle, Ivy or Buildr
-
-The jBPM jars are also available in http://search.maven.org/#search|ga|1|org.jbpm[the central maven repository]
-(and also in https://repository.jboss.org/nexus/index.html#nexus-search;gav\~org.jbpm~\~~~[the JBoss maven repository]).
-
-If you use Maven, just add a dependency in your `pom.xml`:
-
-[source,xml]
-----
-    <dependency>
-      <groupId>org.jbpm</groupId>
-      <artifactId>jbpm-test</artifactId>
-      <version>#{site.pom.latestFinal.version}</version>
-    </dependency>
-----
-
-This is similar for Gradle, Ivy and Buildr.
+* Evaluation version of Red Hat Process Automation Manager: Check http://www.jboss.com/downloads/[the product download site].
 
 === http://www.docker.com/[Docker] images
 
@@ -73,6 +56,6 @@ More info at http://blog.athico.com/2015/06/drools-jbpm-get-dockerized.html[this
 
 === Nightly snapshots
 
-Nightly snapshots are unstable binaries, build by link:../code/continuousIntegration.html[our build server].
+Nightly snapshots are unstable binaries, built by our build server.
 
 * image:download.png[] #{site.pom.nightly.jbpmBinaries}[Download jBPM #{site.pom.nightly.version} binaries]
