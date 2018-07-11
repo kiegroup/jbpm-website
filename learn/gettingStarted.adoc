@@ -51,7 +51,7 @@ Additional users can be created via jBPM Console Admin section.
 KIE Server is the execution server that provides various capabilities
 
 - BRM (business rules)
-- BPM (business processed)
+- BPM (business processes)
 - BRP (planning/solver)
 - Case management
 - DMN (decisions)
