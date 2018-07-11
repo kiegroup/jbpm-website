@@ -22,9 +22,9 @@ Just download, unzip and run
 
 [source,bash]
 ----
- curl #{site.pom.latestFinal.jbpmServerZip} --output jbpm-server-distribuion.zip
- unzip jbpm-server-distribuion.zip -d jbpm-server
- jbpm-server/bin/standalone.sh
+jbpm-server/bin/standalone.sh     (Unix / Linux)
+
+jbpm-server/bin/standalone.bat    (Windows)
 ----
 
 The jBPM binaries include documentation, examples and sources.
