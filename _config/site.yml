@@ -1,7 +1,7 @@
 encoding: UTF-8
 title: jBPM - Open Source Business Automation Toolkit
-description: jBPM is a toolkit for building business applications backed by solid business automation capabilities.
-keywords: business automation, business process management, case management, business rules, decision services, BPMN2, DMN, CMMN, BPM
+description: jBPM is an Open Source toolkit for building business applications backed by solid business automation capabilities.
+keywords: business automation, business process management, case management, business rules, decision services, BPMN2, DMN, CMMN, BPM, open source business automation, business applications
 canonicalBaseUrl: https://www.jbpm.org
 issueTracker: https://issues.jboss.org/projects/JBPM
 
