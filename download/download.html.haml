@@ -1,0 +1,120 @@
+---
+description: Download the community release of jBPM - the open source business automation toolkit
+layout: normalBase
+title: Download jBPM
+---
+
+%h1 #{page.title}
+
+%ul(class="nav nav-tabs download-nav-tabs")
+  %li(class="active")
+    %a(href="#community" data-toggle="pill") Community
+  %li
+    %a(href="#enterprise" data-toggle="pill") Enterprise
+  %li
+    %a(href="#docker" data-toggle="pill") Docker
+
+%div(class="tab-content download-tab-content")
+  %div(id="community" class="tab-pane fade in active")
+    :asciidoc
+      == Latest Final version: #{site.pom.latestFinal.version}
+
+        * #{site.pom.latestFinal.releaseNotesVersion}[Release notes]
+        * License: link:../code/license.html[ASL 2.0]
+        * Release date: `#{site.pom.latestFinal.releaseDate}`
+
+      *The jBPM Server distribution is the easiest way to start with jBPM.*
+
+      * image:download.png[] #{site.pom.latestFinal.jbpmServerZip}[Download jBPM #{site.pom.latestFinal.version} server (single zip) distribution]
+
+      Just download, unzip and run
+
+      [source,bash]
+      ----
+      jbpm-server/bin/standalone.sh     (Unix / Linux)
+
+      jbpm-server/bin/standalone.bat    (Windows)
+      ----
+
+      It includes:
+
+      * WildFly server
+      * jBPM console
+      * KIE Server
+      * jBPM Case management showcase app
+      * jBPM Service repository (with community work items)
+
+      all configured to work smoothly together.
+
+      Once download is completed have a look at link:../learn/gettingStarted.html[*Get started guide*]
+
+      '''
+
+      *The jBPM binaries include documentation, examples and sources.*
+
+      * image:download.png[] Download jBPM #{site.pom.latestFinal.version} binaries
+      ** #{site.pom.latestFinal.jbpmBinZip}[jBPM #{site.pom.latestFinal.version}-bin.zip]
+      ** #{site.pom.latestFinal.jbpmExamplesZip}[jBPM #{site.pom.latestFinal.version}-examples.zip]
+      ** #{site.pom.latestFinal.jbpmInstallerZip}[jBPM-installer #{site.pom.latestFinal.version}.zip]
+      ** #{site.pom.latestFinal.jbpmInstallerFullZip}[jBPM-installer-full #{site.pom.latestFinal.version}.zip]
+      ** #{site.pom.latestFinal.updatesite}[updatesite #{site.pom.latestFinal.version}]
+
+      '''
+
+      *Older community releases*
+
+      Check https://download.jboss.org/jbpm/release/[the release archive].
+
+  %div(id="enterprise" class="tab-pane fade")
+    :asciidoc
+      === http://www.redhat.com/en/technologies/jboss-middleware/bpm[Red Hat Process Automation Manager is the enterprise version of jBPM]
+
+      * image:download.png[] https://developers.redhat.com/products/rhpam/download/[Download Red Hat Process Automation Manager]
+
+      === Community and enterprise comparison
+
+      The community download delivers everything you would expect from an Open Source project,
+      including all features. The enterprise subscription fills the missing gaps for enterprise use.
+      Both community and enterprise use the same code base.
+
+      |===
+      | |Community |Enterprise subscription
+
+      |*Functionality* | |
+      |All features |image:checkYes.png[Yes] Includes all enterprise features too |image:checkYes.png[Yes]
+      |All bugfixes |image:checkYes.png[Yes] Master branch only |image:checkYes.png[Yes] Supported maintenance branches too
+      |Documentation |image:checkYes.png[Yes] |image:checkYes.png[Yes]
+      |Backport bugfixes to maintenance branches |image:checkNo.png[No] Not released |image:checkYes.png[Yes] Released in maintenance releases
+      |Security (CVE) watch for maintenance branches |image:checkNo.png[No] Eventually released from master branch only |image:checkYes.png[Yes] Released as backported bugfix
+
+      |*Testing* | |
+      |Unit testing |image:checkYes.png[Yes] |image:checkYes.png[Yes] On certification matrix
+      |Integration testing |image:checkYes.png[Yes] |image:checkYes.png[Yes] On certification matrix
+      |Stress testing |image:checkYes.png[Yes] |image:checkYes.png[Yes]
+      |Performance testing and sizing |image:checkNo.png[No] |image:checkYes.png[Yes]
+      |QA certification |image:checkNo.png[No] |image:checkYes.png[Yes] Cross matrix of OS's, JDK's, application containers, databases, ... See https://access.redhat.com/articles/3354301[supported configurations].
+
+      |*Help* | |
+      |Roadmap impact |image:checkYes.png[Yes] Use link:../community/getHelp.html[our forum], #{site.issueTracker}[issue tracker] or send a link:../code/sourceCode.html[Pull Request] |image:checkYes.png[Yes] Prioritized above community requests
+      |Public questions |image:checkYes.png[Yes] Use link:../community/getHelp.html[Google Groups] |image:checkYes.png[Yes] Or call 24/7 support instead
+      |Private 24/7 support |image:checkNo.png[No] |image:checkYes.png[Yes] https://access.redhat.com/support/contact/[By web or phone], guaranteed response time (SLA)
+      |Red Hat consultancy, training and POC assistance |image:checkNo.png[No] |image:checkYes.png[Yes] Talk to your account manager
+
+      |*Release schedule* | |
+      |Stable releases |image:checkYes.png[Yes] Final usually every 3 weeks |image:checkYes.png[Yes] GA every 3 months
+      |Maintenance releases |image:checkNo.png[No] Use latest instead |image:checkYes.png[Yes] Usually every 6 weeks
+      |One-off release for an urgent customer critical issue |image:checkNo.png[No] |image:checkYes.png[Yes] Also rolled up in the next maintenance release
+
+      |*Information* | |
+      |Open source (link:../code/license.html[Apache License]) |image:checkYes.png[Yes] |image:checkYes.png[Yes] but distribution available from customer portal only
+      |===
+  %div(id="docker" class="tab-pane fade")
+    :asciidoc
+      === http://www.docker.com/[Docker] images
+
+      You can find the Docker images for jBPM and how to use them for last final version #{site.pom.latestFinal.version} at
+
+      * http://registry.hub.docker.com/u/jboss/jbpm-workbench/[jBPM Workbench]
+      * http://registry.hub.docker.com/u/jboss/jbpm-workbench-showcase/[jBPM Workbench Showcase]
+
+      More info at http://blog.athico.com/2015/06/drools-jbpm-get-dockerized.html[this post]
