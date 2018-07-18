@@ -7,111 +7,112 @@ title: Get help
 %h1 #{page.title}
 
 .row
-  .col-md-7
-    .panel.panel-default
-      .panel-body(style="padding-top: 0")
-        :asciidoc
-          == Create an issue
+  .col-md-12
+    :asciidoc
+      [#stackoverflow]
+      == Usage question
 
-          If you've found a bug,
-          please open a ticket in our issue tracker _with a reproducer_:
+      Our friendly volunteer community regularly answers jBPM questions on StackOverflow. To get a helpful answer, follow https://stackoverflow.com/help/how-to-ask[the StackOverflow guidelines] such as:
 
-        .text-center<
-          %a.btn.btn-default.versionedButton{:href => site.issueTracker}<
-            %div
-              %span Create an issue in JIRA
-          .small
-            Do not use our issue tracker for questions.
+      * Get to the point. Keep it short.
+      * Be crystal clear. Reread your question before posting it.
+      * Add relevant technical details: stacktrace, code snippet, ...
+
+  .text-center(style="margin-bottom: 10px")<
+    %a.btn.btn-default.versionedButton(href="https://stackoverflow.com/questions/tagged/jbpm")<
+      %div
+        %span Ask/view questions on StackOverflow
+    .small
+      Opinionated questions aren't welcome on StackOverflow,
+      %br
+      so those belong on our discussion forum below.
+
+.row
+  .col-md-12
+    :asciidoc
+      [#issue]
+      == Create an issue
+
+      If you've found a bug,
+      please open a ticket in our issue tracker _with a reproducer_:
+
+    .text-center<
+      %a.btn.btn-default.versionedButton{:href => site.issueTracker}<
+        %div
+          %span Create an issue in JIRA
+      .small
+        Do not use our issue tracker for questions.
 
 
 .row
-  .col-md-7
-    .panel.panel-default
-      .panel-body(style="padding-top: 0")
+  .col-md-12
+    :asciidoc
+      [#customer]
+      == Customer support
+
+      For a fast and detailed answer, open a support case with Red Hat.
+
+      Red Hat sponsors this open source project by employing its core developers.
+      They have a dedicated QA and support team around this project.
+
+    .text-center<
+      %a.btn.btn-default.versionedButton(href="https://access.redhat.com/support/cases/#/case/new")<
+        %div
+          %span Open a support case
+      .small
         :asciidoc
-          == Customer support
-
-          For a fast and detailed answer, open a support case with Red Hat.
-
-          Red Hat sponsors this open source project by employing its core developers.
-          They have a dedicated QA and support team around this project.
-
-        .text-center<
-          %a.btn.btn-default.versionedButton(href="https://access.redhat.com/support/cases/#/case/new")<
-            %div
-              %span Open a support case
-          .small
-            :asciidoc
-              This requires link:../product/services.html[a paid support subscription].
+          This requires link:../product/services.html[a paid support subscription].
 
 .row
-  .col-md-7
-    .panel.panel-default
-      .panel-body(style="padding-top: 0")
-        :asciidoc
-          == Contributor contact
+  .col-md-12
+    :asciidoc
+      [#forum]
+      == Contributor contact
 
-          If you're working on a contribution or want to start an opinionated discussion, join our discussion forum
-          or mail directly through mailto:jbpm-usage@googlegroups.com[jbpm-usage@googlegroups.com] or mailto:jbpm-setup@googlegroups.com[jbpm-setup@googlegroups.com]
+      If you're working on a contribution or want to start an opinionated discussion, join our discussion forum
+      or mail directly through mailto:jbpm-usage@googlegroups.com[jbpm-usage@googlegroups.com] or mailto:jbpm-setup@googlegroups.com[jbpm-setup@googlegroups.com]
 
-          It's recommended to link:../code/sourceCode.html[build JBPM from source] before starting a discussion there.
+      It's recommended to link:../code/sourceCode.html[build JBPM from source] before starting a discussion there.
 
-        .text-center<
-          %a.btn.btn-default.versionedButton(href="https://groups.google.com/forum/#!forum/jbpm-setup")<
-            %div
-              %span Start/view discussions on our forum
-          .small
-            Please don't cross post to both our forum and StackOverflow.
+    .text-center<
+      %a.btn.btn-default.versionedButton(href="https://groups.google.com/forum/#!forum/jbpm-setup")<
+        %div
+          %span Start/view discussions on our forum
+      .small
+        Please don't cross post to both our forum and StackOverflow.
 
 
 .row
-  .col-md-7
-    .panel.panel-default
-      .panel-body(style="padding-top: 0")
-        :asciidoc
-          == Chat
+  .col-md-12
+    :asciidoc
+      [#chat]
+      == Chat
 
-          Use https://hexchat.github.io/[an IRC client]
-          to connect to http://freenode.net/[Freenode] (such as `chat.freenode.net`).
+      Got questions? Want to discuss an issue in real-time? Then join us on IRC.
 
-          - For questions, try the channels `#jbpm`.
+      Most of our project discussion take place on IRC, usually during European and American daytime.
 
-          - If you're working on a contribution, come talk to us on `#jbpmdev`.
-          The core developers are there during working hours (depending on their timezone).
+      === Connection info
 
+      * Chat in http://webchat.freenode.net/?channels=jbpm%2Cdrools&uio=d4[your browser]
 
-.row
-  .col-md-7
-    .panel.panel-default
-      .panel-body(style="padding-top: 0")
-        :asciidoc
-          == Chat real-time
+      * Chat with an IRC client (http://www.xchat.org/[XChat] (Linux), http://colloquy.info/[Colloquy] (Mac), http://www.hydrairc.com/[HydraIRC] (Windows), http://www.mibbit.com/[Mibbit] (works in any browser)...):
 
-          Got questions? Want to discuss an issue in real-time? Then join us on IRC.
+        ** IRC server: *chat.freenode.net:6667*
 
-          Most of our project discussion take place on IRC, usually during European and American daytime.
+          *** http://freenode.net/irc_servers.shtml[List of alternative servers]
 
-          == Connection info
+        ** Channels for users:
 
-          * Chat in http://webchat.freenode.net/?channels=jbpm%2Cdrools&uio=d4[your browser]
+          *** *#jbpm*
 
-          * Chat with an IRC client (http://www.xchat.org/[XChat] (Linux), http://colloquy.info/[Colloquy] (Mac), http://www.hydrairc.com/[HydraIRC] (Windows), http://www.mibbit.com/[Mibbit] (works in any browser)...):
+        ** Channels for core development of jBPM:
 
-            ** IRC server: *chat.freenode.net:6667*
+          *** *#jbpmdev*
 
-              *** http://freenode.net/irc_servers.shtml[List of alternative servers]
+      === Guidelines
 
-            ** Channels for users:
-
-              *** *#jbpm*
-
-            ** Channels for core development of jBPM:
-
-              *** *#jbpmdev*
-
-          ==  Guidelines
-
-            * Answers can take a while. Wait at least an hour. If no one answers, then they are busy or AFK. Try the forum instead.
-            * Don't send private messages to anyone, use only the public channels. Private support is reserved for link:../product/services.html[Red Hat customers] only.
-            * No need to waste time by asking _"Can I ask a question?"_. Just ask your question immediately.
-            * If you need assistance with other JBoss projects, try their IRC channel on Freenode.tml
+        * Answers can take a while. Wait at least an hour. If no one answers, then they are busy or AFK. Try the forum instead.
+        * Don't send private messages to anyone, use only the public channels. Private support is reserved for link:../product/services.html[Red Hat customers] only.
+        * No need to waste time by asking _"Can I ask a question?"_. Just ask your question immediately.
+        * If you need assistance with other JBoss projects, try their IRC channel on Freenode.tml
