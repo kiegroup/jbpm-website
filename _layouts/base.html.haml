@@ -43,7 +43,6 @@
     %header.navbar.navbar-default.navbar-fixed-top(role="navigation")
       #tabzillaHolder
       .dropup
-        %div#ajbossproject A JBoss Project
         %a#tab.tabnav-closed{:href => "https://www.jboss.org"} Red Hat
         %script
           window.addEventListener('load', function() { renderTabzilla("jBPM","jbpm", true) });
@@ -100,17 +99,9 @@
             -# The plusone button fails with data-href="https://plus.google.com/118073921313256143924"
             %div(class="g-plusone" data-href="https://plus.google.com/118073921313256143924") &nbsp;
           %ul.nav.navbar-nav.navbar-right
-            %li.dropdown
-              %a.dropdown-toggle(data-toggle="dropdown" href="#")<
-                = precede 'Follow us ' do
-                  %b.caret>
-              %ul.dropdown-menu
-                %li<
-                  %a(href="https://plus.google.com/118073921313256143924" rel="publisher" target="_blank" title="News stream via Google+")<
-                    %img{:src => relative("/headerFooter/googlePlusLogo.png"), :alt => "G+"} &nbsp;Google+
-                %li<
-                  %a(href="https://twitter.com/jbossjbpm" target="_blank" title="News stream via Twitter")<
-                    %img{:src => relative("/headerFooter/twitterLogo.png"), :alt => "T"} &nbsp;Twitter
+            %li
+              %a(href="https://twitter.com/jbossjbpm" target="_blank" title="News stream via Twitter")<
+                %img{:src => relative("/headerFooter/twitterLogo.png"), :alt => "T"} &nbsp;Twitter
 
     .body-without-header-footer
       .forkMeOnGithub
