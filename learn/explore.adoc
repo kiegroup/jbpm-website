@@ -1,32 +1,10 @@
-= Getting started
-:awestruct-description: Getting started guide for jBPM. Start quickly and easily.
-:awestruct-layout: normalBase
-:awestruct-priority: 1.0
-:page-interpolate: true
-:showtitle:
-
-== Download jBPM
-
-First things first, download jBPM server distribution (if not already done) to start quickly with complete environment.
-
-* #{site.pom.latestFinal.jbpmServerZip}[Download jBPM #{site.pom.latestFinal.version} server (single zip) distribution]
-
-Just download, unzip and run
-
-[source,bash]
-----
-jbpm-server/bin/standalone.sh     (Unix / Linux)
-
-jbpm-server/bin/standalone.bat    (Windows)
-----
-
 == Explore your running environment
 
 *jBPM console*
 
 jBPM Console (aka workbench) provides feature rich authoring and management environment. It consists of:
 
-- Design perspecitves where users can create projects and pages
+- Design perspectives where users can create projects and pages
 - Deploy perspectives where users can manage execution servers
 - Manage perspectives where users can take control over process and case instances
 - Track perspectives where users can access assigned tasks and reports
@@ -35,6 +13,7 @@ jBPM Console can be accessed (once the server was started) at http://localhost:8
 
 There are set of predefined users that can be used to directly logon to jBPM Console:
 
+- admin/admin
 - krisv/krisv
 - john/john
 - mary/mary
@@ -53,21 +32,21 @@ KIE Server is the execution server that provides various capabilities
 - BRM (business rules)
 - BPM (business processes)
 - BRP (planning/solver)
-- Case management
+- Case Management
 - DMN (decisions)
 
 Its complete REST api documentation can be accessed at http://localhost:8080/kie-server/docs[*http://localhost:8080/kie-server/docs*]
 
 '''
 
-*jBPM Case management Showcase*
+*jBPM Case Management Showcase*
 
-jBPM Case management Showcase is a web application that aims at illustrating various case management building blocks in action. These
+jBPM Case Management Showcase is a web application that aims at illustrating various case management building blocks in action. These
 are UI components built on top of KIE Server REST api for case management. It's not intended for production usage but more for getting better
 understanding of the capabilities.
 Case management, in general should be business focused so generic UI won't provide much business context to the knowledge workers.
 
-jBPM Case management application can be accessed at http://localhost:8080/jbpm-casemgmt[*http://localhost:8080/jbpm-casemgmt*]
+jBPM Case Management application can be accessed at http://localhost:8080/jbpm-casemgmt[*http://localhost:8080/jbpm-casemgmt*]
 
 Same users as for jBPM Console can be used to logon to this application.
 
@@ -150,45 +129,3 @@ to fit your needs. This example shows:
 |===
 
 '''
-
-== Switch to another database
-
-jBPM runs by default with H2 database with file storage - located under <JBOSS_HOME>/standalone/data/jbpm-db
-
-Users can switch to another database very easily by invoking a script located in <JBOSS_HOME>/bin.
-
-=== To switch to MySQL use following command when server is stopped
-
-[source,bash]
-----
-<JBOSS_HOME>/bin/jboss-cli.sh --file=jbpm-mysql-config.cli      (Unix / Linux)
-
-<JBOSS_HOME>\bin\jboss-cli.bat --file=jbpm-mysql-config.cli     (Windows)
-
-----
-
-=== To switch to PostgreSQL use following command when server is stopped
-
-[source,bash]
-----
-
-<JBOSS_HOME>/bin/jboss-cli.sh --file=jbpm-postgres-config.cli      (Unix / Linux)
-
-<JBOSS_HOME>\bin\jboss-cli.bat --file=jbpm-postgres-config.cli     (Windows)
-
-----
-
-These scripts assume that database is installed and some default configuration is present:
-
-- host -> localhost
-- port -> 3306 for MySQL and 5432 for PostgreSQL
-- database name -> jbpm
-- user name -> jbpm
-- password -> jbpm
-
-in case the values are not correct, edit them in the script files jbpm-mysql-config.cli for MySQL
-and jbpm-postgres-config.cli for PostgreSQL - in both scripts values to be updated are on line 17.
-
-There is H2 script as well to go back to defaults.
-
-After running the script the only thing that is needed is to start the server.
