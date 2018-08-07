@@ -10,9 +10,9 @@ title: Download jBPM
   %li(class="active")
     %a(href="#community" data-toggle="pill") Community
   %li
-    %a(href="#enterprise" data-toggle="pill") Enterprise
-  %li
     %a(href="#docker" data-toggle="pill") Docker
+  %li
+    %a(href="#enterprise" data-toggle="pill") Enterprise
 
 %div(class="tab-content download-tab-content")
   %div(id="community" class="tab-pane fade in active")
@@ -40,9 +40,9 @@ title: Download jBPM
       It includes:
 
       * WildFly server
-      * jBPM console
+      * jBPM Console
       * KIE Server
-      * jBPM Case management showcase app
+      * jBPM Case Management showcase app
       * jBPM Service repository (with community work items)
 
       all configured to work smoothly together.
@@ -115,8 +115,25 @@ title: Download jBPM
 
       You can find the Docker images for jBPM and how to use them for last final version #{site.pom.latestFinal.version} at
 
-      * http://registry.hub.docker.com/u/jboss/jbpm-workbench/[jBPM Workbench]
-      * http://registry.hub.docker.com/u/jboss/jbpm-workbench-showcase/[jBPM Workbench Showcase]
-      * http://registry.hub.docker.com/u/jboss/jbpm-server-full/[jBPM Server Full (zip)]
+      * https://hub.docker.com/r/jboss/jbpm-server-full/[jBPM Server Full]
+      * https://hub.docker.com/r/jboss/jbpm-workbench/[jBPM Workbench]
+      * https://hub.docker.com/r/jboss/jbpm-workbench-showcase/[jBPM Workbench Showcase]
+      * https://hub.docker.com/r/jboss/kie-server/[KIE Server]
 
-      More info at http://blog.athico.com/2015/06/drools-jbpm-get-dockerized.html[this post]
+      *The jBPM Server Full Docker image is an easy way get started with jBPM.*
+
+      By simply running the following command:
+
+           docker run -p 8080:8080 -p 8001:8001 -d --name jbpm-server-full jboss/jbpm-server-full:latest
+
+      You get a ready to use environment with with all of these component already set up:
+
+      - WildFly server
+      - jBPM Console (aka workbench)
+      - KIE Server
+      - jBPM Case Management showcase
+      - jBPM Service repository
+
+      Take a look at our link:../learn/gettingStarted.html[*Getting Started Guide*] for more details about how to use and explore all capabilities available in this image.
+
+      More info about other Docker images can be found at http://blog.athico.com/2015/06/drools-jbpm-get-dockerized.html[this post]

@@ -1,0 +1,185 @@
+---
+description: Getting started guide for jBPM. Start quickly and easily.
+layout: normalBase
+title: Getting started
+---
+
+%h2 Getting started
+
+%ul(class="nav nav-tabs download-nav-tabs")
+  %li(class="active")
+    %a(href="#zip" data-toggle="pill") Using Single Zip Distribution
+  %li
+    %a(href="#docker" data-toggle="pill") Using Docker
+
+%div(class="tab-content download-tab-content")
+  %div(id="zip" class="tab-pane fade in active")
+
+    :asciidoc
+
+      == Download jBPM
+
+      First things first, download jBPM server distribution (if not already done) to start quickly with complete environment.
+
+      * #{site.pom.latestFinal.jbpmServerZip}[Download jBPM #{site.pom.latestFinal.version} server (single zip) distribution]
+
+      Just download, unzip and run
+
+      [source,bash]
+      ----
+      jbpm-server/bin/standalone.sh     (Unix / Linux)
+
+      jbpm-server/bin/standalone.bat    (Windows)
+      ----
+
+      include::learn/explore.adoc[]
+
+      == Switch to another database
+
+      jBPM runs by default with H2 database with file storage - located under <JBOSS_HOME>/standalone/data/jbpm-db
+
+      Users can switch to another database very easily by invoking a script located in <JBOSS_HOME>/bin.
+
+      === To switch to MySQL use following command when server is stopped
+
+      [source,bash]
+      ----
+      <JBOSS_HOME>/bin/jboss-cli.sh --file=jbpm-mysql-config.cli      (Unix / Linux)
+
+      <JBOSS_HOME>\bin\jboss-cli.bat --file=jbpm-mysql-config.cli     (Windows)
+
+      ----
+
+      === To switch to PostgreSQL use following command when server is stopped
+
+      [source,bash]
+      ----
+
+      <JBOSS_HOME>/bin/jboss-cli.sh --file=jbpm-postgres-config.cli      (Unix / Linux)
+
+      <JBOSS_HOME>\bin\jboss-cli.bat --file=jbpm-postgres-config.cli     (Windows)
+
+      ----
+
+      These scripts assume that database is installed and some default configuration is present:
+
+      - host -> localhost
+      - port -> 3306 for MySQL and 5432 for PostgreSQL
+      - database name -> jbpm
+      - user name -> jbpm
+      - password -> jbpm
+
+      in case the values are not correct, edit them in the script files jbpm-mysql-config.cli for MySQL
+      and jbpm-postgres-config.cli for PostgreSQL - in both scripts values to be updated are on line 17.
+
+      There is H2 script as well to go back to defaults.
+
+      After running the script the only thing that is needed is to start the server.
+
+  %div(id="docker" class="tab-pane fade")
+    :asciidoc
+
+      == Running jBPM Docker image
+
+      If you already have https://docs.docker.com/install/[Docker] installed on your local machine, all you need to do is run the following command:
+
+        docker run -p 8080:8080 -p 8001:8001 -d --name jbpm-server-full jboss/jbpm-server-full:latest
+
+      Once container and web applications started, you can navigate to it and login using the username `admin` and password `admin`
+      or any of the users available in the jBPM Console listed in the section below.
+
+        http://localhost:8080/jbpm-console
+
+      that's all that is needed to get fully configured and running jBPM distribution that includes:
+
+      - WildFly server
+      - jBPM Console (aka workbench)
+      - KIE Server
+      - jBPM Case Management showcase
+      - jBPM Service repository
+
+      Everything configured to work together smoothly and you can access them at following locations:
+
+      - jBPM console - http://localhost:8080/jbpm-console
+      - KIE Server - http://localhost:8080/kie-server/services/rest/server
+      - KIE Server Swagger docs - http://localhost:8080/kie-server/docs
+      - jBPM case management - http://localhost:8080/jbpm-casemgmt
+      - jBPM Service repository - http://localhost:8080/repository
+
+      include::learn/explore.adoc[]
+
+      == Technical details
+
+      By default everything runs using H2 database with file storage but this image also enables you to switch to other databases like MySQL or PostgreSQL.
+      All dependencies and data source configurations are done automatically, you just need to specify a set of environment variables.
+      Alternatively, you can use the provided https://docs.docker.com/compose/install/[Docker Compose] examples to get started using an alternative database.
+      When using the provided Docker Compose examples, all dependencies to get a running container and configuration for the target database is already set in place.
+
+      The Docker Compose examples are located in the following repository: https://github.com/jboss-dockerfiles/jbpm/tree/master/docker-compose-examples
+
+      === MySQL Example using Docker Compose
+
+        docker-compose -f docker-compose-examples/jbpm-full-mysql.yml up
+
+      === MySQL Example using remote connection
+
+        docker run -p 8080:8080 -p 8001:8001 -d --name jbpm-server-full -e JBPM_DB_DRIVER=mysql -e JBPM_DB_HOST=172.17.0.1 jboss/jbpm-server-full:latest
+
+      === PostgreSQL Example using Docker Compose
+
+        docker-compose -f docker-compose-examples/jbpm-full-postgres.yml up
+
+      === PostgreSQL Example using remote connection
+
+        docker run -p 8080:8080 -p 8001:8001 -d --name jbpm-server-full -e JBPM_DB_DRIVER=postgres -e JBPM_DB_HOST=172.17.0.1 jboss/jbpm-server-full:latest
+
+      === Environment variables
+
+      * `JBPM_DB_DRIVER` = Specify which database driver to use. Allows either: 'h2', 'mysql' or 'postgres'. Default: 'h2'.
+      * `JBPM_DB_HOST` = Specify hostname of the database. Default: 'localhost'
+      * `JBPM_DB_PORT` = Specify port of the database. Default: '3306' if using 'mysql' driver or '5432' in case of 'postgres'.
+      * `JBPM_DB_NAME` = Specify name of the database to use. Default: 'jbpm'
+      * `JBPM_DB_USER` = Specify user to use to authenticate to the database. Default: 'jbpm'
+      * `JBPM_DB_PASSWORD` = Specify user's password to use to authenticate to the database. Default: 'jbpm'
+
+      === Useful Docker commands
+
+      === View container logs
+        $ docker logs -f jbpm-server-full
+
+      ==== List running containers
+        $ docker ps
+        CONTAINER ID        IMAGE                           COMMAND                CREATED             STATUS              PORTS                                            NAMES
+        88f2e110aff5        jboss/jbpm-server-full:latest   "./start_jbpm-wb.sh"   7 minutes ago       Up 7 minutes        0.0.0.0:8001->8001/tcp, 0.0.0.0:8080->8080/tcp   jbpm-server-full
+
+      or
+
+        $ docker ps -a
+
+      In case you want to also list stopped containers.
+
+      ==== Stopping the jBPM Server Full Distribution container
+        $ docker stop jbpm-server-full
+
+      ==== Delete jBPM Server Full Distribution container and all its data
+        $ docker rm jbpm-server-full
+
+      ==== Stopping the Docker Compose related containers
+        $ docker-compose -f docker-compose-examples/jbpm-full-mysql.yml stop
+
+      or
+
+        docker-compose -f docker-compose-examples/jbpm-full-postgres.yml stop
+
+      ==== Docker volumes
+      When using the provided Docker Compose configurations, both database images ( MySQL and PostgreSQL ) have local volumes configured to store its data in the local file system.
+      You can list and remove these via `docker volume` commands.
+      Example:
+
+        $ docker volume ls
+        DRIVER              VOLUME NAME
+        local               dockercomposeexamples_mysql_data
+
+        $ docker volume rm dockercomposeexamples_mysql_data
+
+      For a comprehensive overview about all settings and details about the `jbpm-server-full` image, please visit its https://hub.docker.com/r/jboss/jbpm-server-full/[Docker Hub page].
