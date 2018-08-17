@@ -10,6 +10,12 @@
 # Order news by date.
 # Don't remove past news.
 
+- newsId: 20180817-blog
+  newsDate: 2018-08-17
+  newsTitle: Take a look at jBPM 7.10
+  newsContent: jBPM 7.10 is now ready and available for downloads.
+  newsUrl: http://docs.jboss.org/jbpm/release/7.10.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
 - newsId: 20180727-blog
   newsDate: 2018-07-27
   newsTitle: Take a look at jBPM 7.9
