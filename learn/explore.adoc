@@ -13,7 +13,7 @@ jBPM Console can be accessed (once the server was started) at http://localhost:8
 
 There are set of predefined users that can be used to directly logon to jBPM Console:
 
-- admin/admin
+- wbadmin/wbadmin
 - krisv/krisv
 - john/john
 - mary/mary
