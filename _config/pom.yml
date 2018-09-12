@@ -1,6 +1,6 @@
 latestFinal:
     version: 7.11.0.Final
-    releaseDate: 2018-09-12
+    releaseDate: 2018-09-10
 
     jbpmServerZip: https://download.jboss.org/jbpm/release/7.11.0.Final/jbpm-server-7.11.0.Final-dist.zip
     jbpmBinZip: https://download.jboss.org/jbpm/release/7.11.0.Final/jbpm-7.11.0.Final-bin.zip
@@ -18,7 +18,7 @@ latestFinal:
 
 latest:
     version: 7.11.0.Final
-    releaseDate: 2018-09-12
+    releaseDate: 2018-09-10
 
     jbpmServerZip: https://download.jboss.org/jbpm/release/7.11.0.Final/jbpm-server-7.11.0.Final-dist.zip
     jbpmBinZip: https://download.jboss.org/jbpm/release/7.11.0.Final/jbpm-7.11.0.Final-bin.zip
