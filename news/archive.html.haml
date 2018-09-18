@@ -1,9 +1,15 @@
-.panel.panel-default
-  .panel-heading
-    %strong Latest News
-  .panel-body
+---
+description: A list of all important news.
+layout: normalBase
+title: News archive
+---
+
+%h2 Important News
+
+.row
+  .col-md-12
     %ul.list-unstyled
-      - for new in site.importantNews[0,7]
+      - for new in site.importantNews
         %li(style = "margin-top: 10px;")
           .title
             %a{:href => new.newsUrl, :target => "_blank"}
@@ -14,5 +20,5 @@
             - else
               #{new.newsDate.strftime('%a %-d %B %Y')} - #{new.newsContent}
     .small.pull-right
-      %a{:href => relative("/news/archive.html", page.outputPage)}
-        Archive
+      %a{:href => "https://github.com/kiegroup/jbpm-website/tree/master/_config/importantNews.yml", :target => "_blank"}
+        Add news
