@@ -2,25 +2,33 @@
 :awestruct-layout: normalBase
 :showtitle:
 
-Getting started screencasts:
+== Getting started screencasts:
 
-*10 Minute Tutorial using the Workbench*: http://people.redhat.com/kverlaen/jbpm6F-installer-console.swf[Video] +
-*10 Minute Tutorial using Eclipse*: http://people.redhat.com/kverlaen/jbpm6F-installer-eclipse.swf[Video]
+* *jBPM Getting started - Evaluation process*: https://www.youtube.com/watch?v=-fxL2iioPRI[Video]
+* *jBPM Getting started - IT Orders Case*: https://www.youtube.com/watch?v=jtYY5jVD9T0[Video]
+* *jBPM Getting started - Build your project from scratch*: https://www.youtube.com/watch?v=pdgj0hrF5rc[Video]
 
-Presentations / webinars:
+== Presentations / webinars:
 
-*Deep Dive into jBPM6 video (Red Hat Summit 2014)*: http://kverlaen.blogspot.be/2014/05/deep-dive-into-jbpm6-video-red-hat.html[Blog] +
-*JBoss BPM Suite 6.0* webinar, including a 15-20min demo of the web tooling in action: http://kverlaen.blogspot.be/2014/03/webinar-jboss-bpm-suite-60-available-on.html[Blog] +
-*jBPM and BPSim*: http://kverlaen.blogspot.be/2014/04/webinar-april-10th-business-process.html[Blog] +
-*Getting started with Business Activity Monitoring* webinar: http://kverlaen.blogspot.be/2013/10/webinar-getting-started-with-business.html[Blog]
+* *Exploiting Cloud Infrastructure for Efficient Business Process Execution*: https://www.youtube.com/watch?v=-BNwfcwpCaw[video]
+* *Supporting Unstructured Work*: https://www.youtube.com/watch?v=r9Wb-Xg5u4s[Video]
+* *Building Business Applications with DMN and BPMN*: http://blog.athico.com/2017/11/building-business-applications-with-dmn.html[Blog]
+* *jBPM 7.8 native execution of BPMN2, DMN 1.1 and CMMN 1.1*: http://mswiderski.blogspot.com/2018/06/jbpm-78-native-execution-of-bpmn2-dmn.html[Blog]
+* *Java Business Process Management (jBPM) Demo*: https://www.youtube.com/watch?v=pJUtrPE9LFU[Video]
 
-Other:
+== Other:
 
-*Red Hat Summit 2014 Middleware Keynote*: http://kverlaen.blogspot.be/2014/04/red-hat-summit-middleware-keynote-and.html[Blog] +
-*Car Insurance Policy Quote demo*: http://kverlaen.blogspot.be/2013/05/car-insurance-policy-quote-demo.html[Blog]
+* *Deep Dive into jBPM6 video (Red Hat Summit 2014)*: http://kverlaen.blogspot.be/2014/05/deep-dive-into-jbpm6-video-red-hat.html[Blog] +
+* *JBoss BPM Suite 6.0* webinar, including a 15-20min demo of the web tooling in action: http://kverlaen.blogspot.be/2014/03/webinar-jboss-bpm-suite-60-available-on.html[Blog] +
+* *jBPM and BPSim*: http://kverlaen.blogspot.be/2014/04/webinar-april-10th-business-process.html[Blog] +
+* *Getting started with Business Activity Monitoring* webinar: http://kverlaen.blogspot.be/2013/10/webinar-getting-started-with-business.html[Blog]
+* *Red Hat Summit 2014 Middleware Keynote*: http://kverlaen.blogspot.be/2014/04/red-hat-summit-middleware-keynote-and.html[Blog] +
+* *Car Insurance Policy Quote demo*: http://kverlaen.blogspot.be/2013/05/car-insurance-policy-quote-demo.html[Blog]
 
-JBoss BPM Suite demos:
+== Red Hat Process Automation Manager demos:
 
-*JBoss BPM Suite 6 demos* by Eric Schabell, Technology Evangelist for JBoss BPM Suite: http://www.schabell.org/search/label/Video[blog].
+* *Red Hat Business Automation primer: Vision and roadmap*: https://www.youtube.com/watch?v=oQCkA_HzYoU[Video]
+* *Red Hat Process Automation Manager 7 Architecture Overview*: https://www.youtube.com/watch?v=gQHMh66mmh8[Video]
+* *JBoss BPM Suite 6 demos* by Eric Schabell, Technology Evangelist for JBoss BPM Suite: http://www.schabell.org/search/label/BPM%20Suite[blog].
 
 
