@@ -146,7 +146,7 @@ layout: base
             %h4.modal-title"
 
 .row
-  .col-md-8(style="margin-top: -17px;margin-bottom: 20px")
+  .col-md-12(style="margin-top: -17px;margin-bottom: 20px")
     :markdown
       ## What does jBPM do?
 
@@ -171,11 +171,16 @@ layout: base
 
     %p jBPM is also not just an isolated process engine. Complex business logic can be modeled as a combination of business processes with business rules and complex event processing. jBPM can be combined with the Drools project to support one unified environment that integrates these paradigms where you model your business logic as a combination of processes, rules and events.
 
+.row
   .col-md-4
-    %div(style="margin-top: 10px;")
+    %div
       = partial('importantNews.html.haml', :outputPage => page)
-      -#= partial('events.html.haml', :outputPage => page)
+  .col-md-4
+    %div
+      = partial('latestTweets.html.haml', :outputPage => page)
+  .col-md-4
+    %div
+      = partial('referencesBooks.html.haml', :outputPage => page)
 
-
+-#= partial('events.html.haml', :outputPage => page)
 -#= partial('latestBlogPosts.html.haml', :outputPage => page)
-= partial('referencesBooks.html.haml', :outputPage => page)
