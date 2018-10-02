@@ -79,6 +79,15 @@
                   %a{:href => relative("/learn/video.html")} Videos
                 %li<
                   %a{:href => relative("/learn/slides.html")} Slides
+            %li.dropdown
+              %a.dropdown-toggle(data-toggle="dropdown" href="#")<
+                = precede 'Business Applications' do
+                  %b.caret>
+              %ul.dropdown-menu
+                %li<
+                  %a{:href => relative("/businessapps/gettingStarted.html")} Get Started
+                %li<
+                  %a{:href => relative("/businessapps/examples.html")} Beyond basics                
             %li<
               %a{:href => relative("/community/getHelp.html")} Get Help
             %li<
