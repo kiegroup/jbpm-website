@@ -9,13 +9,19 @@
   ** jBPM User Guide #{site.pom.latestFinal.version}: #{site.pom.latestFinal.UserGuide}[HTML]
   ** jBPM JavaDocs #{site.pom.latestFinal.version}: #{site.pom.latestFinal.JavaDocs}[HTML]
 
-  
 * Older community documentation: #{site.pom.latestFinal.Archive}[Check the documentation archive].
 * Red Hat subscription documentation: https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BPM_Suite/[Check the customer portal].
+
+'''
+
+=== Execution Server REST API
+
+* link:../api-docs/overview.html[Overview]
+* link:../api-docs/paths.html[Endpoints]
+* link:../api-docs/definitions.html[Definitions]
 
 '''
 
 === Nightly builds
 
   ** jBPM Nightly snapshots: #{site.pom.nightly.jbpmDocs}[HTML]
-

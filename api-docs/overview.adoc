@@ -1,0 +1,41 @@
+= KIE Server
+
+
+[[_overview]]
+== Overview
+
+=== Version information
+[%hardbreaks]
+__Version__ : 7.0
+
+
+=== URI scheme
+[%hardbreaks]
+__BasePath__ : /kie-server/services/rest
+
+
+=== Tags
+
+* Administration of cases :: Case Management
+* Asynchronous jobs :: BPM
+* Case instances :: Case Management
+* Custom queries :: BPM
+* Decision Service :: DMN
+* Documents :: BPM
+* KIE Server :: Core
+* KIE Server Script :: Core
+* Planning and solvers :: BRP
+* Process and task definitions :: BPM
+* Process and task forms :: BPM
+* Process definition and instance images :: BPM
+* Process instances :: BPM
+* Process instances administration :: BPM
+* Queries - case definitions and instances :: Case Management
+* Queries - processes, nodes, variables and tasks :: BPM
+* Rules evaluation :: BRM
+* Static files endpoint :: BPM
+* User task operations and queries :: BPM
+* User tasks administration :: BPM
+
+
+

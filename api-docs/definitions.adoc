@@ -1,0 +1,1238 @@
+
+[[_definitions]]
+== Definitions
+
+[[_scorewrapper]]
+=== ScoreWrapper
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**value** +
+__optional__|string
+|===
+
+
+[[_case-adhoc-fragment]]
+=== case-adhoc-fragment
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**name** +
+__optional__|string
+|**type** +
+__optional__|string
+|===
+
+
+[[_case-adhoc-fragment-list]]
+=== case-adhoc-fragment-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**fragments** +
+__optional__|< <<_case-adhoc-fragment,case-adhoc-fragment>> > array
+|===
+
+
+[[_case-comment]]
+=== case-comment
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**added-at** +
+__optional__|string (date-time)
+|**author** +
+__optional__|string
+|**id** +
+__optional__|string
+|**restricted-to** +
+__optional__|< string > array
+|**text** +
+__optional__|string
+|===
+
+
+[[_case-comment-list]]
+=== case-comment-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**comments** +
+__optional__|< <<_case-comment,case-comment>> > array
+|===
+
+
+[[_case-definition]]
+=== case-definition
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**adhoc-fragments** +
+__optional__|< <<_case-adhoc-fragment,case-adhoc-fragment>> > array
+|**case-id-prefix** +
+__optional__|string
+|**container-id** +
+__optional__|string
+|**id** +
+__optional__|string
+|**milestones** +
+__optional__|< <<_case-milestone-def,case-milestone-def>> > array
+|**name** +
+__optional__|string
+|**roles** +
+__optional__|< string, integer (int32) > map
+|**stages** +
+__optional__|< <<_case-stage-def,case-stage-def>> > array
+|**version** +
+__optional__|string
+|===
+
+
+[[_case-definition-list]]
+=== case-definition-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**definitions** +
+__optional__|< <<_case-definition,case-definition>> > array
+|===
+
+
+[[_case-file]]
+=== case-file
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**case-data** +
+__optional__|< string, object > map
+|**case-data-restrictions** +
+__optional__|< string, < string > array > map
+|**case-group-assignments** +
+__optional__|< string, string > map
+|**case-user-assignments** +
+__optional__|< string, string > map
+|===
+
+
+[[_case-instance]]
+=== case-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**case-completed-at** +
+__optional__|string (date-time)
+|**case-completion-msg** +
+__optional__|string
+|**case-definition-id** +
+__optional__|string
+|**case-description** +
+__optional__|string
+|**case-file** +
+__optional__|<<_case-file,case-file>>
+|**case-id** +
+__optional__|string
+|**case-milestones** +
+__optional__|< <<_case-milestone,case-milestone>> > array
+|**case-owner** +
+__optional__|string
+|**case-roles** +
+__optional__|< <<_case-role-assignment,case-role-assignment>> > array
+|**case-sla-compliance** +
+__optional__|integer (int32)
+|**case-sla-due-date** +
+__optional__|string (date-time)
+|**case-stages** +
+__optional__|< <<_case-stage,case-stage>> > array
+|**case-started-at** +
+__optional__|string (date-time)
+|**case-status** +
+__optional__|integer (int32)
+|**container-id** +
+__optional__|string
+|===
+
+
+[[_case-instance-list]]
+=== case-instance-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**instances** +
+__optional__|< <<_case-instance,case-instance>> > array
+|===
+
+
+[[_case-migration-report-instance]]
+=== case-migration-report-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**case-id** +
+__optional__|string
+|**case-migration-end** +
+__optional__|string (date-time)
+|**case-migration-reports** +
+__optional__|< <<_migration-report-instance,migration-report-instance>> > array
+|**case-migration-start** +
+__optional__|string (date-time)
+|**case-migration-successful** +
+__optional__|boolean
+|===
+
+
+[[_case-milestone]]
+=== case-milestone
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**milestone-achieved** +
+__optional__|boolean
+|**milestone-achieved-at** +
+__optional__|string (date-time)
+|**milestone-id** +
+__optional__|string
+|**milestone-name** +
+__optional__|string
+|**milestone-status** +
+__optional__|string
+|===
+
+
+[[_case-milestone-def]]
+=== case-milestone-def
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**milestone-id** +
+__optional__|string
+|**milestone-mandatory** +
+__optional__|boolean
+|**milestone-name** +
+__optional__|string
+|===
+
+
+[[_case-milestone-list]]
+=== case-milestone-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**milestones** +
+__optional__|< <<_case-milestone,case-milestone>> > array
+|===
+
+
+[[_case-role-assignment]]
+=== case-role-assignment
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**groups** +
+__optional__|< string > array
+|**name** +
+__optional__|string
+|**users** +
+__optional__|< string > array
+|===
+
+
+[[_case-role-assignment-list]]
+=== case-role-assignment-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**role-assignments** +
+__optional__|< <<_case-role-assignment,case-role-assignment>> > array
+|===
+
+
+[[_case-stage]]
+=== case-stage
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**active-nodes** +
+__optional__|< <<_node-instance,node-instance>> > array
+|**adhoc-fragments** +
+__optional__|< <<_case-adhoc-fragment,case-adhoc-fragment>> > array
+|**stage-id** +
+__optional__|string
+|**stage-name** +
+__optional__|string
+|**stage-status** +
+__optional__|string
+|===
+
+
+[[_case-stage-def]]
+=== case-stage-def
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**adhoc-fragments** +
+__optional__|< <<_case-adhoc-fragment,case-adhoc-fragment>> > array
+|**stage-id** +
+__optional__|string
+|**stage-name** +
+__optional__|string
+|===
+
+
+[[_case-stage-list]]
+=== case-stage-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**stages** +
+__optional__|< <<_case-stage,case-stage>> > array
+|===
+
+
+[[_document-instance]]
+=== document-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**document-content** +
+__optional__|< string (byte) > array
+|**document-id** +
+__optional__|string
+|**document-last-mod** +
+__optional__|string (date-time)
+|**document-link** +
+__optional__|string
+|**document-name** +
+__optional__|string
+|**document-size** +
+__optional__|integer (int64)
+|===
+
+
+[[_document-instance-list]]
+=== document-instance-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**document-instances** +
+__optional__|< <<_document-instance,document-instance>> > array
+|===
+
+
+[[_error-info-instance]]
+=== error-info-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**error-date** +
+__optional__|string (date-time)
+|**error-instance-id** +
+__optional__|integer (int64)
+|**error-message** +
+__optional__|string
+|**error-stacktrace** +
+__optional__|string
+|**request-instance-id** +
+__optional__|integer (int64)
+|===
+
+
+[[_error-info-instance-list]]
+=== error-info-instance-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**error-info-instance** +
+__optional__|< <<_error-info-instance,error-info-instance>> > array
+|===
+
+
+[[_execution-error]]
+=== execution-error
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**acknowledged** +
+__optional__|boolean
+|**acknowledged-at** +
+__optional__|string (date-time)
+|**acknowledged-by** +
+__optional__|string
+|**activity-id** +
+__optional__|integer (int64)
+|**activity-name** +
+__optional__|string
+|**container-id** +
+__optional__|string
+|**error** +
+__optional__|string
+|**error-date** +
+__optional__|string (date-time)
+|**error-msg** +
+__optional__|string
+|**id** +
+__optional__|string
+|**job-id** +
+__optional__|integer (int64)
+|**process-id** +
+__optional__|string
+|**process-instance-id** +
+__optional__|integer (int64)
+|**type** +
+__optional__|string
+|===
+
+
+[[_execution-error-list]]
+=== execution-error-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**error-instance** +
+__optional__|< <<_execution-error,execution-error>> > array
+|===
+
+
+[[_kie-message]]
+=== kie-message
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**content** +
+__optional__|< string > array
+|**severity** +
+__optional__|enum (INFO, WARN, ERROR)
+|**timestamp** +
+__optional__|string (date-time)
+|===
+
+
+[[_migration-report-instance]]
+=== migration-report-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**migration-end** +
+__optional__|string (date-time)
+|**migration-logs** +
+__optional__|< string > array
+|**migration-process-instance** +
+__optional__|integer (int64)
+|**migration-start** +
+__optional__|string (date-time)
+|**migration-successful** +
+__optional__|boolean
+|===
+
+
+[[_migration-report-instance-list]]
+=== migration-report-instance-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**migration-report-instance** +
+__optional__|< <<_migration-report-instance,migration-report-instance>> > array
+|===
+
+
+[[_node-instance]]
+=== node-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**container-id** +
+__optional__|string
+|**node-completed** +
+__optional__|boolean
+|**node-connection** +
+__optional__|string
+|**node-id** +
+__optional__|string
+|**node-instance-id** +
+__optional__|integer (int64)
+|**node-name** +
+__optional__|string
+|**node-type** +
+__optional__|string
+|**process-instance-id** +
+__optional__|integer (int64)
+|**reference-id** +
+__optional__|integer (int64)
+|**sla-compliance** +
+__optional__|integer (int32)
+|**sla-due-date** +
+__optional__|string (date-time)
+|**start-date** +
+__optional__|string (date-time)
+|**work-item-id** +
+__optional__|integer (int64)
+|===
+
+
+[[_node-instance-list]]
+=== node-instance-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**node-instance** +
+__optional__|< <<_node-instance,node-instance>> > array
+|===
+
+
+[[_process-associated-entities]]
+=== process-associated-entities
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**associatedEntities** +
+__optional__|< string, < string > array > map
+|===
+
+
+[[_process-definition]]
+=== process-definition
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**associatedEntities** +
+__optional__|< string, < string > array > map
+|**container-id** +
+__optional__|string
+|**dynamic** +
+__optional__|boolean
+|**package** +
+__optional__|string
+|**process-id** +
+__optional__|string
+|**process-name** +
+__optional__|string
+|**process-version** +
+__optional__|string
+|**processVariables** +
+__optional__|< string, string > map
+|**reusableSubProcesses** +
+__optional__|< string > array
+|**serviceTasks** +
+__optional__|< string, string > map
+|===
+
+
+[[_process-definitions]]
+=== process-definitions
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**processes** +
+__optional__|< <<_process-definition,process-definition>> > array
+|===
+
+
+[[_process-instance]]
+=== process-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**active-user-tasks** +
+__optional__|<<_task-summary-list,task-summary-list>>
+|**container-id** +
+__optional__|string
+|**correlation-key** +
+__optional__|string
+|**initiator** +
+__optional__|string
+|**parent-instance-id** +
+__optional__|integer (int64)
+|**process-id** +
+__optional__|string
+|**process-instance-desc** +
+__optional__|string
+|**process-instance-id** +
+__optional__|integer (int64)
+|**process-instance-state** +
+__optional__|integer (int32)
+|**process-instance-variables** +
+__optional__|< string, object > map
+|**process-name** +
+__optional__|string
+|**process-version** +
+__optional__|string
+|**sla-compliance** +
+__optional__|integer (int32)
+|**sla-due-date** +
+__optional__|string (date-time)
+|**start-date** +
+__optional__|string (date-time)
+|===
+
+
+[[_process-instance-list]]
+=== process-instance-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**process-instance** +
+__optional__|< <<_process-instance,process-instance>> > array
+|===
+
+
+[[_process-node]]
+=== process-node
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**id** +
+__optional__|integer (int64)
+|**name** +
+__optional__|string
+|**process-id** +
+__optional__|string
+|**type** +
+__optional__|string
+|===
+
+
+[[_process-node-list]]
+=== process-node-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**process-node** +
+__optional__|< <<_process-node,process-node>> > array
+|===
+
+
+[[_process-service-tasks]]
+=== process-service-tasks
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**serviceTasks** +
+__optional__|< string, string > map
+|===
+
+
+[[_process-subprocesses]]
+=== process-subprocesses
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**subProcesses** +
+__optional__|< string > array
+|===
+
+
+[[_process-task-inputs]]
+=== process-task-inputs
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**taskInputs** +
+__optional__|< string, string > map
+|===
+
+
+[[_process-task-outputs]]
+=== process-task-outputs
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**taskOutputs** +
+__optional__|< string, string > map
+|===
+
+
+[[_process-variables]]
+=== process-variables
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**variables** +
+__optional__|< string, string > map
+|===
+
+
+[[_query-definition]]
+=== query-definition
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**query-columns** +
+__optional__|< string, string > map
+|**query-expression** +
+__optional__|string
+|**query-name** +
+__optional__|string
+|**query-source** +
+__optional__|string
+|**query-target** +
+__optional__|string
+|===
+
+
+[[_query-definitions]]
+=== query-definitions
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**queries** +
+__optional__|< <<_query-definition,query-definition>> > array
+|===
+
+
+[[_request-info-instance]]
+=== request-info-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**request-business-key** +
+__optional__|string
+|**request-command** +
+__optional__|string
+|**request-container-id** +
+__optional__|string
+|**request-data** +
+__optional__|< string, object > map
+|**request-errors** +
+__optional__|<<_error-info-instance-list,error-info-instance-list>>
+|**request-executions** +
+__optional__|integer (int32)
+|**request-instance-id** +
+__optional__|integer (int64)
+|**request-message** +
+__optional__|string
+|**request-retries** +
+__optional__|integer (int32)
+|**request-scheduled-date** +
+__optional__|string (date-time)
+|**request-status** +
+__optional__|string
+|**response-data** +
+__optional__|< string, object > map
+|===
+
+
+[[_request-info-instance-list]]
+=== request-info-instance-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**request-info-instance** +
+__optional__|< <<_request-info-instance,request-info-instance>> > array
+|===
+
+
+[[_response]]
+=== response
+__Type__ : object
+
+
+[[_responses]]
+=== responses
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**response** +
+__optional__|< <<_response,response>> > array
+|===
+
+
+[[_solver-instance]]
+=== solver-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**best-solution** +
+__optional__|object
+|**container-id** +
+__optional__|string
+|**score** +
+__optional__|<<_scorewrapper,ScoreWrapper>>
+|**solver-config-file** +
+__optional__|string
+|**solver-id** +
+__optional__|string
+|**status** +
+__optional__|enum (NOT_SOLVING, TERMINATING_EARLY, SOLVING)
+|===
+
+
+[[_solvers]]
+=== solvers
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**solver** +
+__optional__|< <<_solver-instance,solver-instance>> > array
+|===
+
+
+[[_task-attachment]]
+=== task-attachment
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**attachment-added-at** +
+__optional__|string (date-time)
+|**attachment-added-by** +
+__optional__|string
+|**attachment-content-id** +
+__optional__|integer (int64)
+|**attachment-id** +
+__optional__|integer (int64)
+|**attachment-name** +
+__optional__|string
+|**attachment-size** +
+__optional__|integer (int32)
+|**attachment-type** +
+__optional__|string
+|===
+
+
+[[_task-attachment-list]]
+=== task-attachment-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**task-attachment** +
+__optional__|< <<_task-attachment,task-attachment>> > array
+|===
+
+
+[[_task-comment]]
+=== task-comment
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**comment** +
+__optional__|string
+|**comment-added-at** +
+__optional__|string (date-time)
+|**comment-added-by** +
+__optional__|string
+|**comment-id** +
+__optional__|integer (int64)
+|===
+
+
+[[_task-comment-list]]
+=== task-comment-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**task-comment** +
+__optional__|< <<_task-comment,task-comment>> > array
+|===
+
+
+[[_task-event-instance]]
+=== task-event-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**task-event-date** +
+__optional__|string (date-time)
+|**task-event-id** +
+__optional__|integer (int64)
+|**task-event-message** +
+__optional__|string
+|**task-event-type** +
+__optional__|string
+|**task-event-user** +
+__optional__|string
+|**task-id** +
+__optional__|integer (int64)
+|**task-process-instance-id** +
+__optional__|integer (int64)
+|**task-work-item-id** +
+__optional__|integer (int64)
+|===
+
+
+[[_task-event-instance-list]]
+=== task-event-instance-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**task-event-instance** +
+__optional__|< <<_task-event-instance,task-event-instance>> > array
+|===
+
+
+[[_task-instance]]
+=== task-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**task-activation-time** +
+__optional__|string (date-time)
+|**task-actual-owner** +
+__optional__|string
+|**task-business-admins** +
+__optional__|< string > array
+|**task-container-id** +
+__optional__|string
+|**task-created-by** +
+__optional__|string
+|**task-created-on** +
+__optional__|string (date-time)
+|**task-description** +
+__optional__|string
+|**task-excl-owners** +
+__optional__|< string > array
+|**task-expiration-time** +
+__optional__|string (date-time)
+|**task-form** +
+__optional__|string
+|**task-id** +
+__optional__|integer (int64)
+|**task-input-data** +
+__optional__|< string, object > map
+|**task-name** +
+__optional__|string
+|**task-output-data** +
+__optional__|< string, object > map
+|**task-parent-id** +
+__optional__|integer (int64)
+|**task-pot-owners** +
+__optional__|< string > array
+|**task-priority** +
+__optional__|integer (int32)
+|**task-process-id** +
+__optional__|string
+|**task-process-instance-id** +
+__optional__|integer (int64)
+|**task-skippable** +
+__optional__|boolean
+|**task-status** +
+__optional__|string
+|**task-subject** +
+__optional__|string
+|**task-type** +
+__optional__|string
+|**task-workitem-id** +
+__optional__|integer (int64)
+|===
+
+
+[[_task-notification]]
+=== task-notification
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**active** +
+__optional__|boolean
+|**content** +
+__optional__|string
+|**groups** +
+__optional__|< string > array
+|**id** +
+__optional__|integer (int64)
+|**name** +
+__optional__|string
+|**notify-at** +
+__optional__|string (date-time)
+|**subject** +
+__optional__|string
+|**users** +
+__optional__|< string > array
+|===
+
+
+[[_task-notification-list]]
+=== task-notification-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**task-notification** +
+__optional__|< <<_task-notification,task-notification>> > array
+|===
+
+
+[[_task-reassignment]]
+=== task-reassignment
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**active** +
+__optional__|boolean
+|**groups** +
+__optional__|< string > array
+|**id** +
+__optional__|integer (int64)
+|**name** +
+__optional__|string
+|**reassign-at** +
+__optional__|string (date-time)
+|**users** +
+__optional__|< string > array
+|===
+
+
+[[_task-reassignment-list]]
+=== task-reassignment-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**task-reassignment** +
+__optional__|< <<_task-reassignment,task-reassignment>> > array
+|===
+
+
+[[_task-summary]]
+=== task-summary
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**task-activation-time** +
+__optional__|string (date-time)
+|**task-actual-owner** +
+__optional__|string
+|**task-container-id** +
+__optional__|string
+|**task-created-by** +
+__optional__|string
+|**task-created-on** +
+__optional__|string (date-time)
+|**task-description** +
+__optional__|string
+|**task-expiration-time** +
+__optional__|string (date-time)
+|**task-id** +
+__optional__|integer (int64)
+|**task-is-skipable** +
+__optional__|boolean
+|**task-name** +
+__optional__|string
+|**task-parent-id** +
+__optional__|integer (int64)
+|**task-priority** +
+__optional__|integer (int32)
+|**task-proc-def-id** +
+__optional__|string
+|**task-proc-inst-id** +
+__optional__|integer (int64)
+|**task-status** +
+__optional__|string
+|**task-subject** +
+__optional__|string
+|===
+
+
+[[_task-summary-list]]
+=== task-summary-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**task-summary** +
+__optional__|< <<_task-summary,task-summary>> > array
+|===
+
+
+[[_timer-instance]]
+=== timer-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**activation-time** +
+__optional__|string (date-time)
+|**delay** +
+__optional__|integer (int64)
+|**id** +
+__optional__|integer (int64)
+|**last-fire-time** +
+__optional__|string (date-time)
+|**name** +
+__optional__|string
+|**next-fire-time** +
+__optional__|string (date-time)
+|**period** +
+__optional__|integer (int64)
+|**process-instance-id** +
+__optional__|integer (int64)
+|**repeat-limit** +
+__optional__|integer (int32)
+|**session-id** +
+__optional__|integer (int64)
+|===
+
+
+[[_timer-instance-list]]
+=== timer-instance-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**timer-instance** +
+__optional__|< <<_timer-instance,timer-instance>> > array
+|===
+
+
+[[_user-task-definition]]
+=== user-task-definition
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**associatedEntities** +
+__optional__|< string > array
+|**task-comment** +
+__optional__|string
+|**task-created-by** +
+__optional__|string
+|**task-form-name** +
+__optional__|string
+|**task-id** +
+__optional__|string
+|**task-name** +
+__optional__|string
+|**task-priority** +
+__optional__|integer (int32)
+|**task-skippable** +
+__optional__|boolean
+|**taskInputMappings** +
+__optional__|< string, string > map
+|**taskOutputMappings** +
+__optional__|< string, string > map
+|===
+
+
+[[_user-task-definitions]]
+=== user-task-definitions
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**task** +
+__optional__|< <<_user-task-definition,user-task-definition>> > array
+|===
+
+
+[[_variable-instance]]
+=== variable-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**modification-date** +
+__optional__|string (date-time)
+|**name** +
+__optional__|string
+|**old-value** +
+__optional__|string
+|**process-instance-id** +
+__optional__|integer (int64)
+|**value** +
+__optional__|string
+|===
+
+
+[[_variable-instance-list]]
+=== variable-instance-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**variable-instance** +
+__optional__|< <<_variable-instance,variable-instance>> > array
+|===
+
+
+[[_work-item-instance]]
+=== work-item-instance
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**container-id** +
+__optional__|string
+|**node-id** +
+__optional__|integer (int64)
+|**node-instance-id** +
+__optional__|integer (int64)
+|**process-instance-id** +
+__optional__|integer (int64)
+|**work-item-id** +
+__optional__|integer (int64)
+|**work-item-name** +
+__optional__|string
+|**work-item-params** +
+__optional__|< string, object > map
+|**work-item-state** +
+__optional__|integer (int32)
+|===
+
+
+[[_work-item-instance-list]]
+=== work-item-instance-list
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**work-item-instance** +
+__optional__|< <<_work-item-instance,work-item-instance>> > array
+|===
+
+
+
