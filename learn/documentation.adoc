@@ -16,9 +16,17 @@
 
 === Execution Server REST API
 
-* link:../api-docs/overview.html[Overview]
-* link:../api-docs/paths.html[Endpoints]
-* link:../api-docs/definitions.html[Definitions]
+* link:../api-docs/kie-server/overview.html[Overview]
+* link:../api-docs/kie-server/paths.html[Endpoints]
+* link:../api-docs/kie-server/definitions.html[Definitions]
+
+'''
+
+=== Controller REST API
+
+* link:../api-docs/controller/overview.html[Overview]
+* link:../api-docs/controller/paths.html[Endpoints]
+* link:../api-docs/controller/definitions.html[Definitions]
 
 '''
 
