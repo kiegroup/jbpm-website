@@ -1,0 +1,1447 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "7.0",
+    "title": "Controller API"
+  },
+  "tags": [
+    {
+      "name": "Controller :: Server Controller"
+    },
+    {
+      "name": "Controller :: Runtime"
+    },
+    {
+      "name": "Controller :: Management"
+    }
+  ],
+  "consumes": [
+    "application/json",
+    "application/xml"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml"
+  ],
+  "paths": {
+    "/controller/server/{id}": {
+      "put": {
+        "tags": [
+          "Controller :: Server Controller"
+        ],
+        "summary": "Connect a new Kie Server instance to Controller",
+        "description": "",
+        "operationId": "connectKieServer",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server instance identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "Kie Server instance information",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-examples": {
+              "application/json": "{\n  \"id\" : \"sample-server\",\n  \"version\" : \"7.14.0-SNAPSHOT\",\n  \"name\" : \"sample-server\",\n  \"location\" : \"http://localhost:8080/kie-server/services/rest/server\",\n  \"capabilities\" : [\n       \"KieServer\",       \"BRM\",       \"BPM\",       \"CaseMgmt\",       \"BPM-UI\",       \"BRP\",       \"DMN\",       \"Swagger\"    ],\n  \"messages\" : null\n}",
+              "application/xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<kie-server-info>\n  <id>sample-server</id>\n  <version>7.14.0-SNAPSHOT</version>\n  <name>sample-server</name>\n  <location>http://localhost:8080/kie-server/services/rest/server</location>\n  <capabilities>KieServer</capabilities>\n  <capabilities>BRM</capabilities>\n  <capabilities>BPM</capabilities>\n  <capabilities>CaseMgmt</capabilities>\n  <capabilities>BPM-UI</capabilities>\n  <capabilities>BRP</capabilities>\n  <capabilities>DMN</capabilities>\n  <capabilities>Swagger</capabilities>\n</kie-server-info>"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/KieServerSetup"
+            }
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Controller :: Server Controller"
+        ],
+        "summary": "Remove a Kie Server instance from Controller",
+        "description": "",
+        "operationId": "disconnectKieServer",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server instance identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Kie Server instance URL",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/runtime/servers/{id}/instances": {
+      "get": {
+        "tags": [
+          "Controller :: Runtime"
+        ],
+        "summary": "Retrieve all Kie Server instances connected to the controller for a given Server Template",
+        "description": "",
+        "operationId": "getServerInstances",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ServerInstanceKeyList"
+            }
+          },
+          "404": {
+            "description": "Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/runtime/servers/{id}/instances/{instanceId}/containers": {
+      "get": {
+        "tags": [
+          "Controller :: Runtime"
+        ],
+        "summary": "Retrieve all Containers for a given Kie Server instance",
+        "description": "",
+        "operationId": "getServerInstanceContainers",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Kie Server instance identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ContainerList"
+            }
+          },
+          "404": {
+            "description": "Server Template or Kie Server instance not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/runtime/servers/{id}/containers/{containerId}/instances": {
+      "get": {
+        "tags": [
+          "Controller :: Runtime"
+        ],
+        "summary": "Retrieve all Containers with a given id in Kie Server instances from a specific Server Template",
+        "description": "",
+        "operationId": "getServerTemplateContainers",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Container identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ContainerList"
+            }
+          },
+          "404": {
+            "description": "Server Template or Kie Server instance not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers/{id}/containers/{containerId}": {
+      "get": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Get Container Specification for a given id and Server Template",
+        "description": "",
+        "operationId": "getContainerSpec",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Container identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ContainerSpec"
+            }
+          },
+          "404": {
+            "description": "Container Specification or Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Update Container Specification in a given Server Template",
+        "description": "",
+        "operationId": "updateContainerSpec",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Container identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "Container information",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-examples": {
+              "application/json": "{\n  \"container-id\" : \"evaluation_1.0.0-SNAPSHOT\",\n  \"container-name\" : \"evaluation\",\n  \"release-id\" : {\n       \"group-id\" : \"evaluation\",\n        \"artifact-id\" : \"evaluation\",\n        \"version\" : \"1.0.0-SNAPSHOT\"\n    },\n  \"configuration\" : null,\n  \"status\" : \"STARTED\"\n}",
+              "application/xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<container-spec-details>\n    <container-id>evaluation_1.0.0-SNAPSHOT</container-id>\n    <container-name>evaluation</container-name>\n    <release-id>\n        <artifact-id>evaluation</artifact-id>\n        <group-id>evaluation</group-id>\n        <version>1.0.0-SNAPSHOT</version>\n    </release-id>\n    <status>STARTED</status>\n</container-spec-details>"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Server Template or Container not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Add new Container Specification to a given Server Template",
+        "description": "",
+        "operationId": "saveContainerSpec",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Container identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "Container information",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-examples": {
+              "application/json": "{\n  \"container-id\" : \"evaluation_1.0.0-SNAPSHOT\",\n  \"container-name\" : \"evaluation\",\n  \"release-id\" : {\n       \"group-id\" : \"evaluation\",\n        \"artifact-id\" : \"evaluation\",\n        \"version\" : \"1.0.0-SNAPSHOT\"\n    },\n  \"configuration\" : null,\n  \"status\" : \"STARTED\"\n}",
+              "application/xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<container-spec-details>\n    <container-id>evaluation_1.0.0-SNAPSHOT</container-id>\n    <container-name>evaluation</container-name>\n    <release-id>\n        <artifact-id>evaluation</artifact-id>\n        <group-id>evaluation</group-id>\n        <version>1.0.0-SNAPSHOT</version>\n    </release-id>\n    <status>STARTED</status>\n</container-spec-details>"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Remove Container Specification from a given Server Template",
+        "description": "",
+        "operationId": "deleteContainerSpec",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Container identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Container Specification or Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers/{id}": {
+      "get": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Retrieve Server Template for a given id",
+        "description": "",
+        "operationId": "getServerTemplate",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ServerTemplate"
+            }
+          },
+          "404": {
+            "description": "Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Add new Server Template to Controller",
+        "description": "",
+        "operationId": "saveServerTemplate",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "Kie Server Template information",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-examples": {
+              "application/json": "{\n  \"server-id\" : \"sample-server\",\n  \"server-name\" : \"sample-server\",\n  \"capabilities\" : [\n       \"RULE\",       \"PROCESS\",       \"PLANNING\"    ],\n  \"container-specs\" : [ ],\n  \"server-config\" : { }\n}",
+              "application/xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<server-template-details>\n  <server-id>sample-server</server-id>\n  <server-name>sample-server</server-name>\n  <configs/>\n  <capabilities>RULE</capabilities>\n  <capabilities>PROCESS</capabilities>\n  <capabilities>PLANNING</capabilities>\n</server-template-details>"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Remove Server Template",
+        "description": "",
+        "operationId": "deleteServerTemplate",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers": {
+      "get": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Retrieve all Server Templates",
+        "description": "",
+        "operationId": "listServerTemplates",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ServerTemplateList"
+            }
+          },
+          "404": {
+            "description": "Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers/{id}/containers": {
+      "get": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Retrieve all Container Specification for a Server Template",
+        "description": "",
+        "operationId": "listContainerSpec",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ContainerSpecList"
+            }
+          },
+          "404": {
+            "description": "Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers/{id}/containers/{containerId}/config/{capability}": {
+      "post": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Update Container Specification for a given id and Server Template",
+        "description": "",
+        "operationId": "updateContainerConfig",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Container identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Container capability",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "Container configuration",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-examples": {
+              "application/json": "{\n\"org.kie.server.controller.api.model.spec.ProcessConfig\" : {\n       \"runtimeStrategy\" : \"SINGLETON\",\n       \"kbase\" : null,\n       \"ksession\" : null,\n       \"mergeMode\" : \"MERGE_COLLECTIONS\"\n  }\n}",
+              "application/xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<process-config>\n    <runtimeStrategy>SINGLETON</runtimeStrategy>\n    <mergeMode>MERGE_COLLECTIONS</mergeMode>\n</process-config>"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Container Specification or Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers/{id}/containers/{containerId}/status/stopped": {
+      "post": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Stop Container for a given id and Server Template",
+        "description": "",
+        "operationId": "stopContainer",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Container identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Container or Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers/{id}/containers/{containerId}/status/started": {
+      "post": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Start Container for a given id and Server Template",
+        "description": "",
+        "operationId": "startContainer",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Container identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Container or Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers/{id}/containers/{containerId}/status/activated": {
+      "post": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Activate Container for a given id and Server Template",
+        "description": "",
+        "operationId": "activateContainer",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Container identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Container or Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers/{id}/containers/{containerId}/status/deactivated": {
+      "post": {
+        "tags": [
+          "Controller :: Management"
+        ],
+        "summary": "Deactivate Container for a given id and Server Template",
+        "description": "",
+        "operationId": "deactivateContainer",
+        "consumes": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Kie Server Template identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Container identifier",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Container or Server Template not found"
+          },
+          "400": {
+            "description": "Controller exception"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "KieContainerResource": {
+      "type": "object",
+      "properties": {
+        "containerId": {
+          "type": "string",
+          "xml": {
+            "name": "container-id",
+            "attribute": true
+          }
+        },
+        "releaseId": {
+          "xml": {
+            "name": "release-id"
+          },
+          "$ref": "#/definitions/ReleaseId"
+        },
+        "resolvedReleaseId": {
+          "xml": {
+            "name": "resolved-release-id"
+          },
+          "$ref": "#/definitions/ReleaseId"
+        },
+        "status": {
+          "type": "string",
+          "xml": {
+            "attribute": true
+          },
+          "enum": [
+            "CREATING",
+            "STARTED",
+            "FAILED",
+            "DISPOSING",
+            "STOPPED",
+            "DEACTIVATED"
+          ]
+        },
+        "scanner": {
+          "$ref": "#/definitions/KieScannerResource"
+        },
+        "configItems": {
+          "type": "array",
+          "xml": {
+            "name": "config-items"
+          },
+          "items": {
+            "xml": {
+              "name": "config-items"
+            },
+            "$ref": "#/definitions/KieServerConfigItem"
+          }
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "xml": {
+              "name": "messages"
+            },
+            "$ref": "#/definitions/Message"
+          }
+        },
+        "containerAlias": {
+          "type": "string",
+          "xml": {
+            "name": "container-alias",
+            "attribute": true
+          }
+        }
+      },
+      "xml": {
+        "name": "kie-container"
+      }
+    },
+    "KieScannerResource": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "xml": {
+            "attribute": true
+          },
+          "enum": [
+            "UNKNOWN",
+            "CREATED",
+            "STARTED",
+            "SCANNING",
+            "STOPPED",
+            "DISPOSED"
+          ]
+        },
+        "pollInterval": {
+          "type": "integer",
+          "format": "int64",
+          "xml": {
+            "name": "poll-interval",
+            "attribute": true
+          }
+        }
+      },
+      "xml": {
+        "name": "kie-scanner"
+      }
+    },
+    "KieServerConfig": {
+      "type": "object",
+      "properties": {
+        "configItems": {
+          "type": "array",
+          "xml": {
+            "name": "config-items"
+          },
+          "items": {
+            "xml": {
+              "name": "config-items"
+            },
+            "$ref": "#/definitions/KieServerConfigItem"
+          }
+        }
+      },
+      "xml": {
+        "name": "kie-server-config"
+      }
+    },
+    "KieServerConfigItem": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "xml": {
+            "name": "itemName"
+          }
+        },
+        "value": {
+          "type": "string",
+          "xml": {
+            "name": "itemValue"
+          }
+        },
+        "type": {
+          "type": "string",
+          "xml": {
+            "name": "itemType"
+          }
+        }
+      },
+      "xml": {
+        "name": "kie-server-config-item"
+      }
+    },
+    "KieServerSetup": {
+      "type": "object",
+      "properties": {
+        "serverConfig": {
+          "xml": {
+            "name": "server-config"
+          },
+          "$ref": "#/definitions/KieServerConfig"
+        },
+        "containers": {
+          "type": "array",
+          "xml": {
+            "name": "server-containers",
+            "wrapped": true
+          },
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/definitions/KieContainerResource"
+          }
+        }
+      },
+      "xml": {
+        "name": "kie-server-setup"
+      }
+    },
+    "Message": {
+      "type": "object",
+      "properties": {
+        "severity": {
+          "type": "string",
+          "enum": [
+            "INFO",
+            "WARN",
+            "ERROR"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "messages": {
+          "type": "array",
+          "xml": {
+            "name": "content"
+          },
+          "items": {
+            "type": "string",
+            "xml": {
+              "name": "content"
+            }
+          }
+        }
+      },
+      "xml": {
+        "name": "kie-message"
+      }
+    },
+    "ReleaseId": {
+      "type": "object",
+      "required": [
+        "artifactId",
+        "groupId",
+        "version"
+      ],
+      "properties": {
+        "groupId": {
+          "type": "string",
+          "xml": {
+            "name": "group-id"
+          }
+        },
+        "artifactId": {
+          "type": "string",
+          "xml": {
+            "name": "artifact-id"
+          }
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "release-id"
+      }
+    },
+    "ServerInstanceKey": {
+      "type": "object",
+      "properties": {
+        "serverInstanceId": {
+          "type": "string",
+          "xml": {
+            "name": "server-instance-id"
+          }
+        },
+        "serverName": {
+          "type": "string",
+          "xml": {
+            "name": "server-name"
+          }
+        },
+        "serverTemplateId": {
+          "type": "string",
+          "xml": {
+            "name": "server-template-id"
+          }
+        },
+        "url": {
+          "type": "string",
+          "xml": {
+            "name": "server-url"
+          }
+        }
+      },
+      "xml": {
+        "name": "server-instance-key"
+      }
+    },
+    "ServerInstanceKeyList": {
+      "type": "object",
+      "properties": {
+        "serverInstanceKeys": {
+          "type": "array",
+          "xml": {
+            "name": "server-instance-key"
+          },
+          "items": {
+            "xml": {
+              "name": "server-instance-key"
+            },
+            "$ref": "#/definitions/ServerInstanceKey"
+          }
+        }
+      },
+      "xml": {
+        "name": "server-instance-key-list"
+      }
+    },
+    "Container": {
+      "type": "object",
+      "properties": {
+        "serverTemplateId": {
+          "type": "string",
+          "xml": {
+            "name": "sever-template-id"
+          }
+        },
+        "containerSpecId": {
+          "type": "string",
+          "xml": {
+            "name": "container-id"
+          }
+        },
+        "containerName": {
+          "type": "string",
+          "xml": {
+            "name": "container-name"
+          }
+        },
+        "url": {
+          "type": "string"
+        },
+        "serverInstanceId": {
+          "type": "string",
+          "xml": {
+            "name": "sever-instance-id"
+          }
+        },
+        "resolvedReleasedId": {
+          "xml": {
+            "name": "container-release-id"
+          },
+          "$ref": "#/definitions/ReleaseId"
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "xml": {
+              "name": "messages"
+            },
+            "$ref": "#/definitions/Message"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "CREATING",
+            "STARTED",
+            "FAILED",
+            "DISPOSING",
+            "STOPPED",
+            "DEACTIVATED"
+          ]
+        },
+        "serverInstanceKey": {
+          "$ref": "#/definitions/ServerInstanceKey"
+        }
+      },
+      "xml": {
+        "name": "container-details"
+      }
+    },
+    "ContainerList": {
+      "type": "object",
+      "properties": {
+        "containers": {
+          "type": "array",
+          "xml": {
+            "name": "container-details"
+          },
+          "items": {
+            "xml": {
+              "name": "container-details"
+            },
+            "$ref": "#/definitions/Container"
+          }
+        }
+      },
+      "xml": {
+        "name": "container-details-list"
+      }
+    },
+    "ContainerConfig": {
+      "type": "object",
+      "xml": {
+        "name": "container-config"
+      }
+    },
+    "ContainerSpec": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "xml": {
+            "name": "container-id"
+          }
+        },
+        "containerName": {
+          "type": "string",
+          "xml": {
+            "name": "container-name"
+          }
+        },
+        "serverTemplateKey": {
+          "xml": {
+            "name": "server-template-key"
+          },
+          "$ref": "#/definitions/ServerTemplateKey"
+        },
+        "releasedId": {
+          "xml": {
+            "name": "release-id"
+          },
+          "$ref": "#/definitions/ReleaseId"
+        },
+        "configs": {
+          "type": "object",
+          "xml": {
+            "name": "configuration"
+          },
+          "additionalProperties": {
+            "$ref": "#/definitions/ContainerConfig"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "CREATING",
+            "STARTED",
+            "FAILED",
+            "DISPOSING",
+            "STOPPED",
+            "DEACTIVATED"
+          ]
+        }
+      },
+      "xml": {
+        "name": "container-spec-details"
+      }
+    },
+    "ProcessConfig": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContainerConfig"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "runtimeStrategy": {
+              "type": "string"
+            },
+            "mergeMode": {
+              "type": "string"
+            },
+            "kbase": {
+              "type": "string"
+            },
+            "ksession": {
+              "type": "string"
+            }
+          },
+          "xml": {
+            "name": "process-config"
+          }
+        }
+      ]
+    },
+    "RuleConfig": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContainerConfig"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "pollInterval": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "scannerStatus": {
+              "type": "string",
+              "enum": [
+                "UNKNOWN",
+                "CREATED",
+                "STARTED",
+                "SCANNING",
+                "STOPPED",
+                "DISPOSED"
+              ]
+            }
+          },
+          "xml": {
+            "name": "rule-config"
+          }
+        }
+      ]
+    },
+    "ServerConfig": {
+      "type": "object",
+      "xml": {
+        "name": "server-config"
+      }
+    },
+    "ServerTemplate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "xml": {
+            "name": "server-id"
+          }
+        },
+        "name": {
+          "type": "string",
+          "xml": {
+            "name": "server-name"
+          }
+        },
+        "containersSpec": {
+          "type": "array",
+          "xml": {
+            "name": "container-specs"
+          },
+          "items": {
+            "xml": {
+              "name": "container-specs"
+            },
+            "$ref": "#/definitions/ContainerSpec"
+          }
+        },
+        "configs": {
+          "type": "object",
+          "xml": {
+            "name": "server-config"
+          },
+          "additionalProperties": {
+            "$ref": "#/definitions/ServerConfig"
+          }
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "xml": {
+              "name": "capabilities"
+            }
+          }
+        },
+        "serverInstanceKeys": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ServerInstanceKey"
+          }
+        }
+      },
+      "xml": {
+        "name": "server-template-details"
+      }
+    },
+    "ServerTemplateKey": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "xml": {
+            "name": "server-id"
+          }
+        },
+        "name": {
+          "type": "string",
+          "xml": {
+            "name": "server-name"
+          }
+        }
+      },
+      "xml": {
+        "name": "server-template-key"
+      }
+    },
+    "ServerTemplateList": {
+      "type": "object",
+      "properties": {
+        "serverTemplates": {
+          "type": "array",
+          "xml": {
+            "name": "server-template"
+          },
+          "items": {
+            "xml": {
+              "name": "server-template"
+            },
+            "$ref": "#/definitions/ServerTemplate"
+          }
+        }
+      },
+      "xml": {
+        "name": "server-template-list"
+      }
+    },
+    "ContainerSpecList": {
+      "type": "object",
+      "properties": {
+        "containerSpecs": {
+          "type": "array",
+          "xml": {
+            "name": "container-spec"
+          },
+          "items": {
+            "xml": {
+              "name": "container-spec"
+            },
+            "$ref": "#/definitions/ContainerSpec"
+          }
+        }
+      },
+      "xml": {
+        "name": "container-spec-list"
+      }
+    }
+  }
+}

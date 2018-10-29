@@ -1,0 +1,1302 @@
+
+:toc: left
+
+
+[[_paths]]
+== Resources
+
+[[_controller_management_resource]]
+=== Controller :: Management
+
+[[_listservertemplates]]
+==== Retrieve all Server Templates
+....
+GET /controller/management/servers
+....
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|successful operation|<<_servertemplatelist,ServerTemplateList>>
+|**400**|Controller exception|No Content
+|**404**|Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "serverTemplates" : [ {
+    "id" : "string",
+    "name" : "string",
+    "containersSpec" : [ {
+      "id" : "string",
+      "containerName" : "string",
+      "serverTemplateKey" : {
+        "id" : "string",
+        "name" : "string"
+      },
+      "releasedId" : {
+        "groupId" : "string",
+        "artifactId" : "string",
+        "version" : "string"
+      },
+      "configs" : {
+        "string" : "<<_containerconfig>>"
+      },
+      "status" : "CREATING"
+    } ],
+    "configs" : {
+      "string" : "<<_serverconfig>>"
+    },
+    "capabilities" : [ "string" ],
+    "serverInstanceKeys" : [ {
+      "serverInstanceId" : "string",
+      "serverName" : "string",
+      "serverTemplateId" : "string",
+      "url" : "string"
+    } ]
+  } ]
+}
+----
+
+
+[[_getservertemplate]]
+==== Retrieve Server Template for a given id
+....
+GET /controller/management/servers/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|successful operation|<<_servertemplate,ServerTemplate>>
+|**400**|Controller exception|No Content
+|**404**|Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "id" : "string",
+  "name" : "string",
+  "containersSpec" : [ {
+    "id" : "string",
+    "containerName" : "string",
+    "serverTemplateKey" : {
+      "id" : "string",
+      "name" : "string"
+    },
+    "releasedId" : {
+      "groupId" : "string",
+      "artifactId" : "string",
+      "version" : "string"
+    },
+    "configs" : {
+      "string" : "<<_containerconfig>>"
+    },
+    "status" : "CREATING"
+  } ],
+  "configs" : {
+    "string" : "<<_serverconfig>>"
+  },
+  "capabilities" : [ "string" ],
+  "serverInstanceKeys" : [ {
+    "serverInstanceId" : "string",
+    "serverName" : "string",
+    "serverTemplateId" : "string",
+    "url" : "string"
+  } ]
+}
+----
+
+
+[[_saveservertemplate]]
+==== Add new Server Template to Controller
+....
+PUT /controller/management/servers/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|**Body**|**Kie Server Template information** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**400**|Controller exception|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "server-id" : "sample-server",
+  "server-name" : "sample-server",
+  "capabilities" : [
+       "RULE",       "PROCESS",       "PLANNING"    ],
+  "container-specs" : [ ],
+  "server-config" : { }
+}
+----
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<server-template-details>
+  <server-id>sample-server</server-id>
+  <server-name>sample-server</server-name>
+  <configs/>
+  <capabilities>RULE</capabilities>
+  <capabilities>PROCESS</capabilities>
+  <capabilities>PLANNING</capabilities>
+</server-template-details>
+----
+
+
+[[_deleteservertemplate]]
+==== Remove Server Template
+....
+DELETE /controller/management/servers/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**400**|Controller exception|No Content
+|**404**|Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}
+----
+
+
+[[_listcontainerspec]]
+==== Retrieve all Container Specification for a Server Template
+....
+GET /controller/management/servers/{id}/containers
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|successful operation|<<_containerspeclist,ContainerSpecList>>
+|**400**|Controller exception|No Content
+|**404**|Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}/containers
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "containerSpecs" : [ {
+    "id" : "string",
+    "containerName" : "string",
+    "serverTemplateKey" : {
+      "id" : "string",
+      "name" : "string"
+    },
+    "releasedId" : {
+      "groupId" : "string",
+      "artifactId" : "string",
+      "version" : "string"
+    },
+    "configs" : {
+      "string" : "<<_containerconfig>>"
+    },
+    "status" : "CREATING"
+  } ]
+}
+----
+
+
+[[_updatecontainerspec]]
+==== Update Container Specification in a given Server Template
+....
+POST /controller/management/servers/{id}/containers/{containerId}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Container identifier** +
+__required__|string
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|**Body**|**Container information** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**400**|Controller exception|No Content
+|**404**|Server Template or Container not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}/containers/{containerId}
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "container-id" : "evaluation_1.0.0-SNAPSHOT",
+  "container-name" : "evaluation",
+  "release-id" : {
+       "group-id" : "evaluation",
+        "artifact-id" : "evaluation",
+        "version" : "1.0.0-SNAPSHOT"
+    },
+  "configuration" : null,
+  "status" : "STARTED"
+}
+----
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<container-spec-details>
+    <container-id>evaluation_1.0.0-SNAPSHOT</container-id>
+    <container-name>evaluation</container-name>
+    <release-id>
+        <artifact-id>evaluation</artifact-id>
+        <group-id>evaluation</group-id>
+        <version>1.0.0-SNAPSHOT</version>
+    </release-id>
+    <status>STARTED</status>
+</container-spec-details>
+----
+
+
+[[_getcontainerspec]]
+==== Get Container Specification for a given id and Server Template
+....
+GET /controller/management/servers/{id}/containers/{containerId}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Container identifier** +
+__required__|string
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|successful operation|<<_containerspec,ContainerSpec>>
+|**400**|Controller exception|No Content
+|**404**|Container Specification or Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}/containers/{containerId}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "id" : "string",
+  "containerName" : "string",
+  "serverTemplateKey" : {
+    "id" : "string",
+    "name" : "string"
+  },
+  "releasedId" : {
+    "groupId" : "string",
+    "artifactId" : "string",
+    "version" : "string"
+  },
+  "configs" : {
+    "string" : "<<_containerconfig>>"
+  },
+  "status" : "CREATING"
+}
+----
+
+
+[[_savecontainerspec]]
+==== Add new Container Specification to a given Server Template
+....
+PUT /controller/management/servers/{id}/containers/{containerId}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Container identifier** +
+__required__|string
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|**Body**|**Container information** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**400**|Controller exception|No Content
+|**404**|Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}/containers/{containerId}
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "container-id" : "evaluation_1.0.0-SNAPSHOT",
+  "container-name" : "evaluation",
+  "release-id" : {
+       "group-id" : "evaluation",
+        "artifact-id" : "evaluation",
+        "version" : "1.0.0-SNAPSHOT"
+    },
+  "configuration" : null,
+  "status" : "STARTED"
+}
+----
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<container-spec-details>
+    <container-id>evaluation_1.0.0-SNAPSHOT</container-id>
+    <container-name>evaluation</container-name>
+    <release-id>
+        <artifact-id>evaluation</artifact-id>
+        <group-id>evaluation</group-id>
+        <version>1.0.0-SNAPSHOT</version>
+    </release-id>
+    <status>STARTED</status>
+</container-spec-details>
+----
+
+
+[[_deletecontainerspec]]
+==== Remove Container Specification from a given Server Template
+....
+DELETE /controller/management/servers/{id}/containers/{containerId}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Container identifier** +
+__required__|string
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**400**|Controller exception|No Content
+|**404**|Container Specification or Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}/containers/{containerId}
+----
+
+
+[[_updatecontainerconfig]]
+==== Update Container Specification for a given id and Server Template
+....
+POST /controller/management/servers/{id}/containers/{containerId}/config/{capability}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Container capability** +
+__required__|string
+|**Path**|**Container identifier** +
+__required__|string
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|**Body**|**Container configuration** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**400**|Controller exception|No Content
+|**404**|Container Specification or Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}/containers/{containerId}/config/{capability}
+----
+
+
+====== Request body
+[source,json]
+----
+{
+"org.kie.server.controller.api.model.spec.ProcessConfig" : {
+       "runtimeStrategy" : "SINGLETON",
+       "kbase" : null,
+       "ksession" : null,
+       "mergeMode" : "MERGE_COLLECTIONS"
+  }
+}
+----
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<process-config>
+    <runtimeStrategy>SINGLETON</runtimeStrategy>
+    <mergeMode>MERGE_COLLECTIONS</mergeMode>
+</process-config>
+----
+
+
+[[_activatecontainer]]
+==== Activate Container for a given id and Server Template
+....
+POST /controller/management/servers/{id}/containers/{containerId}/status/activated
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Container identifier** +
+__required__|string
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**400**|Controller exception|No Content
+|**404**|Container or Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}/containers/{containerId}/status/activated
+----
+
+
+[[_deactivatecontainer]]
+==== Deactivate Container for a given id and Server Template
+....
+POST /controller/management/servers/{id}/containers/{containerId}/status/deactivated
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Container identifier** +
+__required__|string
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**400**|Controller exception|No Content
+|**404**|Container or Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}/containers/{containerId}/status/deactivated
+----
+
+
+[[_startcontainer]]
+==== Start Container for a given id and Server Template
+....
+POST /controller/management/servers/{id}/containers/{containerId}/status/started
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Container identifier** +
+__required__|string
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**400**|Controller exception|No Content
+|**404**|Container or Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}/containers/{containerId}/status/started
+----
+
+
+[[_stopcontainer]]
+==== Stop Container for a given id and Server Template
+....
+POST /controller/management/servers/{id}/containers/{containerId}/status/stopped
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Container identifier** +
+__required__|string
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**400**|Controller exception|No Content
+|**404**|Container or Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/{id}/containers/{containerId}/status/stopped
+----
+
+
+[[_controller_runtime_resource]]
+=== Controller :: Runtime
+
+[[_getservertemplatecontainers]]
+==== Retrieve all Containers with a given id in Kie Server instances from a specific Server Template
+....
+GET /controller/runtime/servers/{id}/containers/{containerId}/instances
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Container identifier** +
+__required__|string
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|successful operation|<<_containerlist,ContainerList>>
+|**400**|Controller exception|No Content
+|**404**|Server Template or Kie Server instance not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/runtime/servers/{id}/containers/{containerId}/instances
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "containers" : [ {
+    "serverTemplateId" : "string",
+    "containerSpecId" : "string",
+    "containerName" : "string",
+    "url" : "string",
+    "serverInstanceId" : "string",
+    "resolvedReleasedId" : {
+      "groupId" : "string",
+      "artifactId" : "string",
+      "version" : "string"
+    },
+    "messages" : [ {
+      "severity" : "INFO",
+      "timestamp" : "1970-01-01T00:00:00Z",
+      "messages" : [ "string" ]
+    } ],
+    "status" : "CREATING",
+    "serverInstanceKey" : {
+      "serverInstanceId" : "string",
+      "serverName" : "string",
+      "serverTemplateId" : "string",
+      "url" : "string"
+    }
+  } ]
+}
+----
+
+
+[[_getserverinstances]]
+==== Retrieve all Kie Server instances connected to the controller for a given Server Template
+....
+GET /controller/runtime/servers/{id}/instances
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|successful operation|<<_serverinstancekeylist,ServerInstanceKeyList>>
+|**400**|Controller exception|No Content
+|**404**|Server Template not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/runtime/servers/{id}/instances
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "serverInstanceKeys" : [ {
+    "serverInstanceId" : "string",
+    "serverName" : "string",
+    "serverTemplateId" : "string",
+    "url" : "string"
+  } ]
+}
+----
+
+
+[[_getserverinstancecontainers]]
+==== Retrieve all Containers for a given Kie Server instance
+....
+GET /controller/runtime/servers/{id}/instances/{instanceId}/containers
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Kie Server Template identifier** +
+__required__|string
+|**Path**|**Kie Server instance identifier** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|successful operation|<<_containerlist,ContainerList>>
+|**400**|Controller exception|No Content
+|**404**|Server Template or Kie Server instance not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/runtime/servers/{id}/instances/{instanceId}/containers
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "containers" : [ {
+    "serverTemplateId" : "string",
+    "containerSpecId" : "string",
+    "containerName" : "string",
+    "url" : "string",
+    "serverInstanceId" : "string",
+    "resolvedReleasedId" : {
+      "groupId" : "string",
+      "artifactId" : "string",
+      "version" : "string"
+    },
+    "messages" : [ {
+      "severity" : "INFO",
+      "timestamp" : "1970-01-01T00:00:00Z",
+      "messages" : [ "string" ]
+    } ],
+    "status" : "CREATING",
+    "serverInstanceKey" : {
+      "serverInstanceId" : "string",
+      "serverName" : "string",
+      "serverTemplateId" : "string",
+      "url" : "string"
+    }
+  } ]
+}
+----
+
+
+[[_controller_server_controller_resource]]
+=== Controller :: Server Controller
+
+[[_connectkieserver]]
+==== Connect a new Kie Server instance to Controller
+....
+PUT /controller/server/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Kie Server instance identifier** +
+__required__|string
+|**Body**|**Kie Server instance information** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|successful operation|<<_kieserversetup,KieServerSetup>>
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/server/{id}
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "id" : "sample-server",
+  "version" : "7.14.0-SNAPSHOT",
+  "name" : "sample-server",
+  "location" : "http://localhost:8080/kie-server/services/rest/server",
+  "capabilities" : [
+       "KieServer",       "BRM",       "BPM",       "CaseMgmt",       "BPM-UI",       "BRP",       "DMN",       "Swagger"    ],
+  "messages" : null
+}
+----
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kie-server-info>
+  <id>sample-server</id>
+  <version>7.14.0-SNAPSHOT</version>
+  <name>sample-server</name>
+  <location>http://localhost:8080/kie-server/services/rest/server</location>
+  <capabilities>KieServer</capabilities>
+  <capabilities>BRM</capabilities>
+  <capabilities>BPM</capabilities>
+  <capabilities>CaseMgmt</capabilities>
+  <capabilities>BPM-UI</capabilities>
+  <capabilities>BRP</capabilities>
+  <capabilities>DMN</capabilities>
+  <capabilities>Swagger</capabilities>
+</kie-server-info>
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "serverConfig" : {
+    "configItems" : [ {
+      "name" : "string",
+      "value" : "string",
+      "type" : "string"
+    } ]
+  },
+  "containers" : [ {
+    "containerId" : "string",
+    "releaseId" : {
+      "groupId" : "string",
+      "artifactId" : "string",
+      "version" : "string"
+    },
+    "resolvedReleaseId" : {
+      "groupId" : "string",
+      "artifactId" : "string",
+      "version" : "string"
+    },
+    "status" : "CREATING",
+    "scanner" : {
+      "status" : "UNKNOWN",
+      "pollInterval" : 0
+    },
+    "configItems" : [ {
+      "name" : "string",
+      "value" : "string",
+      "type" : "string"
+    } ],
+    "messages" : [ {
+      "severity" : "INFO",
+      "timestamp" : "1970-01-01T00:00:00Z",
+      "messages" : [ "string" ]
+    } ],
+    "containerAlias" : "string"
+  } ]
+}
+----
+
+
+[[_disconnectkieserver]]
+==== Remove a Kie Server instance from Controller
+....
+DELETE /controller/server/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Path**|**Kie Server instance identifier** +
+__required__|string
+|**Query**|**Kie Server instance URL** +
+__required__|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/server/{id}?Kie Server instance URL=string
+----
+
+
+
