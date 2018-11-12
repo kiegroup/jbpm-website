@@ -1,37 +1,37 @@
 latestFinal:
-    version: 7.13.0.Final
-    releaseDate: 2018-10-01
+    version: 7.14.0.Final
+    releaseDate: 2018-11-07
 
-    jbpmServerZip: https://download.jboss.org/jbpm/release/7.13.0.Final/jbpm-server-7.13.0.Final-dist.zip
-    jbpmBinZip: https://download.jboss.org/jbpm/release/7.13.0.Final/jbpm-7.13.0.Final-bin.zip
-    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.13.0.Final/jbpm-7.13.0.Final-examples.zip
-    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.13.0.Final/jbpm-installer-7.13.0.Final.zip
-    jbpmInstallerFullZip: https://download.jboss.org/jbpm/release/7.13.0.Final/jbpm-installer-full-7.13.0.Final.zip
-    updatesite: https://download.jboss.org/jbpm/release/7.13.0.Final/updatesite/
-    installerChapter: https://docs.jboss.org/jbpm/release/7.13.0.Final/jbpm-docs/html_single/#_jbpminstaller
-    releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12339232
-    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.13.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+    jbpmServerZip: https://download.jboss.org/jbpm/release/7.14.0.Final/jbpm-server-7.14.0.Final-dist.zip
+    jbpmBinZip: https://download.jboss.org/jbpm/release/7.14.0.Final/jbpm-7.14.0.Final-bin.zip
+    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.14.0.Final/jbpm-7.14.0.Final-examples.zip
+    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.14.0.Final/jbpm-installer-7.14.0.Final.zip
+    jbpmInstallerFullZip: https://download.jboss.org/jbpm/release/7.14.0.Final/jbpm-installer-full-7.14.0.Final.zip
+    updatesite: https://download.jboss.org/jbpm/release/7.14.0.Final/updatesite/
+    installerChapter: https://docs.jboss.org/jbpm/release/7.14.0.Final/jbpm-docs/html_single/#_jbpminstaller
+    releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12339562
+    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.14.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
 
-    UserGuide: https://docs.jboss.org/jbpm/release/7.13.0.Final/jbpm-docs/html_single/
-    JavaDocs: https://docs.jboss.org/drools/release/7.13.0.Final/kie-api-javadoc/index.html
+    UserGuide: https://docs.jboss.org/jbpm/release/7.14.0.Final/jbpm-docs/html_single/
+    JavaDocs: https://docs.jboss.org/drools/release/7.14.0.Final/kie-api-javadoc/index.html
     Archive: https://docs.jboss.org/jbpm/
 
 latest:
-    version: 7.13.0.Final
-    releaseDate: 2018-10-01
+    version: 7.14.0.Final
+    releaseDate: 2018-11-07
 
-    jbpmServerZip: https://download.jboss.org/jbpm/release/7.13.0.Final/jbpm-server-7.13.0.Final-dist.zip
-    jbpmBinZip: https://download.jboss.org/jbpm/release/7.13.0.Final/jbpm-7.13.0.Final-bin.zip
-    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.13.0.Final/jbpm-7.13.0.Final-examples.zip
-    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.13.0.Final/jbpm-installer-7.13.0.Final.zip
-    updatesite: https://download.jboss.org/jbpm/release/7.13.0.Final/updatesite/
+    jbpmServerZip: https://download.jboss.org/jbpm/release/7.14.0.Final/jbpm-server-7.14.0.Final-dist.zip
+    jbpmBinZip: https://download.jboss.org/jbpm/release/7.14.0.Final/jbpm-7.14.0.Final-bin.zip
+    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.14.0.Final/jbpm-7.14.0.Final-examples.zip
+    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.14.0.Final/jbpm-installer-7.14.0.Final.zip
+    updatesite: https://download.jboss.org/jbpm/release/7.14.0.Final/updatesite/
 
-    UserGuide: https://docs.jboss.org/jbpm/release/7.13.0.Final/jbpm-docs/html_single
-    JavaDocs: https://docs.jboss.org/drools/release/7.13.0.Final/kie-api-javadoc/index.html
+    UserGuide: https://docs.jboss.org/jbpm/release/7.14.0.Final/jbpm-docs/html_single
+    JavaDocs: https://docs.jboss.org/drools/release/7.14.0.Final/kie-api-javadoc/index.html
     Nightly: https://docs.jboss.org/jbpm/release/snapshot/noPublicCI.html
 
-    releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12339232
-    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.13.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+    releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12339562
+    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.14.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
 
 nightly:
     version: 7.14.0-SNAPSHOT
