@@ -11,9 +11,8 @@ __Version__ : 7.0
 
 === Tags
 
-* Controller :: Management
-* Controller :: Runtime
-* Controller :: Server Controller
+* Controller :: KIE Server instances and KIE containers
+* Controller :: KIE Server templates and KIE containers
 
 
 === Consumes
