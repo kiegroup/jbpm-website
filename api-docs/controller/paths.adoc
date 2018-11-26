@@ -444,96 +444,6 @@ GET /controller/management/servers
 ----
 
 
-[[_saveservertemplate]]
-==== Creates a new KIE Server template with a specified ID
-....
-POST /controller/management/servers/{serverTemplateId}
-....
-
-
-===== Parameters
-
-[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
-|===
-|Type|Name|Description|Schema
-|**Path**|**serverTemplateId** +
-__required__|ID of the new KIE Server template|string
-|**Body**|**body** +
-__required__|A map containing the server-name, capabilities, and other components of the new KIE Server template|string
-|===
-
-
-===== Responses
-
-[options="header", cols=".^2a,.^14a,.^4a"]
-|===
-|HTTP Code|Description|Schema
-|**201**|KIE Server template successfully created|No Content
-|**400**|Controller exception|No Content
-|**500**|Unexpected error|No Content
-|===
-
-
-===== Consumes
-
-* `application/xml`
-* `application/json`
-
-
-===== Example HTTP request
-
-====== Request path
-----
-/controller/management/servers/string
-----
-
-
-====== Request body
-[source,json]
-----
-{
-  "server-id" : "sample-server",
-  "server-name" : "sample-server",
-  "capabilities" : [
-       "RULE",       "PROCESS",       "PLANNING"    ],
-  "container-specs" : [ ],
-  "server-config" : { }
-}
-----
-
-[source,xml]
-----
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<server-template-details>
-  <server-id>sample-server</server-id>
-  <server-name>sample-server</server-name>
-  <configs/>
-  <capabilities>RULE</capabilities>
-  <capabilities>PROCESS</capabilities>
-  <capabilities>PLANNING</capabilities>
-</server-template-details>
-----
-
-
-===== Example HTTP response
-
-====== Response 201
-[source,json]
-----
-{
-  "type" : "SUCCESS",
-  "msg" : "Server template sample-server successfully created",
-  "result" : null
-}
-----
-
-[source,xml]
-----
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<response type="SUCCESS" msg="Server template sample-server successfully created"/>
-----
-
-
 [[_getservertemplate]]
 ==== Returns information about a specified KIE Server template
 ....
@@ -680,6 +590,102 @@ __required__|ID of the KIE Server template to be retrieved|string
    <capabilities>PROCESS</capabilities>
    <capabilities>PLANNING</capabilities>
 </server-template>
+----
+
+
+[[_saveservertemplate]]
+==== Creates a new KIE Server template with a specified ID
+....
+PUT /controller/management/servers/{serverTemplateId}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**serverTemplateId** +
+__required__|ID of the new KIE Server template|string
+|**Body**|**body** +
+__required__|A map containing the server-name, capabilities, and other components of the new KIE Server template|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**201**|KIE Server template successfully created|No Content
+|**400**|Controller exception|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/controller/management/servers/string
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "server-id" : "sample-server",
+  "server-name" : "sample-server",
+  "capabilities" : [
+       "RULE",       "PROCESS",       "PLANNING"    ],
+  "container-specs" : [ ],
+  "server-config" : { }
+}
+----
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<server-template-details>
+  <server-id>sample-server</server-id>
+  <server-name>sample-server</server-name>
+  <configs/>
+  <capabilities>RULE</capabilities>
+  <capabilities>PROCESS</capabilities>
+  <capabilities>PLANNING</capabilities>
+</server-template-details>
+----
+
+
+===== Example HTTP response
+
+====== Response 201
+[source,json]
+----
+{
+  "type" : "SUCCESS",
+  "msg" : "Server template sample-server successfully created",
+  "result" : null
+}
+----
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response type="SUCCESS" msg="Server template sample-server successfully created"/>
 ----
 
 
@@ -853,15 +859,11 @@ __required__|ID of the KIE Server template for which you are retrieving KIE cont
 ----
 
 
-[[_savecontainerspec]]
-==== Creates a KIE container in a specified KIE Server template
+[[_updatecontainerspec]]
+==== Updates information about a specified KIE container in a specified KIE Server template
 ....
 POST /controller/management/servers/{serverTemplateId}/containers/{containerId}
 ....
-
-
-===== Description
-You set the KIE container configurations in the request body
 
 
 ===== Parameters
@@ -870,11 +872,11 @@ You set the KIE container configurations in the request body
 |===
 |Type|Name|Description|Schema
 |**Path**|**containerId** +
-__required__|ID of the new KIE container|string
+__required__|ID of the KIE container to be updated|string
 |**Path**|**serverTemplateId** +
-__required__|ID of the KIE Server template associated with the new KIE container|string
+__required__|ID of the KIE Server template associated with the KIE container|string
 |**Body**|**body** +
-__required__|A map containing the container-name, relevant release-id (group ID, artifact ID, and version), configuration specifications (rule, process, planning), and other components of the new KIE container|string
+__required__|A map containing the updated specifications for the KIE container|string
 |===
 
 
@@ -883,14 +885,20 @@ __required__|A map containing the container-name, relevant release-id (group ID,
 [options="header", cols=".^2a,.^14a,.^4a"]
 |===
 |HTTP Code|Description|Schema
-|**201**|KIE container successfully deployed|No Content
+|**201**|KIE container successfully updated|No Content
 |**400**|Controller exception|No Content
-|**404**|KIE Server template not found|No Content
+|**404**|KIE Server template or KIE container not found|No Content
 |**500**|Unexpected error|No Content
 |===
 
 
 ===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
 
 * `application/xml`
 * `application/json`
@@ -1094,11 +1102,15 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 ----
 
 
-[[_updatecontainerspec]]
-==== Updates information about a specified KIE container in a specified KIE Server template
+[[_savecontainerspec]]
+==== Creates a KIE container in a specified KIE Server template
 ....
 PUT /controller/management/servers/{serverTemplateId}/containers/{containerId}
 ....
+
+
+===== Description
+You set the KIE container configurations in the request body
 
 
 ===== Parameters
@@ -1107,11 +1119,11 @@ PUT /controller/management/servers/{serverTemplateId}/containers/{containerId}
 |===
 |Type|Name|Description|Schema
 |**Path**|**containerId** +
-__required__|ID of the KIE container to be updated|string
+__required__|ID of the new KIE container|string
 |**Path**|**serverTemplateId** +
-__required__|ID of the KIE Server template associated with the KIE container|string
+__required__|ID of the KIE Server template associated with the new KIE container|string
 |**Body**|**body** +
-__required__|A map containing the updated specifications for the KIE container|string
+__required__|A map containing the container-name, relevant release-id (group ID, artifact ID, and version), configuration specifications (rule, process, planning), and other components of the new KIE container|string
 |===
 
 
@@ -1120,14 +1132,20 @@ __required__|A map containing the updated specifications for the KIE container|s
 [options="header", cols=".^2a,.^14a,.^4a"]
 |===
 |HTTP Code|Description|Schema
-|**200**|KIE container successfully updated|No Content
+|**201**|KIE container successfully deployed|No Content
 |**400**|Controller exception|No Content
-|**404**|KIE Server template or KIE container not found|No Content
+|**404**|KIE Server template not found|No Content
 |**500**|Unexpected error|No Content
 |===
 
 
 ===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
 
 * `application/xml`
 * `application/json`
@@ -1254,7 +1272,7 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 [[_updatecontainerconfig]]
 ==== Updates configurations for a specified KIE container in a specified KIE Server template
 ....
-PUT /controller/management/servers/{serverTemplateId}/containers/{containerId}/config/{capability}
+POST /controller/management/servers/{serverTemplateId}/containers/{containerId}/config/{capability}
 ....
 
 
@@ -1279,7 +1297,7 @@ __required__|An org.kie.server.controller.api.model.spec.<capability>Config map 
 [options="header", cols=".^2a,.^14a,.^4a"]
 |===
 |HTTP Code|Description|Schema
-|**200**|KIE container successfully updated|No Content
+|**201**|KIE container successfully updated|No Content
 |**400**|Controller exception|No Content
 |**404**|KIE container or KIE Server template not found|No Content
 |**500**|Unexpected error|No Content
@@ -1287,6 +1305,12 @@ __required__|An org.kie.server.controller.api.model.spec.<capability>Config map 
 
 
 ===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
 
 * `application/xml`
 * `application/json`
@@ -1326,7 +1350,7 @@ __required__|An org.kie.server.controller.api.model.spec.<capability>Config map 
 [[_activatecontainer]]
 ==== Activates a specified KIE container in a specified KIE Server template
 ....
-PUT /controller/management/servers/{serverTemplateId}/containers/{containerId}/status/activated
+POST /controller/management/servers/{serverTemplateId}/containers/{containerId}/status/activated
 ....
 
 
@@ -1360,6 +1384,12 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 * `application/json`
 
 
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
 ===== Example HTTP request
 
 ====== Request path
@@ -1371,7 +1401,7 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 [[_deactivatecontainer]]
 ==== Deactivates a specified KIE container in a specified KIE Server template
 ....
-PUT /controller/management/servers/{serverTemplateId}/containers/{containerId}/status/deactivated
+POST /controller/management/servers/{serverTemplateId}/containers/{containerId}/status/deactivated
 ....
 
 
@@ -1405,6 +1435,12 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 * `application/json`
 
 
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
 ===== Example HTTP request
 
 ====== Request path
@@ -1416,7 +1452,7 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 [[_startcontainer]]
 ==== Starts a specified KIE container in a specified KIE Server template
 ....
-PUT /controller/management/servers/{serverTemplateId}/containers/{containerId}/status/started
+POST /controller/management/servers/{serverTemplateId}/containers/{containerId}/status/started
 ....
 
 
@@ -1450,6 +1486,12 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 * `application/json`
 
 
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
 ===== Example HTTP request
 
 ====== Request path
@@ -1461,7 +1503,7 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 [[_stopcontainer]]
 ==== Stops a specified KIE container in a specified KIE Server template
 ....
-PUT /controller/management/servers/{serverTemplateId}/containers/{containerId}/status/stopped
+POST /controller/management/servers/{serverTemplateId}/containers/{containerId}/status/stopped
 ....
 
 
@@ -1490,6 +1532,12 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 
 
 ===== Consumes
+
+* `application/xml`
+* `application/json`
+
+
+===== Produces
 
 * `application/xml`
 * `application/json`
