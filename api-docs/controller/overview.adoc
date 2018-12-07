@@ -9,22 +9,15 @@
 __Version__ : 7.0
 
 
+=== URI scheme
+[%hardbreaks]
+__BasePath__ : /controller/rest
+
+
 === Tags
 
 * Controller :: KIE Server instances and KIE containers
 * Controller :: KIE Server templates and KIE containers
-
-
-=== Consumes
-
-* `application/json`
-* `application/xml`
-
-
-=== Produces
-
-* `application/json`
-* `application/xml`
 
 
 

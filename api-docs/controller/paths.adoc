@@ -629,12 +629,6 @@ __required__|A map containing the server-name, capabilities, and other component
 * `application/json`
 
 
-===== Produces
-
-* `application/xml`
-* `application/json`
-
-
 ===== Example HTTP request
 
 ====== Request path
@@ -898,12 +892,6 @@ __required__|A map containing the updated specifications for the KIE container|s
 * `application/json`
 
 
-===== Produces
-
-* `application/xml`
-* `application/json`
-
-
 ===== Example HTTP request
 
 ====== Request path
@@ -1145,12 +1133,6 @@ __required__|A map containing the container-name, relevant release-id (group ID,
 * `application/json`
 
 
-===== Produces
-
-* `application/xml`
-* `application/json`
-
-
 ===== Example HTTP request
 
 ====== Request path
@@ -1310,12 +1292,6 @@ __required__|An org.kie.server.controller.api.model.spec.<capability>Config map 
 * `application/json`
 
 
-===== Produces
-
-* `application/xml`
-* `application/json`
-
-
 ===== Example HTTP request
 
 ====== Request path
@@ -1384,12 +1360,6 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 * `application/json`
 
 
-===== Produces
-
-* `application/xml`
-* `application/json`
-
-
 ===== Example HTTP request
 
 ====== Request path
@@ -1430,12 +1400,6 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 
 
 ===== Consumes
-
-* `application/xml`
-* `application/json`
-
-
-===== Produces
 
 * `application/xml`
 * `application/json`
@@ -1486,12 +1450,6 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 * `application/json`
 
 
-===== Produces
-
-* `application/xml`
-* `application/json`
-
-
 ===== Example HTTP request
 
 ====== Request path
@@ -1532,12 +1490,6 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 
 
 ===== Consumes
-
-* `application/xml`
-* `application/json`
-
-
-===== Produces
 
 * `application/xml`
 * `application/json`
