@@ -1,17 +1,17 @@
 == Explore your running environment
 
-*jBPM console*
+*Business Central*
 
-jBPM Console (aka workbench) provides feature rich authoring and management environment. It consists of:
+Business Central provides feature rich authoring and management environment. It consists of:
 
 - Design perspectives where users can create projects and pages
 - Deploy perspectives where users can manage execution servers
 - Manage perspectives where users can take control over process and case instances
 - Track perspectives where users can access assigned tasks and reports
 
-jBPM Console can be accessed (once the server was started) at http://localhost:8080/jbpm-console[*http://localhost:8080/jbpm-console*]
+Business Central can be accessed (once the server was started) at http://localhost:8080/business-central[*http://localhost:8080/business-central*]
 
-There are set of predefined users that can be used to directly logon to jBPM Console:
+There are set of predefined users that can be used to directly logon to Business Central:
 
 - wbadmin/wbadmin
 - krisv/krisv
@@ -21,7 +21,7 @@ There are set of predefined users that can be used to directly logon to jBPM Con
 - jack/jack
 - kieserver/kieserver1!
 
-Additional users can be created via jBPM Console Admin section.
+Additional users can be created via Business Central Admin section.
 
 '''
 
@@ -48,7 +48,7 @@ Case management, in general should be business focused so generic UI won't provi
 
 jBPM Case Management application can be accessed at http://localhost:8080/jbpm-casemgmt[*http://localhost:8080/jbpm-casemgmt*]
 
-Same users as for jBPM Console can be used to logon to this application.
+Same users as for Business Central can be used to logon to this application.
 
 '''
 
@@ -100,7 +100,7 @@ to express bit of workflows within the case. This examples shows:
 * verifying deployment to execution server
 * use of jBPM Case management Showcase application
 * document upload and handing
-* monitoring of case instance in jBPM Console
+* monitoring of case instance in Business Central
 
 More about case management capabilities can be found in following articles
 
