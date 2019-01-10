@@ -24,7 +24,8 @@
           "in" : "path",
           "description" : "ID of the KIE Server template for which you are retrieving KIE Server instances",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         } ],
         "responses" : {
           "200" : {
@@ -59,13 +60,15 @@
           "in" : "path",
           "description" : "ID of the KIE Server template associated with the KIE Server instance",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         }, {
           "name" : "serverInstanceId",
           "in" : "path",
           "description" : "ID of the KIE Server instance for which you are retrieving KIE containers (example: default-kieserver-instance@localhost:8080)",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server@localhost:8080"
         } ],
         "responses" : {
           "200" : {
@@ -100,13 +103,15 @@
           "in" : "path",
           "description" : "ID of the KIE Server template for which you are retrieving KIE containers",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         }, {
           "name" : "containerId",
           "in" : "path",
           "description" : "ID of the KIE container to be retrieved",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
         } ],
         "responses" : {
           "200" : {
@@ -141,13 +146,15 @@
           "in" : "path",
           "description" : "ID of the KIE Server template associated with the KIE container",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         }, {
           "name" : "containerId",
           "in" : "path",
           "description" : "ID of the KIE container to be retrieved",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
         } ],
         "responses" : {
           "200" : {
@@ -179,13 +186,15 @@
           "in" : "path",
           "description" : "ID of the KIE Server template associated with the KIE container",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         }, {
           "name" : "containerId",
           "in" : "path",
           "description" : "ID of the KIE container to be updated",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
         }, {
           "in" : "body",
           "name" : "body",
@@ -225,13 +234,15 @@
           "in" : "path",
           "description" : "ID of the KIE Server template associated with the new KIE container",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         }, {
           "name" : "containerId",
           "in" : "path",
           "description" : "ID of the new KIE container",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
         }, {
           "in" : "body",
           "name" : "body",
@@ -271,13 +282,15 @@
           "in" : "path",
           "description" : "ID of the KIE Server template associated with the KIE container",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         }, {
           "name" : "containerId",
           "in" : "path",
           "description" : "ID of the KIE container to be disposed",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
         } ],
         "responses" : {
           "204" : {
@@ -308,7 +321,8 @@
           "in" : "path",
           "description" : "ID of the KIE Server template to be retrieved",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         } ],
         "responses" : {
           "200" : {
@@ -340,7 +354,8 @@
           "in" : "path",
           "description" : "ID of the new KIE Server template",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "sample-server"
         }, {
           "in" : "body",
           "name" : "body",
@@ -381,7 +396,8 @@
           "in" : "path",
           "description" : "ID of the KIE Server template to be deleted",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         } ],
         "responses" : {
           "204" : {
@@ -441,7 +457,8 @@
           "in" : "path",
           "description" : "ID of the KIE Server template for which you are retrieving KIE containers",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         } ],
         "responses" : {
           "200" : {
@@ -475,19 +492,22 @@
           "in" : "path",
           "description" : "ID of the KIE Server template associated with the KIE container",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         }, {
           "name" : "containerId",
           "in" : "path",
           "description" : "ID of the KIE container to be updated",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
         }, {
           "name" : "capability",
           "in" : "path",
           "description" : "KIE container capability to be applied (RULE, PROCESS, or PLANNING, case sensitive)",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "PROCESS"
         }, {
           "in" : "body",
           "name" : "body",
@@ -529,13 +549,15 @@
           "in" : "path",
           "description" : "ID of the KIE Server template associated with the KIE container",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         }, {
           "name" : "containerId",
           "in" : "path",
           "description" : "ID of the KIE container to be stopped",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
         } ],
         "responses" : {
           "200" : {
@@ -565,13 +587,15 @@
           "in" : "path",
           "description" : "ID of the KIE Server template associated with the KIE container",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         }, {
           "name" : "containerId",
           "in" : "path",
           "description" : "ID of the KIE container to be started",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
         } ],
         "responses" : {
           "200" : {
@@ -601,13 +625,15 @@
           "in" : "path",
           "description" : "ID of the KIE Server template associated with the KIE container",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         }, {
           "name" : "containerId",
           "in" : "path",
           "description" : "ID of the KIE container to be activated",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
         } ],
         "responses" : {
           "200" : {
@@ -637,13 +663,15 @@
           "in" : "path",
           "description" : "ID of the KIE Server template associated with the KIE container",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "test-kie-server"
         }, {
           "name" : "containerId",
           "in" : "path",
           "description" : "ID of the KIE container to be deactivated",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
         } ],
         "responses" : {
           "200" : {
