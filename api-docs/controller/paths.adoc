@@ -55,7 +55,7 @@ __required__|ID of the KIE Server template for which you are retrieving KIE cont
 
 ====== Request path
 ----
-/controller/runtime/servers/string/containers/string/instances
+/controller/runtime/servers/test-kie-server/containers/evaluation_1.0.0-SNAPSHOT/instances
 ----
 
 
@@ -159,7 +159,7 @@ __required__|ID of the KIE Server template for which you are retrieving KIE Serv
 
 ====== Request path
 ----
-/controller/runtime/servers/string/instances
+/controller/runtime/servers/test-kie-server/instances
 ----
 
 
@@ -239,7 +239,7 @@ __required__|ID of the KIE Server template associated with the KIE Server instan
 
 ====== Request path
 ----
-/controller/runtime/servers/string/instances/string/containers
+/controller/runtime/servers/test-kie-server/instances/test-kie-server%40localhost%3A8080/containers
 ----
 
 
@@ -489,7 +489,7 @@ __required__|ID of the KIE Server template to be retrieved|string
 
 ====== Request path
 ----
-/controller/management/servers/string
+/controller/management/servers/test-kie-server
 ----
 
 
@@ -633,7 +633,7 @@ __required__|A map containing the server-name, capabilities, and other component
 
 ====== Request path
 ----
-/controller/management/servers/string
+/controller/management/servers/sample-server
 ----
 
 
@@ -722,7 +722,7 @@ __required__|ID of the KIE Server template to be deleted|string
 
 ====== Request path
 ----
-/controller/management/servers/string
+/controller/management/servers/test-kie-server
 ----
 
 
@@ -771,7 +771,7 @@ __required__|ID of the KIE Server template for which you are retrieving KIE cont
 
 ====== Request path
 ----
-/controller/management/servers/string/containers
+/controller/management/servers/test-kie-server/containers
 ----
 
 
@@ -896,7 +896,7 @@ __required__|A map containing the updated specifications for the KIE container|s
 
 ====== Request path
 ----
-/controller/management/servers/string/containers/string
+/controller/management/servers/test-kie-server/containers/evaluation_1.0.0-SNAPSHOT
 ----
 
 
@@ -1012,7 +1012,7 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 
 ====== Request path
 ----
-/controller/management/servers/string/containers/string
+/controller/management/servers/test-kie-server/containers/evaluation_1.0.0-SNAPSHOT
 ----
 
 
@@ -1137,7 +1137,7 @@ __required__|A map containing the container-name, relevant release-id (group ID,
 
 ====== Request path
 ----
-/controller/management/servers/string/containers/string
+/controller/management/servers/test-kie-server/containers/evaluation_1.0.0-SNAPSHOT
 ----
 
 
@@ -1247,7 +1247,7 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 
 ====== Request path
 ----
-/controller/management/servers/string/containers/string
+/controller/management/servers/test-kie-server/containers/evaluation_1.0.0-SNAPSHOT
 ----
 
 
@@ -1296,7 +1296,7 @@ __required__|An org.kie.server.controller.api.model.spec.<capability>Config map 
 
 ====== Request path
 ----
-/controller/management/servers/string/containers/string/config/string
+/controller/management/servers/test-kie-server/containers/evaluation_1.0.0-SNAPSHOT/config/PROCESS
 ----
 
 
@@ -1364,7 +1364,7 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 
 ====== Request path
 ----
-/controller/management/servers/string/containers/string/status/activated
+/controller/management/servers/test-kie-server/containers/evaluation_1.0.0-SNAPSHOT/status/activated
 ----
 
 
@@ -1409,7 +1409,7 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 
 ====== Request path
 ----
-/controller/management/servers/string/containers/string/status/deactivated
+/controller/management/servers/test-kie-server/containers/evaluation_1.0.0-SNAPSHOT/status/deactivated
 ----
 
 
@@ -1454,7 +1454,7 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 
 ====== Request path
 ----
-/controller/management/servers/string/containers/string/status/started
+/controller/management/servers/test-kie-server/containers/evaluation_1.0.0-SNAPSHOT/status/started
 ----
 
 
@@ -1499,7 +1499,7 @@ __required__|ID of the KIE Server template associated with the KIE container|str
 
 ====== Request path
 ----
-/controller/management/servers/string/containers/string/status/stopped
+/controller/management/servers/test-kie-server/containers/evaluation_1.0.0-SNAPSHOT/status/stopped
 ----
 
 
