@@ -112,4 +112,4 @@ public class PatientCaseVariableIndexer implements CaseVariableIndexer {
 ----
 
 In the above mentioned example single Patient case variable will be stored in data log table
-as two entires (rows) to allow more fine grained searching capabilities.
+as two entries (rows) to allow more fine grained searching capabilities.
