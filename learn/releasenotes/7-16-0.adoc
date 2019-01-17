@@ -1,7 +1,7 @@
 == jBPM Server Distribution context update
 
-Following up on the recent changes to rename jBPM Console to Business Central, the single server zip distribution has also
-been updated to match the new naming. Business Central will now be available on http://localhost:8080/business-central.
+Following up on the recent development to rename jBPM Console to Business Central, the single server zip distribution
+has been updated to reflect the new naming convention. Business Central will now be available on http://localhost:8080/business-central.
 
 == DMN and Test Scenario keyboard control
 
@@ -25,10 +25,12 @@ for more details.
 
 == Kie Server rendered forms in Business Central
 
-Following up on the recent enhancements to render forms directly in the Kie Server, there is now a system property
-`org.jbpm.wb.forms.renderer.name` that allows users to switch between Business Central and Kie Server rendered forms.
-By default, forms still rendered by Business Central but you can easily switch to either one of the standard renders from
-Kie Server ('bootstrap' or 'patternfly') or your custom render implementation.
+Following up on the recent enhancements to render forms directly in the Kie Server, two new system properties:
+`org.jbpm.wb.forms.renderer.ext` and `org.jbpm.wb.forms.renderer.name` now allow you to switch between Business Central
+and Kie Server rendered forms. By default, forms are still rendered by Business Central but you can easily switch to either
+one of the standard renderers from Kie Server ('bootstrap' or 'patternfly') or your custom render implementation.
+NOTE: When using Business Central rendered forms, only the 'workbench' render fully integrates with all the needed
+requirements. Users can, in this case, extend this render for further customization.
 
 == Enhanced data source configuration for SpringBoot
 
