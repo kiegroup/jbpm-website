@@ -52,17 +52,6 @@ Same users as for Business Central can be used to logon to this application.
 
 '''
 
-*jBPM Service Repository*
-
-jBPM Service Repository application delivers community work items - domain specific services (such as Twitter, Jira, Github and more)
-so they can be easily used (by drag and drop) when designing your process and case definitions.
-
-jBPM Service Repository application can be accessed at http://localhost:8080/repository[*http://localhost:8080/repository*].
-Same URL can be used from within jBPM designer to import these domain specific services.
-
-'''
-
-
 == Try examples
 
 Once you get yourself familiar with the tools of the jBPM it's time to see something running. The easiest way is to try one of the examples
