@@ -472,6 +472,23 @@ __optional__|**Example** : `[ "<<_migration-report-instance>>" ]`|< <<_migration
 |===
 
 
+[[_node-definition]]
+=== node-definition
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**id** +
+__optional__|**Example** : `0`|integer (int64)
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**type** +
+__optional__|**Example** : `"string"`|string
+|**unique-id** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
 [[_node-instance]]
 === node-instance
 
@@ -545,6 +562,8 @@ __optional__|**Example** : `{
 __optional__|**Example** : `"string"`|string
 |**dynamic** +
 __optional__|**Example** : `true`|boolean
+|**nodes** +
+__optional__|**Example** : `[ "<<_node-definition>>" ]`|< <<_node-definition,node-definition>> > array
 |**package** +
 __optional__|**Example** : `"string"`|string
 |**process-id** +
@@ -563,6 +582,8 @@ __optional__|**Example** : `[ "string" ]`|< string > array
 __optional__|**Example** : `{
   "string" : "string"
 }`|< string, string > map
+|**timers** +
+__optional__|**Example** : `[ "<<_timer-definition>>" ]`|< <<_timer-definition,timer-definition>> > array
 |===
 
 
@@ -1135,6 +1156,23 @@ __optional__|**Example** : `[ "<<_task-summary>>" ]`|< <<_task-summary,task-summ
 |===
 
 
+[[_timer-definition]]
+=== timer-definition
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**id** +
+__optional__|**Example** : `0`|integer (int64)
+|**node-name** +
+__optional__|**Example** : `"string"`|string
+|**nodeId** +
+__optional__|**Example** : `0`|integer (int64)
+|**unique-id** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
 [[_timer-instance]]
 === timer-instance
 
@@ -1160,6 +1198,8 @@ __optional__|**Example** : `0`|integer (int64)
 |**repeat-limit** +
 __optional__|**Example** : `0`|integer (int32)
 |**session-id** +
+__optional__|**Example** : `0`|integer (int64)
+|**timer-id** +
 __optional__|**Example** : `0`|integer (int64)
 |===
 

@@ -194,6 +194,8 @@ __optional__|**Example** : `{
 __optional__|**Example** : `[ "<<_containerspec>>" ]`|< <<_containerspec,ContainerSpec>> > array
 |**id** +
 __optional__|**Example** : `"string"`|string
+|**mode** +
+__optional__|**Example** : `"PRODUCTION"`|enum (PRODUCTION, DEVELOPMENT)
 |**name** +
 __optional__|**Example** : `"string"`|string
 |**serverInstanceKeys** +
