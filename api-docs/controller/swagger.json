@@ -2,9 +2,9 @@
   "swagger" : "2.0",
   "info" : {
     "version" : "7.0",
-    "title" : "Business Central API"
+    "title" : "Controller API"
   },
-  "basePath" : "/business-central/rest",
+  "basePath" : "/controller/rest",
   "tags" : [ {
     "name" : "Controller :: KIE Server instances and KIE containers"
   }, {
@@ -315,158 +315,6 @@
         }
       }
     },
-    "/controller/management/servers/{serverTemplateId}/containers/{containerId}/status/started" : {
-      "post" : {
-        "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
-        "summary" : "Starts a specified KIE container in a specified KIE Server template",
-        "description" : "",
-        "operationId" : "startContainer",
-        "consumes" : [ "application/xml", "application/json" ],
-        "parameters" : [ {
-          "name" : "serverTemplateId",
-          "in" : "path",
-          "description" : "ID of the KIE Server template associated with the KIE container",
-          "required" : true,
-          "type" : "string",
-          "x-example" : "test-kie-server"
-        }, {
-          "name" : "containerId",
-          "in" : "path",
-          "description" : "ID of the KIE container to be started",
-          "required" : true,
-          "type" : "string",
-          "x-example" : "evaluation_1.0.0-SNAPSHOT"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "KIE Container successfully started"
-          },
-          "404" : {
-            "description" : "KIE container or KIE Server template not found"
-          },
-          "400" : {
-            "description" : "Controller exception"
-          },
-          "500" : {
-            "description" : "Unexpected error"
-          }
-        }
-      }
-    },
-    "/controller/management/servers/{serverTemplateId}/containers/{containerId}/status/activated" : {
-      "post" : {
-        "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
-        "summary" : "Activates a specified KIE container in a specified KIE Server template",
-        "description" : "",
-        "operationId" : "activateContainer",
-        "consumes" : [ "application/xml", "application/json" ],
-        "parameters" : [ {
-          "name" : "serverTemplateId",
-          "in" : "path",
-          "description" : "ID of the KIE Server template associated with the KIE container",
-          "required" : true,
-          "type" : "string",
-          "x-example" : "test-kie-server"
-        }, {
-          "name" : "containerId",
-          "in" : "path",
-          "description" : "ID of the KIE container to be activated",
-          "required" : true,
-          "type" : "string",
-          "x-example" : "evaluation_1.0.0-SNAPSHOT"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "KIE container successfully activated"
-          },
-          "404" : {
-            "description" : "KIE container or KIE Server template not found"
-          },
-          "400" : {
-            "description" : "Controller exception"
-          },
-          "500" : {
-            "description" : "Unexpected error"
-          }
-        }
-      }
-    },
-    "/controller/management/servers/{serverTemplateId}/containers/{containerId}/status/deactivated" : {
-      "post" : {
-        "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
-        "summary" : "Deactivates a specified KIE container in a specified KIE Server template",
-        "description" : "",
-        "operationId" : "deactivateContainer",
-        "consumes" : [ "application/xml", "application/json" ],
-        "parameters" : [ {
-          "name" : "serverTemplateId",
-          "in" : "path",
-          "description" : "ID of the KIE Server template associated with the KIE container",
-          "required" : true,
-          "type" : "string",
-          "x-example" : "test-kie-server"
-        }, {
-          "name" : "containerId",
-          "in" : "path",
-          "description" : "ID of the KIE container to be deactivated",
-          "required" : true,
-          "type" : "string",
-          "x-example" : "evaluation_1.0.0-SNAPSHOT"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "KIE container successfully deactivated"
-          },
-          "404" : {
-            "description" : "KIE container or KIE Server template not found"
-          },
-          "400" : {
-            "description" : "Controller exception"
-          },
-          "500" : {
-            "description" : "Unexpected error"
-          }
-        }
-      }
-    },
-    "/controller/management/servers/{serverTemplateId}/containers/{containerId}/status/stopped" : {
-      "post" : {
-        "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
-        "summary" : "Stops a specified KIE container in a specified KIE Server template",
-        "description" : "",
-        "operationId" : "stopContainer",
-        "consumes" : [ "application/xml", "application/json" ],
-        "parameters" : [ {
-          "name" : "serverTemplateId",
-          "in" : "path",
-          "description" : "ID of the KIE Server template associated with the KIE container",
-          "required" : true,
-          "type" : "string",
-          "x-example" : "test-kie-server"
-        }, {
-          "name" : "containerId",
-          "in" : "path",
-          "description" : "ID of the KIE container to be stopped",
-          "required" : true,
-          "type" : "string",
-          "x-example" : "evaluation_1.0.0-SNAPSHOT"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "KIE container successfully stopped"
-          },
-          "404" : {
-            "description" : "KIE container or KIE Server template not found"
-          },
-          "400" : {
-            "description" : "Controller exception"
-          },
-          "500" : {
-            "description" : "Unexpected error"
-          }
-        }
-      }
-    },
     "/controller/management/servers/{serverTemplateId}" : {
       "get" : {
         "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
@@ -574,6 +422,71 @@
         }
       }
     },
+    "/controller/management/servers" : {
+      "get" : {
+        "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
+        "summary" : "Returns all KIE Server templates",
+        "description" : "",
+        "operationId" : "listServerTemplates",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "KIE Server templates",
+            "examples" : {
+              "application/json" : "{\n  \"server-template\" : [ {\n       \"server-id\" : \"test-kie-server\",\n       \"server-name\" : \"test-kie-server\",\n       \"container-specs\" : [ {\n           \"container-id\" : \"evaluation_1.0.0-SNAPSHOT\",\n           \"container-name\" : \"evaluation\",\n              \"server-template-key\" : {\n                   \"server-id\" : \"test-kie-server\",\n                   \"server-name\" : \"test-kie-server\"\n               },\n           \"release-id\" : {\n                   \"group-id\" : \"evaluation\",\n                   \"artifact-id\" : \"evaluation\",\n                   \"version\" : \"1.0.0-SNAPSHOT\"\n           },\n           \"configuration\" : {\n                   \"PROCESS\" : {\n                       \"org.kie.server.controller.api.model.spec.ProcessConfig\" : {\n                               \"runtimeStrategy\" : \"SINGLETON\",\n                               \"kbase\" : \"\",\n                               \"ksession\" : \"\",\n                               \"mergeMode\" : \"MERGE_COLLECTIONS\"\n                       }\n                   },\n                   \"RULE\" : {\n                       \"org.kie.server.controller.api.model.spec.RuleConfig\" : {\n                           \"pollInterval\" : null,\n                           \"scannerStatus\" : \"STOPPED\"\n                       }\n                   }\n           },\n           \"status\" : \"STARTED\"\n       } ],\n       \"server-config\" : { },\n       \"server-instances\" : [ {\n               \"server-instance-id\" : \"test-kie-server@localhost:8080\",\n                       \"server-name\" : \"test-kie-server@localhost:8080\",\n                       \"server-template-id\" : \"test-kie-server\",\n                       \"server-url\" : \"http://localhost:8080/kie-server/services/rest/server\"\n               } ],\n       \"capabilities\" : [ \"RULE\", \"PROCESS\", \"PLANNING\" ]\n   } ]\n}",
+              "application/xml" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<server-template-list>\n    <server-template>\n        <server-id>test-kie-server</server-id>\n        <server-name>test-kie-server</server-name>\n        <container-specs>\n            <container-id>evaluation_1.0.0-SNAPSHOT</container-id>\n            <container-name>evaluation</container-name>\n            <server-template-key>\n                <server-id>test-kie-server</server-id>\n                <server-name>test-kie-server</server-name>\n            </server-template-key>\n            <release-id>\n                <artifact-id>evaluation</artifact-id>\n                <group-id>evaluation</group-id>\n                <version>1.0.0-SNAPSHOT</version>\n            </release-id>\n            <configs>\n                <entry>\n                    <key>PROCESS</key>\n                    <value xsi:type=\"processConfig\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                        <runtimeStrategy>SINGLETON</runtimeStrategy>\n                        <kbase></kbase>\n                        <ksession></ksession>\n                        <mergeMode>MERGE_COLLECTIONS</mergeMode>\n                    </value>\n                </entry>\n                <entry>\n                    <key>RULE</key>\n                    <value xsi:type=\"ruleConfig\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                        <scannerStatus>STOPPED</scannerStatus>\n                    </value>\n                </entry>\n            </configs>\n            <status>STARTED</status>\n        </container-specs>\n        <configs/>\n        <server-instances>\n            <server-instance-id>test-kie-server@localhost:8080</server-instance-id>\n            <server-name>test-kie-server@localhost:8080</server-name>\n            <server-template-id>test-kie-server</server-template-id>\n            <server-url>http://localhost:8080/kie-server/services/rest/server</server-url>\n        </server-instances>\n        <capabilities>RULE</capabilities>\n        <capabilities>PROCESS</capabilities>\n        <capabilities>PLANNING</capabilities>\n    </server-template>\n</server-template-list>"
+            }
+          },
+          "404" : {
+            "description" : "KIE Server template not found"
+          },
+          "400" : {
+            "description" : "Controller exception"
+          },
+          "500" : {
+            "description" : "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers/{serverTemplateId}/containers" : {
+      "get" : {
+        "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
+        "summary" : "Returns all KIE containers for a specified KIE Server template",
+        "description" : "",
+        "operationId" : "listContainerSpec",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "parameters" : [ {
+          "name" : "serverTemplateId",
+          "in" : "path",
+          "description" : "ID of the KIE Server template for which you are retrieving KIE containers",
+          "required" : true,
+          "type" : "string",
+          "x-example" : "test-kie-server"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "KIE containers",
+            "examples" : {
+              "application/json" : "{\n \"container-spec\" : [ {\n       \"container-id\" : \"evaluation_1.0.0-SNAPSHOT\",\n       \"container-name\" : \"evaluation\",\n       \"server-template-key\" : {\n           \"server-id\" : \"test-kie-server\",\n           \"server-name\" : \"test-kie-server\"\n       },\n       \"release-id\" : {\n           \"group-id\" : \"evaluation\",\n           \"artifact-id\" : \"evaluation\",\n           \"version\" : \"1.0.0-SNAPSHOT\"\n       },\n       \"configuration\" : {\n           \"PROCESS\" : {\n               \"org.kie.server.controller.api.model.spec.ProcessConfig\" : {\n                   \"runtimeStrategy\" : \"SINGLETON\",\n                   \"kbase\" : \"\",\n                   \"ksession\" : \"\",\n                   \"mergeMode\" : \"MERGE_COLLECTIONS\"\n               }\n           },\n           \"RULE\" : {\n               \"org.kie.server.controller.api.model.spec.RuleConfig\" : {\n                   \"pollInterval\" : null,\n                   \"scannerStatus\" : \"STOPPED\"\n               }\n           }\n       },\n       \"status\" : \"STARTED\"\n   } ]\n}",
+              "application/xml" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<container-spec-list>\n    <container-spec>\n        <container-id>evaluation_1.0.0-SNAPSHOT</container-id>\n        <container-name>evaluation</container-name>\n        <server-template-key>\n            <server-id>test-kie-server</server-id>\n            <server-name>test-kie-server</server-name>\n        </server-template-key>\n        <release-id>\n            <artifact-id>evaluation</artifact-id>\n            <group-id>evaluation</group-id>\n            <version>1.0.0-SNAPSHOT</version>\n        </release-id>\n        <configs>\n            <entry>\n                <key>PROCESS</key>\n                <value xsi:type=\"processConfig\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                    <runtimeStrategy>SINGLETON</runtimeStrategy>\n                    <kbase></kbase>\n                    <ksession></ksession>\n                    <mergeMode>MERGE_COLLECTIONS</mergeMode>\n                </value>\n            </entry>\n            <entry>\n                <key>RULE</key>\n                <value xsi:type=\"ruleConfig\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                    <scannerStatus>STOPPED</scannerStatus>\n                </value>\n            </entry>\n        </configs>\n        <status>STARTED</status>\n    </container-spec>\n</container-spec-list>"
+            }
+          },
+          "404" : {
+            "description" : "KIE Server template not found"
+          },
+          "400" : {
+            "description" : "Controller exception"
+          },
+          "500" : {
+            "description" : "Unexpected error"
+          }
+        }
+      }
+    },
     "/controller/management/servers/{serverTemplateId}/containers/{containerId}/config/{capability}" : {
       "post" : {
         "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
@@ -631,25 +544,34 @@
         }
       }
     },
-    "/controller/management/servers" : {
-      "get" : {
+    "/controller/management/servers/{serverTemplateId}/containers/{containerId}/status/stopped" : {
+      "post" : {
         "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
-        "summary" : "Returns all KIE Server templates",
+        "summary" : "Stops a specified KIE container in a specified KIE Server template",
         "description" : "",
-        "operationId" : "listServerTemplates",
+        "operationId" : "stopContainer",
         "consumes" : [ "application/xml", "application/json" ],
-        "produces" : [ "application/xml", "application/json" ],
-        "parameters" : [ ],
+        "parameters" : [ {
+          "name" : "serverTemplateId",
+          "in" : "path",
+          "description" : "ID of the KIE Server template associated with the KIE container",
+          "required" : true,
+          "type" : "string",
+          "x-example" : "test-kie-server"
+        }, {
+          "name" : "containerId",
+          "in" : "path",
+          "description" : "ID of the KIE container to be stopped",
+          "required" : true,
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
+        } ],
         "responses" : {
           "200" : {
-            "description" : "KIE Server templates",
-            "examples" : {
-              "application/json" : "{\n  \"server-template\" : [ {\n       \"server-id\" : \"test-kie-server\",\n       \"server-name\" : \"test-kie-server\",\n       \"container-specs\" : [ {\n           \"container-id\" : \"evaluation_1.0.0-SNAPSHOT\",\n           \"container-name\" : \"evaluation\",\n              \"server-template-key\" : {\n                   \"server-id\" : \"test-kie-server\",\n                   \"server-name\" : \"test-kie-server\"\n               },\n           \"release-id\" : {\n                   \"group-id\" : \"evaluation\",\n                   \"artifact-id\" : \"evaluation\",\n                   \"version\" : \"1.0.0-SNAPSHOT\"\n           },\n           \"configuration\" : {\n                   \"PROCESS\" : {\n                       \"org.kie.server.controller.api.model.spec.ProcessConfig\" : {\n                               \"runtimeStrategy\" : \"SINGLETON\",\n                               \"kbase\" : \"\",\n                               \"ksession\" : \"\",\n                               \"mergeMode\" : \"MERGE_COLLECTIONS\"\n                       }\n                   },\n                   \"RULE\" : {\n                       \"org.kie.server.controller.api.model.spec.RuleConfig\" : {\n                           \"pollInterval\" : null,\n                           \"scannerStatus\" : \"STOPPED\"\n                       }\n                   }\n           },\n           \"status\" : \"STARTED\"\n       } ],\n       \"server-config\" : { },\n       \"server-instances\" : [ {\n               \"server-instance-id\" : \"test-kie-server@localhost:8080\",\n                       \"server-name\" : \"test-kie-server@localhost:8080\",\n                       \"server-template-id\" : \"test-kie-server\",\n                       \"server-url\" : \"http://localhost:8080/kie-server/services/rest/server\"\n               } ],\n       \"capabilities\" : [ \"RULE\", \"PROCESS\", \"PLANNING\" ]\n   } ]\n}",
-              "application/xml" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<server-template-list>\n    <server-template>\n        <server-id>test-kie-server</server-id>\n        <server-name>test-kie-server</server-name>\n        <container-specs>\n            <container-id>evaluation_1.0.0-SNAPSHOT</container-id>\n            <container-name>evaluation</container-name>\n            <server-template-key>\n                <server-id>test-kie-server</server-id>\n                <server-name>test-kie-server</server-name>\n            </server-template-key>\n            <release-id>\n                <artifact-id>evaluation</artifact-id>\n                <group-id>evaluation</group-id>\n                <version>1.0.0-SNAPSHOT</version>\n            </release-id>\n            <configs>\n                <entry>\n                    <key>PROCESS</key>\n                    <value xsi:type=\"processConfig\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                        <runtimeStrategy>SINGLETON</runtimeStrategy>\n                        <kbase></kbase>\n                        <ksession></ksession>\n                        <mergeMode>MERGE_COLLECTIONS</mergeMode>\n                    </value>\n                </entry>\n                <entry>\n                    <key>RULE</key>\n                    <value xsi:type=\"ruleConfig\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                        <scannerStatus>STOPPED</scannerStatus>\n                    </value>\n                </entry>\n            </configs>\n            <status>STARTED</status>\n        </container-specs>\n        <configs/>\n        <server-instances>\n            <server-instance-id>test-kie-server@localhost:8080</server-instance-id>\n            <server-name>test-kie-server@localhost:8080</server-name>\n            <server-template-id>test-kie-server</server-template-id>\n            <server-url>http://localhost:8080/kie-server/services/rest/server</server-url>\n        </server-instances>\n        <capabilities>RULE</capabilities>\n        <capabilities>PROCESS</capabilities>\n        <capabilities>PLANNING</capabilities>\n    </server-template>\n</server-template-list>"
-            }
+            "description" : "KIE container successfully stopped"
           },
           "404" : {
-            "description" : "KIE Server template not found"
+            "description" : "KIE container or KIE Server template not found"
           },
           "400" : {
             "description" : "Controller exception"
@@ -660,32 +582,110 @@
         }
       }
     },
-    "/controller/management/servers/{serverTemplateId}/containers" : {
-      "get" : {
+    "/controller/management/servers/{serverTemplateId}/containers/{containerId}/status/started" : {
+      "post" : {
         "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
-        "summary" : "Returns all KIE containers for a specified KIE Server template",
+        "summary" : "Starts a specified KIE container in a specified KIE Server template",
         "description" : "",
-        "operationId" : "listContainerSpec",
+        "operationId" : "startContainer",
         "consumes" : [ "application/xml", "application/json" ],
-        "produces" : [ "application/xml", "application/json" ],
         "parameters" : [ {
           "name" : "serverTemplateId",
           "in" : "path",
-          "description" : "ID of the KIE Server template for which you are retrieving KIE containers",
+          "description" : "ID of the KIE Server template associated with the KIE container",
           "required" : true,
           "type" : "string",
           "x-example" : "test-kie-server"
+        }, {
+          "name" : "containerId",
+          "in" : "path",
+          "description" : "ID of the KIE container to be started",
+          "required" : true,
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
         } ],
         "responses" : {
           "200" : {
-            "description" : "KIE containers",
-            "examples" : {
-              "application/json" : "{\n \"container-spec\" : [ {\n       \"container-id\" : \"evaluation_1.0.0-SNAPSHOT\",\n       \"container-name\" : \"evaluation\",\n       \"server-template-key\" : {\n           \"server-id\" : \"test-kie-server\",\n           \"server-name\" : \"test-kie-server\"\n       },\n       \"release-id\" : {\n           \"group-id\" : \"evaluation\",\n           \"artifact-id\" : \"evaluation\",\n           \"version\" : \"1.0.0-SNAPSHOT\"\n       },\n       \"configuration\" : {\n           \"PROCESS\" : {\n               \"org.kie.server.controller.api.model.spec.ProcessConfig\" : {\n                   \"runtimeStrategy\" : \"SINGLETON\",\n                   \"kbase\" : \"\",\n                   \"ksession\" : \"\",\n                   \"mergeMode\" : \"MERGE_COLLECTIONS\"\n               }\n           },\n           \"RULE\" : {\n               \"org.kie.server.controller.api.model.spec.RuleConfig\" : {\n                   \"pollInterval\" : null,\n                   \"scannerStatus\" : \"STOPPED\"\n               }\n           }\n       },\n       \"status\" : \"STARTED\"\n   } ]\n}",
-              "application/xml" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<container-spec-list>\n    <container-spec>\n        <container-id>evaluation_1.0.0-SNAPSHOT</container-id>\n        <container-name>evaluation</container-name>\n        <server-template-key>\n            <server-id>test-kie-server</server-id>\n            <server-name>test-kie-server</server-name>\n        </server-template-key>\n        <release-id>\n            <artifact-id>evaluation</artifact-id>\n            <group-id>evaluation</group-id>\n            <version>1.0.0-SNAPSHOT</version>\n        </release-id>\n        <configs>\n            <entry>\n                <key>PROCESS</key>\n                <value xsi:type=\"processConfig\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                    <runtimeStrategy>SINGLETON</runtimeStrategy>\n                    <kbase></kbase>\n                    <ksession></ksession>\n                    <mergeMode>MERGE_COLLECTIONS</mergeMode>\n                </value>\n            </entry>\n            <entry>\n                <key>RULE</key>\n                <value xsi:type=\"ruleConfig\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                    <scannerStatus>STOPPED</scannerStatus>\n                </value>\n            </entry>\n        </configs>\n        <status>STARTED</status>\n    </container-spec>\n</container-spec-list>"
-            }
+            "description" : "KIE Container successfully started"
           },
           "404" : {
-            "description" : "KIE Server template not found"
+            "description" : "KIE container or KIE Server template not found"
+          },
+          "400" : {
+            "description" : "Controller exception"
+          },
+          "500" : {
+            "description" : "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers/{serverTemplateId}/containers/{containerId}/status/activated" : {
+      "post" : {
+        "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
+        "summary" : "Activates a specified KIE container in a specified KIE Server template",
+        "description" : "",
+        "operationId" : "activateContainer",
+        "consumes" : [ "application/xml", "application/json" ],
+        "parameters" : [ {
+          "name" : "serverTemplateId",
+          "in" : "path",
+          "description" : "ID of the KIE Server template associated with the KIE container",
+          "required" : true,
+          "type" : "string",
+          "x-example" : "test-kie-server"
+        }, {
+          "name" : "containerId",
+          "in" : "path",
+          "description" : "ID of the KIE container to be activated",
+          "required" : true,
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "KIE container successfully activated"
+          },
+          "404" : {
+            "description" : "KIE container or KIE Server template not found"
+          },
+          "400" : {
+            "description" : "Controller exception"
+          },
+          "500" : {
+            "description" : "Unexpected error"
+          }
+        }
+      }
+    },
+    "/controller/management/servers/{serverTemplateId}/containers/{containerId}/status/deactivated" : {
+      "post" : {
+        "tags" : [ "Controller :: KIE Server templates and KIE containers" ],
+        "summary" : "Deactivates a specified KIE container in a specified KIE Server template",
+        "description" : "",
+        "operationId" : "deactivateContainer",
+        "consumes" : [ "application/xml", "application/json" ],
+        "parameters" : [ {
+          "name" : "serverTemplateId",
+          "in" : "path",
+          "description" : "ID of the KIE Server template associated with the KIE container",
+          "required" : true,
+          "type" : "string",
+          "x-example" : "test-kie-server"
+        }, {
+          "name" : "containerId",
+          "in" : "path",
+          "description" : "ID of the KIE container to be deactivated",
+          "required" : true,
+          "type" : "string",
+          "x-example" : "evaluation_1.0.0-SNAPSHOT"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "KIE container successfully deactivated"
+          },
+          "404" : {
+            "description" : "KIE container or KIE Server template not found"
           },
           "400" : {
             "description" : "Controller exception"

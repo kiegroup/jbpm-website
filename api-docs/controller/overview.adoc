@@ -1,4 +1,4 @@
-= Business Central API
+= Controller API
 
 
 [[_overview]]
@@ -11,7 +11,7 @@ __Version__ : 7.0
 
 === URI scheme
 [%hardbreaks]
-__BasePath__ : /business-central/rest
+__BasePath__ : /controller/rest
 
 
 === Tags
