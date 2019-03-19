@@ -210,7 +210,7 @@
         }, {
           "name" : "resetBeforeUpdate",
           "in" : "query",
-          "description" : "Allows to reset the current environment aborting active process instances before updating when the server runs on development mode. Optional, defaults to false",
+          "description" : "Determines whether active processes are aborted (reset) before updating when the server runs in development mode",
           "required" : false,
           "type" : "boolean",
           "default" : false

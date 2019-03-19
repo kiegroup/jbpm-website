@@ -870,7 +870,7 @@ __required__|ID of the KIE container to be updated|string|
 |**Path**|**serverTemplateId** +
 __required__|ID of the KIE Server template associated with the KIE container|string|
 |**Query**|**resetBeforeUpdate** +
-__optional__|Allows to reset the current environment aborting active process instances before updating when the server runs on development mode. Optional, defaults to false|boolean|`"false"`
+__optional__|Determines whether active processes are aborted (reset) before updating when the server runs in development mode|boolean|`"false"`
 |**Body**|**body** +
 __required__|A map containing the updated specifications for the KIE container|string|
 |===
