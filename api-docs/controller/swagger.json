@@ -207,6 +207,13 @@
             "application/json" : "{\n  \"container-id\" : \"evaluation_1.0.0-SNAPSHOT\",\n  \"container-name\" : \"evaluation\",\n  \"server-template-key\" : null,\n  \"release-id\" : {\"\n    \"group-id\" : \"evaluation\",\n    \"artifact-id\" : \"evaluation\",\n    \"version\" : \"1.0.0-SNAPSHOT\"\n  },\n  \"configuration\" : {\n    \"RULE\" : {\n      \"org.kie.server.controller.api.model.spec.RuleConfig\" : {\n        \"pollInterval\" : null,\n        \"scannerStatus\" : \"STOPPED\"\n      }\n    },\n    \"PROCESS\" : {\n      \"org.kie.server.controller.api.model.spec.ProcessConfig\" : {\n        \"runtimeStrategy\" : \"SINGLETON\",\n        \"kbase\" : \"\",\n        \"ksession\" : \"\",\n        \"mergeMode\" : \"MERGE_COLLECTIONS\"\n      }\n    }\n  },\n  \"status\" : \"STARTED\"\n}",
             "application/xml" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<container-spec-details>\n    <container-id>evaluation_1.0.0-SNAPSHOT</container-id>\n    <container-name>evaluation</container-name>\n    <release-id>\n        <artifact-id>evaluation</artifact-id>\n        <group-id>evaluation</group-id>\n        <version>1.0.0-SNAPSHOT</version>\n    </release-id>\n    <configs>\n        <entry>\n            <key>RULE</key>\n            <value xsi:type=\"ruleConfig\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <scannerStatus>STOPPED</scannerStatus>\n            </value>\n        </entry>\n        <entry>\n            <key>PROCESS</key>\n            <value xsi:type=\"processConfig\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <runtimeStrategy>SINGLETON</runtimeStrategy>\n                <kbase></kbase>\n                <ksession></ksession>\n                <mergeMode>MERGE_COLLECTIONS</mergeMode>\n            </value>\n        </entry>\n    </configs>\n    <status>STARTED</status>\n</container-spec-details>"
           }
+        }, {
+          "name" : "resetBeforeUpdate",
+          "in" : "query",
+          "description" : "Allows to reset the current environment aborting active process instances before updating when the server runs on development mode. Optional, defaults to false",
+          "required" : false,
+          "type" : "boolean",
+          "default" : false
         } ],
         "responses" : {
           "201" : {
@@ -967,6 +974,26 @@
         }
       } ]
     },
+    "ServerTemplateKey" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "xml" : {
+            "name" : "server-id"
+          }
+        },
+        "name" : {
+          "type" : "string",
+          "xml" : {
+            "name" : "server-name"
+          }
+        }
+      },
+      "xml" : {
+        "name" : "server-template-key"
+      }
+    },
     "ServerConfig" : {
       "type" : "object",
       "xml" : {
@@ -1018,6 +1045,10 @@
             }
           }
         },
+        "mode" : {
+          "type" : "string",
+          "enum" : [ "PRODUCTION", "DEVELOPMENT" ]
+        },
         "serverInstanceKeys" : {
           "type" : "array",
           "items" : {
@@ -1027,26 +1058,6 @@
       },
       "xml" : {
         "name" : "server-template-details"
-      }
-    },
-    "ServerTemplateKey" : {
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "type" : "string",
-          "xml" : {
-            "name" : "server-id"
-          }
-        },
-        "name" : {
-          "type" : "string",
-          "xml" : {
-            "name" : "server-name"
-          }
-        }
-      },
-      "xml" : {
-        "name" : "server-template-key"
       }
     },
     "ServerTemplateList" : {

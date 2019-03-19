@@ -16,26 +16,25 @@ __BasePath__ : /kie-server/services/rest
 
 === Tags
 
-* Administration of cases :: Case Management
-* Asynchronous jobs :: BPM
-* Case instances :: Case Management
-* Custom queries :: BPM
-* Decision Service :: DMN
-* Documents :: BPM
-* KIE Server :: Core
-* KIE Server Script :: Core
+* Case instance administration
+* Case instances
+* Case queries
+* Custom queries
+* DMN models
+* Documents
+* Jobs
+* KIE Server and KIE containers
+* KIE session assets
 * Planning and solvers :: BRP
-* Process and task definitions :: BPM
-* Process and task forms :: BPM
-* Process definition and instance images :: BPM
-* Process instances :: BPM
-* Process instances administration :: BPM
-* Queries - case definitions and instances :: Case Management
-* Queries - processes, nodes, variables and tasks :: BPM
-* Rules evaluation :: BRM
+* Process and task definitions
+* Process and task forms
+* Process images
+* Process instance administration
+* Process instances
+* Process queries
 * Static files endpoint :: BPM
-* User task operations and queries :: BPM
-* User tasks administration :: BPM
+* Task instance administration
+* Task instances
 
 
 
