@@ -9,6 +9,12 @@
 #
 # Order news by date.
 # Don't remove past news.
+- newsId: 20190325-blog
+  newsDate: 2019-03-25
+  newsTitle: Take a look at jBPM 7.19
+  newsContent: jBPM 7.19 is out, take some time to check the awesome updates.
+  newsUrl: http://docs.jboss.org/jbpm/release/7.19.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes  
+
 - newsId: 20190307-blog
   newsDate: 2019-03-07
   newsTitle: Take a look at jBPM 7.18
