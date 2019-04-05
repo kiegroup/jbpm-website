@@ -1,0 +1,19 @@
+== Invoke DMN Decision Service from jBPM business rule task
+
+Business rule task has been improved to allow to invoke decision service from DMN.
+
+== Allow filtering manage section related items by container/deployment
+
+Additional filtering for managing process instances and task instance
+ by filtering on container id (deployment id).
+
+== Form generation for classes from external dependencies
+
+Form modeller supports form generation from classes that are not part of the project
+but are added as dependencies of the project.
+
+== Significant improvement of JMS client for KIE Server
+
+Enhancement for JMS client has been implemented that allows to reuse JAXB context
+that significantly improves overall performance of KIE Server client operations
+via JMS.
