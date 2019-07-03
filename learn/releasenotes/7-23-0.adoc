@@ -1,3 +1,10 @@
+== New Business Central Docker images
+
+This release includes two new Docker images: Business Central and Business Central Showcase.
+
+* https://hub.docker.com/r/jboss/business-central-workbench/
+* https://hub.docker.com/r/jboss/business-central-workbench-showcase/
+
 == ISO8601 expressions for user task notifications
 
 Support ISO8601 expressions for user task notifications has been added in this release.
