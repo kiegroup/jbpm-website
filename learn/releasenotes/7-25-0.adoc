@@ -1,0 +1,5 @@
+== Bulk reassignment supported for tasks in Business Central
+
+In the *Task Inbox* and *Tasks* pages in Business Central, you can now perform bulk reassignment over multiple tasks in a
+single operation. To reassign tasks in bulk, select two or more tasks, click the *Bulk Actions* drop-down menu in the
+upper-right corner of the window, and select *Bulk Reassign*.
