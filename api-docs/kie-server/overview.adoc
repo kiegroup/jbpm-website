@@ -35,6 +35,7 @@ __BasePath__ : /kie-server/services/rest
 * Static files endpoint :: BPM
 * Task instance administration
 * Task instances
+* Test scenario execution
 
 
 
