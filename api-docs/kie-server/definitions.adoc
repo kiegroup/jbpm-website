@@ -981,6 +981,10 @@ __optional__|**Example** : `[ "<<_task-event-instance>>" ]`|< <<_task-event-inst
 [options="header", cols=".^3a,.^11a,.^4a"]
 |===
 |Name|Description|Schema
+|**sla-compliance** +
+__optional__|**Example** : `0`|integer (int32)
+|**sla-due-date** +
+__optional__|**Example** : `"1970-01-01T00:00:00Z"`|string (date-time)
 |**task-activation-time** +
 __optional__|**Example** : `"1970-01-01T00:00:00Z"`|string (date-time)
 |**task-actual-owner** +

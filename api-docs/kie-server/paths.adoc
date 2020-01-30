@@ -1817,7 +1817,7 @@ __optional__|optional process instance status (active, completed, aborted) - def
 ----
 
 
-[[_adddynamicprocesstocase_1]]
+[[_adddynamicprocesstocase]]
 ==== Adds a dynamic subprocess to a specified case instance.
 ....
 POST /server/containers/{containerId}/cases/instances/{caseId}/processes/{processId}
@@ -2169,7 +2169,7 @@ __optional__|optional pagination - size of the result, defaults to 10|integer (i
 ----
 
 
-[[_adddynamicprocesstocase]]
+[[_adddynamicprocesstocase_1]]
 ==== Adds dynamic subprocess identified by process id to stage within case instance
 ....
 POST /server/containers/{containerId}/cases/instances/{caseId}/stages/{caseStageId}/processes/{processId}
@@ -2258,7 +2258,7 @@ __required__|data for dynamic subprocess|string
 ----
 
 
-[[_adddynamictasktocase_1]]
+[[_adddynamictasktocase]]
 ==== Adds a dynamic user task or service task to the specified stage in a specified case instance.
 ....
 POST /server/containers/{containerId}/cases/instances/{caseId}/stages/{caseStageId}/tasks
@@ -2434,7 +2434,7 @@ __optional__|optional data to be given when triggering adhoc fragment|string
 ----
 
 
-[[_adddynamictasktocase]]
+[[_adddynamictasktocase_1]]
 ==== Adds a dynamic user task or service task to the specified case instance.
 ....
 POST /server/containers/{containerId}/cases/instances/{caseId}/tasks
@@ -4570,7 +4570,7 @@ __optional__|optional query filter specification represented as QueryFilterSpec|
 === DMN Models
 
 [[_evaluatedecisions]]
-==== Evaluates decisions for given imput
+==== Evaluates decisions for given input
 ....
 POST /server/containers/{containerId}/dmn
 ....
@@ -6596,7 +6596,7 @@ POST /server/containers/{containerId}/release-id
 |**Path**|**containerId** +
 __required__|Container id that release id should be upgraded|string|
 |**Query**|**resetBeforeUpdate** +
-__optional__|Allows to reset the current environment aborting active process instances before updating when the server runs on development mode. Optional, defaults to false|boolean|`"false"`
+__optional__|Determines whether active processes are aborted (reset) before updating when the server runs in development mode|boolean|`"false"`
 |**Body**|**body** +
 __required__|Release Id to be upgraded to as ReleaseId type|string|
 |===
@@ -8752,6 +8752,8 @@ __optional__|optional language that the form should be found for|string|`"en"`
 __optional__|optional marshall content flag if the content should be transformed or not, defaults to true|boolean|`"true"`
 |**Query**|**type** +
 __optional__|optional type of the form, defaults to ANY so system will find the most current one|string|`"ANY"`
+|**Query**|**user** +
+__optional__|optional user id to be used instead of authenticated user - only when bypass authenticated user is enabled|string|
 |===
 
 
@@ -8990,13 +8992,19 @@ GET /server/containers/{containerId}/images/processes/instances/{processInstance
 
 ===== Parameters
 
-[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+[options="header", cols=".^2a,.^3a,.^9a,.^4a,.^2a"]
 |===
-|Type|Name|Description|Schema
+|Type|Name|Description|Schema|Default
 |**Path**|**containerId** +
-__required__|container id that process instance belongs to|string
+__required__|container id that process instance belongs to|string|
 |**Path**|**processInstanceId** +
-__required__|identifier of the process instance that image should be loaded for|integer (int64)
+__required__|identifier of the process instance that image should be loaded for|integer (int64)|
+|**Query**|**svgActiveBorderColor** +
+__optional__|svg active node border color|string|`"#FF0000"`
+|**Query**|**svgCompletedBorderColor** +
+__optional__|svg completed node border color|string|`"#030303"`
+|**Query**|**svgCompletedColor** +
+__optional__|svg completed node color|string|`"#C0C0C0"`
 |===
 
 
@@ -13792,11 +13800,13 @@ GET /server/queries/tasks/instances/{taskInstanceId}
 
 ===== Parameters
 
-[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+[options="header", cols=".^2a,.^3a,.^9a,.^4a,.^2a"]
 |===
-|Type|Name|Description|Schema
+|Type|Name|Description|Schema|Default
 |**Path**|**taskInstanceId** +
-__required__|task id to load task instance|integer (int64)
+__required__|task id to load task instance|integer (int64)|
+|**Query**|**withSLA** +
+__optional__|optional include SLA data - defaults to false|boolean|`"false"`
 |===
 
 
@@ -17709,6 +17719,68 @@ __optional__|optional user id to be used instead of authenticated user - only wh
 ====== Request path
 ----
 /server/containers/evaluation_1.0.0-SNAPSHOT/tasks/123/states/suspended
+----
+
+
+[[_test_scenario_execution_resource]]
+=== Test Scenario Execution
+
+[[_executesimulation]]
+==== Execute given test scenario against specified container
+....
+POST /server/containers/{containerId}/scesim
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**containerId** +
+__required__|Container id|string
+|**Body**|**body** +
+__required__|Test scenario file content to be executed|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|successful operation|<<_response,response>>
+|**400**|Malformed test scenario file|No Content
+|**404**|Container not found|No Content
+|**500**|Unexpected error|No Content
+|===
+
+
+===== Produces
+
+* `application/xml`
+* `application/json`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/server/containers/string/scesim
+----
+
+
+====== Request body
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "type" : "SUCCESS",
+  "msg" : "string"
+}
 ----
 
 
