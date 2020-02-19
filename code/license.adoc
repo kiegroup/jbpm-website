@@ -1,5 +1,5 @@
 = License
-:awestruct-description: Drools is open source, under the Apache License 2.0.
+:awestruct-description: jBPM is open source, under the Apache License 2.0.
 :awestruct-layout: normalBase
 :showtitle:
 
