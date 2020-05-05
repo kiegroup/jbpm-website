@@ -5,6 +5,10 @@ layout: base
 ---
 .alert.alert-info.alert-dismissable
   %button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
+  %a.alert-link(href="https://kogito.kie.org") Looking for pure cloud-native process automation? Take a look at Kogito as well (based on jBPM)!
+
+.alert.alert-info.alert-dismissable
+  %button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
   #{site.pom.latestFinal.releaseDate}:
   %a.alert-link(href="learn/releases.html") jBPM #{site.pom.latestFinal.version} has been released. Click here to see what's new.
 
@@ -14,12 +18,6 @@ layout: base
       ## What is jBPM?
 
       **jBPM** is a toolkit for building business applications to help automate business processes and decisions.
-
-      **Business application can be defined as an automated solution, built with selected frameworks and capabilities that implements business functions and/or business problems. Capabilities can be (among others) persistence, messaging, transactions, business processes, business rules and planning solutions.**
-
-    .text-center<
-      %a.btn.btn-lg.btn-primary(href="businessapps/gettingStarted.html")<
-        Start with Business Applications!
 
     :markdown
 
@@ -44,8 +42,21 @@ layout: base
       %li SpringBoot or Thorntail (formerly known as WildFly Swarm) - uberjar deployments
       %li standalone java programs
 
+    %p jBPM is typically used to build business applications.  A business application could be defined as a domain-specific solution (built with selected frameworks and capabilities) that solves a particular business problem.  To implement the business logic it leverages capabilities from various frameworks like business processes, business rules and planning constraints, but also persistence, messaging, transactions, etc.
+    
+    .text-center<
+      %a.btn.btn-lg.btn-primary(href="businessapps/gettingStarted.html")<
+        Start with Business Applications!        
+    %p
+
     %p jBPM is open source software, released under the Apache License 2.0. It is written in 100% pure Java™, runs on any JVM and is available in the Maven Central repository too.
 
+    :markdown
+    
+      ## Cloud-native?
+    
+      Looking for a pure cloud-native process automation solution, specifically targeted towards creating intelligent business applications in the cloud?  Take a look at [Kogito](https://kogito.kie.org), based on jBPM.
+    
   .col-md-4
     .jumbotron(style="padding: 10px; margin-bottom: 20px;")
       .text-center<
