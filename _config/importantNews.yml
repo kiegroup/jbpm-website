@@ -9,6 +9,90 @@
 #
 # Order news by date.
 # Don't remove past news.
+- newsId: 20200626-blog
+  newsDate: 2020-06-26
+  newsTitle: Take a look at jBPM 7.39.0
+  newsContent: jBPM 7.39 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.39.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 20200528-blog
+  newsDate: 2020-05-28
+  newsTitle: Take a look at jBPM 7.38.0
+  newsContent: jBPM 7.38 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.38.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 20200508-blog
+  newsDate: 2020-05-08
+  newsTitle: Take a look at jBPM 7.37.0
+  newsContent: jBPM 7.37 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.37.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 20200415-blog
+  newsDate: 2020-04-15
+  newsTitle: Take a look at jBPM 7.36.0
+  newsContent: jBPM 7.36 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.36.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 20200330-blog
+  newsDate: 2020-03-30
+  newsTitle: Take a look at jBPM 7.35.0
+  newsContent: jBPM 7.35 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.35.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 20200309-blog
+  newsDate: 2020-03-09
+  newsTitle: Take a look at jBPM 7.34.0
+  newsContent: jBPM 7.34 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.34.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 20200217-blog
+  newsDate: 2020-02-17
+  newsTitle: Take a look at jBPM 7.33.0
+  newsContent: jBPM 7.33 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.33.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 20200127-blog
+  newsDate: 2020-01-27
+  newsTitle: Take a look at jBPM 7.32.0
+  newsContent: jBPM 7.32 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.32.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 20191212-blog
+  newsDate: 2019-12-22
+  newsTitle: Take a look at jBPM 7.31.0
+  newsContent: jBPM 7.31 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.31.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 20191127-blog
+  newsDate: 2019-11-27
+  newsTitle: Take a look at jBPM 7.30.0
+  newsContent: jBPM 7.30 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.30.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 20191105-blog
+  newsDate: 2019-11-05
+  newsTitle: Take a look at jBPM 7.29.0
+  newsContent: jBPM 7.29 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.29.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 20191015-blog
+  newsDate: 2019-10-15
+  newsTitle: Take a look at jBPM 7.28.0
+  newsContent: jBPM 7.28 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.28.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 2019924-blog
+  newsDate: 2019-09-24
+  newsTitle: Take a look at jBPM 7.27.0
+  newsContent: jBPM 7.27 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.27.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
+- newsId: 2019906-blog
+  newsDate: 2019-09-06
+  newsTitle: Take a look at jBPM 7.26.0
+  newsContent: jBPM 7.26 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.26.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+
 - newsId: 20190812-blog
   newsDate: 2019-08-12
   newsTitle: Take a look at jBPM 7.25
