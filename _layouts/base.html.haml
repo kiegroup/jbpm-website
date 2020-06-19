@@ -55,7 +55,7 @@
             %span.icon-bar
             %span.icon-bar
           %a.navbar-brand(style="padding: 10px;"){:href => relative("/")}
-            %img(alt="jBPM logo"){:src => relative("/headerFooter/jBPMLogo200px.png")}
+            %img(alt="jBPM logo"){:src => relative("/headerFooter/jBPMLogo_siteheader.png")}
         .collapse.navbar-collapse#baseNavigation
           %ul.nav.navbar-nav
             %li<
@@ -99,6 +99,8 @@
                 = precede 'KIE ' do
                   %b.caret>
               %ul.dropdown-menu
+                %li<
+                  %a(href="https://kogito.kie.org" rel="publisher" target="_blank" title="Kogito") Kogito
                 %li<
                   %a(href="https://www.drools.org" rel="publisher" target="_blank" title="Drools") Drools
                 %li<
@@ -153,7 +155,7 @@
               %li<
                 %a{:href => site.issueTracker} Submit a bug
               %li<
-                %a{:href => relative("/code/license.html")} License (Apache)
+                %a{:href => relative("/code/license.html")} License (Apache-2.0)
               %li<
                 %a{:href => site.pom.latest.releaseNotesVersion} Release notes
           .col-md-3
@@ -161,12 +163,12 @@
               %span Sponsored by
               %br
               %a(href="https://www.redhat.com/")<
-                %img{:src => relative("/headerFooter/redHatLogo.png"), :alt => "Red Hat"}
+                %img{:src => relative("/headerFooter/redHatLogo.png"), :alt => "Red Hat", :width => "164", :height => "48"}
             .sponsorMessage
               %span More coder content at
               %br
               %a(href="https://developers.redhat.com/")<
-                %img{:src => relative("/headerFooter/redHatDevelopersLogo.png"), :alt => "Red Hat Developers"}
+                %img{:src => relative("/headerFooter/redHatDevelopersLogo.png"), :alt => "Red Hat Developers", :width => "164", :height => "48"}
 
         .row
           .col-md-12

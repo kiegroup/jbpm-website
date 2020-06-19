@@ -95,12 +95,3 @@ _The source code for this website and presentations._
 
 Want to improve our sources? *Pull requests are welcome!*
 
-== Continuous integration
-:awestruct-layout: normalBase
-:showtitle:
-
-We use Jenkins for continuous integration.
-
-*Show http://ci.jbpm.org/[the Jenkins jobs].* These are mirrors of a Red Hat internal Jenkins jobs.
-
-Keep the builds green!

@@ -1,0 +1,14 @@
+== Bulk actions supported for tasks in Business Central
+
+In the  *Task Inbox* and *Tasks* pages in Business Central, you can now perform bulk actions over multiple tasks in a single operation. To update tasks in bulk, select two or more tasks, click the *Bulk Actions* drop-down menu in the upper-right corner of the window, and select one of the following bulk actions:
+
+* *Bulk Claim*
+* *Bulk Release*
+* *Bulk Resume*
+* *Bulk Suspend*
+
+== User role requirement for WebSocket clients to access the built-in Controller in Business Central
+
+Starting this release, if you use WebSocket protocol in your Java client to connect to the built-in Controller in Business Central,
+you must configure the client with the `rest-all` user role in order to access the Controller REST API.
+This enhancement ensures that WebSocket clients have proper access and security when interacting with the Controller in Business Central.
