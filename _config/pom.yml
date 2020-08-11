@@ -10,7 +10,7 @@ latestFinal:
     updatesite: https://download.jboss.org/jbpm/release/7.41.0.Final/updatesite/
     installerChapter: https://docs.jboss.org/jbpm/release/7.41.0.Final/jbpm-docs/html_single/#_jbpminstaller
     releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12346608
-    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.41.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.41.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
 
     UserGuide: https://docs.jboss.org/jbpm/release/7.41.0.Final/jbpm-docs/html_single/
     JavaDocs: https://docs.jboss.org/drools/release/7.41.0.Final/kie-api-javadoc/index.html
@@ -31,7 +31,7 @@ latest:
     Nightly: https://docs.jboss.org/jbpm/release/snapshot/noPublicCI.html
 
     releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12346608
-    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.41.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.41.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
 
 nightly:
     version: 7.42.0-SNAPSHOT

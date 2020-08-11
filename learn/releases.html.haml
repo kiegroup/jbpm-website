@@ -9,6 +9,12 @@ title: jBPM releases
   %button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
   <strong>#{site.pom.latestFinal.version} is the latest and greatest version of jBPM.</strong>
 
+.row
+  .col-md-12
+
+    :asciidoc
+      jBPM releases a new minor version at the end of every 3-week sprint.
+
 %ul(class="nav nav-tabs download-nav-tabs" style="margin-bottom: 10px;")
   %li(class="active")
     %a(href="#latest" data-toggle="pill") Latest release
@@ -19,10 +25,11 @@ title: jBPM releases
   %div(id="latest" class="tab-pane fade in active")
 
     :asciidoc
-      *Complete release notes can be found in the #{site.pom.latestFinal.whatsNewVersion}[documentation].*
-      *Detailed content of the release can be found in JIRA #{site.pom.latestFinal.releaseNotesVersion}[here]*
+      Complete release notes can be found in the #{site.pom.latestFinal.whatsNewVersion}[documentation].
+      
+      Detailed content of the release can be found in JIRA #{site.pom.latestFinal.releaseNotesVersion}[here].
 
   %div(id="previous" class="tab-pane fade")
     :asciidoc
 
-      *Complete release notes for older versions can be found in the #{site.pom.latestFinal.whatsNewVersion}[documentation].*
+      Complete release notes for older versions can be found in the #{site.pom.latestFinal.whatsNewVersion}[documentation].
