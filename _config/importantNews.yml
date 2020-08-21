@@ -9,10 +9,16 @@
 #
 # Order news by date.
 # Don't remove past news.
+- newsId: 20200820-blog
+  newsDate: 2020-08-20
+  newsTitle: Take a look at jBPM 7.42.0
+  newsContent: jBPM 7.42 is out, including bug fixes and exciting new features!
+  newsUrl: http://docs.jboss.org/jbpm/release/7.42.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
+
 - newsId: 20200728-blog
   newsDate: 2020-07-28
   newsTitle: Take a look at jBPM 7.41.0
-  newsContent: jBPM 7.40 is out, including bug fixes and exciting new features!
+  newsContent: jBPM 7.41 is out, including bug fixes and exciting new features!
   newsUrl: http://docs.jboss.org/jbpm/release/7.41.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
 
 - newsId: 20200709-blog
