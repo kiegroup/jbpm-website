@@ -1,39 +1,39 @@
 latestFinal:
-    version: 7.38.0.Final
-    releaseDate: 2020-05-28
+    version: 7.46.0.Final
+    releaseDate: 2020-11-12
 
-    jbpmServerZip: https://download.jboss.org/jbpm/release/7.38.0.Final/jbpm-server-7.38.0.Final-dist.zip
-    jbpmBinZip: https://download.jboss.org/jbpm/release/7.38.0.Final/jbpm-7.38.0.Final-bin.zip
-    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.38.0.Final/jbpm-7.38.0.Final-examples.zip
-    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.38.0.Final/jbpm-installer-7.38.0.Final.zip
-    jbpmInstallerFullZip: https://download.jboss.org/jbpm/release/7.38.0.Final/jbpm-installer-full-7.38.0.Final.zip
-    updatesite: https://download.jboss.org/jbpm/release/7.38.0.Final/updatesite/
-    installerChapter: https://docs.jboss.org/jbpm/release/7.38.0.Final/jbpm-docs/html_single/#_jbpminstaller
-    releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12345754
-    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.38.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+    jbpmServerZip: https://download.jboss.org/jbpm/release/7.46.0.Final/jbpm-server-7.46.0.Final-dist.zip
+    jbpmBinZip: https://download.jboss.org/jbpm/release/7.46.0.Final/jbpm-7.46.0.Final-bin.zip
+    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.46.0.Final/jbpm-7.46.0.Final-examples.zip
+    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.46.0.Final/jbpm-installer-7.46.0.Final.zip
+    jbpmInstallerFullZip: https://download.jboss.org/jbpm/release/7.46.0.Final/jbpm-installer-full-7.46.0.Final.zip
+    updatesite: https://download.jboss.org/jbpm/release/7.46.0.Final/updatesite/
+    installerChapter: https://docs.jboss.org/jbpm/release/7.46.0.Final/jbpm-docs/html_single/#_jbpminstaller
+    releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12351475
+    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.46.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
 
-    UserGuide: https://docs.jboss.org/jbpm/release/7.38.0.Final/jbpm-docs/html_single/
-    JavaDocs: https://docs.jboss.org/drools/release/7.38.0.Final/kie-api-javadoc/index.html
+    UserGuide: https://docs.jboss.org/jbpm/release/7.46.0.Final/jbpm-docs/html_single/
+    JavaDocs: https://docs.jboss.org/drools/release/7.46.0.Final/kie-api-javadoc/index.html
     Archive: https://docs.jboss.org/jbpm/
 
 latest:
-    version: 7.38.0.Final
-    releaseDate: 2020-05-28
+    version: 7.46.0.Final
+    releaseDate: 2020-10-12
 
-    jbpmServerZip: https://download.jboss.org/jbpm/release/7.38.0.Final/jbpm-server-7.38.0.Final-dist.zip
-    jbpmBinZip: https://download.jboss.org/jbpm/release/7.38.0.Final/jbpm-7.38.0.Final-bin.zip
-    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.38.0.Final/jbpm-7.38.0.Final-examples.zip
-    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.38.0.Final/jbpm-installer-7.38.0.Final.zip
-    updatesite: https://download.jboss.org/jbpm/release/7.38.0.Final/updatesite/
+    jbpmServerZip: https://download.jboss.org/jbpm/release/7.46.0.Final/jbpm-server-7.46.0.Final-dist.zip
+    jbpmBinZip: https://download.jboss.org/jbpm/release/7.46.0.Final/jbpm-7.46.0.Final-bin.zip
+    jbpmExamplesZip: https://download.jboss.org/jbpm/release/7.46.0.Final/jbpm-7.46.0.Final-examples.zip
+    jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.46.0.Final/jbpm-installer-7.46.0.Final.zip
+    updatesite: https://download.jboss.org/jbpm/release/7.46.0.Final/updatesite/
 
-    UserGuide: https://docs.jboss.org/jbpm/release/7.38.0.Final/jbpm-docs/html_single
-    JavaDocs: https://docs.jboss.org/drools/release/7.38.0.Final/kie-api-javadoc/index.html
+    UserGuide: https://docs.jboss.org/jbpm/release/7.46.0.Final/jbpm-docs/html_single
+    JavaDocs: https://docs.jboss.org/drools/release/7.46.0.Final/kie-api-javadoc/index.html
     Nightly: https://docs.jboss.org/jbpm/release/snapshot/noPublicCI.html
 
-    releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12345754
-    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.38.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes
+    releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12351475
+    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.46.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
 
 nightly:
-    version: 7.39.0-SNAPSHOT
+    version: 7.47.0-SNAPSHOT
     jbpmBinaries: https://downloads.jboss.org/jbpm/release/snapshot/master/index.html
-    jbpmDocs: https://repository.jboss.org/nexus/service/local/artifact/maven/redirect?r=snapshots&g=org.jbpm&a=jbpm-docs&v=7.39.0-SNAPSHOT&e=zip
+    jbpmDocs: https://repository.jboss.org/nexus/service/local/artifact/maven/redirect?r=snapshots&g=org.jbpm&a=jbpm-docs&v=7.47.0-SNAPSHOT&e=zip

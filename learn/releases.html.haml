@@ -9,6 +9,12 @@ title: jBPM releases
   %button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
   <strong>#{site.pom.latestFinal.version} is the latest and greatest version of jBPM.</strong>
 
+.row
+  .col-md-12
+
+    :asciidoc
+      jBPM releases a new minor version at the end of every 3-week sprint.
+
 %ul(class="nav nav-tabs download-nav-tabs" style="margin-bottom: 10px;")
   %li(class="active")
     %a(href="#latest" data-toggle="pill") Latest release
@@ -19,37 +25,11 @@ title: jBPM releases
   %div(id="latest" class="tab-pane fade in active")
 
     :asciidoc
-      *Complete content of the release can be found #{site.pom.latestFinal.releaseNotesVersion}[here] and below are the highlights you can't miss*
-
-      include::learn/releasenotes/7-25-0.adoc[]
+      Complete release notes can be found in the #{site.pom.latestFinal.whatsNewVersion}[documentation].
+      
+      Detailed content of the release can be found in JIRA #{site.pom.latestFinal.releaseNotesVersion}[here].
 
   %div(id="previous" class="tab-pane fade")
     :asciidoc
 
-      *Complete release notes for older versions can be found in the #{site.pom.latestFinal.whatsNewVersion}[documentation].*
-
-      - http://docs.jboss.org/jbpm/release/7.24.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.24*]
-      - http://docs.jboss.org/jbpm/release/7.23.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.23*]
-      - http://docs.jboss.org/jbpm/release/7.22.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.22*]
-      - http://docs.jboss.org/jbpm/release/7.21.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.21*]
-      - http://docs.jboss.org/jbpm/release/7.20.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.20*]
-      - http://docs.jboss.org/jbpm/release/7.19.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.19*]
-      - http://docs.jboss.org/jbpm/release/7.18.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.18*]
-      - http://docs.jboss.org/jbpm/release/7.17.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.17*]
-      - http://docs.jboss.org/jbpm/release/7.16.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.16*]
-      - http://docs.jboss.org/jbpm/release/7.15.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.15*]
-      - http://docs.jboss.org/jbpm/release/7.14.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.14*]
-      - http://docs.jboss.org/jbpm/release/7.13.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.13*]
-      - http://docs.jboss.org/jbpm/release/7.12.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.12*]
-      - http://docs.jboss.org/jbpm/release/7.11.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.11*]
-      - http://docs.jboss.org/jbpm/release/7.10.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.10*]
-      - http://docs.jboss.org/jbpm/release/7.9.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.9*]
-      - http://docs.jboss.org/jbpm/release/7.8.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.8*]
-      - http://docs.jboss.org/jbpm/release/7.7.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.7*]
-      - http://docs.jboss.org/jbpm/release/7.6.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.6*]
-      - http://docs.jboss.org/jbpm/release/7.5.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.5*]
-      - http://docs.jboss.org/jbpm/release/7.4.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.4*]
-      - http://docs.jboss.org/jbpm/release/7.3.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.3*]
-      - http://docs.jboss.org/jbpm/release/7.2.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.2*]
-      - http://docs.jboss.org/jbpm/release/7.1.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.1*]
-      - http://docs.jboss.org/jbpm/release/7.0.0.Final/jbpm-docs/html_single/#_jbpmreleasenotes[*jBPM 7.0*]
+      Complete release notes for older versions can be found in the #{site.pom.latestFinal.whatsNewVersion}[documentation].
