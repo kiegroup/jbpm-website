@@ -8,13 +8,13 @@ latestFinal:
     jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.53.0.Final/jbpm-installer-7.53.0.Final.zip
     jbpmInstallerFullZip: https://download.jboss.org/jbpm/release/7.53.0.Final/jbpm-installer-full-7.53.0.Final.zip
     updatesite: https://download.jboss.org/jbpm/release/7.46.0.Final/updatesite/
-    installerChapter: https://docs.jboss.org/jbpm/release/7.53.0.Final/jbpm-docs/html_single/#_jbpminstaller
+    installerChapter: https://docs.jbpm.org/7.53.0.Final/jbpm-docs/html_single/#_jbpminstaller
     releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12354776
-    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.53.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
+    whatsNewVersion: https://docs.jbpm.org/7.53.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
 
-    UserGuide: https://docs.jboss.org/jbpm/release/7.53.0.Final/jbpm-docs/html_single/
-    JavaDocs: https://docs.jboss.org/drools/release/7.53.0.Final/kie-api-javadoc/index.html
-    Archive: https://docs.jboss.org/jbpm/
+    UserGuide: https://docs.jbpm.org/7.53.0.Final/jbpm-docs/html_single/
+    JavaDocs: https://docs.drools.org/7.53.0.Final/kie-api-javadoc/index.html
+    Archive: https://docs.jbpm.org/
 
 latest:
     version: 7.53.0.Final
@@ -26,12 +26,12 @@ latest:
     jbpmInstallerZip: https://download.jboss.org/jbpm/release/7.53.0.Final/jbpm-installer-7.53.0.Final.zip
     updatesite: https://download.jboss.org/jbpm/release/7.48.0.Final/updatesite/
 
-    UserGuide: https://docs.jboss.org/jbpm/release/7.53.0.Final/jbpm-docs/html_single
-    JavaDocs: https://docs.jboss.org/drools/release/7.53.0.Final/kie-api-javadoc/index.html
-    Nightly: https://docs.jboss.org/jbpm/release/snapshot/noPublicCI.html
+    UserGuide: https://docs.jbpm.org/7.53.0.Final/jbpm-docs/html_single
+    JavaDocs: https://docs.drools.org/7.53.0.Final/kie-api-javadoc/index.html
+    Nightly: https://docs.jbpm.org/snapshot/noPublicCI.html
 
     releaseNotesVersion: https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=10052&version=12354776
-    whatsNewVersion: http://docs.jboss.org/jbpm/release/7.53.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
+    whatsNewVersion: https://docs.jbpm.org/7.53.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
 
 nightly:
     version: 7.54.0-SNAPSHOT
