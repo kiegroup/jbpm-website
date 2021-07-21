@@ -9,6 +9,12 @@
 #
 # Order news by date.
 # Don't remove past news.
+- newsId: 20210720-blog
+  newsDate: 2021-07-20
+  newsTitle: Take a look at jBPM 7.57.0
+  newsContent: jBPM 7.57.0 is out, including bug fixes and exciting new features!
+  newsUrl: https://docs.jbpm.org/7.57.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
+
 - newsId: 20210624-blog
   newsDate: 2021-06-24
   newsTitle: Take a look at jBPM 7.56.0
