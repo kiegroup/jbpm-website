@@ -28,7 +28,6 @@
                             :integrity => "sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We",
                             :crossorigin => "anonymous" }
     %link(rel="stylesheet"){:href => relative("/website/highlight/highlight.css")}
-    %link(rel="stylesheet"){:href => relative("/website/tabzilla/tabzilla.css")}
     %link(rel="stylesheet"){:href => relative("/website/jBPMWebsite.css")}
     %link(rel="stylesheet"){:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css",
                             :integrity => "sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==",
@@ -44,11 +43,6 @@
 
   %body(data-spy="scroll" data-target=".bs-docs-sidebar")
     %header.navbar.navbar-default.navbar-fixed-top(role="navigation")
-      #tabzillaHolder
-      .dropup
-        %a#tab.tabnav-closed{:href => "https://www.jboss.org"} Red Hat
-        %script
-          window.addEventListener('load', function() { renderTabzilla("jBPM","jbpm", true) });
       .container
         .navbar-header
           -# When the screen width is too little, these 3 icon-bar spans are needed to show the collapsed navbar
@@ -191,7 +185,6 @@
 
     %script{:src => "https://code.jquery.com/jquery-3.6.0.min.js", :crossorigin => "anonymous"}
     %script{:src => relative("/website/highlight/highlight.js")}
-    %script{:src => relative("/website/tabzilla/tabzilla.js")}
     %script{:src => relative("/website/jBPMWebsite.js")}
     %script{:src => ("http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js")}
     %script{:src => relative("/website/bootstrap/js/bootstrap-image-gallery.js")}
