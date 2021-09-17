@@ -89,15 +89,15 @@ footer .sponsorMessage {
 ******************************************************************************/
 
 /* Reduce space taken by alerts */
-.alert {
-    margin-top: 0;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-.alert-dismissable .close {
-    top: 0;
-    right: 0;
-}
+/*.alert {*/
+/*    margin-top: 0;*/
+/*    margin-bottom: 20px;*/
+/*    padding: 10px;*/
+/*}*/
+/*.alert-dismissable .close {*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*}*/
 
 /* Carousel: center images, remove gradient, tabs instead of indicators */
 #whatIsCarousel .item > img {

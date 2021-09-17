@@ -3,14 +3,14 @@ description: jBPM is a toolkit for building business applications to help automa
 title: jBPM Business Automation Toolkit
 layout: base
 ---
-.alert.alert-info.alert-dismissable
-  %button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
+.alert.alert-info.alert-dismissible.fade.show{:role => "alert"}
   %a.alert-link(href="https://kogito.kie.org") Looking for pure cloud-native process automation? Take a look at Kogito as well (based on jBPM)!
+  %button.btn-close(type="button" data-bs-dismiss="alert" aria-label="Close")
 
-.alert.alert-info.alert-dismissable
-  %button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
+.alert.alert-info.alert-dismissible.fade.show{:role => "alert"}
   #{site.pom.latestFinal.releaseDate}:
   %a.alert-link(href="learn/releases.html") jBPM #{site.pom.latestFinal.version} has been released. Click here to see what's new.
+  %button.btn-close(type="button" data-bs-dismiss="alert" aria-label="Close")
 
 .row
   .col-md-8(style="margin-top: -17px;margin-bottom: 20px")

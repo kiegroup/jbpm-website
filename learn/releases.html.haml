@@ -5,9 +5,9 @@ title: jBPM releases
 ---
 
 %h2 Release information
-.alert.alert-info.alert-dismissable
-  %button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
+.alert.alert-info.alert-dismissible.fade.show{:role => "alert"}
   <strong>#{site.pom.latestFinal.version} is the latest and greatest version of jBPM.</strong>
+  %button.btn-close(type="button" data-bs-dismiss="alert" aria-label="Close")
 
 .row
   .col-md-12
