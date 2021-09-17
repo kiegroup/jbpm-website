@@ -24,12 +24,15 @@
     %meta(itemprop="description"){:content => page.description ? page.description : site.description}
     %meta(itemprop="image"){:content => relative("/headerFooter/jBPMLogo210px.png")}
 
-    %link(rel="stylesheet"){:href => relative("/website/bootstrap/css/bootstrap.min.css")}
+    %link(rel="stylesheet"){:href => "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css",
+                            :integrity => "sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We",
+                            :crossorigin => "anonymous" }
     %link(rel="stylesheet"){:href => relative("/website/highlight/highlight.css")}
     %link(rel="stylesheet"){:href => relative("/website/tabzilla/tabzilla.css")}
     %link(rel="stylesheet"){:href => relative("/website/jBPMWebsite.css")}
-    %link(rel="stylesheet"){:href => relative("/website/bootstrap/css/bootstrap-image-gallery.css")}
-    %link(rel="stylesheet"){:href => ("http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css")}
+    %link(rel="stylesheet"){:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css",
+                            :integrity => "sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==",
+                            :crossorigin => "anonymous", :referrerpolicy => "no-referrer"}
     :plain
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -182,9 +185,11 @@
             \-
             %a{:href => relative("/website/websiteInfo.html")} Website info
 
+    %script{:src => "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js",
+           :integrity => "sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj",
+           :crossorigin => "anonymous"}
 
-    %script{:src => relative("/website/jquery/jquery.min.js")}
-    %script{:src => relative("/website/bootstrap/js/bootstrap.min.js")}
+    %script{:src => "https://code.jquery.com/jquery-3.6.0.min.js", :crossorigin => "anonymous"}
     %script{:src => relative("/website/highlight/highlight.js")}
     %script{:src => relative("/website/tabzilla/tabzilla.js")}
     %script{:src => relative("/website/jBPMWebsite.js")}
