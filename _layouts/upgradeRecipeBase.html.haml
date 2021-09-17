@@ -11,7 +11,7 @@ layout: normalBase
 
 .row
   .col-md-7
-    %h2(style="margin-top: 0px;") Legend
+    %h2 Legend
     %p Every upgrade note has an indication how likely your code will be affected by that change:
     %ul.upgrade-recipe-label-list
       %li
@@ -31,14 +31,16 @@ layout: normalBase
         Read this to better understand why the subsequent major changes were made.
 
   .col-md-5
-    .panel.panel-default
-      .panel-heading Note for Red Hat customers
-      .panel-body
-        %p
-          The BRMS and BPM Suite version does
-          %strong NOT
-          match the Drools version:
-        = partial('productToProjectVersionMapping.html.haml', :outputPage => page)
-        %p Apply the recipe of the appropriate Drools version.
+    .card
+      .card-body
+        .card-title
+          %h3 Note for Red Hat customers
+        .card-text
+          %p
+            The BRMS and BPM Suite version does
+            %strong NOT
+            match the Drools version:
+          = partial('productToProjectVersionMapping.html.haml', :outputPage => page)
+          %p Apply the recipe of the appropriate Drools version.
 
 ~ content
