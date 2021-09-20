@@ -13,7 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+:root {
+    --bs-font-sans-serif: Overpass;
+    --bs-body-font-size: 16px;
+}
 html {
     background-color: #f8f8f8;
 }
