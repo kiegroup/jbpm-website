@@ -15,21 +15,21 @@ title: jBPM releases
     :asciidoc
       jBPM releases a new minor version at the end of every 3-week sprint.
 
-%ul(class="nav nav-tabs download-nav-tabs" style="margin-bottom: 10px;")
-  %li(class="active")
-    %a(href="#latest" data-toggle="pill") Latest release
-  %li
-    %a(href="#previous" data-toggle="pill") Previous releases
+%ul(class="nav nav-tabs download-nav-tabs")
+  %li.nav-item
+    %a.nav-link.active(href="#latest" data-bs-toggle="tab") Latest release
+  %li.nav-item
+    %a.nav-link(href="#previous" data-bs-toggle="tab") Previous releases
 
-%div(class="tab-content download-tab-content")
-  %div(id="latest" class="tab-pane fade in active")
+%div(class="tab-content download-tab-content p-3")
+  %div(id="latest" class="tab-pane fade show active" role="tabpanel")
 
     :asciidoc
       Complete release notes can be found in the #{site.pom.latestFinal.whatsNewVersion}[documentation].
       
       Detailed content of the release can be found in JIRA #{site.pom.latestFinal.releaseNotesVersion}[here].
 
-  %div(id="previous" class="tab-pane fade")
+  %div(id="previous" class="tab-pane fade show" role="tabpanel")
     :asciidoc
 
       Complete release notes for older versions can be found in the #{site.pom.latestFinal.whatsNewVersion}[documentation].

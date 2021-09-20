@@ -6,14 +6,14 @@ title: Getting started
 
 %h2 Getting started
 
-%ul(class="nav nav-tabs download-nav-tabs")
-  %li(class="active")
-    %a(href="#zip" data-toggle="pill") Using Single Zip Distribution
-  %li
-    %a(href="#docker" data-toggle="pill") Using Docker
+%ul(class="nav nav-tabs download-nav-tabs" role="tablist")
+  %li(class="nav-item")
+    %a.nav-link.active(href="#zip" data-bs-toggle="tab") Using Single Zip Distribution
+  %li.nav-item
+    %a.nav-link(href="#docker" data-bs-toggle="tab") Using Docker
 
-%div(class="tab-content download-tab-content")
-  %div(id="zip" class="tab-pane fade in active")
+%div(class="tab-content download-tab-content p-3")
+  %div(id="zip" class="tab-pane fade show active" role="tabpanel")
 
     :asciidoc
 
@@ -76,7 +76,7 @@ title: Getting started
 
       After running the script the only thing that is needed is to start the server.
 
-  %div(id="docker" class="tab-pane fade")
+  %div(id="docker" class="tab-pane fade show" role="tabpanel")
     :asciidoc
 
       == Running jBPM Docker image
