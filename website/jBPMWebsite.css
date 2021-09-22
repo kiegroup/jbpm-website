@@ -103,28 +103,34 @@ footer .sponsorMessage {
 /*}*/
 
 /* Carousel: center images, remove gradient, tabs instead of indicators */
-#whatIsCarousel .item > img {
-    margin: 0 auto;
-    display: block;
-}
-#whatIsCarousel .carousel-control.left, .carousel-control.right {
-    background-image: none;
-    color: inherit;
-}
-#whatIsCarouselButtons > li {
-    vertical-align: bottom;
-}
-#whatIsCarouselButtons > li.active a {
-    background-color: white;
-    color: inherit;
-    -webkit-border-radius: 4px 4px 0 0;
-    -moz-border-radius: 4px 4px 0 0;
-    border-radius: 4px 4px 0 0;
-}
+/*#whatIsCarousel .item > img {*/
+/*    margin: 0 auto;*/
+/*    display: block;*/
+/*}*/
+/*#whatIsCarousel .carousel-control.left, .carousel-control.right {*/
+/*    background-image: none;*/
+/*    color: inherit;*/
+/*}*/
+/*#whatIsCarouselButtons > li {*/
+/*    vertical-align: bottom;*/
+/*}*/
+/*#whatIsCarouselButtons > li.active a {*/
+/*    background-color: white;*/
+/*    color: inherit;*/
+/*    -webkit-border-radius: 4px 4px 0 0;*/
+/*    -moz-border-radius: 4px 4px 0 0;*/
+/*    border-radius: 4px 4px 0 0;*/
+/*}*/
 
-#whatIsCarousel .item > a img {
-    margin: 0 auto;
-    display: block;
+/*#whatIsCarousel .item > a img {*/
+/*    margin: 0 auto;*/
+/*    display: block;*/
+/*}*/
+
+#whatIsCarousel .carousel-indicators {
+    background-color: rgba(50%, 50%, 50%, .5);
+    margin-right: 0;
+    margin-left: 0;
 }
 
 /******************************************************************************

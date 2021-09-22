@@ -13,7 +13,7 @@ layout: base
   %button.btn-close(type="button" data-bs-dismiss="alert" aria-label="Close")
 
 .row
-  .col-md-8(style="margin-top: -17px;margin-bottom: 20px")
+  .col-md-8
     :markdown
       ## What is jBPM?
 
@@ -56,11 +56,10 @@ layout: base
       ## Cloud-native?
     
       Looking for a pure cloud-native process automation solution, specifically targeted towards creating intelligent business applications in the cloud?  Take a look at [Kogito](https://kogito.kie.org), based on jBPM.
-    
   .col-md-4
-    .jumbotron(style="padding: 10px; margin-bottom: 20px;")
+    .bg-light.mb-4.p-3
       .text-center<
-        %a.btn.btn-lg.btn-success(href="#{site.pom.latestFinal.jbpmServerZip}")<
+        %a.btn.btn-lg.btn-success.rounded(href="#{site.pom.latestFinal.jbpmServerZip}")<
           %img(src = "download/download.png")
           Download jBPM #{site.pom.latestFinal.version}
       %ol
@@ -93,85 +92,55 @@ layout: base
         %a.btn.btn-lg.btn-primary(href="#{site.pom.latestFinal.UserGuide}")<
           %img(src = "learn/documentation.png")
           Read documentation
-
-.jumbotron.pagination-centered(style="padding: 10px; margin-bottom: 20px;")
-  .carousel.slide#whatIsCarousel(data-ride="carousel" data-interval="false" style="background-color: white;")
-    -#.carousel-inner(style="align: center;")
-    .carousel-inner
-      .item.active#links
-        %a(href="landingPage/01_Home_Big.png" title="Home" data-gallery="")
-          %img(src="landingPage/01_Home.png" alt="Home")
-      .item
-        %a(href="landingPage/02_Authoring_Big.png" title="Authoring" data-gallery="")
-          %img(src="landingPage/02_Authoring.png" alt="Authoring")
-      .item
-        %a(href="landingPage/03_ProcessModeler_Big.png" title="ProcessModeler" data-gallery="")
-          %img(src="landingPage/03_ProcessModeler.png" alt="ProcessModeler")
-      .item
-        %a(href="landingPage/03_DataModeler_Big.png" title="DataModeler" data-gallery="")
-          %img(src="landingPage/03_DataModeler.png" alt="DataModeler")
-      .item
-        %a(href="landingPage/04_FormModeler_Big.png" title="FormModeler" data-gallery="")
-          %img(src="landingPage/04_FormModeler.png" alt="FormModeler")
-      .item
-        %a(href="landingPage/05_Simulation_Big.png" title="Simulation" data-gallery="")
-          %img(src="landingPage/05_Simulation.png" alt="Simulation")
-      .item
-        %a(href="landingPage/06_ProcessInstances_Big.png" title="ProcessInstances" data-gallery="")
-          %img(src="landingPage/06_ProcessInstances.png" alt="ProcessInstances")
-      .item
-        %a(href="landingPage/07_TaskList_Big.png" title="TaskInbox" data-gallery="")
-          %img(src="landingPage/07_TaskList.png" alt="TaskInbox")
-      .item
-        %a(href="landingPage/08_Dashboards_Big.png" title="Dashboards" data-gallery="")
-          %img(src="landingPage/08_Dashboards.png" alt="Dashboards")
-      .item
-        %a(href="landingPage/09_Eclipse_Big.png" title="Eclipse" data-gallery="")
-          %img(src="landingPage/09_Eclipse.png" alt="Eclipse")
-    %div.TextZoom Click on the image to zoom in
-    %a.left.carousel-control(href="#whatIsCarousel" data-slide="prev")
-      %span.glyphicon.glyphicon-chevron-left
-    %a.right.carousel-control(href="#whatIsCarousel" data-slide="next")
-      %span.glyphicon.glyphicon-chevron-right
-  %ul.nav.nav-justified#whatIsCarouselButtons
-    %li.active(data-target="#whatIsCarousel" data-slide-to="0")
-      %a(href="#" data-toggle="tab") Home
-    %li(data-target="#whatIsCarousel" data-slide-to="1")
-      %a(href="#" data-toggle="tab") Authoring
-    %li(data-target="#whatIsCarousel" data-slide-to="2")
-      %a(href="#" data-toggle="tab") ProcessModeler
-    %li(data-target="#whatIsCarousel" data-slide-to="3")
-      %a(href="#" data-toggle="tab") DataModeler
-    %li(data-target="#whatIsCarousel" data-slide-to="4")
-      %a(href="#" data-toggle="tab") FormModeler
-    %li(data-target="#whatIsCarousel" data-slide-to="5")
-      %a(href="#" data-toggle="tab") Simulation
-    %li(data-target="#whatIsCarousel" data-slide-to="6")
-      %a(href="#" data-toggle="tab") ProcessInstances
-    %li(data-target="#whatIsCarousel" data-slide-to="7")
-      %a(href="#" data-toggle="tab") TaskInbox
-    %li(data-target="#whatIsCarousel" data-slide-to="8")
-      %a(href="#" data-toggle="tab") Dashboards
-    %li(data-target="#whatIsCarousel" data-slide-to="9")
-      %a(href="#" data-toggle="tab") Eclipse
-
-
-  #blueimp-gallery.blueimp-gallery
-    .slides
-    %a.prev‹
-    %a.next›
-    %a.close×
-    %a.play-pause
-    %ol.indicator
-    .modal.fade
-      .modal-dialog
-        .modal-content
-          .modal-header
-            %button(type="button" class="close" aria-hidden="true")
-            %h4.modal-title"
+.row.justify-content-center
+  .col-8
+    .carousel#whatIsCarousel(data-ride="carousel" data-interval="false")
+      .carousel-indicators
+        %button.active(type="button" aria-label="Home" data-bs-target="#whatIsCarousel" data-bs-slide-to="0" aria-current="true" )
+        %button(type="button" aria-label="Authoring" data-bs-target="#whatIsCarousel" data-bs-slide-to="1")
+        %button(type="button" aria-label="ProcessModeler" data-bs-target="#whatIsCarousel" data-bs-slide-to="2")
+        %button(type="button" aria-label="DataModeler" data-bs-target="#whatIsCarousel" data-bs-slide-to="3")
+        %button(type="button" aria-label="FormModeler" data-bs-target="#whatIsCarousel" data-bs-slide-to="4")
+        %button(type="button" aria-label="Simulation" data-bs-target="#whatIsCarousel" data-bs-slide-to="5")
+        %button(type="button" aria-label="ProcessInstances" data-bs-target="#whatIsCarousel" data-bs-slide-to="6")
+        %button(type="button" aria-label="TaskInbox" data-bs-target="#whatIsCarousel" data-bs-slide-to="7")
+        %button(type="button" aria-label="Dashboards" data-bs-target="#whatIsCarousel" data-bs-slide-to="8")
+        %button(type="button" aria-label="Eclipse" data-bs-target="#whatIsCarousel" data-bs-slide-to="9")
+      .carousel-inner
+        .carousel-item.active#links
+          %a(href="landingPage/01_Home_Big.png" title="Home" data-gallery="")
+            %img.w-100.block(src="landingPage/01_Home.png" alt="Home")
+        .carousel-item
+          %a(href="landingPage/02_Authoring_Big.png" title="Authoring" data-gallery="")
+            %img.w-100.block(src="landingPage/02_Authoring.png" alt="Authoring")
+        .carousel-item
+          %a(href="landingPage/03_ProcessModeler_Big.png" title="ProcessModeler" data-gallery="")
+            %img.w-100.block(src="landingPage/03_ProcessModeler.png" alt="ProcessModeler")
+        .carousel-item
+          %a(href="landingPage/03_DataModeler_Big.png" title="DataModeler" data-gallery="")
+            %img.w-100.block(src="landingPage/03_DataModeler.png" alt="DataModeler")
+        .carousel-item
+          %a(href="landingPage/04_FormModeler_Big.png" title="FormModeler" data-gallery="")
+            %img.w-100.block(src="landingPage/04_FormModeler.png" alt="FormModeler")
+        .carousel-item
+          %a(href="landingPage/05_Simulation_Big.png" title="Simulation" data-gallery="")
+            %img.w-100.block(src="landingPage/05_Simulation.png" alt="Simulation")
+        .carousel-item
+          %a(href="landingPage/06_ProcessInstances_Big.png" title="ProcessInstances" data-gallery="")
+            %img.w-100.block(src="landingPage/06_ProcessInstances.png" alt="ProcessInstances")
+        .carousel-item
+          %a(href="landingPage/07_TaskList_Big.png" title="TaskInbox" data-gallery="")
+            %img.w-100.block(src="landingPage/07_TaskList.png" alt="TaskInbox")
+        .carousel-item
+          %a(href="landingPage/08_Dashboards_Big.png" title="Dashboards" data-gallery="")
+            %img.w-100.block(src="landingPage/08_Dashboards.png" alt="Dashboards")
+        .carousel-item
+          %a(href="landingPage/09_Eclipse_Big.png" title="Eclipse" data-gallery="")
+            %img.w-100.block(src="landingPage/09_Eclipse.png" alt="Eclipse")
+      %div.TextZoom Click on the image to zoom in
 
 .row
-  .col-md-12(style="margin-top: -17px;margin-bottom: 20px")
+  .col-md-12
     :markdown
       ## What does jBPM do?
 
