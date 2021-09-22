@@ -57,10 +57,9 @@ function insertEmailSupportPopover() {
 }
 
 $(document).ready( function() {
-    $(insertUpgradeRecipePriorities);
-    $(insertEmailSupportPopover);
+    insertUpgradeRecipePriorities();
+    insertEmailSupportPopover();
 
-    $('.carousel').carousel();
     $('#whatIsCarousel').on('slide.bs.carousel', function(e) {
         var next = $(e.relatedTarget);
         var to = next.index();

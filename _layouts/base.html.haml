@@ -110,11 +110,9 @@
       .forkMeOnGithub
         %a(href="https://github.com/kiegroup/jbpm" target="_blank")
           %img{:src => relative("/headerFooter/forkMeOnGithub.png"), :alt => "Fork me on GitHub"}
-
-      .container#Content(style="padding-top: 20px;")
+      .container.pb-2.mt-5.pt-3
         ~ content
-
-    %footer
+    %footer.bg-dark.pt-4
       .container
         .row
           .col-md-3
@@ -181,8 +179,6 @@
     %script{:src => "https://code.jquery.com/jquery-3.6.0.min.js", :crossorigin => "anonymous"}
     %script{:src => relative("/website/highlight/highlight.js")}
     %script{:src => relative("/website/jBPMWebsite.js")}
-    %script{:src => ("http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js")}
-    %script{:src => relative("/website/bootstrap/js/bootstrap-image-gallery.js")}
     %script(type="text/javascript")<
       hljs.initHighlightingOnLoad();
     -# Adobe Analytics for Red Hat - DPAL (DTM Property Auto-Loader) - part 2/2
