@@ -24,12 +24,14 @@
     %meta(itemprop="description"){:content => page.description ? page.description : site.description}
     %meta(itemprop="image"){:content => relative("/headerFooter/jBPMLogo210px.png")}
 
-    %link(rel="stylesheet"){:href => relative("/website/bootstrap/css/bootstrap.min.css")}
+    %link(rel="stylesheet"){:href => "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css",
+                            :integrity => "sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We",
+                            :crossorigin => "anonymous" }
     %link(rel="stylesheet"){:href => relative("/website/highlight/highlight.css")}
-    %link(rel="stylesheet"){:href => relative("/website/tabzilla/tabzilla.css")}
     %link(rel="stylesheet"){:href => relative("/website/jBPMWebsite.css")}
-    %link(rel="stylesheet"){:href => relative("/website/bootstrap/css/bootstrap-image-gallery.css")}
-    %link(rel="stylesheet"){:href => ("http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css")}
+    %link(rel="stylesheet"){:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css",
+                            :integrity => "sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==",
+                            :crossorigin => "anonymous", :referrerpolicy => "no-referrer"}
     :plain
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,77 +42,67 @@
     %link{:rel => "shortcut icon", :href => relative("/favicon.ico")}
 
   %body(data-spy="scroll" data-target=".bs-docs-sidebar")
-    %header.navbar.navbar-default.navbar-fixed-top(role="navigation")
-      #tabzillaHolder
-      .dropup
-        %a#tab.tabnav-closed{:href => "https://www.jboss.org"} Red Hat
-        %script
-          window.addEventListener('load', function() { renderTabzilla("jBPM","jbpm", true) });
+    %header.navbar.navbar-expand-md.navbar-light.bg-light.fixed-top(role="navigation")
       .container
-        .navbar-header
+        .navbar-brand
           -# When the screen width is too little, these 3 icon-bar spans are needed to show the collapsed navbar
-          %a.button.navbar-toggle(data-toggle="collapse" data-target="#baseNavigation")
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.navbar-brand(style="padding: 10px;"){:href => relative("/")}
+          %a{:href => relative("/")}
             %img(alt="jBPM logo"){:src => relative("/headerFooter/jBPMLogo_siteheader.png")}
+          %button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+            %span.navbar-toggler-icon
         .collapse.navbar-collapse#baseNavigation
-          %ul.nav.navbar-nav
-            %li<
-              %a{:href => "https://blog.kie.org/"} Blog
-            %li<
-              %a{:href => relative("/download/download.html")} Download
-            %li.dropdown
-              %a.dropdown-toggle(data-toggle="dropdown" href="#")<
-                = precede 'Learn ' do
-                  %b.caret>
-              %ul.dropdown-menu
+          %ul.navbar-nav.me-auto
+            %li.nav-item<
+              %a.nav-link{:href => "https://blog.kie.org/"} Blog
+            %li.nav-item<
+              %a.nav-link{:href => relative("/download/download.html")} Download
+            %li.nav-item.dropdown
+              %a.nav-link.dropdown-toggle#navbarLearnDropdown(role="button" aria-expanded="false" data-bs-toggle="dropdown" href="#")<
+                Learn
+              %ul.dropdown-menu(aria-labelledby="navbarLearnDropdown" )
                 %li<
-                  %a{:href => relative("/learn/gettingStarted.html")} Getting started
+                  %a.dropdown-item{:href => relative("/learn/gettingStarted.html")} Getting started
                 %li<
-                  %a{:href => relative("/learn/releases.html")} Releases
+                  %a.dropdown-item{:href => relative("/learn/releases.html")} Releases
                 %li<
-                  %a{:href => relative("/learn/documentation.html")} Documentation
+                  %a.dropdown-item{:href => relative("/learn/documentation.html")} Documentation
                 %li<
-                  %a{:href => relative("/learn/jbpmPerformance.html")} Performance
+                  %a.dropdown-item{:href => relative("/learn/jbpmPerformance.html")} Performance
                 %li<
-                  %a{:href => relative("/learn/video.html")} Videos
+                  %a.dropdown-item{:href => relative("/learn/video.html")} Videos
                 %li<
-                  %a{:href => relative("/learn/slides.html")} Slides
-            %li.dropdown
-              %a.dropdown-toggle(data-toggle="dropdown" href="#")<
-                = precede 'Business Applications' do
-                  %b.caret>
-              %ul.dropdown-menu
+                  %a.dropdown-item{:href => relative("/learn/slides.html")} Slides
+            %li.nav-item.dropdown
+              %a.nav-link.dropdown-toggle#baNavbarDropdown(data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false")<
+                Business Applications
+              %ul.dropdown-menu(aria-labelledby="baNavbarDropdown" )
                 %li<
-                  %a{:href => relative("/businessapps/gettingStarted.html")} Get Started
+                  %a.dropdown-item{:href => relative("/businessapps/gettingStarted.html")} Get Started
                 %li<
-                  %a{:href => relative("/businessapps/examples.html")} Beyond basics                
-            %li<
-              %a{:href => relative("/community/getHelp.html")} Get Help
-            %li<
-              %a{:href => relative("/code/sourceCode.html")} Source
-            %li<
-              %a{:href => relative("/product/services.html")} Services
-            %li.dropdown
-              %a.dropdown-toggle(data-toggle="dropdown" href="#")<
-                = precede 'KIE ' do
-                  %b.caret>
-              %ul.dropdown-menu
+                  %a.dropdown-item{:href => relative("/businessapps/examples.html")} Beyond basics
+            %li.nav-item<
+              %a.nav-link{:href => relative("/community/getHelp.html")} Get Help
+            %li.nav-item<
+              %a.nav-link{:href => relative("/code/sourceCode.html")} Source
+            %li.nav-item<
+              %a.nav-link{:href => relative("/product/services.html")} Services
+            %li.nav-item.dropdown
+              %a.nav-link.dropdown-toggle#kieNavbarDropdown(data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false")<
+                KIE
+              %ul.dropdown-menu(aria-labelledby="kieNavbarDropdown" )
                 %li<
-                  %a(href="https://kogito.kie.org" rel="publisher" target="_blank" title="Kogito") Kogito
+                  %a.dropdown-item(href="https://kogito.kie.org" rel="publisher" target="_blank" title="Kogito") Kogito
                 %li<
-                  %a(href="https://www.drools.org" rel="publisher" target="_blank" title="Drools") Drools
+                  %a.dropdown-item(href="https://www.drools.org" rel="publisher" target="_blank" title="Drools") Drools
                 %li<
-                  %a(href="https://www.jbpm.org" rel="publisher" target="_blank" title="jBPM") jBPM
+                  %a.dropdown-item(href="https://www.jbpm.org" rel="publisher" target="_blank" title="jBPM") jBPM
                 %li<
-                  %a(href="https://www.optaplanner.org" rel="publisher" target="_blank" title="OptaPlanner") OptaPlanner
-                %li.divider
+                  %a.dropdown-item(href="https://www.optaplanner.org" rel="publisher" target="_blank" title="OptaPlanner") OptaPlanner
+                %li
+                  %hr.dropdown-divider
                 %li<
-                  %a(href="http://www.kiegroup.org/" target="_blank" title="Knowledge is everything group") KIE group
-          %ul.nav.navbar-nav.navbar-right
+                  %a.dropdown-item(href="http://www.kiegroup.org/" target="_blank" title="Knowledge is everything group") KIE group
+          %ul.navbar-nav.navbar-right
             %li.twitter-button
               <a href="https://twitter.com/jbossjbpm?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @jbossjbpm</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -118,11 +110,9 @@
       .forkMeOnGithub
         %a(href="https://github.com/kiegroup/jbpm" target="_blank")
           %img{:src => relative("/headerFooter/forkMeOnGithub.png"), :alt => "Fork me on GitHub"}
-
-      .container#Content(style="padding-top: 20px;")
+      .container.pb-2.mt-5.pt-3
         ~ content
-
-    %footer
+    %footer.bg-dark.pt-4
       .container
         .row
           .col-md-3
@@ -182,14 +172,13 @@
             \-
             %a{:href => relative("/website/websiteInfo.html")} Website info
 
+    %script{:src => "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js",
+           :integrity => "sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj",
+           :crossorigin => "anonymous"}
 
-    %script{:src => relative("/website/jquery/jquery.min.js")}
-    %script{:src => relative("/website/bootstrap/js/bootstrap.min.js")}
+    %script{:src => "https://code.jquery.com/jquery-3.6.0.min.js", :crossorigin => "anonymous"}
     %script{:src => relative("/website/highlight/highlight.js")}
-    %script{:src => relative("/website/tabzilla/tabzilla.js")}
     %script{:src => relative("/website/jBPMWebsite.js")}
-    %script{:src => ("http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js")}
-    %script{:src => relative("/website/bootstrap/js/bootstrap-image-gallery.js")}
     %script(type="text/javascript")<
       hljs.initHighlightingOnLoad();
     -# Adobe Analytics for Red Hat - DPAL (DTM Property Auto-Loader) - part 2/2

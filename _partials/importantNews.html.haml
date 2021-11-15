@@ -1,18 +1,19 @@
-.panel.panel-default
-  .panel-heading
-    %strong Latest News
-  .panel-body
-    %ul.list-unstyled
-      - for new in site.importantNews[0,7]
-        %li(style = "margin-top: 10px;")
-          .title
-            %a{:href => new.newsUrl, :target => "_blank"}
-              #{new.newsTitle}
-          %div
-            - if !new.newsDate?
-              #{new.newsContent}
-            - else
-              #{new.newsDate.strftime('%a %-d %B %Y')} - #{new.newsContent}
-    .small.pull-right
-      %a{:href => relative("/news/archive.html", page.outputPage)}
-        Archive
+.card.p-3.mb-2
+  .card-body
+    .card-title
+      %h3 Latest News
+    .card-text
+      %ul.list-unstyled
+        - for new in site.importantNews[0,7]
+          %li.mb-3
+            .title
+              %a{:href => new.newsUrl, :target => "_blank"}
+                #{new.newsTitle}
+            %div
+              - if !new.newsDate?
+                #{new.newsContent}
+              - else
+                #{new.newsDate.strftime('%a %-d %B %Y')} - #{new.newsContent}
+      .small.float-end
+        %a{:href => relative("/news/archive.html", page.outputPage)}
+          Archive

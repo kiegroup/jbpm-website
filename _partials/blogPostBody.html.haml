@@ -23,12 +23,12 @@ layout: blogBase
       %script(language = "javascript" src="http://widgets.dzone.com/links/widgets/zoneit.js")
     .pull-right
       %a{:href => relative(page.post.url + '#comments', page.outputPage)}<
-        %span.label.label-default Comments
+        %span.badge.bg-secondary Comments
       %a{:href => relative(page.post.url, page.outputPage)}<
-        %span.label.label-default Permalink
+        %span.badge.bg-secondary Permalink
     .tags
       %span.glyphicon.glyphicon-tags
       &nbsp;tagged as
       - page.post.tags.each do |tag|
         %a{:href => relative(tag.primary_page.url, page.outputPage)}<
-          %span.label.label-info #{tag}
+          %span.badge.bg-info #{tag}

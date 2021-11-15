@@ -1,12 +1,11 @@
 ---
 layout: base
 ---
-.container
-  .row
-    .col-md-9(style="margin-top: -17px;margin-bottom: 20px")
-      ~ content
-    .col-md-3(style="margin-top: 10px;")
-      = partial('importantNews.html.haml', :outputPage => page)
-      = partial('latestTweets.html.haml', :outputPage => page)
-      -#= partial('events.html.haml', :outputPage => page)
-      -#= partial('referencesBooks.html.haml', :outputPage => page)
+.row
+  .col-md-9
+    ~ content
+  .col-md-3
+    = partial('importantNews.html.haml', :outputPage => page)
+    = partial('latestTweets.html.haml', :outputPage => page)
+    -#= partial('events.html.haml', :outputPage => page)
+    -#= partial('referencesBooks.html.haml', :outputPage => page)

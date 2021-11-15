@@ -4,8 +4,6 @@ layout: normalBase
 title: Get help
 ---
 
-%h1 #{page.title}
-
 .row
   .col-md-12
     :asciidoc
@@ -43,7 +41,7 @@ title: Get help
       please open a ticket in our issue tracker _with a reproducer_:
 
     .text-center<
-      %a.btn.btn-default.versionedButton{:href => site.issueTracker}<
+      %a.btn.btn-secondary.versionedButton{:href => site.issueTracker}<
         %div
           %span Create an issue in JIRA
       .small
@@ -62,7 +60,7 @@ title: Get help
       They have a dedicated QA and support team around the enterprise version of this project.
 
     .text-center<
-      %a.btn.btn-default.versionedButton(href="https://access.redhat.com/support/cases/#/case/new")<
+      %a.btn.btn-secondary.versionedButton(href="https://access.redhat.com/support/cases/#/case/new")<
         %div
           %span Open a support case
       .small
@@ -79,6 +77,6 @@ title: Get help
       or mail directly through mailto:jbpm-usage@googlegroups.com[jbpm-usage@googlegroups.com] or mailto:jbpm-setup@googlegroups.com[jbpm-setup@googlegroups.com]
 
     .text-center<
-      %a.btn.btn-default.versionedButton(href="https://groups.google.com/forum/#!forum/jbpm-setup")<
+      %a.btn.btn-secondary.versionedButton(href="https://groups.google.com/forum/#!forum/jbpm-setup")<
         %div
           %span Start/view discussions on our forum

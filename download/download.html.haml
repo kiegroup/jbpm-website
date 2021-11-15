@@ -6,16 +6,16 @@ title: Download jBPM
 
 %h1 #{page.title}
 
-%ul(class="nav nav-tabs download-nav-tabs")
-  %li(class="active")
-    %a(href="#community" data-toggle="pill") Community
-  %li
-    %a(href="#docker" data-toggle="pill") Docker
-  %li
-    %a(href="#enterprise" data-toggle="pill") Enterprise
+%ul(class="nav nav-tabs download-nav-tabs" role="tablist")
+  %li(class="nav-item")
+    %a.nav-link.active(href="#community" aria-current="page" data-bs-toggle="tab") Community
+  %li.nav-item
+    %a.nav-link(href="#docker" data-bs-toggle="tab") Docker
+  %li.nav-item
+    %a.nav-link(href="#enterprise" data-bs-toggle="tab") Enterprise
 
-%div(class="tab-content download-tab-content")
-  %div(id="community" class="tab-pane fade in active")
+%div(class="tab-content download-tab-content p-3")
+  %div(id="community" class="tab-pane fade show active" role="tabpanel")
     :asciidoc
       == Latest Final version: #{site.pom.latestFinal.version}
 
@@ -72,7 +72,7 @@ title: Download jBPM
 
       Check https://download.jboss.org/jbpm/release/[the release archive].
 
-  %div(id="enterprise" class="tab-pane fade")
+  %div(id="enterprise" class="tab-pane fade" role="tabpanel")
     :asciidoc
       === http://www.redhat.com/en/technologies/jboss-middleware/bpm[Red Hat Process Automation Manager is the enterprise version of jBPM]
 
@@ -115,7 +115,7 @@ title: Download jBPM
       |*Information* | |
       |Open source (link:../code/license.html[Apache License 2.0]) |image:checkYes.png[Yes] |image:checkYes.png[Yes] but distribution available from customer portal only
       |===
-  %div(id="docker" class="tab-pane fade")
+  %div(id="docker" class="tab-pane fade" role="tabpanel")
     :asciidoc
       === http://www.docker.com/[Docker] images
 

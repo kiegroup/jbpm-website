@@ -1,10 +1,12 @@
-.panel.panel-default
-  .panel-heading Upcoming events
-  .panel-body
+.card.p-3
+  .card-body
+  .card-title
+    %h3 Upcoming events
+  .card-text
     %ul.list-unstyled
       - for event in site.events
         - if event.date >= Date.today
-          %li(style="margin-bottom: 10px;")
+          %li.mb-3
             .title
               %a{:href => event.url}
                 - if !event.title.empty?
@@ -16,7 +18,7 @@
             - if !event.presenters.empty?
               .small
                 by #{event.presenters}
-    .small.pull-right
+    .small.float-end
       %a{:href => "https://github.com/kiegroup/jbpm-website/blob/master/_config/events.yml"}
         Add event
       #{'/'}
