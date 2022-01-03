@@ -28,9 +28,10 @@ RUN sed -i 's/# %wheel	ALL=(ALL)	NOPASSWD: ALL/%wheel	ALL=(ALL)	NOPASSWD: ALL/g'
 
 USER jenkins
 
-WORKDIR /home/jenkins
+WORKDIR /home/jenkins/
 
 RUN mkdir /home/jenkins/.ssh
+RUN chown -R jenkins:jenkins /home/jenkins/.ssh
 RUN wget https://github.com/kiegroup/jbpm-website/archive/main.zip
 RUN unzip main.zip
 
