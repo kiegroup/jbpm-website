@@ -1,0 +1,28 @@
+name: Check-URL
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: urls-checker
+        uses: urlstechie/urlchecker-action@0.2.31
+        with:
+          subfolder: _config
+          file_types: .yml
+          print_all: false
+          timeout: 5
+          retry_count: 3
+          exclude_urls: http://static.jboss.org/theme/css/bootstrap/2.1.0.0.0/bootstrap-community.css, http://static.jboss.org/theme/js/libs/bootstrap/2.1.0.0.0/bootstrap-community.js
+          force_pass : true

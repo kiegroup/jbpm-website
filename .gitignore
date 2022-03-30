@@ -3,6 +3,7 @@
 
 # Eclipse, Netbeans and IntelliJ files
 /.*
+!/.github
 !.gitignore
 !.awestruct_ignore
 /nbproject
