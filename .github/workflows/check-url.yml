@@ -24,5 +24,4 @@ jobs:
           print_all: false
           timeout: 5
           retry_count: 3
-          exclude_urls: http://static.jboss.org/theme/css/bootstrap/2.1.0.0.0/bootstrap-community.css, http://static.jboss.org/theme/js/libs/bootstrap/2.1.0.0.0/bootstrap-community.js
           force_pass : true
