@@ -28,8 +28,8 @@ end
 desc "Build the site and publish"
 task :publish => :check do
   system("echo Publishing...")
-  deploy_url = "jbpm@filemgmt.jboss.org:/www_htdocs/jbpm/"
-  success = system("rsync -Pqr --protocol=28 --delete-after _site/* #{deploy_url}")
+  deploy_url = "jbpm@filemgmt-prod-sync.jboss.org:/www_htdocs/jbpm/"
+  success = system("rsync -Pqr -e \"ssh -p 2222 -i /home/jenkins/.ssh/id_rsa\" --protocol=28 --delete-after _site/* #{deploy_url}")
 end
 
 task :check do
