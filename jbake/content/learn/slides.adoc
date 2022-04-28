@@ -1,0 +1,10 @@
+= Slides
+:jbake-type: normalBase
+:jbake-description: Presentations about jBPM
+:showtitle:
+
+== Watch the slides
+
+These slides are viewable in your browser:
+
+http://www.slideshare.net/krisverlaenen/presentations[*Show the jBPM presentations*]
