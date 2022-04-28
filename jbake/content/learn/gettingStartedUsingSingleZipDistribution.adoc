@@ -1,0 +1,7 @@
+= Getting Started
+:jbake-type: _content_learn_gettingStartedUsingSingleZipDistribution
+:jbake-description: Getting Started with jBPM - Using Single Zip Distribution
+:page-interpolate: true
+:showtitle:
+
+// Empty .adoc jbake /content, using FTL for data processing. Ref: https://github.com/jbake-org/jbake/issues/693

@@ -1,0 +1,34 @@
+:jbake-type: normalBase
+:jbake-description: Download information for jBPM
+:showtitle:
+
+=== http://www.docker.com/[Docker] images
+
+You can find the Docker images for jBPM and how to use them for last final version at
+
+* https://quay.io/repository/kiegroup/business-central-workbench[Business Central Workbench]
+* https://quay.io/repository/kiegroup/business-central-workbench-showcase[Business Central Workbench Showcase]
+* https://quay.io/repository/kiegroup/jbpm-server-full[jBPM Server Full]
+* https://quay.io/repository/kiegroup/kie-server[KIE Server]
+* https://quay.io/repository/kiegroup/kie-server-showcase[KIE Server Showcase]
+
+*The jBPM Server Full Docker image is an easy way get started with jBPM.*
+
+By simply running the following command:
+
+[source,shell]
+----
+docker run -p 8080:8080 -p 8001:8001 -d --name jbpm-server-full jboss/jbpm-server-full:latest
+----
+
+You get a ready to use environment with all of these component already set up:
+
+- WildFly server
+- Business Central
+- KIE Server
+- jBPM Case Management showcase
+- jBPM Service repository
+
+Take a look at our link:../learn/gettingStartedUsingDocker.html[*Getting Started Guide*] for more details about how to use and explore all capabilities available in this image.
+
+More info about other Docker images can be found at http://blog.athico.com/2015/06/drools-jbpm-get-dockerized.html[this post]
