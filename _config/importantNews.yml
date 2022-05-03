@@ -9,6 +9,12 @@
 #
 # Order news by date.
 # Don't remove past news.
+- newsId: 20220503-blog
+  newsDate: 2022-05-03
+  newsTitle: Take a look at jBPM 7.69.0
+  newsContent: jBPM 7.69.0 is out, including bug fixes and exciting new features!
+  newsUrl: https://docs.jbpm.org/7.69.0.Final/jbpm-docs/html_single/#jbpmreleasenotes
+
 - newsId: 20220413-blog
   newsDate: 2022-04-13
   newsTitle: Take a look at jBPM 7.68.0
