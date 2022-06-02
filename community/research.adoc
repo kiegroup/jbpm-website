@@ -1,7 +1,0 @@
-= Research
-:awestruct-layout: normalBase
-:showtitle:
-
-*jBPM* is a good base for research related to workflow, business process management, BPMN, case management, etc. +
-
-If you're doing academic or professional research on top of jBPM, link:../community/socialMedia.html[let us know].
