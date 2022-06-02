@@ -31,8 +31,16 @@ this_script_directory="${BASH_SOURCE%/*}"
 if [[ ! -d "$this_script_directory" ]]; then
   this_script_directory="$PWD"
 fi
-readonly pom_yml_file="$this_script_directory/../_config/pom.yml"
+readonly pom_yml_file="$this_script_directory/../data/pom.yml" # locate jbake pom.yml value file
 
 sed -i -E "s/releaseDate: [0-9]+-[0-9]+-[0-9]+/releaseDate: $release_date/g" "$pom_yml_file"
-sed -i -E "s/7\.[0-9]+\.[0-9]+\.(Final|Beta[0-9]*|CR[0-9]*)/$new_release/g" "$pom_yml_file" # change versions 7.x series for Jbpm
-sed -i -E "s/7\.[0-9]+\.[0-9]+\-SNAPSHOT/$new_snapshot/g" "$pom_yml_file" # change versions 7.x series for Jbpm
+sed -i -E "s/7\.[0-9]+\.[0-9]+\.(Final|Beta[0-9]*|CR[0-9]*)/$new_release/g" "$pom_yml_file" # change only 7.x series for Drools
+sed -i -E "s/7\.[0-9]+\.[0-9]+\-SNAPSHOT/$new_snapshot/g" "$pom_yml_file" # change only 7.x series for Drools
+
+# Update antora-playbook.yml to point to the latest release branch of https://github.com/kiegroup/<project>.
+# if [[ "$new_release" == *Final* ]]; then
+#   readonly antora_playbook_yml_file="$this_script_directory/../optaplanner-website-docs/antora-playbook.yml"
+#   readonly version_array=(${new_release//./ })
+#   readonly release_branch="${version_array[0]}.${version_array[1]}.x"
+#   sed -i -E "s/branches: \[[0-9]+\.[0-9]+\.x\]/branches: [$release_branch]/" "$antora_playbook_yml_file"
+# fi
