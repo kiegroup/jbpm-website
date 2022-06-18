@@ -1,0 +1,65 @@
+= Kris Verlaenen
+:awestruct-layout: normalBase
+:showtitle:
+
+== Senior Principal Software Engineer, Red Hat
+
+++++
+<a href="https://twitter.com/KrisVerlaenen"><img src="../../headerFooter/twitterLogo.png"/></a>
+<a href="https://github.com/krisv"><img src="../../headerFooter/gitHubLogo.png"/></a>
+<br/>
+<br/>
+++++
+
+image::http://www.gravatar.com/avatar/48514750add199714a1ab5f525f6f7b5?s=200&d=mm[]
+
+++++
+<br/>
+++++
+*Introduction*
+
+Hi, my name is Kris Verlaenen and  I'm a *principal architect* in the Application Services group at Red Hat!  I've been at Red Hat for over 15 years, and
+most of my focus has been on technologies related to Business Automation, with a particular interest on runtimes for workflow and business process management.
+
+I'm the https://jbpm.org[jBPM] *project lead*, one of the largest open-source BPM engines out there, and I've been part of the project since 2010.  I've written large parts
+of the core workflow engine, and a lot of that code is still in use today (albeit often with many improvements along the way)!
+
+I'm also the https://kogito.kie.org[Kogito] *project lead*, an open-source cloud-native solution for business automation, the next generation of process automation
+based on jBPM, Drools and Optaplanner, targeting the cloud.  It's built from the ground up to be cloud-native, and integrates closely with the cloud-native
+ecosystem (Kubernetes, Quarkus, Knative, Camel-K, etc.).  Most of my recent focus is on working with partners, both inside and outside of Red Hat, on making this
+vision a reality.
+
+These open-source community projects are also the bases for *Red Hat Business Automation Manager*, and I work closely with product management, support and directly
+with many customers.
+
+Moving beyond the traditional Business Automation space, I'm also focused on Serverless Workflow, integrating Kogito into knative and the broader cloud-native
+ecosystem for service orchestration use cases.
+
+I have an interest in a broad range of topics:
+
+* workflow and business processes
+* rules and decision management
+* cloud-native services
+* managed services
+* quarkus, knative
+* BPMN, serverless workflow, choreography
+* open source
+* clinical decision support
+
+++++
+<br/>
+++++
+*Quick resume*
+
+I've been a Software Engineer (currently Senior Principal) at Red Hat since April 2006. +
+Before joining Red Hat, I did my PhD in Computer Science at the Katholieke Universiteit Leuven, Belgium. +
+I also completed my education there, i.e. Master in Computer Science (Magna Cum Laude). +
+My full resume can be found on https://www.linkedin.com/in/krisverlaenen/[linkedin].
+
+++++
+<br/>
+++++
+*Community*
+
+I present regularly at conferences like Red Hat Summit and bpmNEXT. +
+You can find my blogs (about conferences, demos, features and releases) on the https://blog.kie.org/category/all?search_authors=4[KIE blog].

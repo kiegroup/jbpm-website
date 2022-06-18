@@ -13,23 +13,25 @@
 #  ircNickname: (optional)
 #  contributionsDescription: only work related to this project (optional)
 #  biography: (optional)
-- userId: mdproctor
-  fullName: Mark Proctor
-  role: KIE lead
-  gravatarHashId: 37e3e4a1e196a53748dcb127cea7d1c1
-  twitterUsername: markproctor
-  githubUsername: mdproctor
-  employedBy: Red Hat
-  ircNickname: conan
 - userId: kverlaenen
   fullName: Kris Verlaenen
-  role: Business Automation Lead
+  role: jBPM Project Lead
   gravatarHashId: 48514750add199714a1ab5f525f6f7b5
   googlePlusId: +KrisVerlaenen
   twitterUsername: KrisVerlaenen
   employedBy: Red Hat
   githubUsername: krisv
   ircNickname: krisv
+  biography: Principal Architect for Business Automation
+  biographyLink: https://jbpm.org/community/members/KrisVerlaenen.html
+- userId: mdproctor
+  fullName: Mark Proctor
+  role: KIE lead, Chief Architect for Business Automation
+  gravatarHashId: 37e3e4a1e196a53748dcb127cea7d1c1
+  twitterUsername: markproctor
+  githubUsername: mdproctor
+  employedBy: Red Hat
+  ircNickname: conan
 - userId: etirelli
   fullName: Edson Tirelli
   role: Decision Manager lead
@@ -40,7 +42,7 @@
   ircNickname: etirelli
 - userId: mswiderski
   fullName: Maciej Swiderski
-  role: jBPM project lead
+  role: Former jBPM project lead
   gravatarHashId: 367d990904b8520a15e75d2fbcee6183
   employedBy: Red Hat
   githubUsername: mswiderski
@@ -467,3 +469,23 @@
   gravatarHashId: 918847782c26cddfb831ce9a68e94a1a
   twitterUsername: bobmcwhirter
   email: bob [at] openxource [dot] com
+- userId: enriquegonzalez
+  fullName: Enrique Gonzalez Martinez
+  role: jBPM Core engineer
+  employedBy: Red Hat
+  gravatarHashId: unknown
+- userId: lazarotti
+  fullName: Alessandro Lazarotti
+  role: jBPM Engineering Manager
+  employedBy: Red Hat
+  gravatarHashId: unknown 
+- userId: vaniharipriya
+  fullName: Vani Haripriya
+  role: jBPM Core Engineering
+  employedBy: Red Hat
+  gravatarHashId: unknown 
+- userId: xiaofengbai
+  fullName: Xiaofeng Bai
+  role: jBPM Runtime Tooling Engineering
+  employedBy: Red Hat
+  gravatarHashId: unknown 
