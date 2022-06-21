@@ -41,27 +41,85 @@ title: Business Applications  Getting started
     * service project - actual service with various capabilities
 
     *Service project* is the one that is deployable but will in most of the cases include business assets and data model projects.
+     This will include chosen capabilities with all bits configured. Capabilities essentially define the features that your business
+     application will be equipped with. Available options are:
+     
+      * *Business automation*
+	  covers features for process management, case management, decision management and optimization. These will be by default 
+	  configured in the service project of your business application. Although you can turn them off via configuration.
+	  * *Decision management*
+	  covers mainly decision and rules related features (backed by Drools project)
+	  * *Business optimization*
+	  covers planning problems and solutions related features (backed by OptaPlanner project)      
 
     *Data model project* represents the common data structures that will be shared between service implementation and
     business assets. That enables proper encapsulation and promotes reuse and at the same time reduces shortcuts to make
     data model classes something more than they are - include too much of implementation into data models.
 
     *Business assets project* represents your business logic as processes, cases, rules, decision tables and more.
+    
+    Following are the maven archetype commands need to be used to generate different types of projects:
+    
+    * Data model project archetype
+
+	[source, bash,subs="attributes+"]
+	----
+	mvn archetype:generate -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-model-archetype -DarchetypeVersion={COMMUNITY_VERSION_FINAL} -DgroupId=com.company -DartifactId=business-application-model -Dversion=1.0-SNAPSHOT -Dpackage=com.company.model
+	----
+
+	`org.apache.maven.archetypes:maven-archetype-quickstart:1.3`
+
+	* Business assets project archetype
+
+	[source, bash,subs="attributes+"]
+	----
+	mvn archetype:generate -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-kjar-archetype -DarchetypeVersion={COMMUNITY_VERSION_FINAL} -DgroupId=com.company -DartifactId=business-	application-kjar -Dversion=1.0-SNAPSHOT -Dpackage=com.company
+	----
+	`org.kie:kie-kjar-archetype:{COMMUNITY_VERSION_FINAL}`
+
+	* Dynamic assets project archetype(Case Management)
+
+	[source, bash,subs="attributes+"]
+	 ----
+	mvn archetype:generate -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-kjar-archetype -DarchetypeVersion={COMMUNITY_VERSION_FINAL} -DcaseProject=true -DgroupId=com.company -		DartifactId=business-application-kjar -Dversion=1.0-SNAPSHOT -Dpackage=com.company
+	----
+	`org.kie:kie-kjar-archetype:{COMMUNITY_VERSION_FINAL}`
+
+	* Service project archetype can be used based on the capabilities that are needed in the project:
+
+	* Service project archetype(Business Automation)
+
+	[source, bash,subs="attributes+"]
+	----
+	mvn archetype:generate -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-service-spring-boot-archetype -DarchetypeVersion={COMMUNITY_VERSION_FINAL} -DgroupId=com.company -	DartifactId=business-application-service -Dversion=1.0-SNAPSHOT -Dpackage=com.company.service -DappType=bpm
+	----
+`	org.kie:kie-service-spring-boot-archetype:{COMMUNITY_VERSION_FINAL}`
+
+	* Service project archetype(Decision Management)
+
+	[source, bash,subs="attributes+"]
+	----
+	mvn archetype:generate -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-service-spring-boot-archetype -DarchetypeVersion={COMMUNITY_VERSION_FINAL} -DgroupId=com.company -	DartifactId=business-application-service -Dversion=1.0-SNAPSHOT -Dpackage=com.company.service -DappType=brm
+	----
+	`org.kie:kie-service-spring-boot-archetype:{COMMUNITY_VERSION_FINAL}`
+
+	* Service project archetype(Business Optimization)
+
+	[source, bash,subs="attributes+"]
+	----
+	mvn archetype:generate -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-service-spring-boot-archetype -DarchetypeVersion={COMMUNITY_VERSION_FINAL} -DgroupId=com.company -DartifactId=business-application-service -Dversion=1.0-SNAPSHOT -Dpackage=com.company.service -DappType=planner
+	----
+	`org.kie:kie-service-spring-boot-archetype:{COMMUNITY_VERSION_FINAL}`
+    
 
     == Build your first Business Application
 
-    To build your first business application simply go to https://start.jbpm.org[start.jbpm.org, window="_blank"] and generate the application.
-
-    image::start-jbpm-org.png[Generate application at start.jbpm.org]
-
-    There are two options you can get your application
-
-    * Generate default application - that gives you all default settings to get started as fast as possible
-    * Configure projects and capabilities - that gives you few options to select from before generating application
-
+    To build your first business application,use the above mentioned maven archetype commands to generate a Data project,Business assets project and a Service project with desired capabilities.
+    
+	It is recommended to generate all the three types of projects -Data Model, Business assets and Service projects using the archetypes in same directory on your computer.
+    
     Once you have the application on your computer just follow these steps to have it up and running
-
-    * unzip downloaded archive and go into unzipped directory
+   
     * go to directory suffixed with -service
     * execute `./launch.sh clean install` for unix or `launch.bat clean install` for windows
     * once the boot has finished go to http://localhost:8090[http://localhost:8090, window="_blank"]
