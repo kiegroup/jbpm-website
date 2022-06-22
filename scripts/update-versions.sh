@@ -34,8 +34,8 @@ fi
 readonly pom_yml_file="$this_script_directory/../data/pom.yml" # locate jbake pom.yml value file
 
 sed -i -E "s/releaseDate: [0-9]+-[0-9]+-[0-9]+/releaseDate: $release_date/g" "$pom_yml_file"
-sed -i -E "s/7\.[0-9]+\.[0-9]+\.(Final|Beta[0-9]*|CR[0-9]*)/$new_release/g" "$pom_yml_file" # change only 7.x series for Drools
-sed -i -E "s/7\.[0-9]+\.[0-9]+\-SNAPSHOT/$new_snapshot/g" "$pom_yml_file" # change only 7.x series for Drools
+sed -i -E "s/7\.[0-9]+\.[0-9]+\.(Final|Beta[0-9]*|CR[0-9]*)/$new_release/g" "$pom_yml_file"
+sed -i -E "s/7\.[0-9]+\.[0-9]+\-SNAPSHOT/$new_snapshot/g" "$pom_yml_file"
 
 # Update antora-playbook.yml to point to the latest release branch of https://github.com/kiegroup/<project>.
 # if [[ "$new_release" == *Final* ]]; then
