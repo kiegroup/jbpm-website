@@ -1,0 +1,93 @@
+@Library('jenkins-pipeline-shared-libraries')_
+import org.kie.jenkins.MavenCommand
+
+AGENT_LABEL="kie-rhel7 && kie-mem8g && !master"
+MVN_TOOL="kie-maven-3.8.1"
+JDK_TOOL="kie-jdk11"
+REPO="jbpm-website"
+ORGANIZATION="kiegroup"
+BASE_BRANCH="main"
+MAIL_RECIPIENT="jbpm.4cc0cd41ecdad6832601280ed753f17a.show-sender@streams.zulipchat.com"
+
+pipeline {
+    agent {
+        label "$AGENT_LABEL"
+    }
+    options{
+        timestamps()
+    }
+    tools {
+        maven "$MVN_TOOL"
+        jdk "$JDK_TOOL"
+    }
+    stages {
+        stage('CleanWorkspace') {
+            steps {
+                cleanWs()
+            }
+        }
+        stage('clone jbpm-website') {
+            steps {
+                script {
+                    checkoutStartjbpmWeb()
+                }
+            }
+        }
+        stage('build jbpm-website'){
+            steps{
+                script {
+                    dir("$WORKSPACE/${REPO}"){
+                        MavenCommand mvnCmd = new MavenCommand(this, ['-fae'])
+                            .withSettingsXmlId('kogito_release_settings')
+                        mvnCmd.run('clean package')
+                    }
+                }
+            }
+        }
+        stage('zip jbpm-website'){
+            steps{
+                dir("$WORKSPACE/${REPO}"){
+                    sh "tar -cvzf jbpm-website.tar -C target/website/ ."
+                    archiveArtifacts "jbpm-website.tar"
+                }
+            }
+        }
+        stage('publish jbpm-website to filemgmt-prod-sync.jboss.org') {
+            steps {
+                dir("$WORKSPACE/${REPO}") {
+                    sshagent(["jbpm-filemgmt"]) {
+                        sh './scripts/rsync_website.sh'
+                    }
+                }
+            }
+        }
+    }
+    post {
+        failure {
+            emailext to: "${MAIL_RECIPIENT}",
+            subject: 'status of jbpm-website automatic publishing',
+            body: ' The status of Jenkins CI job for automatic publishing of the jbpm-website #${BUILD_NUMBER} was: FAILURE \n' +
+            'because of ${BUILD_URL}consoleText \n' +
+            '(IMPORTANT: For visiting the links you need to have access to Red Hat VPN)'
+            cleanWs()
+        }
+        fixed {
+            emailext to: "${MAIL_RECIPIENT}",
+            subject: 'status of jbpm-website automatic publishing',
+            body: 'The Jenkins CI job of automatic publishing of the jbpm-website #${BUILD_NUMBER} was fixed'
+            cleanWs()
+        }
+        success {
+            emailext to: "${MAIL_RECIPIENT}",
+            subject: 'status of jbpm-website automatic publishing',
+            body: 'The status of Jenkins CI job for automatic publishing of the jbpm-website #${BUILD_NUMBER} was: SUCCESSFUL'
+            cleanWs()
+        }
+    }
+}
+
+void checkoutStartjbpmWeb() {
+    dir(REPO) {
+        checkout(githubscm.resolveRepository(REPO, ORGANIZATION, BASE_BRANCH, false))
+    }
+}
