@@ -135,6 +135,13 @@
                                 ${user.biography}
                             </p>
                         </#if>
+                        <#if user.biographyLink??>
+                            <p class="card-text">
+                                <a href="${user.biographyLink}">
+                                    Full profile
+                                </a>
+                            </p>
+                        </#if>
                     </#if>
                 </div>
             </div>

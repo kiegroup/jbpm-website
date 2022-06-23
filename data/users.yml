@@ -1,8 +1,8 @@
-# Available properties per user
+#  Available properties per user
 #  userId: Should be the same as githubUsername
 #  fullName: First name and last name (in that order)
 #  role: Role in this project
-#  gravatarHashId: Used to show your avatar image. Change your avatar any time at https://www.gravatar.com/
+#  gravatarHashId: Used to show your avatar image. Change your avatar any time at http://www.gravatar.com/
 #                  To find the gravatar hash id, use: "echo -n youremail@gmail.com | md5sum"
 #  googlePlusId: (optional)
 #  twitterUsername: without the @ (optional)
@@ -13,31 +13,48 @@
 #  ircNickname: (optional)
 #  contributionsDescription: only work related to this project (optional)
 #  biography: (optional)
+- userId: kverlaenen
+  fullName: Kris Verlaenen
+  role: jBPM Project Lead
+  gravatarHashId: 48514750add199714a1ab5f525f6f7b5
+  googlePlusId: +KrisVerlaenen
+  twitterUsername: KrisVerlaenen
+  employedBy: Red Hat
+  githubUsername: krisv
+  ircNickname: krisv
+  biography: Principal Architect for Business Automation
+  biographyLink: https://jbpm.org/community/members/KrisVerlaenen.html
 - userId: mdproctor
   fullName: Mark Proctor
-  role: KIE lead
+  role: KIE lead, Chief Architect for Business Automation
   gravatarHashId: 37e3e4a1e196a53748dcb127cea7d1c1
   twitterUsername: markproctor
   githubUsername: mdproctor
   employedBy: Red Hat
   ircNickname: conan
-- userId: kverlaenen
-  fullName: Kris Verlaenen
-  role: jBPM Lead
-  gravatarHashId: 48514750add199714a1ab5f525f6f7b5
-  twitterUsername: KrisVerlaenen
-  email: kris.verlaenen [at] gmail [dot] com
-  employedBy: Red Hat
-  githubUsername: krisv
-  ircNickname: krisv
 - userId: etirelli
   fullName: Edson Tirelli
-  role: Drools lead
+  role: Decision Manager lead
   gravatarHashId: 1b7f091584d6362942215fa51d5913ba
   twitterUsername: edsontirelli
   githubUsername: etirelli
   employedBy: Red Hat
   ircNickname: etirelli
+- userId: mswiderski
+  fullName: Maciej Swiderski
+  role: Former jBPM project lead
+  gravatarHashId: 367d990904b8520a15e75d2fbcee6183
+  employedBy: Red Hat
+  githubUsername: mswiderski
+  ircNickname: maciejs
+- userId: mariofusco
+  fullName: Mario Fusco
+  role: Drools project lead
+  gravatarHashId: 9eafc29df96e6aaf4a3eb4c0209086ae
+  twitterUsername: mariofusco
+  employedBy: Red Hat
+  githubUsername: mariofusco
+  ircNickname: mfusco
 - userId: ge0ffrey
   fullName: Geoffrey De Smet
   role: OptaPlanner lead
@@ -65,14 +82,7 @@
   employedBy: Red Hat
   githubUsername: tsurdilo
   ircNickname: tsurdilo
-- userId: mariofusco
-  fullName: Mario Fusco
-  role: Drools Expert
-  gravatarHashId: 9eafc29df96e6aaf4a3eb4c0209086ae
-  twitterUsername: mariofusco
-  employedBy: Red Hat
-  githubUsername: mariofusco
-  ircNickname: mfusco
+  twitterUsername: tsurdilo
 - userId: michaelanstis
   fullName: Michael Anstis
   role: Drools Guvnor
@@ -81,14 +91,6 @@
   employedBy: Red Hat
   githubUsername: manstis
   ircNickname: manstis
-- userId: mauriciosalatino
-  fullName: Mauricio Salatino
-  role: Senior Engineer
-  gravatarHashId: 7666e02db7c2afa17051ef9d480443d1
-  twitterUsername: salaboy
-  employedBy: Red Hat
-  githubUsername: Salaboy
-  ircNickname: salaboy
 - userId: porcelli
   fullName: Alexandre Porcelli
   role: Software Engineer
@@ -97,13 +99,6 @@
   employedBy: Red Hat
   githubUsername: porcelli
   ircNickname: porcelli
-- userId: jlindop
-  fullName: Jeremy Lindop
-  role: Senior Software Engineer
-  gravatarHashId: 70f07209f7a254b93ae6ccb030aefb61
-  employedBy: Red Hat
-  githubUsername: jlindop
-  ircNickname: jeremyl
 - userId: ederign
   fullName: Eder Ignatowicz
   role: Senior Software Engineer
@@ -112,36 +107,6 @@
   employedBy: Red Hat
   githubUsername: ederign
   ircNickname: ederign
-- userId: mrietvel
-  fullName: Marco Rietveld
-  role: Senior Software Engineer
-  gravatarHashId: d4dacb2e9fe88961621b8a89d119c6aa
-  twitterUsername: marcorietveld
-  employedBy: Red Hat
-  githubUsername: mrietveld
-  ircNickname: mriet
-- userId: wmedvede
-  fullName: Walter Medvedeo
-  role: Senior Software Engineer
-  gravatarHashId: 4a8c787544c0b40bc033f631dc2256c2
-  employedBy: Red Hat
-  githubUsername: wmedvede
-  ircNickname: wmedvede
-- userId: mbiarnes
-  fullName: Michael Biarnes Kiefer
-  role: Release engineer
-  gravatarHashId: b259671a57bb987c00a2e1ba37ff05c5
-  employedBy: Red Hat
-  githubUsername: mbiarnes
-  employedBy: Red Hat
-  ircNickname: mbiarnes
-- userId: psiroky
-  fullName: Petr Široký
-  role: Software Engineer
-  gravatarHashId: e8eb2caefbe452befc919ea0977864c1
-  employedBy: Red Hat
-  githubUsername: psiroky
-  ircNickname: psiroky
 - userId: pefernan
   fullName: Pere Fernandez
   role: Software Engineer
@@ -149,13 +114,13 @@
   employedBy: Red Hat
   githubUsername: pefernan
   ircNickname: sr_pere
-- userId: jrenaat
-  fullName: Jan Schatteman
-  role: Software Engineer
-  gravatarHashId: 57e600470d83cd8fe4c36578b2b5c9dd
+- userId: wmedvede
+  fullName: Walter Medvedeo
+  role: Senior Software Engineer
+  gravatarHashId: 4a8c787544c0b40bc033f631dc2256c2
   employedBy: Red Hat
-  githubUsername: jrenaat
-  ircNickname: jrenaat
+  githubUsername: wmedvede
+  ircNickname: wmedvede
 - userId: dgutierr
   fullName: David Gutierrez
   role: Dashbuilder Lead
@@ -177,6 +142,14 @@
   employedBy: Red Hat
   githubUsername: romartin
   ircNickname: roger600
+- userId: mbiarnes
+  fullName: Michael Biarnes Kiefer
+  role: Release engineer
+  gravatarHashId: b259671a57bb987c00a2e1ba37ff05c5
+  employedBy: Red Hat
+  githubUsername: mbiarnes
+  employedBy: Red Hat
+  ircNickname: mbiarnes
 - userId: cristiano
   fullName: Cristiano Nicolai
   role: Senior Software Engineer
@@ -185,14 +158,6 @@
   employedBy: Red Hat
   githubUsername: cristianonicolai
   ircNickname: cristiano
-- userId: qmx
-  fullName: Douglas Campos
-  role: Senior Software Engineer
-  gravatarHashId: 684b4bfe97a40454db104abcb601e375
-  twitterUsername: qmx
-  employedBy: Red Hat
-  githubUsername: qmx
-  ircNickname: qmx
 - userId: paulovmr
   fullName: Paulo Rego
   role: Software Engineer
@@ -207,34 +172,49 @@
   employedBy: Red Hat
   githubUsername: karreiro
   ircNickname: karreiro
-- userId: tarilabs
-  fullName: Matteo Mortari
-  role: Senior Software Engineer
-  gravatarHashId: 9777c95daf66418bc54f6a78b3a72e5e
-  employedBy: Red Hat
-  githubUsername: tarilabs
-- userId: volothamp
-  fullName: Luca Molteni
-  role: Senior Software Engineer
-  gravatarHashId: cd40128e044f39d7063b5cfdeace80f6
-  employedBy: Red Hat
-  githubUsername: lucamolteni
-- userId: dzonca
-  fullName: Daniele Zonca
-  role: Senior Software Engineer
-  gravatarHashId: b3cae44acd006e8bbe45d4dd5ee04939
-  employedBy: Red Hat
-  githubUsername: danielezonca
-  ircNickname: dzonca
-- userId: evacchi
-  fullName: Edoardo Vacchi
-  role: Senior Software Engineer
-  gravatarHashId: 06af491f015c1278d8c650a2e8598162
-  employedBy: Red Hat
-  twitterUsername: evacchi
-  githubUsername: evacchi
-  ircNickname: evacchi
 # Properties per contributor
+- userId: mauriciosalatino
+  fullName: Mauricio Salatino
+  role: Drools and jBPM
+  gravatarHashId: 7666e02db7c2afa17051ef9d480443d1
+  twitterUsername: salaboy
+  githubUsername: Salaboy
+  ircNickname: salaboy
+- userId: mrietvel
+  fullName: Marco Rietveld
+  role: Drools and jBPM
+  gravatarHashId: d4dacb2e9fe88961621b8a89d119c6aa
+  twitterUsername: marcorietveld
+  githubUsername: mrietveld
+  ircNickname: mriet
+- userId: jlindop
+  fullName: Jeremy Lindop
+  role: jBPM designer
+  gravatarHashId: 70f07209f7a254b93ae6ccb030aefb61
+  githubUsername: jlindop
+  ircNickname: jeremyl
+- userId: psiroky
+  fullName: Petr &#x160;irok&#xFD;
+  role: Software Engineer
+  gravatarHashId: e8eb2caefbe452befc919ea0977864c1
+  employedBy: Red Hat
+  githubUsername: psiroky
+  ircNickname: psiroky
+- userId: jrenaat
+  fullName: Jan Schatteman
+  role: Software Engineer
+  gravatarHashId: 57e600470d83cd8fe4c36578b2b5c9dd
+  employedBy: Red Hat
+  githubUsername: jrenaat
+  ircNickname: jrenaat
+- userId: bbrodt
+  fullName: Bob Brodt
+  role: Software Engineer
+  gravatarHashId: bab590bda7e10028e61d120f7f4427cf
+  employedBy: Red Hat
+  githubUsername: bbrodt
+  facebookUsername: rbrodt
+  ircNickname: bbrodt
 - userId: vkiran
   fullName: Vinod Kiran P.
   role: Drools Spring (5.2, 5.3, 5.4). Drools Scorecard (5.5), Kie-Spring, Kie-Camel, Kie-Aries-Blueprint (6.x)
@@ -488,13 +468,24 @@
   role: Founder (now manager of jboss.org)
   gravatarHashId: 918847782c26cddfb831ce9a68e94a1a
   twitterUsername: bobmcwhirter
-- userId: tarilabs_community
-  fullName: Matteo Mortari
-  role: Bug reports, reproducers, fixes and Drools Maven Archetype
-  gravatarHashId: 9777c95daf66418bc54f6a78b3a72e5e
-  githubUsername: tarilabs
-- userId: volothamp_community
-  fullName: Luca Molteni
-  role: Drools developer
-  gravatarHashId: cd40128e044f39d7063b5cfdeace80f6
-  githubUsername: lucamolteni
+  email: bob [at] openxource [dot] com
+- userId: enriquegonzalez
+  fullName: Enrique Gonzalez Martinez
+  role: jBPM Core engineer
+  employedBy: Red Hat
+  gravatarHashId: unknown
+- userId: lazarotti
+  fullName: Alessandro Lazarotti
+  role: jBPM Engineering Manager
+  employedBy: Red Hat
+  gravatarHashId: unknown
+- userId: vaniharipriya
+  fullName: Vani Haripriya
+  role: jBPM Core Engineering
+  employedBy: Red Hat
+  gravatarHashId: unknown
+- userId: xiaofengbai
+  fullName: Xiaofeng Bai
+  role: jBPM Runtime Tooling Engineering
+  employedBy: Red Hat
+  gravatarHashId: unknown
