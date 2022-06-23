@@ -1,9 +1,0 @@
-= Slides
-:awestruct-layout: normalBase
-:showtitle:
-
-== Watch the slides
-
-These slides are viewable in your browser:
-
-http://www.slideshare.net/krisverlaenen/presentations[*Show the jBPM presentations*]

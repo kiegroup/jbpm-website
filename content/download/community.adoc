@@ -1,0 +1,7 @@
+= Download
+:jbake-type: _content_download_community
+:jbake-description: Download information for jBPM
+:page-interpolate: true
+:showtitle:
+
+// Empty .adoc jbake /content, using FTL for data processing. Ref: https://github.com/jbake-org/jbake/issues/693

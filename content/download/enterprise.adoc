@@ -1,0 +1,47 @@
+:jbake-type: normalBase
+:jbake-description: Download information for jBPM
+:showtitle:
+
+== Download - Enterprise
+
+=== http://www.redhat.com/en/technologies/jboss-middleware/bpm[Red Hat Process Automation Manager is the enterprise version of jBPM]
+
+* image:download.png[] https://developers.redhat.com/products/rhpam/download/[Download Red Hat Process Automation Manager]
+
+=== Community and enterprise comparison
+
+The community download delivers everything you would expect from an Open Source project,
+including all features. The enterprise subscription fills the missing gaps for enterprise use.
+Both community and enterprise use the same code base.
+
+|===
+| |Community |Enterprise subscription
+
+|*Functionality* | |
+|All features |image:checkYes.png[Yes] Includes all enterprise features too |image:checkYes.png[Yes]
+|All bugfixes |image:checkYes.png[Yes] Master branch only |image:checkYes.png[Yes] Supported maintenance branches too
+|Documentation |image:checkYes.png[Yes] |image:checkYes.png[Yes]
+|Backport bugfixes to maintenance branches |image:checkNo.png[No] Not released |image:checkYes.png[Yes] Released in maintenance releases
+|Security (CVE) watch for maintenance branches |image:checkNo.png[No] Eventually released from master branch only |image:checkYes.png[Yes] Released as backported bugfix
+
+|*Testing* | |
+|Unit testing |image:checkYes.png[Yes] |image:checkYes.png[Yes] On certification matrix
+|Integration testing |image:checkYes.png[Yes] |image:checkYes.png[Yes] On certification matrix
+|Stress testing |image:checkYes.png[Yes] |image:checkYes.png[Yes]
+|Performance testing and sizing |image:checkNo.png[No] |image:checkYes.png[Yes]
+|QA certification |image:checkNo.png[No] |image:checkYes.png[Yes] Cross matrix of OS's, JDK's, application containers, databases, ... See https://access.redhat.com/articles/3354301[supported configurations].
+
+|*Help* | |
+|Roadmap impact |image:checkYes.png[Yes] Use link:../community/getHelp.html[our forum], #{site.issueTracker}[issue tracker] or send a link:../code/sourceCode.html[Pull Request] |image:checkYes.png[Yes] Prioritized above community requests
+|Public questions |image:checkYes.png[Yes] Use link:../community/getHelp.html[Google Groups] |image:checkYes.png[Yes] Or call 24/7 support instead
+|Private 24/7 support |image:checkNo.png[No] |image:checkYes.png[Yes] https://access.redhat.com/support/contact/[By web or phone], guaranteed response time (SLA)
+|Red Hat consultancy, training and POC assistance |image:checkNo.png[No] |image:checkYes.png[Yes] Talk to your account manager
+
+|*Release schedule* | |
+|Stable releases |image:checkYes.png[Yes] Final usually every 3 weeks |image:checkYes.png[Yes] GA every 3 months
+|Maintenance releases |image:checkNo.png[No] Use latest instead |image:checkYes.png[Yes] Usually every 6 weeks
+|One-off release for an urgent customer critical issue |image:checkNo.png[No] |image:checkYes.png[Yes] Also rolled up in the next maintenance release
+
+|*Information* | |
+|Open source (link:../code/license.html[Apache License 2.0]) |image:checkYes.png[Yes] |image:checkYes.png[Yes] but distribution available from customer portal only
+|===

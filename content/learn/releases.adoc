@@ -1,0 +1,7 @@
+= Getting Started
+:jbake-type: _content_learn_releases
+:jbake-description: Release information of jBPM.
+:page-interpolate: true
+:showtitle:
+
+// Empty .adoc jbake /content, using FTL for data processing. Ref: https://github.com/jbake-org/jbake/issues/693
