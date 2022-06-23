@@ -19,7 +19,7 @@ jobs:
       - name: urls-checker
         uses: urlstechie/urlchecker-action@0.0.27
         with:
-          subfolder: _config
+          subfolder: data
           file_types: .yml
           print_all: false
           timeout: 5
