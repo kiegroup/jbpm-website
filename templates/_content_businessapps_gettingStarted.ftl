@@ -153,7 +153,7 @@
                   <p>Business automation(bpm) covers features for process management, case management,
                     decision management and optimization. These will be by default configured
                     in the service project of your business application. Although you can
-                    turn them off via configurationService project archetype(Business Automation)</p>
+                    turn them off via configuration.</p>
                 </li>
               </ul>
             </div>
@@ -204,7 +204,7 @@
                 project with desired capabilities.</p>
             </div>
             <div class="paragraph">
-              <p>It is recommended to generate all the three types of projects -Data Model,
+              <p>It is recommended to generate all the three types of projects Data Model,
                 Business assets and Service projects using the archetypes in same directory
                 on your computer.</p>
             </div>
