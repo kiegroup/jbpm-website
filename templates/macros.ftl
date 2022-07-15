@@ -8,7 +8,7 @@
         <div class="card-body">
             <#if pom.latest.version == pom.latestFinal.version>
                 <a class="btn btn-lg btn-success w-100"
-                   href="${content.rootpath}download/download.html">
+                   href="${content.rootpath}download/community.html">
                     <img alt="Download" src="/download/download.png">
                     <div>
                         <span>Try ${config.title}</span><br>
@@ -18,7 +18,7 @@
             </#if>
             <#if pom.latest.version != pom.latestFinal.version>
                 <a class="btn btn-lg btn-success w-100"
-                   href="${content.rootpath}download/download.html">
+                   href="${content.rootpath}download/community.html">
                     <img alt="Download" src="/download/download.png">
                     <div>
                         <span>Try ${config.title}</span><br>
@@ -171,7 +171,7 @@
 <#macro downloadJumbotron>
     <div>
         <div style="text-align: center">
-            <a class="btn btn-lg btn-success" href="${content.rootpath}download/download.html">
+            <a class="btn btn-lg btn-success" href="${content.rootpath}download/community.html">
                 <img alt="Download" src="${content.rootpath}download/download.png">
                 Download jBPM ${pom.latestFinal.version}
             </a>
@@ -257,7 +257,7 @@
         OptaPlanner is <b>open source software</b>, released under <a href="${content.rootpath}code/license.html">the
             Apache License</a>.
         It is written in 100% pure Java™, runs on any JVM and is available in
-        <a href="${content.rootpath}download/download.html">the Maven Central repository</a> too.
+        <a href="${content.rootpath}download/community.html">the Maven Central repository</a> too.
         It works with <a href="${content.rootpath}compatibility/quarkus.html">Quarkus</a>
         and <a href="${content.rootpath}compatibility/springBoot.html">Spring Boot</a>.
     </p>
