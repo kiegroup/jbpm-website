@@ -221,7 +221,7 @@
                   <p>execute <code>./launch.sh clean install</code> for unix or <code>launch.bat clean install</code>            for windows</p>
                 </li>
                 <li>
-                  <p>once the boot has finished go to <a href="http://localhost:8090">http://localhost:8090, window="_blank"</a></p>
+                  <p>once the boot has finished go to <a href="http://localhost:8090" target="_blank">http://localhost:8090</a></p>
                 </li>
               </ul>
             </div>
