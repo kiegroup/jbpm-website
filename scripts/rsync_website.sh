@@ -12,4 +12,4 @@
 #
 #############################################################################################################################################################################
 
-rsync -Pavqr -e 'ssh -p 2222' --protocol=28 --delete-after target/website/* jbpm@filemgmt-prod-sync.jboss.org:www_htdocs/jbpm
+rsync -Pavqr -e 'ssh -p 2222' --protocol=28 target/website/ jbpm@filemgmt-prod-sync.jboss.org:www_htdocs/jbpm/ --delete-after
