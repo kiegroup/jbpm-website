@@ -87,7 +87,7 @@
     <li>building and deploying project</li>
     <li>verifying deployment to execution server</li>
     <li>use of jBPM Case management Showcase application</li>
-    <li>document upload and handing</li>
+    <li>document upload and handling</li>
     <li>monitoring of case instance in Business Central</li>
 </ul>
 <p>More about case management capabilities can be found in following articles</p>
